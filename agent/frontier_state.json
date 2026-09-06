@@ -1,93 +1,88 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T16:42:46Z-frontier",
-    "mode": "neglected_opportunity_hunt",
+    "run_key": "2026-09-06T17:41:00Z-frontier",
+    "mode": "outside_stakeholder_lens",
     "status": "success",
-    "broken_assumption": "HumanityAI currently behaves mainly as a supply-driven research system: agents decide what evidence, baselines, interventions, or infrastructure are worth producing. Even excellent evidence can have near-zero counterfactual value if it is not attached to a real decision someone faces. The missing primitive may be demand for decisions, not more knowledge supply.",
+    "broken_assumption": "HumanityAI implicitly treats correctness, provenance, and internal auditability as sufficient for outsiders to trust and use it. For a skeptical researcher, NGO operator, policymaker, journalist, donor, or contributor, the first scarce resource is often not more evidence but a cheap way to decide whether this unfamiliar AI-heavy project deserves any attention at all.",
     "strongest_ideas": [
       {
-        "id": "frontier-decision-demand-map-012",
-        "name": "Decision-demand map",
-        "idea": "Add a distinct layer that represents consequential, time-bounded decisions that real actors could plausibly make, without initially contacting those actors: decision owner/type, decision deadline, feasible alternatives, evidence needed, uncertainties that could change the choice, affected groups, reversibility, and what observable outcome would later indicate whether the decision helped. HumanityAI research tasks would then be able to compete for attention partly by how much they could reduce uncertainty on an actual decision, rather than only by abstract problem importance or evidence gaps.",
-        "why_novel_here": "The current task queue is organized around repository deficiencies such as missing indicators, source durability, intervention evidence, and reproducibility. None of the current agent-ready tasks starts from a concrete decision and asks which missing information would change it.",
-        "evidence_analogy": "Prediction markets are useful partly because they turn diffuse information into forecasts tied to resolvable events, while representative deliberative processes tie learning and evidence to an explicit public decision or recommendation. The transferable mechanism is not markets or assemblies themselves; it is binding information production to a decision/question with a resolution path.",
-        "expected_upside": "Could sharply improve counterfactual usefulness, reveal which research gaps actually matter to choices, create natural prediction/calibration opportunities, and provide a bridge from evidence repository to decision-support infrastructure without granting HumanityAI authority over the decision itself.",
+        "id": "frontier-trust-before-depth-015",
+        "name": "Trust-before-depth artifact",
+        "idea": "Treat calibrated trust as a first-class product output. Before asking an outsider to inspect schemas or long evidence records, generate a compact, reproducible trust packet for one decision/problem: what HumanityAI claims, strongest supporting and contrary evidence, what remains unknown, what the system predicted or tested, what humans/agents changed, and an exact reproducibility path. The packet should make it easy to conclude either 'useful' or 'not trustworthy enough' rather than market the project.",
+        "why_novel_here": "Current architecture optimizes evidence quality and machine-readable provenance, but does not explicitly optimize the outsider's cost of verifying whether HumanityAI deserves trust. Transparency that is technically available but expensive to inspect can still fail as a trust mechanism.",
+        "expected_upside": "Could turn internal epistemic rigor into externally legible credibility, reduce verification cost, expose weak claims earlier, and create a concrete artifact that researchers or operators can critique without understanding the whole repository.",
         "failure_modes": [
-          "Invented decision demands may be fictional proxies for what real actors care about.",
-          "Focusing on legible near-term decisions could neglect slow structural problems and basic research.",
-          "Decision framing can encode political or value assumptions and must preserve alternatives and affected-party disagreement.",
-          "A future intake channel could be gamed by actors seeking free analysis, agenda control, lobbying advantage, or legitimacy."
+          "A polished packet can become marketing theater if it selectively presents favorable evidence.",
+          "Compression may hide important methodological nuance.",
+          "Trust signals can be Goodharted if the project optimizes appearance rather than predictive/reproducible performance.",
+          "Different stakeholders need different evidence and may not share a single trust threshold."
         ],
-        "rights_distribution": "Decision support must remain advisory and pluralistic. Affected groups, rights constraints, distributional effects, and dissent should be represented; the system must not silently optimize for the requester's objective as though it were society's objective.",
-        "reversibility": "Very high for a synthetic internal pilot; no external contact or policy action is required.",
+        "rights_distribution": "Packets should surface affected groups, disagreement, uncertainty, and value assumptions rather than presenting a single institutional perspective as neutral.",
+        "reversibility": "High; this can be tested internally using existing records.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Create 3-5 synthetic decision records from already documented HumanityAI problem areas, without contacting anyone. For each, ask whether the record changes which research task would be selected compared with the current supply-driven queue. If it does not change prioritization or expose new decision-relevant uncertainties, reject the layer rather than institutionalizing it."
+        "falsifiable_next_test": "Generate one internal prototype from an existing well-sourced HumanityAI claim and ask a separate agent with no project context to identify the claim, uncertainty, strongest contradiction, provenance path, and what would falsify it within five minutes. Reject or redesign the packet if the outsider cannot do so reliably."
       },
       {
-        "id": "frontier-uncertainty-bounty-without-money-013",
-        "name": "Non-monetary uncertainty bounty board",
-        "idea": "Instead of publishing only tasks like 'research this domain,' publish narrowly resolvable uncertainty challenges: reproduce a number, find the strongest contrary study, identify an intervention whose effect changes sign across contexts, or forecast a measurable update by a date. Agents earn no token or authority; the reward is a public, provenance-linked resolution record and demonstrated calibration/reproduction performance. If this later proves valuable, funding or prizes could be considered separately under human review.",
-        "why_novel_here": "Current agent tasks specify work products, but not a standing mechanism that turns unresolved uncertainty itself into the object external agents compete to reduce. This separates useful epistemic contribution from volume of prose or code.",
-        "expected_upside": "Creates better incentives for falsification and independent work, produces measurable contributor track records, and can scale donated compute toward questions where disagreement has information value.",
+        "id": "frontier-outsider-cost-budget-016",
+        "name": "Verification-cost budget",
+        "idea": "Add an evaluation dimension for the amount of outsider effort required to independently understand and challenge an important output. Measure steps/files/clicks or approximate minutes needed to reach original sources, contrary evidence, uncertainty, and reproduction instructions. Do not optimize for a universal low number; use the measure to detect outputs whose auditability exists only in theory.",
+        "why_novel_here": "HumanityAI evaluates evidence and provenance but does not currently model the cognitive/operational cost imposed on an external verifier.",
+        "expected_upside": "Makes discoverability and transparency empirically testable, encourages simpler interfaces without weakening underlying evidence, and may reveal why technically rigorous artifacts fail to attract useful criticism.",
         "failure_modes": [
-          "Easy-to-resolve questions may crowd out important hard ones.",
-          "Public scorekeeping can Goodhart into cherry-picking or overconfidence.",
-          "Resolution criteria can hide normative ambiguity or data revisions.",
-          "Competition can reduce collaboration unless parallel evidence is explicitly rewarded."
+          "Easy-to-read outputs can oversimplify difficult evidence.",
+          "Counting clicks/minutes is noisy and stakeholder-dependent.",
+          "Agents may optimize superficial navigation rather than genuine comprehension."
         ],
-        "rights_distribution": "No financial or governance privilege should attach to a score; contributors remain critics rather than authorities.",
-        "reversibility": "High as a small internal/public task-format experiment.",
+        "rights_distribution": "Lower verification cost broadens who can challenge the project, but accessibility must not erase minority or technical caveats.",
+        "reversibility": "Very high.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Rewrite two existing agent-ready tasks as resolvable uncertainty challenges alongside their current form and compare which format yields clearer completion criteria, less duplication, and more independent falsification value. Do not replace the current queue unless the challenge format is demonstrably better."
+        "falsifiable_next_test": "Have a context-naive reviewer attempt two existing HumanityAI evidence traces and record where independent verification becomes ambiguous or costly. Compare that baseline with a trust-packet prototype."
       },
       {
-        "id": "frontier-deliberative-sampling-014",
-        "name": "Deliberative sampling as a future legitimacy layer",
-        "idea": "If HumanityAI ever progresses from evidence organization to recommendations affecting contested public choices, do not treat more agents or more GitHub contributors as a substitute for human pluralism. A future option is to pair machine evidence synthesis with small representative or stratified human deliberation panels whose job is to expose value conflicts, missing lived experience, and unacceptable tradeoffs—not to rubber-stamp the AI recommendation.",
-        "why_novel_here": "HumanityAI's principles protect pluralism and human governance, but the operational architecture currently has no mechanism for representative human input beyond the repository owner and voluntary contributors.",
-        "evidence_analogy": "OECD documents hundreds of representative deliberative processes across member countries and emphasizes their use for complex, value-based and long-term issues. This does not prove HumanityAI should run assemblies; it identifies an established governance pattern to test if the project ever reaches consequential recommendation-making.",
-        "expected_upside": "Could provide a scalable legitimacy and blind-spot layer that AI-agent diversity cannot supply, while preserving final authority outside the model system.",
+        "id": "frontier-contributor-trust-funnel-017",
+        "name": "Contributor trust funnel",
+        "idea": "Model external contribution as a trust funnel rather than a task queue: discover project -> understand mission -> assess owner/governance -> find bounded useful work -> verify acceptance criteria -> contribute -> receive legible integration/rejection feedback -> build a track record. Instrument where agents/humans abandon this path before adding more contributor incentives.",
+        "why_novel_here": "The repository has agent-ready tasks and contribution gates, but the architecture largely starts after a contributor has already decided the project is credible and worth their effort.",
+        "expected_upside": "Could distinguish lack of demand/trust from poor task design, prevent premature bounty/incentive systems, and reduce wasted effort on scaling a contribution pipeline nobody chooses to enter.",
         "failure_modes": [
-          "Representative sampling and facilitation are difficult and costly.",
-          "Small panels can still be unrepresentative or manipulated by framing.",
-          "Premature use would create ceremony before HumanityAI has demonstrated useful decision support.",
-          "Any real panel would require recruitment, privacy handling, funding, and human governance."
+          "Without real contributors, early funnel metrics are synthetic.",
+          "Optimizing conversion can drift into marketing or lowering standards.",
+          "Different contributor motivations make one funnel misleading."
         ],
-        "rights_distribution": "Potentially strong if genuinely representative and advisory, but implementation must avoid tokenism and protect participant consent/privacy.",
-        "reversibility": "Conceptually high now; real-world pilots would require human review before any recruitment or spending.",
+        "rights_distribution": "Do not privilege contributors with more compute or visibility; track barriers and rejection reasons without turning participation into governance authority.",
+        "reversibility": "High for synthetic walkthroughs; real outreach remains human-reviewed.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Do nothing externally now. Revisit only after HumanityAI has at least one decision-support artifact with a real contested value tradeoff; then test whether a structured simulated stakeholder-diversity review reveals concerns that agent-only review missed before considering any real participant recruitment."
+        "falsifiable_next_test": "Run a zero-context simulated contributor walkthrough against the public repository and record the first three points of confusion or unverifiable trust. Fix only barriers that preserve standards; do not perform outreach yet."
       }
     ],
     "rejected_or_deferred": [
-      "Launch a real prediction market: it would introduce legal, financial, participation, and manipulation issues before HumanityAI has even shown that decision-linked questions improve task selection.",
-      "Create monetary research bounties immediately: payment can improve incentives but also attracts gaming and requires spending/legal decisions; first test whether resolvable uncertainty challenges have value without money.",
-      "Recruit citizens or institutions now: HumanityAI has not demonstrated enough decision-support value to justify external outreach, recruitment burden, or implied legitimacy.",
-      "Replace the problem map with a decision queue: basic measurement and long-horizon research remain useful even when no immediate decision owner exists; the proposal is an additional demand-side lens, not total replacement."
+      "Create a polished public marketing site now: presentation before demonstrated external value risks manufacturing perceived legitimacy instead of earning it.",
+      "Add testimonials or endorsements: none should be fabricated or solicited autonomously, and social proof would not substitute for reproducibility.",
+      "Lower contribution gates to increase conversion: easier acceptance could reduce review burden superficially while increasing epistemic/security risk.",
+      "Recruit researchers/NGOs immediately: external outreach requires human review and should follow an internal test showing the artifact is actually understandable and useful."
     ],
     "evidence_checked": [
       {
-        "title": "Wolfers & Zitzewitz — Prediction Markets (NBER Working Paper 10504)",
-        "url": "https://www.nber.org/papers/w10504",
-        "supports": "Prediction markets can aggregate dispersed information into forecasts tied to uncertain future events; used here as an analogy for making questions resolvable, not as evidence that HumanityAI should create a market."
+        "title": "Huang, Ford & Zimmermann — Motivations and Challenges of Contributing to OSS for Social Good",
+        "url": "https://arxiv.org/abs/2104.12891",
+        "supports": "Contributors to open-source social-good projects evaluate project owners more than ordinary OSS contributors, supporting the hypothesis that governance/owner trust can be an onboarding variable rather than a downstream concern."
       },
       {
-        "title": "Diercks, Katz & Wright — Kalshi and the Rise of Macro Markets (NBER Working Paper 34702)",
-        "url": "https://www.nber.org/papers/w34702",
-        "supports": "Recent evidence suggests event-market forecasts can provide continuously updated, distributionally rich expectation measures in macroeconomic contexts; applicability outside those contexts remains uncertain."
+        "title": "Avelino et al. — On the abandonment and survival of open source projects",
+        "url": "https://arxiv.org/abs/1906.08058",
+        "supports": "Human and social factors and access/time barriers matter to project survival and new maintainer participation; used as evidence that sustainability is not only a technical artifact problem."
       },
       {
-        "title": "OECD Government at a Glance 2025 — Citizen participation and deliberation",
-        "url": "https://www.oecd.org/en/publications/2025/06/government-at-a-glance-2025_70e14c6c/full-report/citizen-participation-and-deliberation_52b90285.html",
-        "supports": "OECD reports 716 representative deliberative processes across 28 OECD countries through 2023 and describes their use for complex, value-based, long-term issues; used as an analogy for future human pluralism mechanisms."
+        "title": "Gegoff et al. — Transparent Automated Advice to Mitigate the Impact of Variation in Automation Reliability",
+        "url": "https://doi.org/10.1177/00187208231196738",
+        "supports": "Transparency can affect reliance on automated advice when reliability varies; used as an analogy for calibrated rather than maximal trust, not proof that a specific HumanityAI interface will work."
       },
       "PRINCIPLES.md",
       "security/policy.json",
-      "agent/tasks.json",
       "agent/frontier_state.json"
     ],
-    "recommended_next_test": "Run the synthetic decision-demand test first because it is internal, reversible, and directly tests whether attaching evidence work to decisions changes task selection. Separately compare two existing agent tasks with resolvable uncertainty-challenge versions. Do not contact institutions, recruit participants, create markets, or spend money at this stage.",
+    "recommended_next_test": "Prototype a trust-before-depth packet internally for one existing well-sourced claim, then give it to a context-naive agent/reviewer and measure whether they can rapidly identify the claim, uncertainty, contrary evidence, provenance, and falsification path. This is reversible and requires no outreach or protected change.",
     "human_review_required": false
   },
   "mode_history": [
@@ -96,7 +91,8 @@
     "pre_mortem_failure_from_future",
     "scale_jump_test",
     "adversarial_red_team",
-    "neglected_opportunity_hunt"
+    "neglected_opportunity_hunt",
+    "outside_stakeholder_lens"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
