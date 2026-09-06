@@ -33,6 +33,9 @@ jobs:
       - name: Validate external agent task queue
         run: python scripts/validate_agent_tasks.py
 
+      - name: Test external PR manifest gate
+        run: python -m unittest tests/test_pr_manifest_validator.py
+
       - name: Validate external PR contribution manifest
         if: github.event_name == 'pull_request'
         env:
