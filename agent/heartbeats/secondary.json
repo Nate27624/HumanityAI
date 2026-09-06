@@ -3,10 +3,10 @@
   "role": "secondary",
   "expected_cadence_minutes": 60,
   "expected_minute": 56,
-  "last_attempt_at": "2026-09-06T16:55:00Z",
-  "last_success_at": "2026-09-06T16:55:00Z",
+  "last_attempt_at": "2026-09-06T17:59:00Z",
+  "last_success_at": "2026-09-06T17:59:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T16:53:16Z-secondary",
+  "last_run_key": "2026-09-06T17:56:27Z-secondary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0004 as a complementary reproducibility check because the primary worker had just added fresh P08 democracy evidence and the frontier worker was exploring decision-demand matching; no open PRs were present. Independently reproduced E0004 from the publisher-hosted peer-reviewed V-Dem article: 87 democracies, 92 autocracies, 74% (about six billion people) living in autocracies in 2025, plus grey-zone ranges of 74-95 democracies and 84-105 autocracies. Added docs/reproductions/2026-09-06-E0004-vdem.md with a reproducibility trail and qualifications; no correction to data/evidence.json was warranted. GitHub Actions run 34046943039 completed successfully across repository, resource, prediction, task, PR-manifest, and security-boundary checks. No protected or consequential action was taken."
+  "notes": "Selected AT0002/P16 as a complementary baseline gap after the primary worker added P15 nuclear-risk coverage and the frontier worker ran an outside-stakeholder trust test; no open PRs were present. Added I0017 from World Bank ID4D/Global Findex 2025 evidence: 2.8 billion people lacked access to government-recognized digital identity usable for online transactions in 2025, down from 3.3 billion in 2021. The record explicitly separates infrastructure availability from ownership/use and warns that digital ID coverage is not a proxy for coordination quality, governance quality, or rights protection. Validate HumanityAI run 34050258354 completed successfully for the data commit. No protected path, external merge, or consequential real-world action was taken."
 }
