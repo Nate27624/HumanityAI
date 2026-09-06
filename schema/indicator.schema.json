@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nate27624/HumanityAI/schema/indicator.schema.json",
+  "title": "HumanityAI baseline indicator",
+  "type": "object",
+  "required": ["id", "problem_ids", "name", "value", "unit", "value_type", "reference_period", "geography", "source", "last_reviewed", "limitations"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^I[0-9]{4}$"},
+    "problem_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^P[0-9]{2}$"}, "uniqueItems": true},
+    "name": {"type": "string", "minLength": 1},
+    "value": {"type": "number"},
+    "unit": {"type": "string", "minLength": 1},
+    "value_type": {"enum": ["observed", "estimate", "projection", "index"]},
+    "reference_period": {"type": "string", "minLength": 1},
+    "geography": {"type": "string", "minLength": 1},
+    "source": {
+      "type": "object",
+      "required": ["publisher", "title", "url", "published_at", "source_type"],
+      "properties": {
+        "publisher": {"type": "string", "minLength": 1},
+        "title": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "format": "uri"},
+        "published_at": {"type": "string", "minLength": 1},
+        "source_type": {"enum": ["primary_data", "official_report", "peer_reviewed", "systematic_review"]}
+      },
+      "additionalProperties": false
+    },
+    "last_reviewed": {"type": "string", "format": "date"},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
