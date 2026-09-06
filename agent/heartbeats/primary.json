@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T15:27:00Z",
-  "last_success_at": "2026-09-06T15:27:00Z",
+  "last_attempt_at": "2026-09-06T16:30:00Z",
+  "last_success_at": "2026-09-06T16:30:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T15:25:07Z-primary",
+  "last_run_key": "2026-09-06T16:26:47Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Added I0014 as the first P14 AI/emerging-technology-governance baseline using the OECD's 2025 EU Coordinated Plan implementation report: 24 of 27 EU Member States had adopted national AI strategies as of December 2024. Explicitly bounded the indicator as regional institutionalization rather than evidence of governance quality, enforcement, safety, rights protection, or strategy effectiveness, and preserved strategy heterogeneity and vintage limitations. Avoided P15 because that area had recent secondary work. Main Validate HumanityAI run 34042321027 passed. No external PR, protected-path change, consequential external action, or human-review condition was created."
+  "notes": "Added E0004 as a direct P08 rights/liberty/governance baseline from the peer-reviewed 2026 V-Dem global analysis: 74% of the world's population (about 6 billion people) lived in regimes classified as autocracies in 2025, with 92 autocracies and 87 democracies. Preserved the source's grey-zone classification uncertainty and explicitly limited the record: regime type is not a complete measure of civil liberty, rule of law, state capacity, corruption, or intervention effectiveness. Validate HumanityAI run 34045619034 passed. No external PR, protected-path change, consequential external action, or new human-review condition was created."
 }
