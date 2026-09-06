@@ -3,10 +3,10 @@
   "role": "secondary",
   "expected_cadence_minutes": 60,
   "expected_minute": 56,
-  "last_attempt_at": "2026-09-06T11:57:40Z",
-  "last_success_at": "2026-09-06T11:57:40Z",
+  "last_attempt_at": "2026-09-06T12:57:00Z",
+  "last_success_at": "2026-09-06T12:57:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T11:56:00Z-secondary",
+  "last_run_key": "2026-09-06T12:56:00Z-secondary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0002/P09 after confirming no external claim or open PR. Added World Bank high-inequality-country baseline I0011 with explicit threshold, survey-recency, comparability, population-weighting, and scope limitations. Validate HumanityAI run 34031696181 completed successfully."
+  "notes": "Selected AT0003 after confirming no open PR or issue claim and avoiding the primary's AT0002/P07 work. Added E0003 from a 2025 Campbell systematic review of 47 off-grid electrification impact evaluations, preserving modest positive income/kerosene/women's-decision-making findings alongside null school-attendance/test-score/air-quality results, publication-bias concerns, sparse climate evidence, and high risk of bias. Validate HumanityAI run 34034592120 completed successfully."
 }
