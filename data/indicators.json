@@ -1,0 +1,100 @@
+{
+  "schema_version": "0.1",
+  "description": "Traceable quantitative baselines for HumanityAI problem categories. These indicators describe important dimensions of problems; they are not priority scores.",
+  "records": [
+    {
+      "id": "I0001",
+      "problem_ids": ["P02"],
+      "name": "People living in extreme poverty under the World Bank international poverty line",
+      "value": 847,
+      "unit": "million people",
+      "value_type": "estimate",
+      "reference_period": "2024",
+      "geography": "World",
+      "source": {
+        "publisher": "World Bank",
+        "title": "March 2026 global poverty update from the World Bank: New data and updated poverty numbers",
+        "url": "https://blogs.worldbank.org/en/opendata/march-2026-global-poverty-update-from-the-world-bank--new-data-a",
+        "published_at": "2026-03",
+        "source_type": "official_report"
+      },
+      "last_reviewed": "2026-09-06",
+      "limitations": [
+        "This is an estimated global count, not a direct census of people in poverty.",
+        "The $3.00/day international poverty line uses 2021 purchasing-power parities and is intended for global comparability; national poverty lines are generally more appropriate for country-level policy.",
+        "Monetary poverty does not capture all dimensions of material insecurity or human capability."
+      ],
+      "notes": "The World Bank's March 2026 update estimates 847 million people in extreme poverty in 2024 and nowcasts a global extreme-poverty rate of 10.0% for 2026."
+    },
+    {
+      "id": "I0002",
+      "problem_ids": ["P03"],
+      "name": "People not fully covered by essential health services",
+      "value": 4.6,
+      "unit": "billion people",
+      "value_type": "estimate",
+      "reference_period": "2023",
+      "geography": "World",
+      "source": {
+        "publisher": "World Health Organization",
+        "title": "Universal health coverage (UHC)",
+        "url": "https://www.who.int/news-room/fact-sheets/detail/universal-health-coverage-%28uhc%29",
+        "published_at": "2025-12-05",
+        "source_type": "official_report"
+      },
+      "last_reviewed": "2026-09-06",
+      "limitations": [
+        "The estimate reflects coverage of essential health services and is not a direct measure of health outcomes, quality of care, or all unmet medical need.",
+        "Underlying global health indicators have reporting lags and heterogeneous national data quality.",
+        "This indicator should not be added to financial-hardship counts because the affected populations overlap."
+      ],
+      "notes": "WHO reports that the UHC service coverage index rose from 54 in 2000 to 71 in 2023, while about 4.6 billion people remained not fully covered in 2023."
+    },
+    {
+      "id": "I0003",
+      "problem_ids": ["P06"],
+      "name": "People without access to electricity",
+      "value": 730,
+      "unit": "million people",
+      "value_type": "estimate",
+      "reference_period": "2025 (IEA current estimate)",
+      "geography": "World",
+      "source": {
+        "publisher": "International Energy Agency",
+        "title": "World Energy Outlook 2025 — Achieving access for all",
+        "url": "https://www.iea.org/reports/world-energy-outlook-2025/achieving-access-for-all",
+        "published_at": "2025",
+        "source_type": "official_report"
+      },
+      "last_reviewed": "2026-09-06",
+      "limitations": [
+        "Electricity access is a threshold measure and does not by itself capture reliability, affordability, generation quality, or sufficient power for productive use.",
+        "The global estimate can conceal large geographic and socioeconomic disparities."
+      ],
+      "notes": "IEA reports roughly 730 million people without electricity and notes that progress remains insufficient for universal access on current trends."
+    },
+    {
+      "id": "I0004",
+      "problem_ids": ["P06", "P03"],
+      "name": "People lacking access to clean cooking",
+      "value": 2.0,
+      "unit": "billion people",
+      "value_type": "estimate",
+      "reference_period": "2025 (IEA current estimate)",
+      "geography": "World",
+      "source": {
+        "publisher": "International Energy Agency",
+        "title": "World Energy Outlook 2025 — Achieving access for all",
+        "url": "https://www.iea.org/reports/world-energy-outlook-2025/achieving-access-for-all",
+        "published_at": "2025",
+        "source_type": "official_report"
+      },
+      "last_reviewed": "2026-09-06",
+      "limitations": [
+        "The rounded global count does not capture differences in exposure intensity, household fuel stacking, affordability, or reliability of clean cooking options.",
+        "Health impacts from polluting cooking depend on exposure and context, so this count should not be treated as a direct morbidity estimate."
+      ],
+      "notes": "IEA reports around 2 billion people lacking clean cooking access; this connects essential infrastructure with health and economic opportunity."
+    }
+  ]
+}
