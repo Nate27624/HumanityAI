@@ -1,13 +1,34 @@
 {
-  "schema_version": "0.1",
+  "schema_version": "0.2",
   "project": "HumanityAI",
   "mode": "ai-maintained-human-grounded-publicly-auditable",
+  "heartbeat": {
+    "expected_cadence": "hourly",
+    "last_attempt_at": null,
+    "last_success_at": null,
+    "last_run_status": null,
+    "consecutive_blocked_or_failed_runs": 0
+  },
   "last_run": null,
   "last_audit": null,
   "current_focus": null,
   "recent_changes": [],
   "unresolved_questions": [],
   "known_regressions": [],
+  "retry_queue": [],
+  "reliability": {
+    "total_recorded_runs": 0,
+    "successful_runs": 0,
+    "partial_success_runs": 0,
+    "no_change_needed_runs": 0,
+    "blocked_transient_runs": 0,
+    "blocked_permission_runs": 0,
+    "blocked_governance_runs": 0,
+    "failed_validation_runs": 0,
+    "reverted_runs": 0,
+    "stale_heartbeat_incidents": 0,
+    "duplicate_work_incidents": 0
+  },
   "high_value_backlog": [
     {
       "id": "B001",
@@ -35,7 +56,7 @@
     },
     {
       "id": "B005",
-      "task": "Create automated validation for JSON schemas, broken source links, duplicate entities, and uncited consequential claims",
+      "task": "Create automated validation for JSON schemas, broken source links, duplicate entities, uncited consequential claims, and agent-state heartbeat integrity",
       "priority": "high",
       "status": "open"
     },
@@ -47,8 +68,14 @@
     },
     {
       "id": "B007",
-      "task": "Develop a defensible method for prioritizing research questions without pretending normative tradeoffs are purely objective",
-      "priority": "medium",
+      "task": "Develop and calibrate a defensible impact-prioritization method without pretending normative tradeoffs are purely objective",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "id": "B008",
+      "task": "Build prediction calibration and external-impact feedback so internal impact estimates are tested against later outcomes",
+      "priority": "high",
       "status": "open"
     }
   ],
@@ -56,6 +83,11 @@
     "last_evaluation": null,
     "observed_strengths": [],
     "observed_weaknesses": [],
-    "experiments": []
+    "experiments": [],
+    "prediction_calibration": {
+      "predictions_recorded": 0,
+      "predictions_resolved": 0,
+      "calibration_summary": null
+    }
   }
 }
