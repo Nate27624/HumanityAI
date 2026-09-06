@@ -1,78 +1,47 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T20:41:27Z-frontier",
-    "mode": "counterfactual_founder_test",
+    "run_key": "2026-09-06T21:41:22Z-frontier",
+    "mode": "experiment_generator",
     "status": "success",
-    "broken_assumption": "HumanityAI currently assumes that building a broad, high-quality map of problems and evidence will eventually create downstream value. If the project vanished tomorrow, however, most of today's outputs would likely be replaced by existing research/search systems and almost no real human decision would measurably change. The missing primitive is not more supply of knowledge; it is durable evidence of demand and decision pull.",
+    "broken_assumption": "HumanityAI should adopt frontier architecture ideas because they sound conceptually stronger. Instead, competing workflows should be tested head-to-head before structural adoption.",
     "strongest_ideas": [
       {
-        "id": "frontier-demand-ledger-024",
-        "name": "Decision-demand ledger",
-        "idea": "Add a public machine-readable ledger of real decisions, questions, or coordination bottlenecks that humans or organizations actually need help resolving. Each demand object should record the decision owner or stakeholder class at a privacy-safe level, decision deadline, alternatives under consideration, what evidence would change the decision, affected groups, uncertainty, and whether HumanityAI's work was actually used. Research tasks can then be generated from unresolved demand rather than only from a global supply-side map.",
-        "why_novel_here": "Current HumanityAI work is mostly supply-first: identify important problems, collect evidence, map interventions, then hope usefulness follows. A demand ledger inverts the causal direction and gives the project a direct counterfactual test: did a concrete decision become better, faster, more evidence-grounded, or more contestable because HumanityAI existed?",
-        "expected_upside": "Creates measurable counterfactual value, gives task selection real external pull, reduces impressive-but-unused research, naturally connects to the earlier decision-to-outcome lifecycle, and can reveal which parts of the world model are actually useful rather than merely complete.",
+        "id": "frontier-decision-workflow-backtest-027",
+        "name": "Blind historical architecture backtest",
+        "idea": "Compare the current supply-first problem/evidence workflow against the proposed decision-centric lifecycle on the same historical public-interest decisions, with a strict information cutoff and post-outcome reveal only after both arms freeze recommendations and forecasts.",
+        "why_novel_here": "The project has started generating architectural hypotheses but lacks a method for experimentally deciding whether one architecture actually improves decision-relevant analysis. This turns architecture selection itself into a falsifiable process.",
+        "expected_upside": "Creates evidence for or against the decision-centric architecture, reduces path dependence and persuasive-story bias, and could become a general pattern for testing future HumanityAI workflow changes before promotion into core structure.",
         "failure_modes": [
-          "Early demand may be unrepresentative and bias the project toward vocal or well-connected users.",
-          "Urgent visible decisions may crowd out foundational research whose value is delayed.",
-          "Demand objects can expose sensitive context if privacy is handled badly.",
-          "Users may ask for decisions HumanityAI should not influence or cannot safely support.",
-          "Optimizing for recorded use could Goodhart into shallow responsiveness instead of genuine benefit."
+          "Historical cases can leak hindsight information into supposedly pre-outcome analysis.",
+          "Case selection can favor one workflow.",
+          "Later outcomes are confounded and do not perfectly identify decision quality.",
+          "A decision-centric workflow may look better merely because it produces more structured documentation.",
+          "Small samples may produce noisy conclusions."
         ],
-        "rights_distribution": "Record affected groups and who gets to define the decision. Do not treat the requester's objective as morally exhaustive. Preserve the option to refuse or reframe coercive, rights-violating, privacy-sensitive, or inappropriate requests.",
-        "reversibility": "High if prototyped with synthetic or historical demand objects before accepting live submissions.",
+        "rights_distribution": "Evaluation explicitly includes affected groups and rights/distribution considerations rather than treating decision-owner utility as the sole objective.",
+        "reversibility": "High; the test is retrospective and additive and changes no protected governance or security structure.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Create three synthetic or historical demand objects from decisions already discussed in HumanityAI's evidence domains. Compare task selection and output against the current backlog. Keep the concept only if it changes at least one research priority or reveals evidence that would matter to a decision but is invisible in the current problem-map workflow."
-      },
-      {
-        "id": "frontier-proof-of-use-025",
-        "name": "Proof-of-use feedback instead of repository activity",
-        "idea": "For selected outputs, track a small chain of downstream evidence: requested -> delivered -> read/reused -> decision influenced or not -> later outcome when observable. A null result ('useful-looking analysis changed nothing') is first-class evidence and should reduce confidence in similar work classes.",
-        "why_novel_here": "EVALUATION.md calls for counterfactual value and external validation, but there is not yet a concrete object tying an artifact to actual use or non-use. This converts 'utility' from a self-assessment dimension into observable feedback.",
-        "expected_upside": "Provides a reality-based signal for recursive task selection, identifies dead-end work classes, and gives HumanityAI a reason to stop producing artifacts that nobody needs.",
-        "failure_modes": [
-          "Use is not the same as benefit.",
-          "Impact attribution is often confounded.",
-          "Tracking can become invasive or burdensome.",
-          "Popular outputs can dominate neglected but important work."
-        ],
-        "rights_distribution": "Use only voluntary/public feedback; do not instrument people covertly. Keep non-use as neutral evidence rather than blaming users.",
-        "reversibility": "High as an additive experimental registry.",
-        "human_action_required_now": false,
-        "falsifiable_next_test": "Define a minimal proof-of-use schema and retrospectively classify three existing HumanityAI outputs as no observed use / internal use / externally evidenced use. If every record collapses to speculation, that itself is evidence the project currently lacks a real impact-feedback channel."
-      },
-      {
-        "id": "frontier-pull-push-portfolio-026",
-        "name": "Explicit pull-versus-exploration portfolio",
-        "idea": "Split future work into two visibly different portfolios: demand-pulled work tied to concrete decision needs, and exploration work justified by neglectedness or option value. Evaluate them differently rather than forcing all research through one impact heuristic.",
-        "why_novel_here": "A pure demand-first system would overfit current users, while the current supply-first system risks irrelevance. Treating both as separate portfolios preserves long-horizon discovery while adding accountability to real-world usefulness.",
-        "expected_upside": "Prevents the demand-ledger idea from becoming a new Goodhart target and makes tradeoffs between immediate usefulness and foundational exploration explicit.",
-        "failure_modes": [
-          "Portfolio labels can become arbitrary.",
-          "Exploration can become a loophole for low-value work.",
-          "Demand work can dominate because its feedback is faster."
-        ],
-        "rights_distribution": "Exploration priorities should continue to account for neglected populations whose needs may not appear in incoming demand.",
-        "reversibility": "High as a task-selection experiment.",
-        "human_action_required_now": false,
-        "falsifiable_next_test": "Classify the current high-value backlog into pull-capable versus exploration work and see whether this exposes any tasks whose justification is only 'it seems important' without a plausible use or option-value case."
+        "falsifiable_next_test": "Select three historical cases with preregistered information cutoff dates, run independent current-workflow and decision-centric arms without post-cutoff evidence, freeze outputs, then reveal later evidence and compare on predeclared multidimensional measures."
       }
     ],
     "rejected_or_deferred": [
-      "Immediately solicit real organizations or policymakers for decision requests: potentially high value, but external outreach requires human review and the internal demand schema should first be tested on historical/synthetic cases.",
-      "Make user demand the sole task-selection criterion: this would systematically neglect voiceless, future, or poorly organized populations and would violate the project's broader mission.",
-      "Use clicks, stars, traffic, or downloads as proof of use: these are weak attention metrics and can reward popularity without decision value.",
-      "Replace the global problem map with a request queue: the map remains useful as exploration infrastructure and as a check against narrow incoming demand."
+      "Promote the decision-to-outcome lifecycle directly into core schemas before testing it: too much path dependence for an unvalidated architecture idea.",
+      "Judge the experiment only by whether the historical outcome matched the recommendation: outcomes are stochastic and confounded, so calibration, uncertainty, evidence-gap discovery, rights considerations and reviewer usefulness must remain separate dimensions.",
+      "Use the same agent context for both arms: cross-contamination would make the comparison weak; separate contexts are preferred when practical.",
+      "Run live real-world decisions first: unnecessary risk before a retrospective test establishes information value."
     ],
     "evidence_checked": [
-      "README.md",
-      "EVALUATION.md",
-      "PRINCIPLES.md",
-      "SECURITY.md",
-      "security/policy.json",
-      "agent/frontier_state.json"
+      "agent/frontier_state.json",
+      "agent/state.json",
+      "agent/heartbeats/frontier.json",
+      "recent HumanityAI commits through 2026-09-06T21:29:43Z",
+      "open pull-request state"
     ],
-    "recommended_next_test": "Prototype three historical/synthetic decision-demand objects and a minimal proof-of-use field set without changing protected policy. Compare whether they materially alter task selection or reveal decision-relevant evidence gaps that current supply-first research misses.",
+    "implemented": [
+      "Added agent/frontier_experiments/decision_workflow_backtest_001.json as a concrete low-risk experiment specification."
+    ],
+    "recommended_next_test": "Preregister three historical cases and their cutoff dates before analysis. If the decision-centric arm does not repeatedly add material decision value at acceptable review cost, do not promote it into core architecture.",
     "human_review_required": false
   },
   "mode_history": [
@@ -85,7 +54,8 @@
     "outside_stakeholder_lens",
     "humanityai_is_the_wrong_shape",
     "technology_science_frontier_import",
-    "counterfactual_founder_test"
+    "counterfactual_founder_test",
+    "experiment_generator"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
