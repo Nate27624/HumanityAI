@@ -1,0 +1,39 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "frontier-decision-workflow-backtest-001",
+  "title": "Blind historical backtest of decision-centric versus supply-first research workflows",
+  "status": "proposed_low_risk_internal",
+  "hypothesis": "A decision-centric workflow that begins from an explicit decision, alternatives, affected groups, decision-changing evidence thresholds, predictions, and uncertainty will surface more decision-relevant evidence gaps and produce better-calibrated recommendations than HumanityAI's current supply-first problem/evidence workflow on the same historical cases.",
+  "broken_assumption": "Architecture ideas should be adopted because they sound conceptually better. Instead, competing HumanityAI workflows should be experimentally compared before structural adoption.",
+  "design": {
+    "cases": 3,
+    "case_selection": "Choose historical public-interest decisions with a clear information cutoff date, multiple plausible alternatives, publicly available pre-cutoff evidence, and later observable outcomes. Avoid cases already deeply represented in HumanityAI to reduce contamination.",
+    "blinding": "For each case, hide post-cutoff evidence and outcomes from both workflow arms until recommendations and predictions are frozen.",
+    "arm_a_current_workflow": "Use the existing problem-map/evidence/resource/task approach without adding a decision-lifecycle object.",
+    "arm_b_decision_centric": "Represent the concrete decision, alternatives, affected groups, rights/distribution constraints, evidence that would change the choice, key uncertainties, explicit forecasts, and recommended action before gathering targeted evidence.",
+    "independence": "Use separate agent contexts for the two arms when practical. Neither arm should see the other's draft before freeze.",
+    "freeze": "Persist each arm's recommendation, confidence, forecasts, cited evidence, unresolved uncertainties, and rationale before revealing post-cutoff outcomes.",
+    "evaluation": "After freeze, reveal later evidence/outcomes and compare arms using a predeclared rubric. Do not rewrite frozen recommendations after outcome reveal."
+  },
+  "primary_measures": [
+    "decision-relevant evidence gaps identified before outcome reveal",
+    "number and importance of assumptions made explicit",
+    "forecast calibration against later observable outcomes where measurable",
+    "quality of disagreement/uncertainty representation",
+    "rights/distribution considerations surfaced",
+    "reviewer-rated usefulness for making the historical decision using only pre-cutoff information"
+  ],
+  "guardrails": [
+    "No consequential real-world action is taken; this is retrospective analysis only.",
+    "Do not use post-cutoff information during recommendation generation.",
+    "Do not select cases because one workflow is expected to win.",
+    "Do not collapse all outcomes into one scalar score; preserve dimensions and reviewer disagreement.",
+    "Historical outcome quality is not treated as perfect evidence that the original decision was right or wrong because confounding and stochasticity remain.",
+    "Record null or negative results even if the decision-centric workflow does not outperform."
+  ],
+  "success_condition": "Retain or expand the decision-centric architecture only if it repeatedly surfaces materially useful information, uncertainty, or calibration improvements that the current workflow misses at acceptable additional review cost.",
+  "failure_condition": "If the decision-centric arm mainly adds documentation burden, hindsight-sensitive framing, or no material decision advantage, do not promote it into core architecture without a new hypothesis.",
+  "reversibility": "High. This experiment adds only a retrospective test specification and does not alter protected governance, security, or core schemas.",
+  "human_review_required": false,
+  "next_step": "Select three candidate historical cases and preregister their information cutoff dates and evaluation rubric before either workflow analyzes them."
+}
