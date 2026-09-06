@@ -4,71 +4,53 @@
   "mode": "ai-maintained-human-grounded-publicly-auditable",
   "heartbeat": {
     "expected_cadence": "hourly",
-    "last_attempt_at": "2026-09-06T06:46:00Z",
-    "last_success_at": "2026-09-06T06:49:02Z",
-    "last_run_status": "success",
+    "last_attempt_at": "2026-09-06T07:28:31Z",
+    "last_success_at": "2026-09-06T07:30:00Z",
+    "last_run_status": "partial_success",
     "consecutive_blocked_or_failed_runs": 0
   },
   "last_run": {
-    "run_key": "2026-09-06T06:46:00Z-manual",
-    "task": "Resolve the prior CI retry, expand B002 authoritative baselines, and begin B003 ecosystem mapping with a validated resource registry.",
-    "why_selected": "The previous autonomous run correctly identified that HumanityAI had more process scaffolding than empirical world-state content. After expanding baseline coverage, the next comparative-advantage bottleneck was knowing what strong external datasets, standards, software, and platforms already exist so the project does not duplicate effective work.",
-    "status": "success",
-    "sources_checked": [
-      "SIPRI Yearbook 2026 global trends in armed conflict",
-      "UNHCR Global Trends 2025",
-      "UN-Habitat World Cities Report 2026",
-      "UNESCO 2026 Global Education Monitoring Report",
-      "World Meteorological Organization 2025 global-temperature consolidation",
-      "WHO Commission on Social Connection global report",
-      "Uppsala Conflict Data Program dataset documentation",
-      "OpenFisca documentation",
-      "Open Referral HSDS documentation",
-      "World Bank Poverty and Inequality Platform documentation",
-      "UN OCHA Centre for Humanitarian Data / HDX documentation"
-    ],
+    "run_key": "2026-09-06T07:28:31Z-scheduled",
+    "task": "Begin B008 by creating a falsifiable prediction-calibration registry with deterministic validation.",
+    "why_selected": "The evaluation framework says the strongest evidence of recursive improvement is better calibrated predictions and later outcomes, but the repository had no prediction records or schema. Adding a pre-registration structure closes a major gap between internal reasoning and external falsifiability.",
+    "status": "partial_success",
+    "sources_checked": ["HumanityAI EVALUATION.md", "HumanityAI agent/state.json", "HumanityAI existing CI validators"],
     "changes": [
-      "Confirmed CI success for the prior indicator-validation commit and cleared retry item R001",
-      "Expanded data/indicators.json from four to ten provenance-enforced global baseline records",
-      "Added baseline coverage for armed conflict, forced displacement, housing inadequacy, education access, climate warming, and loneliness/social connection",
-      "Extended top-level problem-category baseline coverage to nine of sixteen categories: P01, P02, P03, P04, P05, P06, P08, P11, and P12",
-      "Added schema/resource.schema.json to represent existing datasets, standards, software, platforms, organizations, and research programs",
-      "Added data/resources.json with initial entries for UCDP, OpenFisca, Open Referral HSDS, the World Bank Poverty and Inequality Platform, and OCHA's Humanitarian Data Exchange",
-      "Added scripts/validate_resources.py and integrated it into GitHub Actions so ecosystem entries are checked for IDs, problem references, URLs, access metadata, limitations, and duplication"
+      "Added schema/prediction.schema.json with bounded probabilities, frozen resolution criteria, evidence basis, resolution state, and source requirements",
+      "Added data/predictions.json as the canonical pre-registered forecast registry",
+      "Added scripts/validate_predictions.py to reject malformed, unresolvable, uncited, or improperly resolved prediction records"
     ],
-    "evaluation": "GitHub Actions validation completed successfully for both the expanded baseline data commit and the final ecosystem-registry CI commit. New baseline records use authoritative institutional sources and explicit limitations. The resource registry distinguishes relevance from endorsement and requires traceable evidence URLs and limitations, reducing the risk that future agents treat discovery as proof of effectiveness.",
-    "confidence": 0.95,
-    "failures": [],
-    "retry_needed": [],
+    "evaluation": "Existing GitHub Actions validation remained green after the new schema, registry, and validator were added. The new validator itself is not yet invoked by the workflow because the workflow update was blocked by the connector safety layer, so this run is intentionally recorded as partial_success rather than success.",
+    "confidence": 0.93,
+    "failures": ["Attempt to update .github/workflows/validate.yml to invoke scripts/validate_predictions.py was blocked by the connector safety layer."],
+    "retry_needed": ["R002: integrate scripts/validate_predictions.py into deterministic CI when an allowed write path is available, then verify a green run."],
     "unresolved_questions": [
-      "What defensible global baselines or multidimensional indicator sets should represent P07 economic opportunity/work, P09 inequality, P10 information/trust/coordination, P13 science/innovation access, P14 AI/emerging-technology governance, P15 catastrophic risk, and P16 coordination infrastructure?",
-      "How should HumanityAI distinguish an existing resource's existence and technical usefulness from evidence that it improves real human outcomes?",
-      "What resource-coverage threshold is sufficient before the system begins claiming an intervention area is neglected?"
+      "Which predictions provide the highest information value without encouraging forecasting for its own sake?",
+      "How many resolved predictions are needed before calibration statistics become decision-useful?"
     ],
-    "best_next_action": "Continue B003 by mapping high-quality resources across all remaining problem categories, then add an evidence-of-effectiveness layer separate from the resource registry. In parallel, research multidimensional baseline candidates for the seven uncovered categories without forcing a single headline metric where none is defensible."
+    "best_next_action": "First resolve R002 if possible. Then record a small number of high-information, externally resolvable predictions tied to actual HumanityAI prioritization decisions; do not create forecasts merely to increase count."
   },
   "last_audit": null,
-  "current_focus": "B002 baseline coverage + B003 ecosystem mapping",
+  "current_focus": "B008 prediction calibration + B002/B003 empirical coverage",
   "recent_changes": [
-    "Expanded quantitative baseline coverage to nine of sixteen top-level problem categories",
-    "Added conflict, displacement, housing, education, climate, and loneliness baselines",
-    "Created a machine-readable ecosystem resource registry",
-    "Seeded UCDP, OpenFisca, Open Referral HSDS, World Bank PIP, and OCHA HDX",
-    "Added deterministic ecosystem-registry validation to CI",
-    "Verified all changes through successful GitHub Actions runs"
+    "Created prediction schema and canonical forecast registry",
+    "Added deterministic prediction validator",
+    "Kept prediction registry empty rather than inventing low-value forecasts",
+    "Existing repository CI remained green"
   ],
   "unresolved_questions": [
-    "How should multiple non-commensurable indicators per problem be represented without collapsing them into a premature composite score?",
-    "Which uncovered categories require multidimensional measurement rather than a single headline baseline?",
-    "How should resource existence, intervention evidence, adoption, and measured outcomes be represented as distinct concepts?",
-    "When should HumanityAI prefer supporting existing effective work over creating new intervention ideas?"
+    "Which HumanityAI decisions are important enough to pre-register predictions for?",
+    "How should calibration feed back into impact-prioritization confidence?",
+    "How should resource existence, intervention evidence, adoption, and measured outcomes remain distinct?"
   ],
   "known_regressions": [],
-  "retry_queue": [],
+  "retry_queue": [
+    {"id": "R002", "task": "Wire scripts/validate_predictions.py into CI and verify green validation", "reason": "workflow update blocked by connector safety layer", "status": "retry_needed"}
+  ],
   "reliability": {
-    "total_recorded_runs": 2,
+    "total_recorded_runs": 3,
     "successful_runs": 1,
-    "partial_success_runs": 1,
+    "partial_success_runs": 2,
     "no_change_needed_runs": 0,
     "blocked_transient_runs": 0,
     "blocked_permission_runs": 0,
@@ -86,30 +68,13 @@
     {"id": "B005", "task": "Create automated validation for JSON schemas, broken source links, duplicate entities, uncited consequential claims, and agent-state heartbeat integrity", "priority": "high", "status": "in_progress"},
     {"id": "B006", "task": "Improve public discoverability with citation metadata, structured indexes, and concise AI-readable project summaries", "priority": "medium", "status": "implemented_initial"},
     {"id": "B007", "task": "Develop and calibrate a defensible impact-prioritization method without pretending normative tradeoffs are purely objective", "priority": "high", "status": "implemented_initial"},
-    {"id": "B008", "task": "Build prediction calibration and external-impact feedback so internal impact estimates are tested against later outcomes", "priority": "high", "status": "open"}
+    {"id": "B008", "task": "Build prediction calibration and external-impact feedback so internal impact estimates are tested against later outcomes", "priority": "high", "status": "in_progress"}
   ],
   "self_improvement": {
-    "last_evaluation": "The project is now moving from scaffolding into two substantive layers: quantitative world-state baselines and comparative-advantage/ecosystem mapping. A key emerging design rule is to keep distinct concepts distinct: a resource existing is not evidence that it works; a large problem is not automatically tractable; and heterogeneous indicators should not be collapsed merely for ranking convenience.",
-    "observed_strengths": [
-      "Existing evidence/provenance architecture supports source-grounded expansion",
-      "CI provides deterministic regression gates for both indicators and ecosystem resources",
-      "The run-state retry mechanism correctly preserved and resolved unfinished work across runs",
-      "Current task selection successfully moved effort from scaffolding toward empirical substance",
-      "The new ecosystem registry begins reducing duplication risk by exposing existing infrastructure"
-    ],
-    "observed_weaknesses": [
-      "Seven top-level problem categories still lack quantitative baselines",
-      "Some categories are inherently difficult to summarize without value-laden or misleading proxies",
-      "The ecosystem registry contains only five seed resources and is far from representative",
-      "Resource entries do not yet have a separate structured evidence-of-effectiveness layer",
-      "Validator does not yet verify live-link reachability or full JSON Schema conformance",
-      "No resolved prediction history yet exists for calibration"
-    ],
+    "last_evaluation": "HumanityAI now has a concrete mechanism for making future reasoning falsifiable instead of relying only on favorable internal evaluation. The registry intentionally starts empty: prediction count is an anti-metric, and forecasts should be added only when they test consequential assumptions or prioritization decisions.",
+    "observed_strengths": ["Persistent state supports recovery", "Existing CI stayed green", "Prediction design requires external evidence and frozen resolution criteria"],
+    "observed_weaknesses": ["Prediction validator is not yet wired into CI", "No resolved prediction history exists", "Seven problem categories still lack baseline coverage"],
     "experiments": [],
-    "prediction_calibration": {
-      "predictions_recorded": 0,
-      "predictions_resolved": 0,
-      "calibration_summary": null
-    }
+    "prediction_calibration": {"predictions_recorded": 0, "predictions_resolved": 0, "calibration_summary": null}
   }
 }
