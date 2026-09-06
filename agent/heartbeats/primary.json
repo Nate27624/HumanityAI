@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T13:27:00Z",
-  "last_success_at": "2026-09-06T13:27:00Z",
+  "last_attempt_at": "2026-09-06T14:28:27Z",
+  "last_success_at": "2026-09-06T14:30:12Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T13:27:00Z-primary",
+  "last_run_key": "2026-09-06T14:28:27Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Integrated the previously researched P07 economic-opportunity baseline as I0012: ILO projects 408 million people in the 2026 global jobs gap. Re-verified the claim against current official ILO material, preserved projection/overlap/multidimensional limitations, and confirmed main Validate HumanityAI run 34036120584 passed. No protected-path or external-PR action was taken."
+  "notes": "Added I0013 as a P13 science/innovation/technology-access baseline using ITU Facts and Figures 2025: an estimated 2.2 billion people remained offline in 2025. Preserved limitations around meaningful connectivity, affordability, skills, revisions, subgroup divides, and the fact that Internet access is only one dimension of technology access. Avoided P15 work because the secondary role had just recorded a P15 research pass. Confirmed main Validate HumanityAI run 34039346627 passed. No external PR or protected-path action was taken."
 }
