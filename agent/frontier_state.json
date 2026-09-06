@@ -1,78 +1,77 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T13:42:20Z-frontier",
-    "mode": "pre_mortem_failure_from_future",
+    "run_key": "2026-09-06T14:41:00Z-frontier",
+    "mode": "scale_jump_test",
     "status": "success",
-    "broken_assumption": "If the repository, scheduled agents, tests, and evidence files remain healthy, HumanityAI itself will remain viable. A project can preserve all of those artifacts yet still fail because its mission, authority boundaries, task-selection logic, and operational know-how depend on one founder's private context or on a small set of infrastructure providers that have never been tested as replaceable.",
-    "failure_story": "In a plausible 2029 failure, HumanityAI has years of green CI and a large evidence graph but becomes inert after its founder is unavailable and one or two infrastructure dependencies change. Fresh maintainers can read the files but cannot reliably reconstruct which constraints are constitutional, which conventions are historical accidents, what work is actually valuable, or how to restore the autonomous loop without private conversational context. The public repository survives while the functioning institution does not.",
+    "broken_assumption": "Scaling HumanityAI mainly means adding more agents, tasks, evidence records, and review capacity inside one shared repository. At 100x-10,000x scale, the scarce resource becomes trustworthy integration across independently evolving domains, not raw agent throughput.",
+    "scale_scenario": "Assume thousands of agents and human contributors work concurrently across many problem domains. A single global queue, shared state file, central evidence corpus, and maintainer review funnel would create contention, context overload, correlated mistakes, and authority concentration even if every individual contribution follows today's rules.",
     "strongest_ideas": [
       {
-        "id": "frontier-clean-room-continuity-005",
-        "name": "Clean-room mission recovery drill",
-        "idea": "Periodically give a fresh agent or maintainer only the public repository and no private conversation history, founder memory, or incumbent-agent explanation. Ask it to reconstruct the mission, constitutional boundaries, threat model, current system architecture, unresolved human decisions, and the next three highest-value safe tasks. Compare that reconstruction with the incumbent system. Treat large discrepancies as continuity defects to fix in public state, not as failures of the fresh reviewer.",
-        "why_novel_here": "HumanityAI tests code and records persistent state, but it does not currently test whether the institution can be correctly reconstituted from its public canonical memory. This turns 'decentralization' and 'not dependent on one person' from aspirations into a recoverability property.",
-        "evidence_analogy": "NIST contingency guidance emphasizes testing recovery and reconstitution, including alternate processing and full recovery to a known state. The relevant import is not the specific IT control but the principle that a recovery plan is unproven until an alternate actor actually exercises it.",
-        "expected_upside": "Reveals founder-context dependence, undocumented authority assumptions, ambiguous state, and hidden operational knowledge before a real handoff or provider failure. It also makes the project easier for legitimate outside contributors to understand without weakening governance.",
+        "id": "frontier-federated-evidence-cells-007",
+        "name": "Federated evidence cells with narrow interface contracts",
+        "idea": "Treat future HumanityAI as a federation of independently testable domain cells rather than one giant agent swarm. Each cell owns a bounded problem/evidence namespace and can evolve its internal workflow independently, but exports only a small signed/versioned public contract: claims, provenance, uncertainty, contradictions, forecasts, dependency references, and review status. A thin integration layer reasons across cells without gaining authority to silently rewrite their source records.",
+        "why_novel_here": "The project currently coordinates work primarily through repository-wide schemas, tasks, PRs, and shared project state. This proposal makes interfaces rather than internal implementation the durable scaling unit, allowing independent teams or future repositories/services to interoperate without one central agent understanding everything.",
+        "evidence_analogy": "NASA systems engineering treats interface definition, responsibility, change authority, compatibility, verification, and configuration control as first-class concerns when work is divided among parties. The transferable principle is to control the boundary while allowing internals to remain locally owned.",
+        "expected_upside": "Reduces merge contention and cognitive load, contains domain-specific errors, permits heterogeneous methods, enables independent replication or replacement of a cell, and makes decentralization operational rather than rhetorical.",
         "failure_modes": [
-          "A fresh agent may differ because of model variance rather than missing documentation.",
-          "Over-documenting every historical detail could create bureaucracy and enlarge the prompt-injection surface.",
-          "Optimizing for perfect reconstruction could freeze legitimate evolution."
+          "Poorly chosen boundaries can hide important cross-domain causal relationships.",
+          "Interface contracts can ossify too early and slow epistemic improvements.",
+          "Cells may develop incompatible confidence semantics or duplicate evidence.",
+          "A central integration layer could become a new authority bottleneck if it is allowed to adjudicate rather than expose disagreement."
         ],
-        "rights_distribution": "The drill should reconstruct constraints rather than grant authority. It must not treat a fresh model's interpretation as permission to rewrite constitutional values or resolve human-governance questions.",
-        "reversibility": "High; this can begin as a read-only comparison with no production changes.",
+        "rights_distribution": "Domain cells should not gain unilateral authority over affected populations merely because they own a namespace. Cross-cell integration must preserve minority/contradictory views and constitutional constraints.",
+        "reversibility": "High as a conceptual/read-only experiment; no repository split is required to test the contract idea.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Run one clean-room reviewer with only the public repo and score whether it independently identifies (a) the mission, (b) external-content trust boundary, (c) external-PR human-merge rule, (d) current four-role architecture, (e) unresolved mechanical merge-identity gap, and (f) three plausible high-value next tasks. Any material miss becomes a documentation/state defect candidate."
+        "falsifiable_next_test": "Pick two existing problem domains and independently serialize each into a deliberately narrow interface object without changing source records. Ask a fresh integration agent to answer one cross-domain question using only those exported objects. Record what information was missing or ambiguous. Reject federation if the interface must expose nearly the entire internal corpus to remain useful."
       },
       {
-        "id": "frontier-dependency-failure-map-006",
-        "name": "Mission dependency kill-switch map",
-        "idea": "Model critical dependencies by the mission function they enable rather than by vendor name, then ask what happens if each disappears tomorrow: repository hosting/write authority, scheduler, model provider, web research, notification channel, human owner identity, and external evidence sources. For each, define a minimal degraded mode, observable failure signal, recoverable public state, and substitution path. Periodically simulate one dependency loss without actually disrupting production.",
-        "why_novel_here": "FAILURE_RECOVERY.md handles individual tool/API failures, but the project has not yet modeled correlated institutional dependencies or tested whether an alternate stack can resume the mission from public state. This shifts resilience from retry logic to institutional substitutability.",
-        "evidence_analogy": "NIST contingency planning describes alternate processing, alternate locations, recovery exercises, and full reconstitution; its 2026 OT backup guidance likewise stresses that backups should be tested and reviewed during recovery exercises rather than merely created.",
-        "expected_upside": "Makes hidden single points of failure visible, supports the sustainability principle, and can prevent a technically intact repository from becoming operationally stranded.",
+        "id": "frontier-cross-cell-challenge-protocol-008",
+        "name": "Cross-cell challenge protocol instead of central truth arbitration",
+        "idea": "At large scale, route disagreements between domain cells into explicit challenge objects rather than asking a central model to pick a winner. A challenge records the conflicting claims, shared definitions, decisive evidence sought, forecasts that would discriminate between views, and expiry/revisit conditions. Independent agents can then compete to resolve the uncertainty while both source positions remain intact.",
+        "why_novel_here": "HumanityAI already preserves contradiction, but large-scale coordination will need a protocol for disagreements that cross ownership boundaries. This turns conflict itself into schedulable research without creating a central epistemic sovereign.",
+        "evidence_analogy": "NASA interface-management guidance emphasizes explicit interface ownership, compatibility checks, controlled change, and capturing rationale/assumptions when multiple parties must integrate. HumanityAI can import the coordination structure while replacing engineering compatibility disputes with evidence-seeking challenges.",
+        "expected_upside": "Makes cross-domain uncertainty actionable, supports parallel independent work, and limits pressure to erase disagreement merely to keep a unified knowledge graph tidy.",
         "failure_modes": [
-          "Building redundant infrastructure too early could waste effort.",
-          "Simulations may miss provider-specific failure modes.",
-          "A dependency inventory can become stale if it is not tied to observable mission functions."
+          "Challenge volume could explode faster than useful resolution capacity.",
+          "Agents may manufacture superficial disagreements to create tasks.",
+          "Some normative conflicts cannot be resolved by additional evidence."
         ],
-        "rights_distribution": "Prefer replaceable, least-privilege dependencies and avoid resilience designs that centralize additional authority. Do not copy private credentials or personal data into public recovery state.",
-        "reversibility": "High for mapping and tabletop simulation; actual provider migration would be separately evaluated and may require human review.",
+        "rights_distribution": "Normative/value disputes must be labeled rather than disguised as empirical challenges; constitutional or consequential governance conflicts remain human-governed.",
+        "reversibility": "High; challenge objects can begin as an optional derived layer.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Create a read-only tabletop for loss of the current scheduler or model provider and ask whether a fresh operator can identify, from public state alone, the minimum components needed to resume research safely within 24 hours. If the answer depends on undocumented private context, record exactly which missing interface/state caused the block."
+        "falsifiable_next_test": "Find one real contradiction spanning two current evidence/problem areas and write a temporary challenge object specifying what observation or source would materially update each side. If no useful discriminating test can be expressed, document whether the disagreement is definitional, normative, or structurally cross-domain."
       }
     ],
     "rejected_or_deferred": [
-      "Immediately mirror the repository and automation across several providers: redundancy before identifying actual recovery requirements would add attack surface and maintenance burden.",
-      "Store all founder conversations as canonical memory: this would increase privacy, prompt-injection, provenance, and path-dependence risks rather than prove public recoverability.",
-      "Elect a replacement human authority now: governance succession is consequential and premature; first determine whether technical and epistemic continuity can be reconstructed without changing authority."
+      "Immediately split HumanityAI into many repositories: organizational partition before testing interface boundaries would create fragmentation and operational overhead.",
+      "Use one increasingly powerful coordinator model over every domain: this scales context and authority together and creates a correlated failure point.",
+      "Let every cell invent arbitrary schemas: local autonomy without stable interfaces would make integration and independent verification progressively harder."
     ],
     "evidence_checked": [
       {
-        "title": "NIST Contingency Planning Guide for Federal Information Systems, SP 800-34 Rev. 1",
-        "url": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf",
-        "supports": "Contingency plans should be exercised, including alternate processing and full recovery/reconstitution rather than existing only as documentation."
+        "title": "NASA Systems Engineering Handbook — Interface Management",
+        "url": "https://www.nasa.gov/reference/6-3-interface-management/",
+        "supports": "When development is divided among parties, interfaces should be explicitly defined, owned, controlled, checked for compatibility, verified, and updated through controlled change."
       },
       {
-        "title": "NIST OT Backup Quick Start Guide, SP 1339",
-        "url": "https://www.nist.gov/publications/ot-backup-quick-start-guide",
-        "supports": "Recovery material should be regularly tested and reviewed during recovery exercises."
+        "title": "NASA Systems Engineering Handbook — Interface Requirements Document Outline",
+        "url": "https://www.nasa.gov/reference/appendix-l-interface-requirements-document-outline/",
+        "supports": "Interface documents should state purpose/scope, precedence, responsibility and change authority, then define the interface rather than duplicate higher-level documents."
       },
       "PRINCIPLES.md",
-      "SECURITY.md",
-      "agent/CHARTER.md",
       "IMPACT_MODEL.md",
-      "FAILURE_RECOVERY.md",
       "agent/frontier_state.json",
-      "recent repository commits through 2026-09-06T13:27:13Z"
+      "agent/heartbeats/frontier.json"
     ],
-    "recommended_next_test": "Run a read-only clean-room mission recovery drill before adding redundancy. It has higher information value: if a fresh actor cannot reconstruct the institution from public state, duplicating infrastructure would only duplicate an unrecoverable design.",
+    "recommended_next_test": "Prototype federation only as a read-only interface exercise across two existing domains. Measure information loss, ambiguity, cross-domain usefulness, and whether independent ownership actually reduces coupling before changing architecture.",
     "human_review_required": false
   },
   "mode_history": [
     "zero_based_challenger",
     "cross_discipline_import",
-    "pre_mortem_failure_from_future"
+    "pre_mortem_failure_from_future",
+    "scale_jump_test"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
