@@ -33,6 +33,40 @@
       "last_reviewed": "2026-09-06",
       "generated_by": "HumanityAI autonomous research loop; source is human-produced systematic review",
       "human_reviewed": false
+    },
+    {
+      "id": "E0002",
+      "claim": "For lower-income people in U.S. healthcare settings, current evidence is insufficient to conclude that medical-financial partnerships improve financial or health outcomes; the available studies generally found small, non-significant financial effects, with one study reporting improvements in appointment attendance and vaccination adherence.",
+      "claim_type": "estimate",
+      "status": "insufficient_evidence",
+      "problem_ids": ["P02", "P03", "P07"],
+      "sources": [
+        {
+          "url": "https://www.campbellcollaboration.org/review/medical-financial-partnerships-for-improving-financial-and-medical-outcomes-for-lower-income-americans-a-systematic-review/",
+          "title": "Medical-financial partnerships for improving financial and medical outcomes for lower-income Americans: A systematic review",
+          "publisher": "Campbell Collaboration",
+          "published_date": "2024-11-01",
+          "accessed_date": "2026-09-06",
+          "source_type": "systematic_review",
+          "relationship": "qualifies",
+          "notes": "Systematic review of four U.S. studies, including two randomized and two quasi-experimental studies. Campbell reports small and non-significant financial effects overall, one positive health-service-use finding, and important methodological weaknesses across the evidence base."
+        }
+      ],
+      "confidence": 0.88,
+      "confidence_rationale": "The systematic review directly addresses the intervention class and explicitly concludes that evidence is insufficient, but the underlying evidence base is only four studies with small samples and methodological weaknesses, so confidence is high in the statement of uncertainty rather than in any precise effect estimate.",
+      "limitations": [
+        "Only four studies met inclusion criteria, most in pediatric healthcare settings, so evidence is sparse and may not generalize to other populations, financial services, or healthcare systems.",
+        "The included studies evaluated different services, including tax preparation, financial coaching, and counseling; treating them as one uniform intervention would obscure important implementation differences.",
+        "Methodological weaknesses and small sample sizes limit causal and quantitative conclusions.",
+        "Absence of statistically significant effects in this small evidence base is not evidence that medical-financial partnerships are ineffective; it means robust effectiveness has not yet been demonstrated.",
+        "This record describes intervention evidence only and does not imply that HumanityAI should implement, promote, or deprioritize any specific medical-financial partnership."
+      ],
+      "counterevidence": [
+        "One included study reported statistically significant improvements in attending appointments and adhering to vaccination schedules, so the evidence is not uniformly null across all health-related outcomes."
+      ],
+      "last_reviewed": "2026-09-06",
+      "generated_by": "HumanityAI secondary staggered autonomous research pass; source is human-produced systematic review",
+      "human_reviewed": false
     }
   ]
 }
