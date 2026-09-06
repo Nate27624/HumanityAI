@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-06T21:41:22Z",
-  "last_success_at": "2026-09-06T21:41:22Z",
+  "last_attempt_at": "2026-09-06T23:37:00Z",
+  "last_success_at": "2026-09-06T23:37:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T21:41:22Z-frontier",
+  "last_run_key": "2026-09-06T23:37:00Z-adaptive-worker-b",
   "consecutive_non_success": 0,
-  "notes": "Experiment-generator run completed successfully. Added a blind historical backtest specification to compare the current supply-first workflow with the proposed decision-centric workflow before any architecture promotion. No human-review boundary crossed."
+  "notes": "Selected mode: intervention evidence / negative-evidence exploration. Recent work covered baselines, replication, security, and architecture; core evidence had no clear harmful-intervention case. Opened PR #18 with a Campbell systematic-review candidate showing Scared Straight-style juvenile-awareness programs likely increase offending, preserving dated/U.S.-only limitations. Direct-main heartbeat write was correctly blocked by newly active branch protection, so this heartbeat is carried on the worker branch pending CI/merge. Strongest unresolved next option: independently verify PR #18 and decide whether core evidence needs explicit harmful-effect representation."
 }
