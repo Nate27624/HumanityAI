@@ -115,3 +115,5 @@ merge exact reviewed SHA
 ```
 
 Repository issue #11 tracks the GitHub-level protection needed to make this authority separation mechanical rather than merely policy-enforced.
+
+<!-- Temporary issue #11 protected-path gate test by AI-Bott. This branch/PR must not be merged without Nate27624 CODEOWNER approval. -->
