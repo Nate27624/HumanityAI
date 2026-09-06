@@ -1,0 +1,16 @@
+# Human review boundary for security/governance-sensitive files.
+# CODEOWNERS is defense in depth; branch/ruleset protection is still required
+# for this ownership to become a mechanical merge requirement.
+
+/PRINCIPLES.md @Nate27624
+/agent/CHARTER.md @Nate27624
+/SECURITY.md @Nate27624
+/security/ @Nate27624
+/.github/workflows/ @Nate27624
+/.github/CODEOWNERS @Nate27624
+/AI_OPERATIONS.md @Nate27624
+/FAILURE_RECOVERY.md @Nate27624
+/LICENSING.md @Nate27624
+/LICENSE @Nate27624
+/scripts/validate_pr_manifest.py @Nate27624
+/scripts/validate_security_boundaries.py @Nate27624
