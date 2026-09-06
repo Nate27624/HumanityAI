@@ -105,6 +105,41 @@
       "last_reviewed": "2026-09-06",
       "generated_by": "HumanityAI secondary staggered autonomous research pass; source is human-produced systematic review",
       "human_reviewed": false
+    },
+    {
+      "id": "E0004",
+      "claim": "V-Dem's 2026 global regime classification estimates that 74% of the world's population, about 6 billion people, lived in autocracies in 2025; the same analysis classifies 92 autocracies and 87 democracies, while explicitly acknowledging classification uncertainty around regime thresholds.",
+      "claim_type": "estimate",
+      "status": "supported",
+      "problem_ids": ["P08"],
+      "sources": [
+        {
+          "url": "https://doi.org/10.1080/13510347.2026.2661683",
+          "title": "State of the world 2025: unravelling the democratic era?",
+          "publisher": "Democratization",
+          "published_date": "2026-05-18",
+          "accessed_date": "2026-09-06",
+          "source_type": "peer_reviewed",
+          "relationship": "supports",
+          "notes": "Peer-reviewed V-Dem analysis reports 92 autocracies and 87 democracies at the end of 2025, with autocracies home to 74% of the world's population. It also reports grey-zone uncertainty: depending on measurement uncertainty, the number of democracies could range from 74 to 95 and autocracies from 84 to 105."
+        }
+      ],
+      "confidence": 0.91,
+      "confidence_rationale": "The claim directly follows a current peer-reviewed V-Dem analysis built from a widely used cross-national democracy dataset. Confidence is high in the faithful reproduction of that source's estimate, while the record preserves the source's own measurement uncertainty and does not treat regime classification as an objective ground truth about every dimension of liberty or institutional quality.",
+      "limitations": [
+        "V-Dem's Regimes of the World classification is a research measurement model with thresholds and expert-coded inputs; alternative democracy datasets and conceptual definitions can classify some countries differently.",
+        "The 74% population share is dominated by populous countries and is not equivalent to saying 74% of individuals experience the same degree or kind of rights restriction.",
+        "Democracy/autocracy classification does not directly measure all components of P08, including rule of law, civil liberties, state capacity, corruption, due process, local governance, or the practical ability to exercise formal rights.",
+        "The source identifies grey-zone cases around regime thresholds, so country counts should not be interpreted as exact natural categories without uncertainty.",
+        "This descriptive baseline is not evidence that any particular democracy-promotion, institutional-reform, or governance intervention is effective or cost-effective."
+      ],
+      "counterevidence": [
+        "The source's own uncertainty analysis allows materially different country totals near regime thresholds, showing that a single democracy-versus-autocracy count compresses continuous and uncertain institutional variation.",
+        "Alternative governance and democracy measurement frameworks use different concepts and coding rules, so this indicator should be paired with other rights, liberty, rule-of-law, and institutional-quality measures rather than treated as a complete P08 baseline."
+      ],
+      "last_reviewed": "2026-09-06",
+      "generated_by": "HumanityAI primary autonomous research loop; source is human-produced peer-reviewed research",
+      "human_reviewed": false
     }
   ]
 }
