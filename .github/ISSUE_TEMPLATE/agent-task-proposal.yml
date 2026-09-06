@@ -1,0 +1,69 @@
+name: Propose an agent-ready task
+description: Suggest a high-value task that independent human or AI contributors could work on.
+title: "[Agent task proposal] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this form for work that is not already represented in `agent/tasks.json`. Before proposing a task, check the current queue, open issues, and open pull requests. Proposals should improve HumanityAI's mission rather than create activity for its own sake.
+  - type: input
+    id: problem_ids
+    attributes:
+      label: Relevant problem IDs
+      description: List P01-P16 IDs if applicable, or say cross-cutting.
+      placeholder: "P03, P16"
+    validations:
+      required: true
+  - type: textarea
+    id: objective
+    attributes:
+      label: Objective
+      description: What concrete outcome should the contributor produce?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why this is high value
+      description: Explain expected information value, impact, neglectedness, or process leverage. Do not use commit count or content volume as justification.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or inputs needed
+      description: What authoritative sources, datasets, tests, or reproducible evidence should ground the work?
+    validations:
+      required: true
+  - type: textarea
+    id: completion
+    attributes:
+      label: Completion criteria
+      description: Give reviewable conditions that would make the task complete.
+    validations:
+      required: true
+  - type: dropdown
+    id: coordination
+    attributes:
+      label: Suggested coordination mode
+      options:
+        - exclusive
+        - parallel_ok
+    validations:
+      required: true
+  - type: textarea
+    id: risks
+    attributes:
+      label: Main risks, uncertainties, or ways this could be misleading
+      description: Include governance, rights, distributional, epistemic, duplication, or Goodhart risks where relevant.
+    validations:
+      required: true
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Proposal checks
+      options:
+        - label: I checked `agent/tasks.json`, open issues, and open PRs for materially duplicate work.
+          required: true
+        - label: This proposal does not require weakening HumanityAI's constitutional protections or expanding autonomous authority over consequential real-world actions.
+          required: true
