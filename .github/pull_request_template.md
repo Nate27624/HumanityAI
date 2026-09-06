@@ -45,3 +45,4 @@
 - [ ] This does not expand autonomous authority over consequential real-world actions.
 - [ ] This does not silently modify foundational human-agency, rights, consent, pluralism, peaceful-cooperation, or governance protections.
 - [ ] I checked for materially duplicate work.
+- [ ] I have the right to submit my contribution under the repository's Apache-2.0 license and have not silently relicensed third-party source material.
