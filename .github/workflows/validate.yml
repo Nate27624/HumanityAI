@@ -43,7 +43,7 @@ jobs:
 
       - name: Validate security policy structure
         env:
-          GITHUB_EVENT_NAME: structure_only
+          SECURITY_STRUCTURE_ONLY: "1"
         run: python scripts/validate_security_boundaries.py
 
       - name: Validate external PR contribution manifest
