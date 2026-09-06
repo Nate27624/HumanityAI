@@ -23,3 +23,6 @@ jobs:
 
       - name: Run deterministic repository validation
         run: python scripts/validate_repo.py
+
+      - name: Validate ecosystem resource registry
+        run: python scripts/validate_resources.py
