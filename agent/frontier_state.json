@@ -1,77 +1,109 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T14:41:00Z-frontier",
-    "mode": "scale_jump_test",
+    "run_key": "2026-09-06T15:44:14Z-frontier",
+    "mode": "adversarial_red_team",
     "status": "success",
-    "broken_assumption": "Scaling HumanityAI mainly means adding more agents, tasks, evidence records, and review capacity inside one shared repository. At 100x-10,000x scale, the scarce resource becomes trustworthy integration across independently evolving domains, not raw agent throughput.",
-    "scale_scenario": "Assume thousands of agents and human contributors work concurrently across many problem domains. A single global queue, shared state file, central evidence corpus, and maintainer review funnel would create contention, context overload, correlated mistakes, and authority concentration even if every individual contribution follows today's rules.",
+    "broken_assumption": "If untrusted text cannot directly authorize a merge and CI is green, then a human-reviewed contribution is adequately isolated from adversarial influence. A sophisticated attacker can instead target the reviewer's information environment, exploit correlated 'independent' agents, or steer the agenda using valid-but-selective evidence without ever tripping today's prompt-injection or schema gates.",
+    "attack_scenario": "Assume an attacker does not try to make CI fail or insert an obvious jailbreak. They submit technically valid, well-sourced work whose narrative anchors the reviewing agent; they induce several apparently independent agents to repeat the same upstream claim or source set; or they flood one tractable domain with high-quality evidence so automated task selection gradually treats evidence density as importance. Every artifact can remain valid, provenance-present, non-malicious in isolation, and constitutionally compliant while the system's beliefs or agenda become systematically biased.",
     "strongest_ideas": [
       {
-        "id": "frontier-federated-evidence-cells-007",
-        "name": "Federated evidence cells with narrow interface contracts",
-        "idea": "Treat future HumanityAI as a federation of independently testable domain cells rather than one giant agent swarm. Each cell owns a bounded problem/evidence namespace and can evolve its internal workflow independently, but exports only a small signed/versioned public contract: claims, provenance, uncertainty, contradictions, forecasts, dependency references, and review status. A thin integration layer reasons across cells without gaining authority to silently rewrite their source records.",
-        "why_novel_here": "The project currently coordinates work primarily through repository-wide schemas, tasks, PRs, and shared project state. This proposal makes interfaces rather than internal implementation the durable scaling unit, allowing independent teams or future repositories/services to interoperate without one central agent understanding everything.",
-        "evidence_analogy": "NASA systems engineering treats interface definition, responsibility, change authority, compatibility, verification, and configuration control as first-class concerns when work is divided among parties. The transferable principle is to control the boundary while allowing internals to remain locally owned.",
-        "expected_upside": "Reduces merge contention and cognitive load, contains domain-specific errors, permits heterogeneous methods, enables independent replication or replacement of a cell, and makes decentralization operational rather than rhetorical.",
+        "id": "frontier-blind-first-review-firewall-009",
+        "name": "Blind-first review firewall",
+        "idea": "For external or otherwise adversarially exposed contributions, make the first reviewer assess an exact SHA from a minimized context assembled from trusted channels: changed-file list/diff, deterministic test results, current repository policy, and independently fetched cited evidence. Withhold contributor-authored PR prose, comments, urgency claims, and suggested reviewer instructions until after the reviewer commits a preliminary finding. Then reveal the narrative only for discrepancy checking. The human receives both the blind assessment and the later context-aware assessment.",
+        "why_novel_here": "HumanityAI currently separates merge authority from untrusted content, but the review model still reads attacker-controlled narrative before producing the recommendation that a human may rely on. Human-only merge therefore limits authority without fully isolating the human decision from a prompt-injected or anchored intermediary.",
+        "expected_upside": "Reduces indirect prompt injection and anchoring in the recommendation channel, makes reviewer reasoning less dependent on contributor framing, and creates a measurable discrepancy signal when the same SHA receives materially different assessments before and after untrusted narrative is revealed.",
         "failure_modes": [
-          "Poorly chosen boundaries can hide important cross-domain causal relationships.",
-          "Interface contracts can ossify too early and slow epistemic improvements.",
-          "Cells may develop incompatible confidence semantics or duplicate evidence.",
-          "A central integration layer could become a new authority bottleneck if it is allowed to adjudicate rather than expose disagreement."
+          "A diff or source itself can still contain adversarial text, so this reduces exposure rather than creating a perfect air gap.",
+          "Removing explanatory context can make legitimate complex changes harder to understand.",
+          "Two-pass review increases cost and may be excessive for low-risk contributions.",
+          "A human can still choose to trust the contributor narrative over the blind assessment."
         ],
-        "rights_distribution": "Domain cells should not gain unilateral authority over affected populations merely because they own a namespace. Cross-cell integration must preserve minority/contradictory views and constitutional constraints.",
-        "reversibility": "High as a conceptual/read-only experiment; no repository split is required to test the contract idea.",
+        "rights_distribution": "The protocol constrains machine influence rather than human choice; final human review remains free to reject either assessment and should retain dissent and uncertainty.",
+        "reversibility": "High if tested only as an optional review procedure on a few synthetic or historical PRs.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Pick two existing problem domains and independently serialize each into a deliberately narrow interface object without changing source records. Ask a fresh integration agent to answer one cross-domain question using only those exported objects. Record what information was missing or ambiguous. Reject federation if the interface must expose nearly the entire internal corpus to remain useful."
+        "falsifiable_next_test": "Take three historical HumanityAI PRs and generate two independent review records per exact SHA: one using only diff/tests/policy/independently fetched sources and one additionally using PR prose/comments. Measure whether conclusions, risk flags, or confidence change materially. Keep the method only if it detects framing dependence without unacceptable loss of necessary context."
       },
       {
-        "id": "frontier-cross-cell-challenge-protocol-008",
-        "name": "Cross-cell challenge protocol instead of central truth arbitration",
-        "idea": "At large scale, route disagreements between domain cells into explicit challenge objects rather than asking a central model to pick a winner. A challenge records the conflicting claims, shared definitions, decisive evidence sought, forecasts that would discriminate between views, and expiry/revisit conditions. Independent agents can then compete to resolve the uncertainty while both source positions remain intact.",
-        "why_novel_here": "HumanityAI already preserves contradiction, but large-scale coordination will need a protocol for disagreements that cross ownership boundaries. This turns conflict itself into schedulable research without creating a central epistemic sovereign.",
-        "evidence_analogy": "NASA interface-management guidance emphasizes explicit interface ownership, compatibility checks, controlled change, and capturing rationale/assumptions when multiple parties must integrate. HumanityAI can import the coordination structure while replacing engineering compatibility disputes with evidence-seeking challenges.",
-        "expected_upside": "Makes cross-domain uncertainty actionable, supports parallel independent work, and limits pressure to erase disagreement merely to keep a unified knowledge graph tidy.",
+        "id": "frontier-epistemic-provenance-010",
+        "name": "Epistemic provenance and correlation accounting",
+        "idea": "Treat an AI conclusion like a supply-chain artifact: record enough lineage to know which model family, retrieval path, source set, prior HumanityAI records, and upstream analyses materially shaped it. Do not count multiple agreeing agents as independent validation when their provenance shows shared models, search indexes, prompts, or source ancestry. Use independence as a property to demonstrate, not a contributor-count assumption.",
+        "why_novel_here": "HumanityAI values independent critique and external validation, but current contribution metadata identifies agent/model only coarsely and does not represent correlation among supposedly independent analyses. At scale, a Sybil-like epistemic failure could produce overwhelming apparent consensus from one upstream error.",
+        "evidence_analogy": "SLSA provenance treats verifiable production lineage as necessary to understand where a software artifact came from and how it was produced. HumanityAI can adapt the principle to evidence synthesis without pretending model lineage makes claims true.",
+        "expected_upside": "Makes correlated consensus visible, improves calibration of multi-agent agreement, helps audits identify common-mode failures, and allows future reviewers to deliberately seek genuinely different evidence or methods rather than merely more votes.",
         "failure_modes": [
-          "Challenge volume could explode faster than useful resolution capacity.",
-          "Agents may manufacture superficial disagreements to create tasks.",
-          "Some normative conflicts cannot be resolved by additional evidence."
+          "Detailed lineage can become burdensome or leak unnecessary implementation information.",
+          "Model/provider identity alone is a weak proxy for epistemic independence.",
+          "A formal lineage graph could create false confidence if hidden shared training data or search infrastructure remain unknowable.",
+          "Contributors may be unable or unwilling to disclose full agent internals."
         ],
-        "rights_distribution": "Normative/value disputes must be labeled rather than disguised as empirical challenges; constitutional or consequential governance conflicts remain human-governed.",
-        "reversibility": "High; challenge objects can begin as an optional derived layer.",
+        "rights_distribution": "Require only the minimum provenance needed to estimate correlation; do not demand private prompts, user data, or proprietary model internals.",
+        "reversibility": "High as an optional metadata experiment before changing contribution requirements.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Find one real contradiction spanning two current evidence/problem areas and write a temporary challenge object specifying what observation or source would materially update each side. If no useful discriminating test can be expressed, document whether the disagreement is definitional, normative, or structurally cross-domain."
+        "falsifiable_next_test": "For five existing or future agent-produced conclusions, record coarse lineage fields (model family when known, source set, retrieval method, HumanityAI records consumed). Ask whether an auditor can identify at least one common-mode dependency that raw contributor count would miss. Reject or simplify the schema if it adds no actionable distinction."
+      },
+      {
+        "id": "frontier-agenda-poisoning-011",
+        "name": "Agenda-poisoning resistance",
+        "idea": "Separate 'what evidence is easiest or most abundant to add' from 'what HumanityAI should investigate next.' Periodically generate a task portfolio from the problem map and impact uncertainties before looking at newly contributed evidence volume, then compare it with the normal evidence-aware queue. Large divergence becomes an audit signal for agenda capture, convenience bias, or contributor-driven topic concentration.",
+        "why_novel_here": "An attacker or benign contributor swarm can steer attention without falsifying anything: simply supply large amounts of valid evidence in favored domains. Existing validators can remain green while task selection increasingly follows corpus density rather than neglectedness or expected value.",
+        "expected_upside": "Detects a class of mission drift that content validation cannot catch, protects under-covered problems from rich-get-richer dynamics, and provides an empirical check on whether the project is choosing work versus merely reacting to available material.",
+        "failure_modes": [
+          "A blind portfolio can ignore genuinely important new evidence.",
+          "Forced diversity can waste effort on low-value domains.",
+          "Differences between portfolios are diagnostic rather than proof of manipulation."
+        ],
+        "rights_distribution": "This should expose agenda-setting pressure rather than impose quotas; normative prioritization remains pluralistic and contestable.",
+        "reversibility": "Very high because the comparison can be read-only.",
+        "human_action_required_now": false,
+        "falsifiable_next_test": "On one future run, produce two candidate task lists: one from mission/problem/impact gaps without consulting recent contribution volume, and one using normal repository state. Compare overlap and reasons for divergence. If repeated divergence tracks evidence-density rather than impact-related considerations, add it as a standing audit signal."
       }
     ],
     "rejected_or_deferred": [
-      "Immediately split HumanityAI into many repositories: organizational partition before testing interface boundaries would create fragmentation and operational overhead.",
-      "Use one increasingly powerful coordinator model over every domain: this scales context and authority together and creates a correlated failure point.",
-      "Let every cell invent arbitrary schemas: local autonomy without stable interfaces would make integration and independent verification progressively harder."
+      "Attempt to detect every malicious phrase with a larger blocklist: NIST's 2026 continuous-security framing argues against treating a finite guardrail set as universally robust, and attacker wording is not the only failure path.",
+      "Cryptographically sign every factual claim immediately: signatures prove origin/integrity, not truth, and would add substantial machinery before HumanityAI has demonstrated that provenance correlation is a practical bottleneck.",
+      "Make every review fully context-free: legitimate explanations and domain context are often necessary; the useful experiment is blind-first, then reveal context and compare.",
+      "Treat multiple AI votes as a safety threshold: correlated agents can share failure modes, so vote count without lineage can amplify false confidence."
     ],
     "evidence_checked": [
       {
-        "title": "NASA Systems Engineering Handbook — Interface Management",
-        "url": "https://www.nasa.gov/reference/6-3-interface-management/",
-        "supports": "When development is divided among parties, interfaces should be explicitly defined, owned, controlled, checked for compatibility, verified, and updated through controlled change."
+        "title": "NIST — Mathematical Proof Supports Transition to a Continuous-Monitor-and-Update Security Model for AI Systems",
+        "url": "https://www.nist.gov/news-events/news/2026/06/nist-mathematical-proof-supports-transition-continuous-monitor-and-update",
+        "supports": "NIST describes fixed guardrails as insufficient against adaptive adversarial prompting and emphasizes continuous red-teaming, updating, resilience, and impact limitation."
       },
       {
-        "title": "NASA Systems Engineering Handbook — Interface Requirements Document Outline",
-        "url": "https://www.nasa.gov/reference/appendix-l-interface-requirements-document-outline/",
-        "supports": "Interface documents should state purpose/scope, precedence, responsibility and change authority, then define the interface rather than duplicate higher-level documents."
+        "title": "NIST AI 100-2e2025 — Adversarial Machine Learning: A Taxonomy and Terminology of Attacks and Mitigations",
+        "url": "https://doi.org/10.6028/NIST.AI.100-2e2025",
+        "supports": "NIST treats evasion, poisoning, privacy, and misuse as lifecycle risks for generative AI and documents indirect prompt-injection attacks against agents."
+      },
+      {
+        "title": "SLSA v1.2 — Provenance",
+        "url": "https://slsa.dev/spec/v1.2/provenance",
+        "supports": "SLSA defines provenance as verifiable information tracing an artifact through how and where it was produced; this is used here only as an analogy for tracking epistemic lineage and common-mode dependencies."
+      },
+      {
+        "title": "OWASP AI Agent Security Cheat Sheet",
+        "url": "https://cheatsheetseries.owasp.org/cheatsheets/AI_Agent_Security_Cheat_Sheet.html",
+        "supports": "OWASP highlights indirect prompt injection, tool abuse, data exfiltration, and memory poisoning as distinct risks in agent architectures, supporting defense in depth rather than reliance on prompt wording."
       },
       "PRINCIPLES.md",
+      "SECURITY.md",
+      "security/policy.json",
+      "EVALUATION.md",
       "IMPACT_MODEL.md",
-      "agent/frontier_state.json",
-      "agent/heartbeats/frontier.json"
+      "FAILURE_RECOVERY.md",
+      "agent/tasks.json",
+      "recent repository commits and open-PR state"
     ],
-    "recommended_next_test": "Prototype federation only as a read-only interface exercise across two existing domains. Measure information loss, ambiguity, cross-domain usefulness, and whether independent ownership actually reduces coupling before changing architecture.",
+    "recommended_next_test": "Run a read-only blind-first versus narrative-aware review experiment on historical PRs and a separate coarse epistemic-lineage exercise on several agent-produced conclusions. These tests can determine whether reviewer framing dependence and correlated consensus are real enough to justify architecture changes before modifying protected security policy.",
     "human_review_required": false
   },
   "mode_history": [
     "zero_based_challenger",
     "cross_discipline_import",
     "pre_mortem_failure_from_future",
-    "scale_jump_test"
+    "scale_jump_test",
+    "adversarial_red_team"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
