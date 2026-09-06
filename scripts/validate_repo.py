@@ -9,7 +9,7 @@ from __future__ import annotations
 
 import json
 import sys
-from datetime import date
+from datetime import date, datetime
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -21,6 +21,23 @@ ALLOWED_RELATIONSHIPS = {"supports", "contradicts", "qualifies", "context"}
 ALLOWED_SOURCE_TYPES = {"primary_data", "peer_reviewed", "systematic_review", "official_report", "preprint", "expert_analysis", "news", "project_documentation", "other"}
 ALLOWED_INDICATOR_VALUE_TYPES = {"observed", "estimate", "projection", "index"}
 ALLOWED_INDICATOR_SOURCE_TYPES = {"primary_data", "official_report", "peer_reviewed", "systematic_review"}
+ALLOWED_HEARTBEAT_STATUSES = {
+    "not_yet_recorded",
+    "success",
+    "partial_success",
+    "no_change_needed",
+    "blocked_transient",
+    "blocked_permission",
+    "blocked_governance",
+    "failed_validation",
+    "reverted",
+}
+EXPECTED_HEARTBEATS = {
+    "primary": 26,
+    "frontier": 41,
+    "secondary": 56,
+    "audit": 11,
+}
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -50,6 +67,16 @@ def looks_like_http_url(value: object) -> bool:
         return False
     parsed = urlparse(value)
     return parsed.scheme in {"http", "https"} and bool(parsed.netloc)
+
+
+def is_iso_datetime(value: object) -> bool:
+    if not isinstance(value, str) or not value.strip():
+        return False
+    try:
+        datetime.fromisoformat(value.replace("Z", "+00:00"))
+    except ValueError:
+        return False
+    return True
 
 
 def validate_problems() -> set[str]:
@@ -194,6 +221,83 @@ def validate_indicators(problem_ids: set[str]) -> None:
             fail(f"{where} source: invalid source_type {source.get('source_type')!r}")
 
 
+def validate_heartbeats() -> None:
+    required_keys = {
+        "schema_version",
+        "role",
+        "expected_cadence_minutes",
+        "expected_minute",
+        "last_attempt_at",
+        "last_success_at",
+        "last_status",
+        "last_run_key",
+        "consecutive_non_success",
+        "notes",
+    }
+    heartbeat_dir = ROOT / "agent" / "heartbeats"
+    for role, expected_minute in EXPECTED_HEARTBEATS.items():
+        relative = f"agent/heartbeats/{role}.json"
+        doc = load_json(relative)
+        if not isinstance(doc, dict):
+            continue
+        where = relative
+        extra = set(doc) - required_keys
+        missing = required_keys - set(doc)
+        if missing:
+            fail(f"{where}: missing heartbeat field(s): {', '.join(sorted(missing))}")
+        if extra:
+            fail(f"{where}: unexpected heartbeat field(s): {', '.join(sorted(extra))}")
+        if doc.get("schema_version") != "1.0":
+            fail(f"{where}: schema_version must be '1.0'")
+        if doc.get("role") != role:
+            fail(f"{where}: role must match filename ({role})")
+        if doc.get("expected_cadence_minutes") != 60:
+            fail(f"{where}: expected_cadence_minutes must be 60")
+        if doc.get("expected_minute") != expected_minute:
+            fail(f"{where}: expected_minute must be {expected_minute} for {role}")
+        status = doc.get("last_status")
+        if status not in ALLOWED_HEARTBEAT_STATUSES:
+            fail(f"{where}: invalid last_status {status!r}")
+        counter = doc.get("consecutive_non_success")
+        if not isinstance(counter, int) or isinstance(counter, bool) or counter < 0:
+            fail(f"{where}: consecutive_non_success must be a non-negative integer")
+        if not isinstance(doc.get("notes"), str):
+            fail(f"{where}: notes must be a string")
+        for field in ("last_attempt_at", "last_success_at"):
+            value = doc.get(field)
+            if value is not None and not is_iso_datetime(value):
+                fail(f"{where}: {field} must be null or ISO date-time")
+        run_key = doc.get("last_run_key")
+        if run_key is not None and (not isinstance(run_key, str) or not run_key.strip()):
+            fail(f"{where}: last_run_key must be null or a non-empty string")
+        if status == "not_yet_recorded":
+            if any(doc.get(field) is not None for field in ("last_attempt_at", "last_success_at", "last_run_key")):
+                fail(f"{where}: not_yet_recorded heartbeat must have null timestamps/run key")
+            if counter != 0:
+                fail(f"{where}: not_yet_recorded heartbeat must have consecutive_non_success=0")
+        else:
+            if doc.get("last_attempt_at") is None or run_key is None:
+                fail(f"{where}: recorded heartbeat requires last_attempt_at and last_run_key")
+            if status in {"success", "no_change_needed"} and doc.get("last_success_at") is None:
+                fail(f"{where}: successful heartbeat requires last_success_at")
+            if status in {"success", "no_change_needed"} and counter != 0:
+                fail(f"{where}: successful heartbeat must reset consecutive_non_success to 0")
+        attempt = doc.get("last_attempt_at")
+        success = doc.get("last_success_at")
+        if attempt is not None and success is not None:
+            attempt_dt = datetime.fromisoformat(attempt.replace("Z", "+00:00"))
+            success_dt = datetime.fromisoformat(success.replace("Z", "+00:00"))
+            if success_dt > attempt_dt:
+                fail(f"{where}: last_success_at cannot be later than last_attempt_at")
+
+    expected_files = {f"{role}.json" for role in EXPECTED_HEARTBEATS}
+    if heartbeat_dir.exists():
+        actual_json = {path.name for path in heartbeat_dir.glob("*.json")}
+        unexpected = actual_json - expected_files
+        if unexpected:
+            fail(f"agent/heartbeats: unexpected role heartbeat file(s): {', '.join(sorted(unexpected))}")
+
+
 def validate_schema_files() -> None:
     schema_dir = ROOT / "schema"
     if not schema_dir.exists():
@@ -212,7 +316,7 @@ def validate_schema_files() -> None:
 
 
 def validate_required_docs() -> None:
-    required = ["README.md", "PRINCIPLES.md", "PROBLEM_MAP.md", "CONTRIBUTING.md", "AI_OPERATIONS.md", "EVALUATION.md", "IMPACT_MODEL.md", "FAILURE_RECOVERY.md", "ROADMAP.md", "agent/CHARTER.md", "agent/state.json"]
+    required = ["README.md", "PRINCIPLES.md", "PROBLEM_MAP.md", "CONTRIBUTING.md", "AI_OPERATIONS.md", "EVALUATION.md", "IMPACT_MODEL.md", "FAILURE_RECOVERY.md", "ROADMAP.md", "agent/CHARTER.md", "agent/state.json", "agent/heartbeats/README.md", "schema/agent-heartbeat.schema.json"]
     for relative in required:
         if not (ROOT / relative).exists():
             fail(f"missing required project document: {relative}")
@@ -223,6 +327,7 @@ def main() -> int:
     problem_ids = validate_problems()
     validate_evidence(problem_ids)
     validate_indicators(problem_ids)
+    validate_heartbeats()
     validate_schema_files()
     for message in warnings:
         print(f"WARNING: {message}")
