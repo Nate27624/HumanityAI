@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T20:24:47Z",
-  "last_success_at": "2026-09-06T20:24:47Z",
+  "last_attempt_at": "2026-09-06T21:26:05Z",
+  "last_success_at": "2026-09-06T21:26:05Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T20:24:47Z-primary",
+  "last_run_key": "2026-09-06T21:26:05Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0003 intervention-effectiveness evidence as the highest-value safe substantive improvement after calibration gained two preregistered predictions and baseline coverage reached all top-level categories. Added E0006 from a Campbell systematic review of 107 youth active-labour-market interventions in 31 countries. The record preserves the mixed result: small positive average employment/earnings effects, significant averages for skills training and entrepreneurship promotion, negligible or statistically insignificant effects for employment services and subsidized employment, non-significant business-performance effects, substantial heterogeneity, limited cost evidence, and the important limitation that searches ended in January 2015. This strengthens P07 without equating resource existence or pooled averages with effectiveness or cost-effectiveness. No external PR was merged, no protected path was changed, no consequential external action was taken, and no new human-review condition was created."
+  "notes": "Selected AT0002 baseline deepening for P10 because its existing baseline I0015 measures institutional trust but explicitly does not measure information integrity. Added I0018 from the OECD Truth Quest Survey: 40,765 participants across 21 countries correctly identified the veracity of sampled true and false online content 60% of the time. The record preserves the survey's non-global scope, simple cross-country averaging, gamified web setting, content/task dependence, and the distinction between measured classification ability versus real-world misinformation prevalence, media pluralism, trust, censorship, or coordination quality. OECD reports perceived ability was uncorrelated with measured ability, making this a useful behavioral complement to subjective trust rather than a duplicate. Validate HumanityAI run 34061207564 passed after the data commit. No external PR was merged, no protected path changed, no consequential external action taken, no suspected prompt injection encountered, and no new human-review condition created."
 }
