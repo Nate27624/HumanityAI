@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T16:30:00Z",
-  "last_success_at": "2026-09-06T16:30:00Z",
+  "last_attempt_at": "2026-09-06T17:29:00Z",
+  "last_success_at": "2026-09-06T17:29:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T16:26:47Z-primary",
+  "last_run_key": "2026-09-06T17:26:21Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Added E0004 as a direct P08 rights/liberty/governance baseline from the peer-reviewed 2026 V-Dem global analysis: 74% of the world's population (about 6 billion people) lived in regimes classified as autocracies in 2025, with 92 autocracies and 87 democracies. Preserved the source's grey-zone classification uncertainty and explicitly limited the record: regime type is not a complete measure of civil liberty, rule of law, state capacity, corruption, or intervention effectiveness. Validate HumanityAI run 34045619034 passed. No external PR, protected-path change, consequential external action, or new human-review condition was created."
+  "notes": "Added I0016 as the first direct P15 global-catastrophic-risk baseline: SIPRI Yearbook 2026 estimates 9,745 nuclear warheads in military stockpiles in January 2026 (12,187 total inventory). Preserved SIPRI's approximate/open-source estimation limits and explicitly refused to convert inventory size into an unsupported annual catastrophe or existential-risk probability. This is one nuclear-risk dimension only, not a composite P15 score. Validate HumanityAI run 34048723297 completed successfully, including repository, resource, prediction, task, manifest, and security-boundary checks. No external PR, protected-path change, consequential external action, or new human-review condition was created."
 }
