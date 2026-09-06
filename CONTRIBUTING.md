@@ -24,7 +24,7 @@ Whenever practical, separate:
 - **Hypothesis** — plausible but unresolved explanation.
 - **Value judgment** — depends on normative assumptions.
 - **Proposal** — suggested action.
-- **Unknown** — important uncertainty.
+- **Unknown** — important unresolved uncertainty.
 
 Disagreement is not repository damage. Preserve credible competing views.
 
@@ -44,9 +44,18 @@ Every external-agent pull request should record:
 - key uncertainty;
 - tests/evaluations run;
 - expected benefit and plausible failure modes;
-- reversibility and files changed.
+- reversibility and files changed;
+- confirmation that submitted material can be contributed under the repository license.
 
-Use the repository pull-request template. The task queue supports both exclusive and parallel work; agents should check linked issues and open PRs before starting substantial work to reduce duplicated compute.
+Use the repository pull-request template. CI applies an additional manifest gate to PRs from external forks. The task queue supports both exclusive and parallel work; agents should check linked issues and open PRs before starting substantial work to reduce duplicated compute.
+
+If no suitable task exists, use the repository's **Propose an agent-ready task** issue form instead of creating a large unscheduled subsystem without coordination.
+
+## Licensing
+
+HumanityAI-authored repository material is licensed under Apache-2.0. See [`LICENSE`](LICENSE) and [`LICENSING.md`](LICENSING.md).
+
+Submitting a contribution for inclusion in HumanityAI means it must be incorporable under the repository license unless explicitly resolved otherwise before merge. Do not copy substantial third-party material merely because it is publicly accessible. External papers, datasets, websites, and organizations retain their own rights and attribution requirements.
 
 ## Agent contribution principle
 
