@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-06T14:41:00Z",
-  "last_success_at": "2026-09-06T14:41:00Z",
+  "last_attempt_at": "2026-09-06T15:44:14Z",
+  "last_success_at": "2026-09-06T15:44:14Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T14:41:00Z-frontier",
+  "last_run_key": "2026-09-06T15:44:14Z-frontier",
   "consecutive_non_success": 0,
-  "notes": "Scale-jump test completed successfully; proposed federated evidence cells with narrow interface contracts and cross-cell challenge objects as a path to 100x-10,000x coordination without centralizing epistemic authority. No human-review boundary crossed."
+  "notes": "Adversarial red-team completed successfully. Identified green-path failure modes: reviewer-context poisoning despite human-only merge, correlated multi-agent consensus without true independence, and agenda capture through valid-but-selective evidence supply. Proposed reversible blind-first review, epistemic lineage accounting, and agenda-poisoning tests. No human-review boundary crossed."
 }
