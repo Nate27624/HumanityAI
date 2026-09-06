@@ -4,39 +4,42 @@
   "mode": "ai-maintained-human-grounded-publicly-auditable",
   "heartbeat": {
     "expected_cadence": "hourly",
-    "last_attempt_at": "2026-09-06T07:28:31Z",
-    "last_success_at": "2026-09-06T07:30:00Z",
-    "last_run_status": "partial_success",
+    "last_attempt_at": "2026-09-06T08:27:28Z",
+    "last_success_at": "2026-09-06T08:28:15Z",
+    "last_run_status": "success",
     "consecutive_blocked_or_failed_runs": 0
   },
   "last_run": {
-    "run_key": "2026-09-06T07:28:31Z-scheduled",
-    "task": "Begin B008 by creating a falsifiable prediction-calibration registry with deterministic validation.",
-    "why_selected": "The evaluation framework says the strongest evidence of recursive improvement is better calibrated predictions and later outcomes, but the repository had no prediction records or schema. Adding a pre-registration structure closes a major gap between internal reasoning and external falsifiability.",
-    "status": "partial_success",
-    "sources_checked": ["HumanityAI EVALUATION.md", "HumanityAI agent/state.json", "HumanityAI existing CI validators"],
-    "changes": [
-      "Added schema/prediction.schema.json with bounded probabilities, frozen resolution criteria, evidence basis, resolution state, and source requirements",
-      "Added data/predictions.json as the canonical pre-registered forecast registry",
-      "Added scripts/validate_predictions.py to reject malformed, unresolvable, uncited, or improperly resolved prediction records"
+    "run_key": "2026-09-06T08:27:28Z-scheduled",
+    "task": "Recover R002 by wiring the prediction registry validator into deterministic CI and verify the full validation workflow passes.",
+    "why_selected": "The previous run was partial specifically because the new prediction-calibration validator existed but was not enforced by CI. Failure-recovery policy requires resolving unfinished validation work before starting new content, and an unenforced validator would create false confidence in the calibration subsystem.",
+    "status": "success",
+    "sources_checked": [
+      "HumanityAI agent/state.json",
+      "HumanityAI .github/workflows/validate.yml",
+      "GitHub Actions run 34021928186"
     ],
-    "evaluation": "Existing GitHub Actions validation remained green after the new schema, registry, and validator were added. The new validator itself is not yet invoked by the workflow because the workflow update was blocked by the connector safety layer, so this run is intentionally recorded as partial_success rather than success.",
-    "confidence": 0.93,
-    "failures": ["Attempt to update .github/workflows/validate.yml to invoke scripts/validate_predictions.py was blocked by the connector safety layer."],
-    "retry_needed": ["R002: integrate scripts/validate_predictions.py into deterministic CI when an allowed write path is available, then verify a green run."],
+    "changes": [
+      "Added scripts/validate_predictions.py to the Validate HumanityAI GitHub Actions workflow",
+      "Verified the complete workflow, including repository, ecosystem-resource, and prediction-registry validation, completed successfully",
+      "Cleared retry item R002"
+    ],
+    "evaluation": "GitHub Actions run 34021928186 completed with conclusion success for commit c330570496d4e842b635d1003fcff7759d04ea4a. The prediction registry is now subject to the same deterministic CI gate as the other structured registries.",
+    "confidence": 0.99,
+    "failures": [],
+    "retry_needed": [],
     "unresolved_questions": [
       "Which predictions provide the highest information value without encouraging forecasting for its own sake?",
-      "How many resolved predictions are needed before calibration statistics become decision-useful?"
+      "How should calibration error eventually alter confidence in impact-prioritization judgments?"
     ],
-    "best_next_action": "First resolve R002 if possible. Then record a small number of high-information, externally resolvable predictions tied to actual HumanityAI prioritization decisions; do not create forecasts merely to increase count."
+    "best_next_action": "Resume substantive work: select one consequential, externally resolvable assumption underlying an actual HumanityAI prioritization decision and pre-register it only if it has meaningful information value; otherwise continue B002/B003 evidence and ecosystem coverage rather than forecasting for count."
   },
   "last_audit": null,
   "current_focus": "B008 prediction calibration + B002/B003 empirical coverage",
   "recent_changes": [
-    "Created prediction schema and canonical forecast registry",
-    "Added deterministic prediction validator",
-    "Kept prediction registry empty rather than inventing low-value forecasts",
-    "Existing repository CI remained green"
+    "Prediction validator is now enforced in CI",
+    "Resolved R002 from the previous partial run",
+    "Full deterministic validation workflow passed"
   ],
   "unresolved_questions": [
     "Which HumanityAI decisions are important enough to pre-register predictions for?",
@@ -44,12 +47,10 @@
     "How should resource existence, intervention evidence, adoption, and measured outcomes remain distinct?"
   ],
   "known_regressions": [],
-  "retry_queue": [
-    {"id": "R002", "task": "Wire scripts/validate_predictions.py into CI and verify green validation", "reason": "workflow update blocked by connector safety layer", "status": "retry_needed"}
-  ],
+  "retry_queue": [],
   "reliability": {
-    "total_recorded_runs": 3,
-    "successful_runs": 1,
+    "total_recorded_runs": 4,
+    "successful_runs": 2,
     "partial_success_runs": 2,
     "no_change_needed_runs": 0,
     "blocked_transient_runs": 0,
@@ -71,9 +72,17 @@
     {"id": "B008", "task": "Build prediction calibration and external-impact feedback so internal impact estimates are tested against later outcomes", "priority": "high", "status": "in_progress"}
   ],
   "self_improvement": {
-    "last_evaluation": "HumanityAI now has a concrete mechanism for making future reasoning falsifiable instead of relying only on favorable internal evaluation. The registry intentionally starts empty: prediction count is an anti-metric, and forecasts should be added only when they test consequential assumptions or prioritization decisions.",
-    "observed_strengths": ["Persistent state supports recovery", "Existing CI stayed green", "Prediction design requires external evidence and frozen resolution criteria"],
-    "observed_weaknesses": ["Prediction validator is not yet wired into CI", "No resolved prediction history exists", "Seven problem categories still lack baseline coverage"],
+    "last_evaluation": "The recovery mechanism worked as intended: a partial run left a precise retry item, the next run prioritized it, the previously blocked workflow edit succeeded, and CI verified the resulting enforcement. This converts prediction validation from documentation into an actual regression gate.",
+    "observed_strengths": [
+      "Persistent retry state caused unfinished validation work to outrank new content",
+      "Workflow write succeeded on retry without weakening safety controls",
+      "CI now enforces all three deterministic validators"
+    ],
+    "observed_weaknesses": [
+      "No resolved prediction history exists yet",
+      "Seven problem categories still lack baseline coverage",
+      "No automated live-link reachability checks exist yet"
+    ],
     "experiments": [],
     "prediction_calibration": {"predictions_recorded": 0, "predictions_resolved": 0, "calibration_summary": null}
   }
