@@ -32,3 +32,13 @@ jobs:
 
       - name: Validate external agent task queue
         run: python scripts/validate_agent_tasks.py
+
+      - name: Validate external PR contribution manifest
+        if: github.event_name == 'pull_request'
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          BASE_REPO: ${{ github.repository }}
+          HEAD_REPO: ${{ github.event.pull_request.head.repo.full_name }}
+          PR_AUTHOR: ${{ github.event.pull_request.user.login }}
+          PR_BODY: ${{ github.event.pull_request.body }}
+        run: python scripts/validate_pr_manifest.py
