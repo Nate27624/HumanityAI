@@ -140,6 +140,42 @@
       "last_reviewed": "2026-09-06",
       "generated_by": "HumanityAI primary autonomous research loop; source is human-produced peer-reviewed research",
       "human_reviewed": false
+    },
+    {
+      "id": "E0005",
+      "claim": "For at-risk youth aged 6 to 18, current comparative evidence is insufficient to conclude that participation in organised leisure-time sport improves risk behaviour, personal skills, or social-emotional outcomes; the available evidence is too sparse and heterogeneous for reliable pooled conclusions on most outcomes.",
+      "claim_type": "estimate",
+      "status": "insufficient_evidence",
+      "problem_ids": ["P05"],
+      "sources": [
+        {
+          "url": "https://www.campbellcollaboration.org/review/participation-in-organised-sport-to-improve-and-prevent-adverse-developmental-trajectories-of-at-risk-youth-a-systematic-review/",
+          "title": "Participation in organised sport to improve and prevent adverse developmental trajectories of at-risk youth: A systematic review",
+          "publisher": "Campbell Collaboration",
+          "published_date": "2024-01-17",
+          "accessed_date": "2026-09-06",
+          "source_type": "systematic_review",
+          "relationship": "qualifies",
+          "notes": "Campbell identified 13 comparative studies and included seven of sufficient methodological quality in the final synthesis. There were no randomized controlled trials. The studies contained 17,155 participants and 9,664 controls, were concentrated in Australia, the United States, and Canada, and searches were current through 2023."
+        }
+      ],
+      "confidence": 0.9,
+      "confidence_rationale": "The Campbell review directly concludes that the intervention evidence is inconclusive. Confidence is high in the statement that robust effectiveness has not been demonstrated, not in a claim of zero effect; the underlying studies are heterogeneous, non-randomized, and too sparse by outcome for strong pooled estimates.",
+      "limitations": [
+        "Only seven studies were judged of sufficient methodological quality for the final synthesis, and none were randomized controlled trials.",
+        "For most outcomes only one study was available; at most three studies could be combined in a meta-analysis, and no meta-analysis could be performed for primary risk-behaviour outcomes.",
+        "Most synthesized evidence came from the United States and Canada, with additional evidence from Australia, so transferability to other settings and sport systems is uncertain.",
+        "Organised sport programs vary in coaching, intensity, safeguarding, peer environment, selection, accessibility, and complementary services; treating participation as a uniform intervention can obscure meaningful heterogeneity.",
+        "Inconclusive evidence is not evidence that organised sport is ineffective; it means the current comparative research base does not support a robust general effectiveness claim.",
+        "This record concerns intervention effectiveness only and does not establish program cost-effectiveness, implementation quality, or HumanityAI's comparative advantage in promoting sport programs."
+      ],
+      "counterevidence": [
+        "Individual studies reported various primary and secondary outcomes, but too few studies measured the same outcomes to establish a consistent overall effect.",
+        "The review notes that some psychosocial-adjustment and depressive-symptom outcomes were reported by multiple studies, but the limited evidence remained insufficient for a general effectiveness conclusion."
+      ],
+      "last_reviewed": "2026-09-06",
+      "generated_by": "HumanityAI secondary staggered autonomous research pass; source is human-produced systematic review",
+      "human_reviewed": false
     }
   ]
 }
