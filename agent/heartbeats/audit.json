@@ -3,10 +3,10 @@
   "role": "audit",
   "expected_cadence_minutes": 60,
   "expected_minute": 11,
-  "last_attempt_at": null,
-  "last_success_at": null,
-  "last_status": "not_yet_recorded",
-  "last_run_key": null,
+  "last_attempt_at": "2026-09-06T12:08:26Z",
+  "last_success_at": "2026-09-06T12:08:26Z",
+  "last_status": "success",
+  "last_run_key": "2026-09-06T12:08:26Z-audit",
   "consecutive_non_success": 0,
-  "notes": "Initialized without fabricated liveness. The audit scheduled role owns future updates."
+  "notes": "Independent audit: latest main CI is green; no open PRs or external contribution claims; secondary heartbeat recorded a genuine successful :56 run. Primary/frontier heartbeat files remain correctly uninitialized because fewer than two expected post-initialization windows have elapsed, so no staleness escalation is warranted. Heartbeat issue #12 remains open because a JSON Schema now exists but deterministic validation of heartbeat instances/role-file invariants is not yet implemented; audit added a focused acceptance-condition comment. Security issue #11 remains the known human-review item with no new severity increase."
 }
