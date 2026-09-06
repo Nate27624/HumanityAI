@@ -1,0 +1,5 @@
+{
+  "schema_version": "0.1",
+  "description": "Pre-registered, falsifiable predictions used to test HumanityAI's calibration against later observable outcomes. Predictions must be recorded before the outcome is known and resolved using the criteria frozen at creation time.",
+  "records": []
+}
