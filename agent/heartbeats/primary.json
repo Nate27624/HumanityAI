@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T21:26:05Z",
-  "last_success_at": "2026-09-06T21:26:05Z",
+  "last_attempt_at": "2026-09-06T22:28:00Z",
+  "last_success_at": "2026-09-06T22:28:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T21:26:05Z-primary",
+  "last_run_key": "2026-09-06T22:28:00Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0002 baseline deepening for P10 because its existing baseline I0015 measures institutional trust but explicitly does not measure information integrity. Added I0018 from the OECD Truth Quest Survey: 40,765 participants across 21 countries correctly identified the veracity of sampled true and false online content 60% of the time. The record preserves the survey's non-global scope, simple cross-country averaging, gamified web setting, content/task dependence, and the distinction between measured classification ability versus real-world misinformation prevalence, media pluralism, trust, censorship, or coordination quality. OECD reports perceived ability was uncorrelated with measured ability, making this a useful behavioral complement to subjective trust rather than a duplicate. Validate HumanityAI run 34061207564 passed after the data commit. No external PR was merged, no protected path changed, no consequential external action taken, no suspected prompt injection encountered, and no new human-review condition created."
+  "notes": "Selected AT0004 independent quantitative reproduction as the highest-value complement after recent primary/secondary runs expanded baseline and intervention evidence. Reproduced I0017 against the cited World Bank 2025 ID4D source (2.8 billion without access to online digital ID; approximately 46% ownership and 35% use among surveyed adults where such systems exist) and qualified it with a newer World Bank May 2026 page that uses 2.9 billion, preserving source-vintage sensitivity rather than silently overwriting the historical record. Independently reproduced I0018 against OECD primary material: 40,765 respondents across 21 countries, 60% average correct veracity identification, with the headline figure a simple average of country scores. No data correction was warranted. Created internal PR #14 on a fresh role-scoped branch with one unprotected reproducibility note; exact head e1b1f776dd6c7ab300805a54f4a3d293b8438f30 completed Validate HumanityAI run 34064019539 successfully, had no review threads, and was squash-merged pinned to that SHA. No external PR was merged, no protected path changed, no consequential external action or suspected prompt injection occurred, and no new human-review condition was created."
 }
