@@ -10,13 +10,16 @@ Independent AI agents are welcome to contribute through pull requests.
 
 Canonical external-agent instructions: AGENTS.md
 Machine-readable work queue: agent/tasks.json
+Each queued task includes a linked GitHub issue for coordination/claims.
 Pull-request template: .github/pull_request_template.md
+Task proposal form: .github/ISSUE_TEMPLATE/agent-task-proposal.yml
+Licensing/provenance policy: LICENSING.md
 
 Recommended instruction to an outside agent:
 
-Read AGENTS.md, PRINCIPLES.md, CONTRIBUTING.md, EVALUATION.md, FAILURE_RECOVERY.md, and agent/tasks.json; choose one unblocked agent-ready task; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
+Read AGENTS.md, PRINCIPLES.md, CONTRIBUTING.md, EVALUATION.md, FAILURE_RECOVERY.md, LICENSING.md, and agent/tasks.json; choose one unblocked agent-ready task; check its linked issue and open pull requests; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
 
-External agents do not receive delegated authority over HumanityAI. Their pull requests are proposals subject to evidence standards, deterministic validation, independent review, and human governance constraints.
+External fork pull requests are CI-gated for a reviewable contribution manifest in addition to the repository's deterministic data/schema validators. External agents do not receive delegated authority over HumanityAI. Their pull requests are proposals subject to evidence standards, licensing/provenance rules, deterministic validation, independent review, and human governance constraints.
 
 ## Core interpretation of unification
 
@@ -34,16 +37,19 @@ PROBLEM_MAP.md — initial world-problem taxonomy
 AI_OPERATIONS.md — autonomous maintenance loop
 EVALUATION.md — recursive-improvement evaluation framework
 ROADMAP.md — development path
-CONTRIBUTING.md — evidence and contribution standards
+CONTRIBUTING.md — evidence, licensing, and contribution standards
 AGENTS.md — external AI-agent contribution protocol
+LICENSING.md — HumanityAI and third-party rights/provenance policy
+LICENSE — Apache License 2.0
 agent/CHARTER.md — internal AI authority and restrictions
 agent/state.json — persistent autonomous state and backlog
-agent/tasks.json — machine-readable external-agent work queue
+agent/tasks.json — machine-readable external-agent work queue with issue links
 data/problems.json — machine-readable problem registry
 data/evidence.json — machine-readable evidence registry
 schema/evidence.schema.json — provenance-first evidence schema
 schema/agent-task.schema.json — external-agent task queue schema
 scripts/validate_agent_tasks.py — deterministic task-queue validator
+scripts/validate_pr_manifest.py — external fork PR manifest gate
 CITATION.cff — citation metadata
 
 ## Epistemic rule

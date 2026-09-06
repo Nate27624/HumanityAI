@@ -29,14 +29,16 @@ Start here:
 1. Give your agent the repository and tell it to read [`AGENTS.md`](AGENTS.md).
 2. Have it inspect the machine-readable queue in [`agent/tasks.json`](agent/tasks.json).
 3. Let it choose an `agent_ready` task that matches its capabilities and is not blocked or duplicative.
-4. Work from a fork or branch and open a pull request using the repository PR template.
-5. HumanityAI's validators and independent review process evaluate the proposal before it becomes part of the shared model.
+4. Check the task's linked GitHub issue and open PRs, then work from a fork or branch.
+5. Open a pull request using the repository PR template; HumanityAI's validators and independent review process evaluate the proposal before it becomes part of the shared model.
+
+If no task is a good fit, use the repository's **Propose an agent-ready task** issue form rather than creating a large uncoordinated subsystem.
 
 A useful instruction is:
 
-> Read `AGENTS.md`, `PRINCIPLES.md`, `CONTRIBUTING.md`, `EVALUATION.md`, `FAILURE_RECOVERY.md`, and `agent/tasks.json`; choose one unblocked agent-ready task; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
+> Read `AGENTS.md`, `PRINCIPLES.md`, `CONTRIBUTING.md`, `EVALUATION.md`, `FAILURE_RECOVERY.md`, `LICENSING.md`, and `agent/tasks.json`; choose one unblocked agent-ready task; check its issue and open PRs; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
 
-External agent compute is **donated analysis, not delegated authority**. Pull requests are proposals. Evidence, uncertainty, safety constraints, CI, and review still apply.
+External agent compute is **donated analysis, not delegated authority**. Pull requests are proposals. Evidence, uncertainty, licensing, safety constraints, CI, and review still apply.
 
 ## Initial scope
 
@@ -99,16 +101,21 @@ The repository now includes:
 - intervention-effectiveness evidence;
 - deterministic validators and GitHub Actions CI;
 - persistent autonomous run/audit state;
-- a machine-readable external-agent task queue;
-- a standardized external-agent pull-request protocol.
+- a machine-readable external-agent task queue with linked coordination issues;
+- a standardized and CI-gated external-agent pull-request protocol;
+- Apache-2.0 licensing for HumanityAI-authored repository material with explicit third-party provenance limits.
 
-Key entry points are [`PRINCIPLES.md`](PRINCIPLES.md), [`AI_OPERATIONS.md`](AI_OPERATIONS.md), [`EVALUATION.md`](EVALUATION.md), [`AGENTS.md`](AGENTS.md), [`agent/tasks.json`](agent/tasks.json), and [`llms.txt`](llms.txt).
+Key entry points are [`PRINCIPLES.md`](PRINCIPLES.md), [`AI_OPERATIONS.md`](AI_OPERATIONS.md), [`EVALUATION.md`](EVALUATION.md), [`AGENTS.md`](AGENTS.md), [`agent/tasks.json`](agent/tasks.json), [`LICENSING.md`](LICENSING.md), and [`llms.txt`](llms.txt).
 
 ## Contributing and criticism
 
 Criticism is part of the architecture, not an attack on it. Corrections, contrary evidence, alternative causal models, better datasets, competing normative assumptions, improved evaluation methods, and independent replication are welcome.
 
 Human contributors should see [CONTRIBUTING.md](CONTRIBUTING.md). Agent operators should also read [AGENTS.md](AGENTS.md) and the live task queue in [agent/tasks.json](agent/tasks.json).
+
+## License
+
+HumanityAI-authored repository material is available under the [Apache License 2.0](LICENSE). External evidence and third-party datasets retain their original rights; see [LICENSING.md](LICENSING.md).
 
 ## Status
 

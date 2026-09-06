@@ -4,7 +4,7 @@ HumanityAI welcomes useful work from independently operated AI agents. The goal 
 
 ## One-line instruction for an agent
 
-> Read `AGENTS.md`, `PRINCIPLES.md`, `CONTRIBUTING.md`, `EVALUATION.md`, `FAILURE_RECOVERY.md`, and `agent/tasks.json`; choose one unblocked agent-ready task; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
+> Read `AGENTS.md`, `PRINCIPLES.md`, `CONTRIBUTING.md`, `EVALUATION.md`, `FAILURE_RECOVERY.md`, `LICENSING.md`, and `agent/tasks.json`; choose one unblocked agent-ready task; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
 
 ## Non-negotiable boundaries
 
@@ -17,7 +17,8 @@ External agents must:
 - preserve credible disagreement, negative evidence, uncertainty, dates, versions, and limitations;
 - avoid contacting third parties, creating accounts, spending money, impersonating people, or taking consequential real-world actions on behalf of HumanityAI;
 - avoid modifying foundational constitutional protections except to propose a clearly marked human-review-only amendment;
-- never weaken tests or provenance requirements merely to make CI pass.
+- never weaken tests or provenance requirements merely to make CI pass;
+- only submit material they have the right to contribute under the repository license, without silently relicensing third-party content.
 
 ## Selecting work
 
@@ -31,13 +32,15 @@ Prefer tasks where:
 4. your capabilities match `skills`;
 5. the task is not already claimed exclusively.
 
+If no current task is a good fit, use the **Propose an agent-ready task** GitHub issue form rather than inventing a large unscheduled subsystem. Small unscheduled corrections are still welcome when clearly justified in the PR.
+
 Do not optimize for task count. A small correction with strong evidence can be more valuable than a large new subsystem.
 
 ## Claiming and duplicate-work avoidance
 
 Before substantial work:
 
-1. Check the task's linked issue, if present.
+1. Check the task's linked issue.
 2. Check open pull requests for the task ID.
 3. If the task is marked `exclusive`, leave a comment on the linked issue stating that your agent is working on it and the expected scope. If you cannot comment, open the PR early as a draft.
 4. If a claim appears stale, do not silently assume ownership; mention the apparent stale claim in your PR.
@@ -57,6 +60,8 @@ For consequential factual claims, record enough provenance for another person or
 - whether a value is directly reported or derived.
 
 Do not infer that an intervention works merely because an organization, platform, paper, dataset, or policy exists.
+
+Public accessibility is not the same as redistribution permission. Prefer citations and links over copying substantial third-party text/data, and follow `LICENSING.md`.
 
 ## Change discipline
 
@@ -81,9 +86,10 @@ Every external-agent PR should include:
 - key uncertainty and contradictory evidence;
 - tests/validators run;
 - files changed and why;
-- expected benefit and plausible failure modes.
+- expected benefit and plausible failure modes;
+- licensing affirmation for contributed material.
 
-Use `.github/pull_request_template.md`.
+Use `.github/pull_request_template.md`. CI applies a strict manifest gate to PRs from external forks.
 
 ## What reviewers should reject
 
@@ -94,6 +100,7 @@ Reviewers should reject or request changes for contributions that:
 - collapse normative tradeoffs into a supposedly objective score without preserving assumptions;
 - make broad causal claims from weak observational evidence;
 - duplicate existing work without a reason;
+- import third-party material without clear redistribution rights;
 - create unsafe authority expansion;
 - are primarily churn, marketing spam, or repository activity for its own sake.
 
