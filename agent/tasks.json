@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-06T10:35:00Z",
+  "updated_at": "2026-09-06T10:52:30Z",
   "claim_policy": {
     "default_claim_hours": 24,
     "instructions": "Check the linked issue and open pull requests before starting. Exclusive tasks should be claimed by issue comment or an early draft PR; parallel_ok tasks may have independent approaches but should avoid redundant scope."
@@ -29,7 +29,7 @@
         "Do not infer that a source is invalid from one transient network error."
       ],
       "blocked_by": [],
-      "issue_url": null,
+      "issue_url": "https://github.com/Nate27624/HumanityAI/issues/5",
       "claimed_by": null,
       "claim_expires_at": null,
       "last_reviewed": "2026-09-06",
@@ -58,7 +58,7 @@
         "Record material methodological controversy, uncertainty, and comparability limits."
       ],
       "blocked_by": [],
-      "issue_url": null,
+      "issue_url": "https://github.com/Nate27624/HumanityAI/issues/6",
       "claimed_by": null,
       "claim_expires_at": null,
       "last_reviewed": "2026-09-06",
@@ -87,7 +87,7 @@
         "Separate intervention evidence from organization/resource existence and from normative judgments."
       ],
       "blocked_by": [],
-      "issue_url": null,
+      "issue_url": "https://github.com/Nate27624/HumanityAI/issues/7",
       "claimed_by": null,
       "claim_expires_at": null,
       "last_reviewed": "2026-09-06",
@@ -116,7 +116,7 @@
         "Preserve uncertainty when source definitions or aggregation rules are ambiguous."
       ],
       "blocked_by": [],
-      "issue_url": null,
+      "issue_url": "https://github.com/Nate27624/HumanityAI/issues/8",
       "claimed_by": null,
       "claim_expires_at": null,
       "last_reviewed": "2026-09-06",
