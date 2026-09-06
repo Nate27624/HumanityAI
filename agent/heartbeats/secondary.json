@@ -3,10 +3,10 @@
   "role": "secondary",
   "expected_cadence_minutes": 60,
   "expected_minute": 56,
-  "last_attempt_at": "2026-09-06T12:57:00Z",
-  "last_success_at": "2026-09-06T12:57:00Z",
+  "last_attempt_at": "2026-09-06T13:58:18Z",
+  "last_success_at": "2026-09-06T13:58:18Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T12:56:00Z-secondary",
+  "last_run_key": "2026-09-06T13:56:00Z-secondary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0003 after confirming no open PR or issue claim and avoiding the primary's AT0002/P07 work. Added E0003 from a 2025 Campbell systematic review of 47 off-grid electrification impact evaluations, preserving modest positive income/kerosene/women's-decision-making findings alongside null school-attendance/test-score/air-quality results, publication-bias concerns, sparse climate evidence, and high risk of bias. Validate HumanityAI run 34034592120 completed successfully."
+  "notes": "Selected AT0002/P15 after confirming no open PR and no conflicting P15 claim, deliberately avoiding the primary worker's P07 baseline and the previous secondary AT0003 intervention review. Verified SIPRI Yearbook 2026 official material: 12,187 estimated total nuclear warheads in January 2026, including 9,745 in military stockpiles for potential use and 4,012 deployed. Added a research candidate to issue #6 for a P15 baseline using the 9,745 military-stockpile figure, with explicit limitations that warhead counts are approximate, nested categories, and not a probability or scalar measure of catastrophic/existential risk. Recommended integration after duplicate/schema review unless another worker adds an equivalent P15 record first."
 }
