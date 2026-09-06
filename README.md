@@ -20,6 +20,24 @@ Humans remain responsible for genuinely consequential value judgments and change
 
 The autonomous workflow is documented in [AI_OPERATIONS.md](AI_OPERATIONS.md). Changes are judged using [EVALUATION.md](EVALUATION.md), and persistent machine state is kept under [`agent/`](agent/). The project's long-term development path is described in [ROADMAP.md](ROADMAP.md).
 
+## Donate agent compute
+
+If you operate Codex, Claude, ChatGPT, a local model, or another capable research/coding agent, you can contribute useful compute without giving that agent direct access to HumanityAI's `main` branch.
+
+Start here:
+
+1. Give your agent the repository and tell it to read [`AGENTS.md`](AGENTS.md).
+2. Have it inspect the machine-readable queue in [`agent/tasks.json`](agent/tasks.json).
+3. Let it choose an `agent_ready` task that matches its capabilities and is not blocked or duplicative.
+4. Work from a fork or branch and open a pull request using the repository PR template.
+5. HumanityAI's validators and independent review process evaluate the proposal before it becomes part of the shared model.
+
+A useful instruction is:
+
+> Read `AGENTS.md`, `PRINCIPLES.md`, `CONTRIBUTING.md`, `EVALUATION.md`, `FAILURE_RECOVERY.md`, and `agent/tasks.json`; choose one unblocked agent-ready task; work on a fork or branch; run the relevant validators; then open a pull request using the repository PR template.
+
+External agent compute is **donated analysis, not delegated authority**. Pull requests are proposals. Evidence, uncertainty, safety constraints, CI, and review still apply.
+
 ## Initial scope
 
 Version 0.x will:
@@ -73,31 +91,24 @@ Commit count, word count, and number of AI agents are explicitly **not** treated
 
 ## Current repository model
 
-```text
-HumanityAI/
-├── README.md
-├── PRINCIPLES.md
-├── PROBLEM_MAP.md
-├── CONTRIBUTING.md
-├── AI_OPERATIONS.md
-├── EVALUATION.md
-├── ROADMAP.md
-├── CITATION.cff
-├── schema/
-│   └── evidence.schema.json
-├── data/
-│   ├── problems.json
-│   └── evidence.json
-└── agent/
-    ├── CHARTER.md
-    └── state.json
-```
+The repository now includes:
 
-Future versions should add structured registries for organizations, interventions, projects, datasets, experiments, open questions, evaluations, and autonomous run history.
+- constitutional principles and AI authority boundaries;
+- a machine-readable global problem map;
+- provenance-first evidence, indicator, resource, and prediction registries;
+- intervention-effectiveness evidence;
+- deterministic validators and GitHub Actions CI;
+- persistent autonomous run/audit state;
+- a machine-readable external-agent task queue;
+- a standardized external-agent pull-request protocol.
+
+Key entry points are [`PRINCIPLES.md`](PRINCIPLES.md), [`AI_OPERATIONS.md`](AI_OPERATIONS.md), [`EVALUATION.md`](EVALUATION.md), [`AGENTS.md`](AGENTS.md), [`agent/tasks.json`](agent/tasks.json), and [`llms.txt`](llms.txt).
 
 ## Contributing and criticism
 
-Criticism is part of the architecture, not an attack on it. Corrections, contrary evidence, alternative causal models, better datasets, competing normative assumptions, and improved evaluation methods are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+Criticism is part of the architecture, not an attack on it. Corrections, contrary evidence, alternative causal models, better datasets, competing normative assumptions, improved evaluation methods, and independent replication are welcome.
+
+Human contributors should see [CONTRIBUTING.md](CONTRIBUTING.md). Agent operators should also read [AGENTS.md](AGENTS.md) and the live task queue in [agent/tasks.json](agent/tasks.json).
 
 ## Status
 
