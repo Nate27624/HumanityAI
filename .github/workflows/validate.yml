@@ -29,3 +29,6 @@ jobs:
 
       - name: Validate prediction registry
         run: python scripts/validate_predictions.py
+
+      - name: Validate external agent task queue
+        run: python scripts/validate_agent_tasks.py
