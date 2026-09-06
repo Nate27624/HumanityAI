@@ -1,0 +1,126 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-09-06T10:35:00Z",
+  "claim_policy": {
+    "default_claim_hours": 24,
+    "instructions": "Check the linked issue and open pull requests before starting. Exclusive tasks should be claimed by issue comment or an early draft PR; parallel_ok tasks may have independent approaches but should avoid redundant scope."
+  },
+  "tasks": [
+    {
+      "id": "AT0001",
+      "title": "Add automated live-link and source-durability checks",
+      "status": "open",
+      "agent_ready": true,
+      "priority": "high",
+      "coordination_mode": "exclusive",
+      "skills": ["python", "github-actions", "data-validation"],
+      "problem_ids": ["P16"],
+      "objective": "Add a conservative validator that detects broken or clearly unstable source URLs without turning temporary network failures into false evidence failures.",
+      "why_it_matters": "HumanityAI depends on traceable evidence, but current validators mostly verify structure rather than whether cited sources remain reachable and durable over time.",
+      "completion_criteria": [
+        "Validator distinguishes hard failures from transient or rate-limited failures.",
+        "Known stable repository URLs do not trigger false failures in normal CI.",
+        "The workflow reports actionable diagnostics and does not silently delete or rewrite sources.",
+        "Tests cover at least success, permanent failure, redirect, and transient-failure behavior."
+      ],
+      "allowed_changes": ["scripts/", ".github/workflows/", "tests/", "docs/"],
+      "evidence_requirements": [
+        "Use official HTTP status/redirect semantics and document failure policy.",
+        "Do not infer that a source is invalid from one transient network error."
+      ],
+      "blocked_by": [],
+      "issue_url": null,
+      "claimed_by": null,
+      "claim_expires_at": null,
+      "last_reviewed": "2026-09-06",
+      "notes": "Prefer a warning or retry policy for ambiguous network failures; fail closed only on deterministic repository/schema errors."
+    },
+    {
+      "id": "AT0002",
+      "title": "Research defensible baselines for currently under-covered problem categories",
+      "status": "open",
+      "agent_ready": true,
+      "priority": "high",
+      "coordination_mode": "parallel_ok",
+      "skills": ["research", "statistics", "source-verification"],
+      "problem_ids": ["P07", "P09", "P10", "P14", "P15", "P16"],
+      "objective": "Identify authoritative, reproducible baseline indicators or explicitly justified multidimensional indicator sets for currently under-covered problem categories.",
+      "why_it_matters": "The project cannot compare change over time or reason well about neglectedness if large parts of the problem map have no defensible empirical baseline.",
+      "completion_criteria": [
+        "Each proposed indicator has an authoritative source, date/version, definition, limitations, and direct-versus-derived status.",
+        "The contribution explains when no single headline metric is defensible and preserves multidimensional measurement instead.",
+        "No composite ranking is introduced merely for convenience.",
+        "Duplicate or weaker indicators are not added when an existing entry already covers the same construct better."
+      ],
+      "allowed_changes": ["data/indicators.json", "schema/", "docs/"],
+      "evidence_requirements": [
+        "Prefer primary official datasets, peer-reviewed sources, or major intergovernmental statistical systems.",
+        "Record material methodological controversy, uncertainty, and comparability limits."
+      ],
+      "blocked_by": [],
+      "issue_url": null,
+      "claimed_by": null,
+      "claim_expires_at": null,
+      "last_reviewed": "2026-09-06",
+      "notes": "Independent agents may work on different problem IDs in parallel."
+    },
+    {
+      "id": "AT0003",
+      "title": "Expand intervention-effectiveness evidence with strong negative and null results",
+      "status": "open",
+      "agent_ready": true,
+      "priority": "high",
+      "coordination_mode": "parallel_ok",
+      "skills": ["systematic-review", "causal-inference", "research"],
+      "problem_ids": ["P02", "P03", "P05", "P07", "P11"],
+      "objective": "Add high-quality intervention evidence while deliberately searching for negative, null, heterogeneous, and replication-sensitive findings rather than only successful interventions.",
+      "why_it_matters": "Resource discovery is not evidence of effectiveness; a useful prioritization system needs comparative outcome evidence and protection against publication or selection bias.",
+      "completion_criteria": [
+        "Every added record identifies study design and population/context.",
+        "At least one credible negative, null, or materially qualifying finding is included when available.",
+        "Causal strength is not overstated beyond the underlying design.",
+        "Applicability limits and external-validity concerns are explicit."
+      ],
+      "allowed_changes": ["data/", "schema/", "docs/"],
+      "evidence_requirements": [
+        "Prefer systematic reviews, meta-analyses, randomized evaluations, strong quasi-experiments, or authoritative evidence syntheses.",
+        "Separate intervention evidence from organization/resource existence and from normative judgments."
+      ],
+      "blocked_by": [],
+      "issue_url": null,
+      "claimed_by": null,
+      "claim_expires_at": null,
+      "last_reviewed": "2026-09-06",
+      "notes": "Parallel work is useful when agents cover different interventions or domains."
+    },
+    {
+      "id": "AT0004",
+      "title": "Independently reproduce and challenge HumanityAI quantitative claims",
+      "status": "open",
+      "agent_ready": true,
+      "priority": "medium",
+      "coordination_mode": "parallel_ok",
+      "skills": ["research", "statistics", "reproducibility"],
+      "problem_ids": ["P16"],
+      "objective": "Select existing quantitative claims or indicators and independently reproduce them from the cited source, documenting discrepancies, ambiguity, or hidden assumptions.",
+      "why_it_matters": "Independent reproduction tests whether provenance is genuinely usable by outsiders and catches errors that structural schema validation cannot detect.",
+      "completion_criteria": [
+        "The PR names the exact HumanityAI record IDs checked.",
+        "Each checked value is marked reproduced, qualified, corrected, or unresolved.",
+        "Any correction includes a source-grounded explanation rather than an unsupported replacement value.",
+        "No change is made when the original value is defensible; successful reproduction is still reported in the PR."
+      ],
+      "allowed_changes": ["data/", "docs/", "tests/"],
+      "evidence_requirements": [
+        "Use the original cited source or a more authoritative primary source when available.",
+        "Preserve uncertainty when source definitions or aggregation rules are ambiguous."
+      ],
+      "blocked_by": [],
+      "issue_url": null,
+      "claimed_by": null,
+      "claim_expires_at": null,
+      "last_reviewed": "2026-09-06",
+      "notes": "This task is intentionally suitable for donated compute because independent replication has value even when no code change results."
+    }
+  ]
+}
