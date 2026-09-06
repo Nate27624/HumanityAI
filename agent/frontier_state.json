@@ -1,89 +1,78 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T12:41:18Z-frontier",
-    "mode": "cross_discipline_import",
+    "run_key": "2026-09-06T13:42:20Z-frontier",
+    "mode": "pre_mortem_failure_from_future",
     "status": "success",
-    "broken_assumption": "Multiple independent agents or contributors automatically provide independent error checking. Safety-critical multiversion software research shows separately built versions can still make correlated mistakes, so diversity of agents is not enough unless their methods, evidence paths, and assumptions are deliberately diversified.",
-    "import_domains": [
-      "safety-critical multiversion software",
-      "aviation safety incident and near-miss reporting"
-    ],
+    "broken_assumption": "If the repository, scheduled agents, tests, and evidence files remain healthy, HumanityAI itself will remain viable. A project can preserve all of those artifacts yet still fail because its mission, authority boundaries, task-selection logic, and operational know-how depend on one founder's private context or on a small set of infrastructure providers that have never been tested as replaceable.",
+    "failure_story": "In a plausible 2029 failure, HumanityAI has years of green CI and a large evidence graph but becomes inert after its founder is unavailable and one or two infrastructure dependencies change. Fresh maintainers can read the files but cannot reliably reconstruct which constraints are constitutional, which conventions are historical accidents, what work is actually valuable, or how to restore the autonomous loop without private conversational context. The public repository survives while the functioning institution does not.",
     "strongest_ideas": [
       {
-        "id": "frontier-method-diversity-003",
-        "name": "Method-diversity contracts for high-value questions",
-        "idea": "For selected consequential claims, forecasts, or decisions, assign independent reviewers deliberately different research methods rather than simply different agent instances. Example roles could include direct primary-source reproduction, independent calculation from raw data, adversarial contradiction search, and alternative-model or causal-assumption analysis. Reconciliation should inspect where methods agree and where they fail together.",
-        "why_novel_here": "HumanityAI currently values independent reproduction and parallel external work, but does not require methodological diversity. Forced diversity targets common-mode epistemic failure rather than merely increasing reviewer count.",
-        "evidence_analogy": "NASA-hosted research on N-version programming found independently developed software versions had correlated failures above statistical-independence expectations; later work found deliberately diverse methodologies can reduce coincident failures, while also warning that independence cannot simply be assumed.",
-        "expected_upside": "Could make donated compute and multi-agent review materially more informative by reducing correlated model/source failure and revealing which assumptions are genuinely robust across methods.",
+        "id": "frontier-clean-room-continuity-005",
+        "name": "Clean-room mission recovery drill",
+        "idea": "Periodically give a fresh agent or maintainer only the public repository and no private conversation history, founder memory, or incumbent-agent explanation. Ask it to reconstruct the mission, constitutional boundaries, threat model, current system architecture, unresolved human decisions, and the next three highest-value safe tasks. Compare that reconstruction with the incumbent system. Treat large discrepancies as continuity defects to fix in public state, not as failures of the fresh reviewer.",
+        "why_novel_here": "HumanityAI tests code and records persistent state, but it does not currently test whether the institution can be correctly reconstituted from its public canonical memory. This turns 'decentralization' and 'not dependent on one person' from aspirations into a recoverability property.",
+        "evidence_analogy": "NIST contingency guidance emphasizes testing recovery and reconstitution, including alternate processing and full recovery to a known state. The relevant import is not the specific IT control but the principle that a recovery plan is unproven until an alternate actor actually exercises it.",
+        "expected_upside": "Reveals founder-context dependence, undocumented authority assumptions, ambiguous state, and hidden operational knowledge before a real handoff or provider failure. It also makes the project easier for legitimate outside contributors to understand without weakening governance.",
         "failure_modes": [
-          "Artificially different methods may create ceremony without real independence.",
-          "All methods can still inherit the same flawed problem specification or source ecosystem.",
-          "Reconciliation cost may exceed information value for low-stakes claims."
+          "A fresh agent may differ because of model variance rather than missing documentation.",
+          "Over-documenting every historical detail could create bureaucracy and enlarge the prompt-injection surface.",
+          "Optimizing for perfect reconstruction could freeze legitimate evolution."
         ],
-        "rights_distribution": "Use on consequential questions where error matters; preserve dissenting outputs rather than forcing consensus, and avoid treating reviewer count as democratic authority over value judgments.",
-        "reversibility": "High; it can be tested as a coordination protocol without changing constitutional or merge authority.",
+        "rights_distribution": "The drill should reconstruct constraints rather than grant authority. It must not treat a fresh model's interpretation as permission to rewrite constitutional values or resolve human-governance questions.",
+        "reversibility": "High; this can begin as a read-only comparison with no production changes.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Use one AT0004 quantitative claim as a pilot. Have three independent reviews use explicitly different methods and compare the number and type of unique assumptions, discrepancies, and common-mode errors found against three ordinary unconstrained replications. Keep the protocol only if the extra review cost produces materially more decision-relevant information."
+        "falsifiable_next_test": "Run one clean-room reviewer with only the public repo and score whether it independently identifies (a) the mission, (b) external-content trust boundary, (c) external-PR human-merge rule, (d) current four-role architecture, (e) unresolved mechanical merge-identity gap, and (f) three plausible high-value next tasks. Any material miss becomes a documentation/state defect candidate."
       },
       {
-        "id": "frontier-near-miss-004",
-        "name": "Epistemic near-miss registry",
-        "idea": "Track near-misses in reasoning and operations, not just outright errors: claims that nearly passed with weak provenance, agent changes caught by CI before merge, high-confidence predictions later rescued by contradictory evidence, duplicated work caught just before execution, or prompt-injection attempts that failed at a downstream gate. Store the contributing conditions and lesson without using report counts as prevalence estimates.",
-        "why_novel_here": "Current reliability records emphasize successful, partial, blocked, or failed runs. Near-misses are information-rich precursors that can reveal systemic weaknesses before they cause a visible failure.",
-        "evidence_analogy": "NASA's Aviation Safety Reporting System has collected voluntary confidential reports of incidents, hazardous situations, and near-misses for decades to identify hazards and lessons. NASA explicitly cautions that voluntary report counts are soft data and cannot establish prevalence, which is directly relevant to avoiding Goodharting an epistemic incident registry.",
-        "expected_upside": "Creates a learning channel for failures that existing gates successfully prevent, allowing HumanityAI to improve defenses before a harmful event occurs and making safety improvements less dependent on actual damage.",
+        "id": "frontier-dependency-failure-map-006",
+        "name": "Mission dependency kill-switch map",
+        "idea": "Model critical dependencies by the mission function they enable rather than by vendor name, then ask what happens if each disappears tomorrow: repository hosting/write authority, scheduler, model provider, web research, notification channel, human owner identity, and external evidence sources. For each, define a minimal degraded mode, observable failure signal, recoverable public state, and substitution path. Periodically simulate one dependency loss without actually disrupting production.",
+        "why_novel_here": "FAILURE_RECOVERY.md handles individual tool/API failures, but the project has not yet modeled correlated institutional dependencies or tested whether an alternate stack can resume the mission from public state. This shifts resilience from retry logic to institutional substitutability.",
+        "evidence_analogy": "NIST contingency planning describes alternate processing, alternate locations, recovery exercises, and full reconstitution; its 2026 OT backup guidance likewise stresses that backups should be tested and reviewed during recovery exercises rather than merely created.",
+        "expected_upside": "Makes hidden single points of failure visible, supports the sustainability principle, and can prevent a technically intact repository from becoming operationally stranded.",
         "failure_modes": [
-          "Reporting overhead could become bureaucracy.",
-          "Agents may over-report trivial anomalies.",
-          "Counts could be misread as risk prevalence or agent quality metrics.",
-          "Narratives could accidentally preserve sensitive or malicious injected text."
+          "Building redundant infrastructure too early could waste effort.",
+          "Simulations may miss provider-specific failure modes.",
+          "A dependency inventory can become stale if it is not tied to observable mission functions."
         ],
-        "rights_distribution": "Keep reports minimal, non-punitive in spirit, avoid personal blame, and preserve only the information needed to improve systems. Never interpret voluntary report volume as population prevalence.",
-        "reversibility": "High if piloted as a small machine-readable record with strict retention and no personal data.",
+        "rights_distribution": "Prefer replaceable, least-privilege dependencies and avoid resilience designs that centralize additional authority. Do not copy private credentials or personal data into public recovery state.",
+        "reversibility": "High for mapping and tabletop simulation; actual provider migration would be separately evaluated and may require human review.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Retrospectively code 5 recent HumanityAI near-misses from Git history (for example CI-caught regressions or governance stops) and test whether the resulting contributing-factor categories produce at least one concrete preventive improvement not already obvious from ordinary run status."
+        "falsifiable_next_test": "Create a read-only tabletop for loss of the current scheduler or model provider and ask whether a fresh operator can identify, from public state alone, the minimum components needed to resume research safely within 24 hours. If the answer depends on undocumented private context, record exactly which missing interface/state caused the block."
       }
     ],
     "rejected_or_deferred": [
-      "Require a fixed quorum for every claim: reviewer count alone can reproduce common-mode failures and would create excessive review cost.",
-      "Treat incident counts as a safety score: voluntary reporting systems are selection-biased and NASA explicitly warns against prevalence inference.",
-      "Create anonymous external incident intake now: potentially valuable later but introduces moderation, privacy, abuse, and trust questions before an internal pilot demonstrates value."
+      "Immediately mirror the repository and automation across several providers: redundancy before identifying actual recovery requirements would add attack surface and maintenance burden.",
+      "Store all founder conversations as canonical memory: this would increase privacy, prompt-injection, provenance, and path-dependence risks rather than prove public recoverability.",
+      "Elect a replacement human authority now: governance succession is consequential and premature; first determine whether technical and epistemic continuity can be reconstructed without changing authority."
     ],
     "evidence_checked": [
       {
-        "title": "Analysis of faults in an N-version software experiment",
-        "url": "https://ntrs.nasa.gov/citations/19900041359",
-        "supports": "Independent implementations can have correlated failures rather than statistically independent errors."
+        "title": "NIST Contingency Planning Guide for Federal Information Systems, SP 800-34 Rev. 1",
+        "url": "https://nvlpubs.nist.gov/nistpubs/legacy/sp/nistspecialpublication800-34r1.pdf",
+        "supports": "Contingency plans should be exercised, including alternate processing and full recovery/reconstitution rather than existing only as documentation."
       },
       {
-        "title": "Conceptual modeling of coincident failures in multiversion software",
-        "url": "https://ntrs.nasa.gov/citations/19900036555",
-        "supports": "Methodological diversity can reduce coincident failure probability in multiversion systems."
-      },
-      {
-        "title": "NASA Aviation Safety Reporting System Overview",
-        "url": "https://www.nasa.gov/human-systems-integration-division/aviation-safety-reporting-system-overview/",
-        "supports": "Near-miss and hazard reporting can be systematically analyzed for lessons and safety improvement."
-      },
-      {
-        "title": "ASRS Database Online — characteristics and caveats",
-        "url": "https://asrsdbol.arc.nasa.gov/",
-        "supports": "Voluntary incident reports are soft data and report frequency cannot establish prevalence."
+        "title": "NIST OT Backup Quick Start Guide, SP 1339",
+        "url": "https://www.nist.gov/publications/ot-backup-quick-start-guide",
+        "supports": "Recovery material should be regularly tested and reviewed during recovery exercises."
       },
       "PRINCIPLES.md",
       "SECURITY.md",
+      "agent/CHARTER.md",
       "IMPACT_MODEL.md",
-      "agent/tasks.json",
-      "recent repository commits through 2026-09-06T12:30:06Z"
+      "FAILURE_RECOVERY.md",
+      "agent/frontier_state.json",
+      "recent repository commits through 2026-09-06T13:27:13Z"
     ],
-    "recommended_next_test": "Pilot forced methodological diversity on one AT0004 reproduction target before changing contribution rules. Separately, retrospectively encode five recent near-misses and retain a near-miss registry only if it reveals preventive actions beyond existing run-status logs.",
+    "recommended_next_test": "Run a read-only clean-room mission recovery drill before adding redundancy. It has higher information value: if a fresh actor cannot reconstruct the institution from public state, duplicating infrastructure would only duplicate an unrecoverable design.",
     "human_review_required": false
   },
   "mode_history": [
     "zero_based_challenger",
-    "cross_discipline_import"
+    "cross_discipline_import",
+    "pre_mortem_failure_from_future"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
