@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.1",
+  "status": "bootstrap",
+  "ranking_method": null,
+  "problems": [
+    {"id":"P01","name":"War, violence, and geopolitical conflict","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P02","name":"Poverty and material insecurity","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P03","name":"Health and preventable suffering","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P04","name":"Housing and human habitat","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P05","name":"Education, knowledge, and human development","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P06","name":"Energy, water, sanitation, and essential infrastructure","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P07","name":"Economic opportunity, work, and abundance","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P08","name":"Rights, liberty, governance, and institutional quality","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P09","name":"Inequality and unequal access to opportunity","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P10","name":"Information integrity, trust, and coordination","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P11","name":"Climate, biodiversity, and environmental stability","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P12","name":"Social connection, community, and meaning","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P13","name":"Science, innovation, and access to technology","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P14","name":"AI and emerging-technology governance","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P15","name":"Global catastrophic and existential risks","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]},
+    {"id":"P16","name":"Coordination infrastructure itself","status":"needs_research","priority_score":null,"confidence":null,"indicators":[],"sources":[],"projects":[],"interventions":[],"open_questions":[],"dependencies":[]}
+  ]
+}
