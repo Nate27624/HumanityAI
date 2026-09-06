@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nate27624/HumanityAI/schema/evidence.schema.json",
+  "title": "HumanityAI Evidence Record",
+  "type": "object",
+  "required": ["id", "claim", "claim_type", "status", "sources", "confidence"],
+  "properties": {
+    "id": {"type": "string"},
+    "claim": {"type": "string", "minLength": 1},
+    "claim_type": {
+      "type": "string",
+      "enum": ["fact", "estimate", "hypothesis", "value_judgment", "proposal", "unknown"]
+    },
+    "status": {
+      "type": "string",
+      "enum": ["supported", "mixed", "disputed", "insufficient_evidence", "superseded"]
+    },
+    "problem_ids": {
+      "type": "array",
+      "items": {"type": "string"},
+      "uniqueItems": true
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["url", "source_type", "relationship"],
+        "properties": {
+          "url": {"type": "string", "format": "uri"},
+          "title": {"type": "string"},
+          "publisher": {"type": "string"},
+          "published_date": {"type": ["string", "null"], "format": "date"},
+          "accessed_date": {"type": ["string", "null"], "format": "date"},
+          "source_type": {
+            "type": "string",
+            "enum": ["primary_data", "peer_reviewed", "systematic_review", "official_report", "preprint", "expert_analysis", "news", "project_documentation", "other"]
+          },
+          "relationship": {
+            "type": "string",
+            "enum": ["supports", "contradicts", "qualifies", "context"]
+          },
+          "notes": {"type": "string"}
+        }
+      }
+    },
+    "confidence": {"type": "number", "minimum": 0, "maximum": 1},
+    "confidence_rationale": {"type": "string"},
+    "limitations": {"type": "array", "items": {"type": "string"}},
+    "counterevidence": {"type": "array", "items": {"type": "string"}},
+    "last_reviewed": {"type": ["string", "null"], "format": "date"},
+    "generated_by": {"type": ["string", "null"]},
+    "human_reviewed": {"type": "boolean", "default": false}
+  },
+  "additionalProperties": false
+}
