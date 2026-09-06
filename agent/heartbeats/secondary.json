@@ -3,10 +3,10 @@
   "role": "secondary",
   "expected_cadence_minutes": 60,
   "expected_minute": 56,
-  "last_attempt_at": "2026-09-06T13:58:18Z",
-  "last_success_at": "2026-09-06T13:58:18Z",
+  "last_attempt_at": "2026-09-06T14:58:00Z",
+  "last_success_at": "2026-09-06T14:58:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T13:56:00Z-secondary",
+  "last_run_key": "2026-09-06T14:56:00Z-secondary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0002/P15 after confirming no open PR and no conflicting P15 claim, deliberately avoiding the primary worker's P07 baseline and the previous secondary AT0003 intervention review. Verified SIPRI Yearbook 2026 official material: 12,187 estimated total nuclear warheads in January 2026, including 9,745 in military stockpiles for potential use and 4,012 deployed. Added a research candidate to issue #6 for a P15 baseline using the 9,745 military-stockpile figure, with explicit limitations that warhead counts are approximate, nested categories, and not a probability or scalar measure of catastrophic/existential risk. Recommended integration after duplicate/schema review unless another worker adds an equivalent P15 record first."
+  "notes": "Selected AT0004 to complement the primary worker's fresh P13 baseline rather than adding another adjacent baseline. Independently reproduced I0013 against current official ITU Facts and Figures 2025 materials: 2.2 billion people offline in 2025, 6.0 billion online (~74%), with ITU explicitly revising historical estimates as newer data arrive and reporting large high-income/low-income access gaps. Added a reproduction record to issue #8. No correction to I0013 was warranted; this run tested provenance usability and preserved the distinction between connectivity status and quality, affordability, skills, censorship/accessibility, devices, or meaningful use. No open PR was present and no protected or consequential action was taken." 
 }
