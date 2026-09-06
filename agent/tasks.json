@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-06T10:52:30Z",
+  "updated_at": "2026-09-06T19:59:00Z",
   "claim_policy": {
     "default_claim_hours": 24,
     "instructions": "Check the linked issue and open pull requests before starting. Exclusive tasks should be claimed by issue comment or an early draft PR; parallel_ok tasks may have independent approaches but should avoid redundant scope."
@@ -37,32 +37,34 @@
     },
     {
       "id": "AT0002",
-      "title": "Research defensible baselines for currently under-covered problem categories",
+      "title": "Deepen baseline quality with complementary dimensions and contradiction checks",
       "status": "open",
       "agent_ready": true,
       "priority": "high",
       "coordination_mode": "parallel_ok",
       "skills": ["research", "statistics", "source-verification"],
-      "problem_ids": ["P07", "P09", "P10", "P14", "P15", "P16"],
-      "objective": "Identify authoritative, reproducible baseline indicators or explicitly justified multidimensional indicator sets for currently under-covered problem categories.",
-      "why_it_matters": "The project cannot compare change over time or reason well about neglectedness if large parts of the problem map have no defensible empirical baseline.",
+      "problem_ids": ["P07", "P08", "P09", "P10", "P14", "P15", "P16"],
+      "objective": "First-pass indicator coverage now spans all top-level problem categories. Improve the weakest multidimensional baselines by adding only genuinely complementary indicators, newer or more global measurements, or credible contradictory estimates that change interpretation.",
+      "why_it_matters": "One indicator per problem is enough for initial coverage but not for robust diagnosis. Several current records explicitly capture only one narrow dimension, so the next value comes from filling material measurement gaps rather than duplicating first-pass coverage.",
       "completion_criteria": [
+        "Name the existing indicator(s) for the selected problem and state the specific measurement gap the proposed record fills.",
         "Each proposed indicator has an authoritative source, date/version, definition, limitations, and direct-versus-derived status.",
-        "The contribution explains when no single headline metric is defensible and preserves multidimensional measurement instead.",
-        "No composite ranking is introduced merely for convenience.",
-        "Duplicate or weaker indicators are not added when an existing entry already covers the same construct better."
+        "Prefer a complementary dimension, materially newer/global measure, or credible contradictory estimate over a second indicator of the same construct.",
+        "Explain when no additional headline metric is defensible and preserve multidimensional measurement instead.",
+        "No composite ranking is introduced merely for convenience and duplicate or weaker indicators are not added."
       ],
       "allowed_changes": ["data/indicators.json", "schema/", "docs/"],
       "evidence_requirements": [
         "Prefer primary official datasets, peer-reviewed sources, or major intergovernmental statistical systems.",
-        "Record material methodological controversy, uncertainty, and comparability limits."
+        "Record material methodological controversy, uncertainty, and comparability limits.",
+        "Do not treat infrastructure, policy adoption, institutional existence, or inventory size as evidence of effectiveness or good outcomes."
       ],
       "blocked_by": [],
       "issue_url": "https://github.com/Nate27624/HumanityAI/issues/6",
       "claimed_by": null,
       "claim_expires_at": null,
       "last_reviewed": "2026-09-06",
-      "notes": "Independent agents may work on different problem IDs in parallel."
+      "notes": "Initial coverage milestone is complete. High-value examples include job quality beyond the P07 jobs gap; rights/rule-of-law dimensions beyond P08 displacement/regime classification; wealth or opportunity inequality beyond P09 country Gini counts; information-integrity measures beyond P10 government trust; global/implementation dimensions beyond P14 EU strategy adoption; non-nuclear dimensions of P15; and coordination capacity beyond P16 online digital-ID availability. Parallel agents should choose different gaps."
     },
     {
       "id": "AT0003",
