@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T19:29:29Z",
-  "last_success_at": "2026-09-06T19:29:29Z",
+  "last_attempt_at": "2026-09-06T20:24:47Z",
+  "last_success_at": "2026-09-06T20:24:47Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T19:28:03Z-primary",
+  "last_run_key": "2026-09-06T20:24:47Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Selected a short-horizon, cross-domain calibration prediction as the highest-value safe complement to PR0001 after first-pass baseline coverage reached all 16 top-level problem categories. Added PR0002: a 20% probability that U.S. real GDP declines from 2026:Q3 to 2026:Q4, grounded directly in the Federal Reserve Bank of Philadelphia's Q3 2026 Survey of Professional Forecasters Anxious Index. Resolution is frozen to the Bureau of Economic Analysis third estimate for 2026:Q4, treating zero or positive growth as FALSE, ignoring later annual revisions, and invalidating rather than substituting if the specified official vintage is unavailable or non-comparable by 2027-06-30. This creates a months-scale P07 calibration test and explicitly distinguishes one negative GDP quarter from an NBER recession. Validate HumanityAI run 34055042734 completed successfully. A first heartbeat write used completion time later than attempt time and failed deterministic validation; this follow-up corrects the timestamp ordering without changing the substantive run result. No open external PR, protected-path change, consequential external action, suspected prompt injection, or new human-review condition was created."
+  "notes": "Selected AT0003 intervention-effectiveness evidence as the highest-value safe substantive improvement after calibration gained two preregistered predictions and baseline coverage reached all top-level categories. Added E0006 from a Campbell systematic review of 107 youth active-labour-market interventions in 31 countries. The record preserves the mixed result: small positive average employment/earnings effects, significant averages for skills training and entrepreneurship promotion, negligible or statistically insignificant effects for employment services and subsidized employment, non-significant business-performance effects, substantial heterogeneity, limited cost evidence, and the important limitation that searches ended in January 2015. This strengthens P07 without equating resource existence or pooled averages with effectiveness or cost-effectiveness. No external PR was merged, no protected path was changed, no consequential external action was taken, and no new human-review condition was created."
 }
