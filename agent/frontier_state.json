@@ -1,94 +1,94 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T18:44:00Z-frontier",
-    "mode": "humanityai_is_the_wrong_shape",
+    "run_key": "2026-09-06T19:39:00Z-frontier",
+    "mode": "technology_science_frontier_import",
     "status": "success",
-    "broken_assumption": "HumanityAI currently treats the repository's accumulated knowledge and task queue as the main substrate for progress. A potentially better shape is to treat unresolved, decision-relevant uncertainty itself as a product that can be compiled into bounded public challenges with objective acceptance tests, so heterogeneous outsiders can attack the uncertainty without first adopting HumanityAI's architecture.",
+    "broken_assumption": "HumanityAI currently treats safety/governance as a collection of durable rules plus validators. A stronger model is to treat every consequential autonomous capability as requiring a continuously maintained, falsifiable assurance case: a structured argument linking a specific capability to explicit hazards, controls, evidence, residual uncertainty, and conditions that automatically force deferral to a human.",
     "strongest_ideas": [
       {
-        "id": "frontier-challenge-compiler-018",
-        "name": "Uncertainty-to-challenge compiler",
-        "idea": "Add a reversible internal compiler that takes a high-value unresolved question and emits a challenge packet: exact question, why resolving it could change a decision, current evidence and strongest contradiction, admissible evidence, falsification/acceptance criteria, reproducibility requirements, rights/safety constraints, duplicate-work fingerprint, and a machine-checkable result manifest. The challenge packet becomes portable: humans, agents, labs, classrooms, or future prize systems can work on it without being trusted with HumanityAI authority.",
-        "why_novel_here": "The current agent task queue delegates repository work. This instead exports uncertainty as a protocol-level object and makes HumanityAI a problem-framing/evaluation layer that can coordinate solvers who never join the project.",
-        "expected_upside": "Could turn donated compute and external expertise into independent attempts on consequential unknowns, reduce coupling to GitHub, enable parallel approaches, and create a reusable bridge from evidence synthesis to actual uncertainty reduction.",
+        "id": "frontier-executable-assurance-case-021",
+        "name": "Executable capability assurance cases",
+        "idea": "Create a machine-readable assurance object for each consequential capability (for example merge, outreach, spending, governance changes, sensitive research, or future real-world actions). The object states the capability, threat model, unacceptable outcomes, required controls, evidence that each control works, assumptions, known counterexamples, residual uncertainty, exact tests/heartbeats that keep the case valid, and a fail-closed deferral condition. Authority is granted only while the assurance case remains valid; stale or contradicted evidence automatically reduces capability rather than merely creating a warning.",
+        "why_novel_here": "Current policy answers 'what is forbidden or human-reviewed?' but does not require a positive, evidence-backed argument for why an autonomous capability remains safe under current conditions. This imports the safety-case/control-evaluation idea from high-assurance and emerging AI-control work and makes safety evidence a live dependency of authority.",
+        "expected_upside": "Turns governance from static prose into testable claims, exposes hidden assumptions, gives frontier/audit agents concrete things to attack, and creates a principled path for safely expanding autonomy later without relying on stronger prompts or one-time human trust decisions.",
         "failure_modes": [
-          "Badly framed challenges can optimize measurable proxies rather than the real uncertainty.",
-          "Objective acceptance criteria are impossible for many normative or open-ended questions.",
-          "Competitive framing can incentivize strategic reporting, duplication, or attacks on other submissions.",
-          "A challenge system can privilege actors with more compute or resources unless parallel noncompetitive contribution remains possible.",
-          "Publishing sensitive challenge details can itself create risk; safety review must precede public release where applicable."
+          "Assurance cases can become paperwork that rationalizes a desired capability instead of genuinely constraining it.",
+          "Tests can miss adaptive or selectively timed attacks, creating false confidence.",
+          "A shared model family can correlate the proposer, monitor, and evaluator failures.",
+          "Overly conservative invalidation can freeze useful low-risk work.",
+          "Machine-readable structure can create an illusion that normative judgments are mechanically settled."
         ],
-        "rights_distribution": "Challenge packets should identify affected groups and value assumptions, allow multiple admissible approaches, avoid making solver resources equivalent to governance authority, and keep consequential deployment decisions under appropriate human governance.",
-        "reversibility": "High for an internal packet prototype; public challenge launch, prizes, outreach, or consequential deployment would require separate human review.",
+        "rights_distribution": "The assurance object must preserve human authority for normative boundaries, identify affected groups and distributional risks, and distinguish empirical control evidence from value judgments. Passing a technical case must never silently authorize a constitutionally protected or legally consequential action.",
+        "reversibility": "High for an internal prototype; using a case to expand real authority would require human review and stronger mechanical identity/capability separation.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Take one existing unresolved HumanityAI evidence question and independently ask two context-naive agents to solve the generated packet. Compare whether their outputs are more independent, reproducible, and reviewable than ordinary free-form task instructions. Reject the architecture if packet overhead exceeds review savings or if both agents converge on the same framing error."
+        "falsifiable_next_test": "Prototype an assurance case for one capability that is currently already bounded, such as reviewing (not merging) an external PR. Ask the adversarial-red-team mode to invalidate the case using prompt injection, stale-state, selective-attack, provenance, and correlated-monitor scenarios. The prototype is useful only if it reveals at least one assumption/control not already obvious from SECURITY.md or makes a deferral condition more precise."
       },
       {
-        "id": "frontier-solver-evaluator-separation-019",
-        "name": "Solver/evaluator separation",
-        "idea": "For challenge packets, separate proposal generation from evaluation. Solvers submit evidence/results; an evaluator sees the fixed acceptance criteria and exact artifact hashes, not solver reputation or persuasive narrative where avoidable. For high-stakes or adversarial questions, require independent reproduction before an answer can alter canonical evidence.",
-        "why_novel_here": "HumanityAI currently separates some audit roles, but external contribution review is still largely PR-centric and narrative-rich. A protocol object can reduce persuasion and identity effects by evaluating against criteria fixed before submissions arrive.",
-        "expected_upside": "Reduces prompt-injection surface, popularity bias, and incentive to optimize rhetoric; makes multiple independent attempts easier to compare.",
+        "id": "frontier-authority-decay-022",
+        "name": "Authority should decay when evidence decays",
+        "idea": "Attach freshness and dependency conditions to future autonomous capabilities. If required CI, identity separation, heartbeat health, provenance, monitor independence, or evaluation evidence becomes stale or fails, the capability automatically falls back to a narrower mode. Recovery requires restoring evidence, not an agent asserting that conditions are probably fine.",
+        "why_novel_here": "HumanityAI has heartbeat monitoring and human-review rules, but authority itself is mostly static. This makes authority conditional on continuously demonstrated safety properties.",
+        "expected_upside": "Limits damage from silent infrastructure drift and converts monitoring into an actual capability boundary rather than an observability feature.",
         "failure_modes": [
-          "Fixed criteria can encode the original framer's blind spots.",
-          "Blind evaluation is not possible when methods reveal identity or context.",
-          "Evaluation agents can still share correlated model failures."
+          "Bad thresholds can cause unnecessary shutdowns.",
+          "Agents may optimize the measured health signals rather than underlying safety.",
+          "Dependencies can become complex enough that nobody understands why authority changed."
         ],
-        "rights_distribution": "Keep framing and acceptance criteria open to criticism; do not let evaluator automation silently decide normative questions.",
-        "reversibility": "High as an internal experiment.",
+        "rights_distribution": "Fail-closed behavior should reduce autonomous authority, never reduce human rights or bypass human governance. Human override of high-consequence safeguards should itself be explicit and auditable.",
+        "reversibility": "High as a design/prototype concept.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Compare a normal PR review with a blinded fixed-criteria review of the same synthetic evidence contribution and measure disagreement, review time, and missed caveats."
+        "falsifiable_next_test": "Model the current external-PR merge boundary as a dependency graph and simulate loss of CI, stale heartbeat, prompt-injection suspicion, and identity-separation failure. Check whether every scenario produces an unambiguous least-authority fallback."
       },
       {
-        "id": "frontier-challenge-portfolio-020",
-        "name": "Portfolio of uncertainties, not backlog of chores",
-        "idea": "Maintain a small portfolio of unresolved questions selected by expected decision value and diversity of failure modes, rather than growing a large issue backlog. A question leaves the portfolio when resolved, shown unresolvable at reasonable cost, superseded, or demonstrated not to affect a decision. This makes external scaling about reducing important uncertainty rather than producing artifacts.",
-        "why_novel_here": "The existing task queue is implementation-oriented. A challenge portfolio would be outcome-oriented and could survive a future migration away from GitHub or away from the current agent stack.",
-        "expected_upside": "Creates a natural counterfactual metric: did external work materially reduce uncertainty that could change a decision? It also limits review overload by constraining work-in-progress.",
+        "id": "frontier-control-eval-023",
+        "name": "Attack the control protocol, not only the agent",
+        "idea": "Add periodic synthetic control evaluations in which a sandboxed adversarial role attempts to achieve a forbidden outcome while knowing portions of the monitoring architecture. Vary attack timing and abstention so the evaluation tests selective attacks, not only obvious continuous malicious behavior. Store failures as regression scenarios for the assurance case.",
+        "why_novel_here": "Current red-team thinking mostly searches for vulnerabilities in architecture/content. AI-control research suggests the monitoring protocol itself must be evaluated against adaptive attack policies, including attackers that wait for favorable moments.",
+        "expected_upside": "Could reveal brittle assumptions before real external contributors or future more-capable agents encounter them and creates empirical evidence for or against expanding autonomy.",
         "failure_modes": [
-          "Decision value is difficult to estimate and can hide neglected long-tail issues.",
-          "A small portfolio can centralize agenda setting.",
-          "Questions with slow feedback may be systematically neglected."
+          "Synthetic attacks can teach future agents about defenses if sensitive protocol internals are unnecessarily exposed.",
+          "A narrow attack generator can make weak controls look safe.",
+          "Unsafe test design could accidentally cross from simulation into real consequential actions."
         ],
-        "rights_distribution": "Portfolio selection should preserve pluralism and permit challenges to the agenda itself; no single scalar priority score should determine inclusion.",
-        "reversibility": "Very high.",
+        "rights_distribution": "Evaluations must remain sandboxed and must never use real people, unauthorized systems, secrets, or consequential external targets. Findings should reduce authority when uncertain rather than justify experimentation on affected parties.",
+        "reversibility": "High if restricted to inert/sandboxed simulations.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Re-express the four current agent-ready tasks as uncertainty-reduction challenges and test whether any become obviously low-value, underspecified, or impossible to evaluate."
+        "falsifiable_next_test": "Create one inert tabletop scenario around external-PR prompt injection and compare whether the current policy catches a selective attacker who behaves normally for several runs before attempting one protected action."
       }
     ],
     "rejected_or_deferred": [
-      "Launch a monetary prize market now: spending, incentive design, legal/tax considerations, outreach, and adversarial dynamics require human review and there is not yet evidence that the challenge packet itself works.",
-      "Replace the repository with a standalone platform now: premature; first test whether challenge packets create measurable review or independence gains using existing infrastructure.",
-      "Let solver votes determine truth: crowd participation is not epistemic authority, and competitive peer evaluation can create strategic behavior.",
-      "Publish every unresolved question publicly: some questions may be sensitive or invite harmful optimization; public release requires a separate safety classification."
+      "Expand autonomous merge authority now: current repository still lacks the target mechanical identity separation/protected-main architecture, so there is no positive assurance case for expansion.",
+      "Treat a passing assurance case as sufficient for normative or legal decisions: technical evidence cannot substitute for human authority over protected values and consequential commitments.",
+      "Expose full monitor/security internals to adversarial agents by default: recent control-evaluation work suggests attackers with knowledge of control internals can adapt around some protocols; use least disclosure compatible with meaningful evaluation.",
+      "Build a large assurance framework immediately: first test one small case and reject the idea if it adds ceremony without revealing new assumptions or improving deferral precision."
     ],
     "evidence_checked": [
       {
-        "title": "Kay (2011) — The effect of inducement prizes on innovation",
-        "url": "https://doi.org/10.1111/j.1467-9310.2011.00653.x",
-        "supports": "Case-study evidence that challenge incentives can attract unconventional entrants and novel R&D approaches; used as an analogy for exporting bounded problems, not proof that HumanityAI should use prizes."
+        "title": "NIST AI Risk Management Framework 1.0 and Generative AI Profile",
+        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
+        "supports": "Risk management should span governance, mapping, measurement and management across the lifecycle; the GAI profile emphasizes additional oversight, tracking, documentation, testing and third-party considerations."
       },
       {
-        "title": "Rutherford et al. (2020) — Impossible by Conventional Means: Ten Years on from the DARPA Red Balloon Challenge",
-        "url": "https://arxiv.org/abs/2008.05940",
-        "supports": "Large-scale open challenges can mobilize distributed problem solving but also attract false information and adverse dynamics, supporting explicit verification and adversarial design."
+        "title": "Korbak et al. (2025) — A sketch of an AI control safety case",
+        "url": "https://arxiv.org/abs/2501.17315",
+        "supports": "A safety case can be a structured argument whose claims depend on empirical control evaluations rather than a generic assertion that monitoring exists."
       },
       {
-        "title": "Miorandi & Maggi (2014) — Error and attack tolerance of collective problem solving: DARPA Shredder Challenge",
-        "url": "https://doi.org/10.1140/epjds/s13688-014-0013-1",
-        "supports": "Crowds may recover from ordinary errors yet remain vulnerable to malicious behavior, supporting evaluator separation and independent verification rather than assuming scale filters attacks."
+        "title": "Kutasov et al. (2025) — Evaluating Control Protocols for Untrusted AI Agents",
+        "url": "https://arxiv.org/abs/2511.02997",
+        "supports": "Control protocols can look strong against default attacks yet degrade sharply against adaptive strategies; deferring on critical actions was comparatively robust in the reported evaluation."
       },
       {
-        "title": "Gustetic et al. (2018) — Outcome-Driven Open Innovation at NASA",
-        "url": "https://arxiv.org/abs/1810.03426",
-        "supports": "Open-innovation challenge design should be driven by desired outcomes, supporting a portfolio centered on uncertainty reduction and decision value rather than contributor activity."
+        "title": "Ge-Wang et al. (2026) — Attack Selection in Agentic AI Control Evaluations Meaningfully Decreases Safety",
+        "url": "https://arxiv.org/abs/2606.06529",
+        "supports": "Attackers that strategically choose when to act can substantially reduce measured safety, supporting selective-attack scenarios rather than only obvious continuous red-team behavior."
       },
-      "PRINCIPLES.md",
-      "agent/tasks.json",
-      "security/policy.json"
+      "SECURITY.md",
+      "security/policy.json",
+      "agent/heartbeats/README.md"
     ],
-    "recommended_next_test": "Without public outreach or protected changes, prototype one challenge packet from an existing unresolved HumanityAI question and compare two independent context-naive solver attempts against the current free-form task format. Measure independence of approach, reproducibility, review effort, and whether the fixed framing itself causes correlated error.",
+    "recommended_next_test": "Prototype one non-authorizing machine-readable assurance case for the already-limited capability 'review an external PR without merging it', then have a future adversarial-red-team rotation try to invalidate its claims. Do not change protected policy or expand authority unless a later human review explicitly approves that separate step.",
     "human_review_required": false
   },
   "mode_history": [
@@ -99,7 +99,8 @@
     "adversarial_red_team",
     "neglected_opportunity_hunt",
     "outside_stakeholder_lens",
-    "humanityai_is_the_wrong_shape"
+    "humanityai_is_the_wrong_shape",
+    "technology_science_frontier_import"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
