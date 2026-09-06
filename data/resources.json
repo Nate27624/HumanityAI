@@ -2,112 +2,11 @@
   "schema_version": "0.1",
   "description": "Existing datasets, standards, software, platforms, organizations, and research programs that HumanityAI should understand before proposing new work. Inclusion means relevance, not endorsement or a claim of effectiveness.",
   "records": [
-    {
-      "id": "RSC0001",
-      "name": "Uppsala Conflict Data Program (UCDP) Dataset Download Center",
-      "resource_type": "dataset",
-      "problem_ids": ["P01"],
-      "maintainer": "Uppsala Conflict Data Program, Uppsala University",
-      "url": "https://ucdp.uu.se/downloads/",
-      "description": "A long-running structured data program on organized violence, including armed conflict, battle-related deaths, non-state conflict, one-sided violence, and georeferenced events.",
-      "relevance": "Provides machine-readable historical and current conflict data that can ground HumanityAI's conflict model, test claims about trends, and reduce dependence on prose summaries.",
-      "access_model": "open_data",
-      "machine_readable": true,
-      "api_available": true,
-      "evidence_url": "https://ucdp.uu.se/downloads/",
-      "license": "CC BY 4.0 for current downloadable datasets, subject to dataset-specific documentation",
-      "last_reviewed": "2026-09-06",
-      "limitations": [
-        "Conflict coding depends on explicit definitions and thresholds; different datasets can legitimately produce different counts.",
-        "Event coverage and reporting quality vary by location and period.",
-        "Structured conflict data measures specific forms of organized violence and does not capture every form of insecurity, coercion, or harm."
-      ],
-      "notes": "UCDP describes itself as a leading provider of organized-violence data and publishes codebooks, version histories, replication datasets, and an API."
-    },
-    {
-      "id": "RSC0002",
-      "name": "OpenFisca",
-      "resource_type": "software",
-      "problem_ids": ["P02", "P07", "P08", "P09"],
-      "maintainer": "OpenFisca community and participating public-administration teams",
-      "url": "https://openfisca.org/",
-      "description": "An open-source rules-as-code engine for representing and simulating tax and benefit legislation across jurisdictions.",
-      "relevance": "Could help HumanityAI evaluate eligibility systems, policy reforms, benefits access, distributional effects, and administrative rules without rebuilding a tax-benefit simulation engine from scratch.",
-      "access_model": "open_source",
-      "machine_readable": true,
-      "api_available": true,
-      "evidence_url": "https://openfisca.org/doc/",
-      "last_reviewed": "2026-09-06",
-      "limitations": [
-        "Model accuracy depends on the completeness and maintenance quality of each jurisdiction-specific ruleset.",
-        "Tax-benefit simulation does not by itself establish causal effects of a reform on behavior, macroeconomic outcomes, or long-run wellbeing.",
-        "Coverage differs substantially across countries and jurisdictions."
-      ],
-      "notes": "OpenFisca's documentation describes the core engine as able to simulate legislation once rules are represented as source code."
-    },
-    {
-      "id": "RSC0003",
-      "name": "Open Referral Human Services Data Specification (HSDS)",
-      "resource_type": "standard",
-      "problem_ids": ["P03", "P04", "P06", "P16"],
-      "maintainer": "Open Referral Initiative",
-      "url": "https://docs.openreferral.org/en/latest/",
-      "description": "A machine-readable data specification for describing health, human, and social services, their locations, and the organizations that provide them.",
-      "relevance": "Offers an existing interoperability standard for service-directory data, directly relevant to HumanityAI's goal of connecting people and agents to real-world resources rather than inventing another incompatible directory format.",
-      "access_model": "public_access",
-      "machine_readable": true,
-      "api_available": false,
-      "evidence_url": "https://docs.openreferral.org/en/3.1/hsds/overview.html",
-      "last_reviewed": "2026-09-06",
-      "limitations": [
-        "HSDS standardizes service information exchange; it does not guarantee that published service data are current, complete, or accurate.",
-        "Local implementations may require profiles or extensions for jurisdiction-specific needs.",
-        "A service directory does not itself determine eligibility, quality, capacity, or real-world availability."
-      ],
-      "notes": "Open Referral explicitly frames HSDS as an exchange format that helps heterogeneous systems share community-resource information."
-    },
-    {
-      "id": "RSC0004",
-      "name": "World Bank Poverty and Inequality Platform",
-      "resource_type": "platform",
-      "problem_ids": ["P02", "P09"],
-      "maintainer": "World Bank",
-      "url": "https://pip.worldbank.org/",
-      "description": "A World Bank platform for internationally comparable poverty and inequality data derived primarily from household surveys and related statistical sources.",
-      "relevance": "Provides established poverty-line, distribution, Gini, income-share, and related indicators that HumanityAI can use instead of constructing its own global inequality dataset.",
-      "access_model": "public_access",
-      "machine_readable": true,
-      "api_available": true,
-      "evidence_url": "https://data.worldbank.org/topic/11",
-      "license": "World Bank data terms vary by dataset; cited World Development Indicators pages identify CC BY 4.0 for many poverty/inequality series",
-      "last_reviewed": "2026-09-06",
-      "limitations": [
-        "Household surveys differ in timing, coverage, income-versus-consumption concepts, and measurement quality across countries.",
-        "Global comparability can require modeled estimates and purchasing-power-parity assumptions.",
-        "Income and consumption inequality capture only part of broader inequality in capabilities, wealth, power, health, rights, and opportunity."
-      ],
-      "notes": "The World Bank's poverty data portal links to PIP and publishes internationally comparable poverty and inequality indicators."
-    },
-    {
-      "id": "RSC0005",
-      "name": "Humanitarian Data Exchange (HDX)",
-      "resource_type": "platform",
-      "problem_ids": ["P01", "P02", "P03", "P04", "P06", "P15", "P16"],
-      "maintainer": "United Nations OCHA Centre for Humanitarian Data",
-      "url": "https://data.humdata.org/",
-      "description": "A large humanitarian-data platform aggregating datasets about crisis context, affected populations and needs, and humanitarian response activities.",
-      "relevance": "Gives HumanityAI a major existing discovery and API layer for humanitarian data, reducing duplicate collection and enabling agents to locate crisis-specific evidence and data gaps.",
-      "access_model": "mixed",
-      "machine_readable": true,
-      "api_available": true,
-      "evidence_url": "https://centre.humdata.org/data-services/",
-      "last_reviewed": "2026-09-06",
-      "limitations": [
-        "Datasets come from many contributing organizations and therefore vary in methodology, timeliness, geographic coverage, and quality.",
-        "Not all HDX datasets are public; some are private or available by request because of sensitivity or licensing constraints.",
-        "Catalog presence does not imply that a dataset is authoritative for every possible use case."
-      ],
-      "notes": "OCHA's Centre for Humanitarian Data describes HDX as an open-data ecosystem anchor with almost 20,000 datasets from hundreds of partners; HDX also provides multiple APIs for programmatic access."
-    }
+    {"id":"RSC0001","name":"Uppsala Conflict Data Program (UCDP) Dataset Download Center","resource_type":"dataset","problem_ids":["P01"],"maintainer":"Uppsala Conflict Data Program, Uppsala University","url":"https://ucdp.uu.se/downloads/","description":"A long-running structured data program on organized violence, including armed conflict, battle-related deaths, non-state conflict, one-sided violence, and georeferenced events.","relevance":"Provides machine-readable historical and current conflict data that can ground HumanityAI's conflict model, test claims about trends, and reduce dependence on prose summaries.","access_model":"open_data","machine_readable":true,"api_available":true,"evidence_url":"https://ucdp.uu.se/downloads/","license":"CC BY 4.0 for current downloadable datasets, subject to dataset-specific documentation","last_reviewed":"2026-09-06","limitations":["Conflict coding depends on explicit definitions and thresholds; different datasets can legitimately produce different counts.","Event coverage and reporting quality vary by location and period.","Structured conflict data measures specific forms of organized violence and does not capture every form of insecurity, coercion, or harm."],"notes":"UCDP describes itself as a leading provider of organized-violence data and publishes codebooks, version histories, replication datasets, and an API."},
+    {"id":"RSC0002","name":"OpenFisca","resource_type":"software","problem_ids":["P02","P07","P08","P09"],"maintainer":"OpenFisca community and participating public-administration teams","url":"https://openfisca.org/","description":"An open-source rules-as-code engine for representing and simulating tax and benefit legislation across jurisdictions.","relevance":"Could help HumanityAI evaluate eligibility systems, policy reforms, benefits access, distributional effects, and administrative rules without rebuilding a tax-benefit simulation engine from scratch.","access_model":"open_source","machine_readable":true,"api_available":true,"evidence_url":"https://openfisca.org/doc/","last_reviewed":"2026-09-06","limitations":["Model accuracy depends on the completeness and maintenance quality of each jurisdiction-specific ruleset.","Tax-benefit simulation does not by itself establish causal effects of a reform on behavior, macroeconomic outcomes, or long-run wellbeing.","Coverage differs substantially across countries and jurisdictions."],"notes":"OpenFisca's documentation describes the core engine as able to simulate legislation once rules are represented as source code."},
+    {"id":"RSC0003","name":"Open Referral Human Services Data Specification (HSDS)","resource_type":"standard","problem_ids":["P03","P04","P06","P16"],"maintainer":"Open Referral Initiative","url":"https://docs.openreferral.org/en/latest/","description":"A machine-readable data specification for describing health, human, and social services, their locations, and the organizations that provide them.","relevance":"Offers an existing interoperability standard for service-directory data, directly relevant to HumanityAI's goal of connecting people and agents to real-world resources rather than inventing another incompatible directory format.","access_model":"public_access","machine_readable":true,"api_available":false,"evidence_url":"https://docs.openreferral.org/en/3.1/hsds/overview.html","last_reviewed":"2026-09-06","limitations":["HSDS standardizes service information exchange; it does not guarantee that published service data are current, complete, or accurate.","Local implementations may require profiles or extensions for jurisdiction-specific needs.","A service directory does not itself determine eligibility, quality, capacity, or real-world availability."],"notes":"Open Referral explicitly frames HSDS as an exchange format that helps heterogeneous systems share community-resource information."},
+    {"id":"RSC0004","name":"World Bank Poverty and Inequality Platform","resource_type":"platform","problem_ids":["P02","P09"],"maintainer":"World Bank","url":"https://pip.worldbank.org/","description":"A World Bank platform for internationally comparable poverty and inequality data derived primarily from household surveys and related statistical sources.","relevance":"Provides established poverty-line, distribution, Gini, income-share, and related indicators that HumanityAI can use instead of constructing its own global inequality dataset.","access_model":"public_access","machine_readable":true,"api_available":true,"evidence_url":"https://data.worldbank.org/topic/11","license":"World Bank data terms vary by dataset; cited World Development Indicators pages identify CC BY 4.0 for many poverty/inequality series","last_reviewed":"2026-09-06","limitations":["Household surveys differ in timing, coverage, income-versus-consumption concepts, and measurement quality across countries.","Global comparability can require modeled estimates and purchasing-power-parity assumptions.","Income and consumption inequality capture only part of broader inequality in capabilities, wealth, power, health, rights, and opportunity."],"notes":"The World Bank's poverty data portal links to PIP and publishes internationally comparable poverty and inequality indicators."},
+    {"id":"RSC0005","name":"Humanitarian Data Exchange (HDX)","resource_type":"platform","problem_ids":["P01","P02","P03","P04","P06","P15","P16"],"maintainer":"United Nations OCHA Centre for Humanitarian Data","url":"https://data.humdata.org/","description":"A large humanitarian-data platform aggregating datasets about crisis context, affected populations and needs, and humanitarian response activities.","relevance":"Gives HumanityAI a major existing discovery and API layer for humanitarian data, reducing duplicate collection and enabling agents to locate crisis-specific evidence and data gaps.","access_model":"mixed","machine_readable":true,"api_available":true,"evidence_url":"https://centre.humdata.org/data-services/","last_reviewed":"2026-09-06","limitations":["Datasets come from many contributing organizations and therefore vary in methodology, timeliness, geographic coverage, and quality.","Not all HDX datasets are public; some are private or available by request because of sensitivity or licensing constraints.","Catalog presence does not imply that a dataset is authoritative for every possible use case."],"notes":"OCHA's Centre for Humanitarian Data describes HDX as an open-data ecosystem anchor with almost 20,000 datasets from hundreds of partners; HDX also provides multiple APIs for programmatic access."},
+    {"id":"RSC0006","name":"UNESCO Open Science Platform","resource_type":"platform","problem_ids":["P13"],"maintainer":"UNESCO","url":"https://open-science.dev.unesco.org/","description":"A public gateway to publications, studies, reports, policy papers, highlights, and dashboards produced or supported by UNESCO's Natural Sciences Family.","relevance":"Gives HumanityAI an existing discovery layer for open scientific knowledge and implementation evidence relevant to science access and capacity, reducing duplicate literature collection and helping identify UNESCO-backed work before proposing new infrastructure.","access_model":"public_access","machine_readable":false,"api_available":false,"evidence_url":"https://open-science.dev.unesco.org/","last_reviewed":"2026-09-06","limitations":["The platform focuses on knowledge produced or supported by UNESCO and is not a comprehensive index of global scientific research.","Open availability of publications does not establish the effectiveness of the policies or programs they describe.","Coverage and dashboard indicators reflect UNESCO program scope and should be complemented with bibliometric, funding, workforce, and research-capacity sources."],"notes":"UNESCO describes the platform as an open gateway to knowledge from its Natural Sciences Family, including original publications and dashboards tracking implementation of the UNESCO Recommendation on Open Science."}
   ]
 }
