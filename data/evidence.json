@@ -67,6 +67,44 @@
       "last_reviewed": "2026-09-06",
       "generated_by": "HumanityAI secondary staggered autonomous research pass; source is human-produced systematic review",
       "human_reviewed": false
+    },
+    {
+      "id": "E0003",
+      "claim": "Across low- and middle-income countries, off-grid electrification interventions reduce kerosene consumption and are associated with small increases in income and women's decision-making, while evidence for broader education and climate benefits is mixed: study time may increase, but school attendance and test scores showed no significant effects, and available air-quality studies did not show a statistically significant effect.",
+      "claim_type": "estimate",
+      "status": "mixed",
+      "problem_ids": ["P06", "P07", "P05", "P11"],
+      "sources": [
+        {
+          "url": "https://www.campbellcollaboration.org/review/improving-energy-access-climate-and-socio-economic-outcomes-through-off-grid-electrification-technologies-a-systematic-review/",
+          "title": "Improving Energy Access, Climate and Socio-Economic Outcomes Through Off-Grid Electrification Technologies: A Systematic Review",
+          "publisher": "Campbell Collaboration",
+          "published_date": "2025-10-14",
+          "accessed_date": "2026-09-06",
+          "source_type": "systematic_review",
+          "relationship": "qualifies",
+          "notes": "Systematic review of 47 rigorous impact evaluations in low- and middle-income countries, with searches through September 2023. Campbell reports reduced kerosene consumption, small positive effects on income, increased women's decision-making, and a possible increase in study time, but no significant effects on school attendance or test scores. Five predominantly high-risk-of-bias studies examined air quality without a statistically significant effect, and only one study assessed CO2 emissions."
+        }
+      ],
+      "confidence": 0.85,
+      "confidence_rationale": "The record closely follows a recent Campbell systematic review and deliberately preserves its mixed findings. Confidence is relatively high in the review-level characterization, but lower for individual outcome effects because evidence was limited for many outcomes, many studies had high risk of bias, and publication bias may inflate the study-time finding.",
+      "limitations": [
+        "The 47 included impact evaluations span different off-grid technologies, program designs, populations, outcome definitions, and follow-up periods, so the intervention class should not be treated as homogeneous.",
+        "The review assessed the evidence as limited for many outcomes and found high risk of bias in much of the underlying evidence base.",
+        "The apparent increase in time spent studying may be overstated because the review found evidence of publication bias; this result should not be generalized to learning outcomes.",
+        "The absence of statistically significant effects on school attendance, test scores, or air quality does not prove zero effect, especially where the number or quality of studies is limited.",
+        "Climate-effect evidence is especially sparse: only one included study assessed CO2 emissions, so this record does not establish that off-grid electrification reliably reduces greenhouse-gas emissions.",
+        "Most evidence was concentrated in sub-Saharan Africa, limiting transferability to other regions and infrastructure contexts.",
+        "This record concerns intervention effectiveness and does not establish the cost-effectiveness of a specific technology, the quality or reliability of delivered electricity, or HumanityAI's comparative advantage in promoting an intervention."
+      ],
+      "counterevidence": [
+        "No significant effect was identified for school attendance or test scores despite a possible increase in time spent studying.",
+        "Five studies examining air quality did not show a statistically significant effect, and evidence was too sparse to draw conclusions about CO2 emissions.",
+        "Evidence of publication bias suggests that the positive study-time effect may overstate the true effect."
+      ],
+      "last_reviewed": "2026-09-06",
+      "generated_by": "HumanityAI secondary staggered autonomous research pass; source is human-produced systematic review",
+      "human_reviewed": false
     }
   ]
 }
