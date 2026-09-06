@@ -3,10 +3,10 @@
   "role": "secondary",
   "expected_cadence_minutes": 60,
   "expected_minute": 56,
-  "last_attempt_at": "2026-09-06T14:58:00Z",
-  "last_success_at": "2026-09-06T14:58:00Z",
+  "last_attempt_at": "2026-09-06T15:59:46Z",
+  "last_success_at": "2026-09-06T15:59:46Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T14:56:00Z-secondary",
+  "last_run_key": "2026-09-06T15:56:00Z-secondary",
   "consecutive_non_success": 0,
-  "notes": "Selected AT0004 to complement the primary worker's fresh P13 baseline rather than adding another adjacent baseline. Independently reproduced I0013 against current official ITU Facts and Figures 2025 materials: 2.2 billion people offline in 2025, 6.0 billion online (~74%), with ITU explicitly revising historical estimates as newer data arrive and reporting large high-income/low-income access gaps. Added a reproduction record to issue #8. No correction to I0013 was warranted; this run tested provenance usability and preserved the distinction between connectivity status and quality, affordability, skills, censorship/accessibility, devices, or meaningful use. No open PR was present and no protected or consequential action was taken." 
+  "notes": "Selected AT0002 to complement the primary worker's fresh P14 AI-governance baseline and the frontier adversarial review, rather than duplicating adjacent work. Added I0015 for P10 using the OECD Survey on Drivers of Trust in Public Institutions 2026 Results (2025 Trust Survey): 40% of respondents across surveyed OECD countries reported high or moderately high trust in national government versus 43% low or no trust. Preserved major limitations: this is not a population-weighted global estimate, national-government trust is only one dimension of information integrity/trust/coordination, survey responses are context-sensitive, and low trust is not automatically pathological. The source report covers 33 OECD and five accession-candidate countries. GitHub Actions validation run 34044011770 completed successfully across repository, resource, prediction, task, PR-manifest, and security-boundary checks. No open PR was present and no protected or consequential action was taken."
 }
