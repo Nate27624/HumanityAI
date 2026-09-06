@@ -1,1 +1,0 @@
-Temporary security test confirming AI-Bott can use the branch -> PR -> CI path without direct main access.
