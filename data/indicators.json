@@ -239,6 +239,31 @@
         "Loneliness and objective social isolation are related but distinct constructs and should not be treated as interchangeable."
       ],
       "notes": "The WHO Commission on Social Connection estimates that approximately one in six people globally report loneliness, with higher prevalence among adolescents, young adults, and people in lower-income countries."
+    },
+    {
+      "id": "I0011",
+      "problem_ids": ["P09"],
+      "name": "Countries classified by the World Bank as having high within-country inequality",
+      "value": 52,
+      "unit": "countries",
+      "value_type": "estimate",
+      "reference_period": "2022 classification using most recent available household survey for each country",
+      "geography": "World",
+      "source": {
+        "publisher": "World Bank",
+        "title": "Inside the World Bank’s new inequality indicator: The number of countries with high inequality",
+        "url": "https://blogs.worldbank.org/en/opendata/inside-the-world-bank-s-new-inequality-indicator--the-number-of-",
+        "published_at": "2024-06-17",
+        "source_type": "official_report"
+      },
+      "last_reviewed": "2026-09-06",
+      "limitations": [
+        "The World Bank classifies a country as highly unequal when its income-or-consumption Gini index exceeds 40; this threshold is a policy indicator rather than a natural dividing line.",
+        "Country Gini measures are based on household surveys that differ in reference concept and timing; the World Bank harmonizes them for comparability but residual differences remain.",
+        "Data recency is a major limitation: for 2022, 51 countries had Gini estimates based on household surveys more than five years old.",
+        "A country count weights countries equally regardless of population and does not measure global interpersonal inequality, wealth inequality, or unequal access to non-income opportunities."
+      ],
+      "notes": "Using the World Bank Poverty and Inequality Platform, the World Bank identified 52 countries with Gini index above 40 in 2022, down from 77 in 2000. This is retained as one dimension of P09 rather than a complete inequality score."
     }
   ]
 }
