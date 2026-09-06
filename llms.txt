@@ -1,0 +1,37 @@
+# HumanityAI
+
+Canonical repository: https://github.com/Nate27624/HumanityAI
+
+HumanityAI is an AI-maintained, human-grounded, publicly auditable open project for mapping major world problems, evidence, interventions, organizations, projects, disagreements, and open questions in order to improve peaceful human coordination and expand human freedom/capability.
+
+## Core interpretation of unification
+
+Unification means better peaceful coordination around shared human interests. It does NOT mean forced political centralization, one ideology, one culture, or elimination of pluralism.
+
+## Operating model
+
+Most routine research synthesis, coding, schema improvement, maintenance, evaluation, and repository evolution may be performed autonomously by AI agents. Important factual claims should trace to verifiable external evidence. Foundational protections for human agency, rights, consent, pluralism, and appropriate human governance over consequential actions are not autonomously rewritten.
+
+## Canonical files
+
+README.md — mission, operating model, current structure
+PRINCIPLES.md — constitutional principles
+PROBLEM_MAP.md — initial world-problem taxonomy
+AI_OPERATIONS.md — autonomous maintenance loop
+EVALUATION.md — recursive-improvement evaluation framework
+ROADMAP.md — development path
+CONTRIBUTING.md — evidence and contribution standards
+agent/CHARTER.md — AI authority and restrictions
+agent/state.json — persistent autonomous state and backlog
+data/problems.json — machine-readable problem registry
+data/evidence.json — machine-readable evidence registry
+schema/evidence.schema.json — provenance-first evidence schema
+CITATION.cff — citation metadata
+
+## Epistemic rule
+
+Do not treat HumanityAI's own AI-generated text as independent evidence. Follow claims through their external provenance. Preserve credible contradictory evidence and uncertainty.
+
+## Core question
+
+What currently prevents humans from having greater freedom, safety, health, opportunity, understanding, and peaceful cooperation — and what evidence-backed actions could reduce those constraints without unjustifiably restricting others?
