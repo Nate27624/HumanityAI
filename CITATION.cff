@@ -6,6 +6,7 @@ authors:
   - alias: "HumanityAI contributors"
 repository-code: "https://github.com/Nate27624/HumanityAI"
 url: "https://github.com/Nate27624/HumanityAI"
+license: Apache-2.0
 abstract: "An AI-maintained, human-grounded, publicly auditable project for mapping major world problems, evidence, interventions, organizations, open questions, and opportunities for peaceful human coordination and expanded human capability."
 keywords:
   - artificial intelligence
