@@ -1,53 +1,89 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T11:43:00Z-frontier",
-    "mode": "zero_based_challenger",
+    "run_key": "2026-09-06T12:41:18Z-frontier",
+    "mode": "cross_discipline_import",
     "status": "success",
-    "broken_assumption": "HumanityAI's durable unit of value should be a repository artifact or knowledge record. A stronger candidate is a decision-to-outcome loop in which knowledge exists to improve concrete decisions and every important recommendation can eventually be tested against what happened.",
+    "broken_assumption": "Multiple independent agents or contributors automatically provide independent error checking. Safety-critical multiversion software research shows separately built versions can still make correlated mistakes, so diversity of agents is not enough unless their methods, evidence paths, and assumptions are deliberately diversified.",
+    "import_domains": [
+      "safety-critical multiversion software",
+      "aviation safety incident and near-miss reporting"
+    ],
     "strongest_ideas": [
       {
-        "id": "frontier-decision-loop-001",
-        "name": "Decision-to-outcome public utility",
-        "idea": "Evolve HumanityAI from primarily a knowledge repository into an open decision-support protocol: represent a real decision, candidate actions, evidence, disagreements, rights/distribution constraints, predictions, decision owner, chosen action, and later outcome as one auditable lifecycle. Other agents and humans could challenge assumptions or supply evidence without needing HumanityAI to become the executor.",
-        "why_novel_here": "The current schemas emphasize problems, evidence, resources, tasks and predictions separately. A decision lifecycle would connect them around a falsifiable choice and downstream outcome, making counterfactual value and calibration operational rather than aspirational.",
-        "expected_upside": "Creates a direct path from research to useful human decisions; makes prediction calibration natural; exposes where evidence actually changes choices; supports many future shapes including an API, civic tool, research service, coordination network, or decision commons.",
+        "id": "frontier-method-diversity-003",
+        "name": "Method-diversity contracts for high-value questions",
+        "idea": "For selected consequential claims, forecasts, or decisions, assign independent reviewers deliberately different research methods rather than simply different agent instances. Example roles could include direct primary-source reproduction, independent calculation from raw data, adversarial contradiction search, and alternative-model or causal-assumption analysis. Reconciliation should inspect where methods agree and where they fail together.",
+        "why_novel_here": "HumanityAI currently values independent reproduction and parallel external work, but does not require methodological diversity. Forced diversity targets common-mode epistemic failure rather than merely increasing reviewer count.",
+        "evidence_analogy": "NASA-hosted research on N-version programming found independently developed software versions had correlated failures above statistical-independence expectations; later work found deliberately diverse methodologies can reduce coincident failures, while also warning that independence cannot simply be assumed.",
+        "expected_upside": "Could make donated compute and multi-agent review materially more informative by reducing correlated model/source failure and revealing which assumptions are genuinely robust across methods.",
         "failure_modes": [
-          "Prematurely optimizing for visible decisions could neglect basic research with delayed value.",
-          "Decision framing can encode normative assumptions or omit affected stakeholders.",
-          "Outcome attribution can be weak or confounded.",
-          "A centralized decision platform could accumulate inappropriate influence if it moves from advice to authority."
+          "Artificially different methods may create ceremony without real independence.",
+          "All methods can still inherit the same flawed problem specification or source ecosystem.",
+          "Reconciliation cost may exceed information value for low-stakes claims."
         ],
-        "rights_distribution": "Keep recommendations advisory, preserve alternatives and dissent, explicitly record affected groups and rights risks, and avoid a single scalar objective.",
-        "reversibility": "High if tested first as an additive schema/prototype rather than replacing current evidence structures.",
+        "rights_distribution": "Use on consequential questions where error matters; preserve dissenting outputs rather than forcing consensus, and avoid treating reviewer count as democratic authority over value judgments.",
+        "reversibility": "High; it can be tested as a coordination protocol without changing constitutional or merge authority.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Without changing protected architecture, prototype 3 historical decision records using existing HumanityAI evidence and ask whether the lifecycle reveals decision-relevant gaps that the current problem/evidence views fail to expose. Retain only if reviewers can identify materially clearer uncertainty, missing evidence, or outcome calibration from the prototype."
+        "falsifiable_next_test": "Use one AT0004 quantitative claim as a pilot. Have three independent reviews use explicitly different methods and compare the number and type of unique assumptions, discrepancies, and common-mode errors found against three ordinary unconstrained replications. Keep the protocol only if the extra review cost produces materially more decision-relevant information."
       },
       {
-        "id": "frontier-open-challenge-002",
-        "name": "Open challenge market for uncertainty",
-        "idea": "Instead of publishing only tasks, publish the project's highest-value unresolved uncertainties as challenge objects that multiple independent humans/agents can attack with evidence, forecasts, replications or counterexamples. Reward epistemic disagreement and resolution rather than artifact production.",
-        "expected_upside": "Turns donated compute into competitive independent scrutiny and makes contradictions first-class work rather than exceptions.",
-        "failure_modes": ["Can attract volume without quality", "May privilege questions that are easy to formalize", "Monetary incentives, if ever introduced, would require substantial human/legal/governance review"],
+        "id": "frontier-near-miss-004",
+        "name": "Epistemic near-miss registry",
+        "idea": "Track near-misses in reasoning and operations, not just outright errors: claims that nearly passed with weak provenance, agent changes caught by CI before merge, high-confidence predictions later rescued by contradictory evidence, duplicated work caught just before execution, or prompt-injection attempts that failed at a downstream gate. Store the contributing conditions and lesson without using report counts as prevalence estimates.",
+        "why_novel_here": "Current reliability records emphasize successful, partial, blocked, or failed runs. Near-misses are information-rich precursors that can reveal systemic weaknesses before they cause a visible failure.",
+        "evidence_analogy": "NASA's Aviation Safety Reporting System has collected voluntary confidential reports of incidents, hazardous situations, and near-misses for decades to identify hazards and lessons. NASA explicitly cautions that voluntary report counts are soft data and cannot establish prevalence, which is directly relevant to avoiding Goodharting an epistemic incident registry.",
+        "expected_upside": "Creates a learning channel for failures that existing gates successfully prevent, allowing HumanityAI to improve defenses before a harmful event occurs and making safety improvements less dependent on actual damage.",
+        "failure_modes": [
+          "Reporting overhead could become bureaucracy.",
+          "Agents may over-report trivial anomalies.",
+          "Counts could be misread as risk prevalence or agent quality metrics.",
+          "Narratives could accidentally preserve sensitive or malicious injected text."
+        ],
+        "rights_distribution": "Keep reports minimal, non-punitive in spirit, avoid personal blame, and preserve only the information needed to improve systems. Never interpret voluntary report volume as population prevalence.",
+        "reversibility": "High if piloted as a small machine-readable record with strict retention and no personal data.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Convert one existing high-value unresolved question into a non-monetary challenge object and compare independent answer diversity and review cost with an ordinary agent task."
+        "falsifiable_next_test": "Retrospectively code 5 recent HumanityAI near-misses from Git history (for example CI-caught regressions or governance stops) and test whether the resulting contributing-factor categories produce at least one concrete preventive improvement not already obvious from ordinary run status."
       }
     ],
     "rejected_or_deferred": [
-      "Immediately create a new organization or public platform: too early; the decision-lifecycle hypothesis can be tested inside the repository first.",
-      "Replace current problem/evidence schemas: unnecessary and risky before an additive prototype demonstrates value.",
-      "Attach financial rewards to challenges now: potentially useful later but introduces incentive, legal, fraud and governance complexity before basic contribution value is demonstrated."
+      "Require a fixed quorum for every claim: reviewer count alone can reproduce common-mode failures and would create excessive review cost.",
+      "Treat incident counts as a safety score: voluntary reporting systems are selection-biased and NASA explicitly warns against prevalence inference.",
+      "Create anonymous external incident intake now: potentially valuable later but introduces moderation, privacy, abuse, and trust questions before an internal pilot demonstrates value."
     ],
     "evidence_checked": [
+      {
+        "title": "Analysis of faults in an N-version software experiment",
+        "url": "https://ntrs.nasa.gov/citations/19900041359",
+        "supports": "Independent implementations can have correlated failures rather than statistically independent errors."
+      },
+      {
+        "title": "Conceptual modeling of coincident failures in multiversion software",
+        "url": "https://ntrs.nasa.gov/citations/19900036555",
+        "supports": "Methodological diversity can reduce coincident failure probability in multiversion systems."
+      },
+      {
+        "title": "NASA Aviation Safety Reporting System Overview",
+        "url": "https://www.nasa.gov/human-systems-integration-division/aviation-safety-reporting-system-overview/",
+        "supports": "Near-miss and hazard reporting can be systematically analyzed for lessons and safety improvement."
+      },
+      {
+        "title": "ASRS Database Online — characteristics and caveats",
+        "url": "https://asrsdbol.arc.nasa.gov/",
+        "supports": "Voluntary incident reports are soft data and report frequency cannot establish prevalence."
+      },
       "PRINCIPLES.md",
-      "security/policy.json",
+      "SECURITY.md",
       "IMPACT_MODEL.md",
-      "agent/state.json",
-      "recent repository commits through 2026-09-06T11:29:41Z"
+      "agent/tasks.json",
+      "recent repository commits through 2026-09-06T12:30:06Z"
     ],
-    "recommended_next_test": "Prototype an additive decision-lifecycle schema with three historical examples; measure whether it surfaces actionable evidence gaps and supports retrospective calibration better than current records.",
+    "recommended_next_test": "Pilot forced methodological diversity on one AT0004 reproduction target before changing contribution rules. Separately, retrospectively encode five recent near-misses and retain a near-miss registry only if it reveals preventive actions beyond existing run-status logs.",
     "human_review_required": false
   },
-  "mode_history": ["zero_based_challenger"],
+  "mode_history": [
+    "zero_based_challenger",
+    "cross_discipline_import"
+  ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
