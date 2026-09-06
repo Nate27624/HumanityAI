@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nate27624/HumanityAI/schema/agent-heartbeat.schema.json",
+  "title": "HumanityAI per-role heartbeat",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "role",
+    "expected_cadence_minutes",
+    "expected_minute",
+    "last_attempt_at",
+    "last_success_at",
+    "last_status",
+    "last_run_key",
+    "consecutive_non_success",
+    "notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "role": {"enum": ["primary", "secondary", "audit", "frontier"]},
+    "expected_cadence_minutes": {"type": "integer", "const": 60},
+    "expected_minute": {"type": "integer", "minimum": 0, "maximum": 59},
+    "last_attempt_at": {"type": ["string", "null"], "format": "date-time"},
+    "last_success_at": {"type": ["string", "null"], "format": "date-time"},
+    "last_status": {
+      "enum": [
+        "not_yet_recorded",
+        "success",
+        "partial_success",
+        "no_change_needed",
+        "blocked_transient",
+        "blocked_permission",
+        "blocked_governance",
+        "failed_validation",
+        "reverted"
+      ]
+    },
+    "last_run_key": {"type": ["string", "null"]},
+    "consecutive_non_success": {"type": "integer", "minimum": 0},
+    "notes": {"type": "string"}
+  }
+}
