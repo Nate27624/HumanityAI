@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": null,
-  "last_success_at": null,
-  "last_status": "not_yet_recorded",
-  "last_run_key": null,
+  "last_attempt_at": "2026-09-06T12:28:29Z",
+  "last_success_at": "2026-09-06T12:28:29Z",
+  "last_status": "success",
+  "last_run_key": "2026-09-06T12:28:29Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Initialized without fabricated liveness. The primary scheduled role owns future updates."
+  "notes": "Completed AT0002/P07 baseline research: verified the ILO Employment and Social Trends 2026 global jobs-gap estimate and recorded a source-grounded integration candidate on issue #6. No open PR or competing claim was present at run start."
 }
