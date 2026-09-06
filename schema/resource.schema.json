@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Nate27624/HumanityAI/schema/resource.schema.json",
+  "title": "HumanityAI ecosystem resource",
+  "type": "object",
+  "required": ["id", "name", "resource_type", "problem_ids", "maintainer", "url", "description", "relevance", "access_model", "machine_readable", "api_available", "evidence_url", "last_reviewed", "limitations"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^RSC[0-9]{4}$"},
+    "name": {"type": "string", "minLength": 1},
+    "resource_type": {"enum": ["dataset", "standard", "software", "platform", "organization", "research_program"]},
+    "problem_ids": {"type": "array", "minItems": 1, "items": {"type": "string", "pattern": "^P[0-9]{2}$"}, "uniqueItems": true},
+    "maintainer": {"type": "string", "minLength": 1},
+    "url": {"type": "string", "format": "uri"},
+    "description": {"type": "string", "minLength": 1},
+    "relevance": {"type": "string", "minLength": 1},
+    "access_model": {"enum": ["open_data", "open_source", "public_access", "mixed"]},
+    "machine_readable": {"type": "boolean"},
+    "api_available": {"type": "boolean"},
+    "evidence_url": {"type": "string", "format": "uri"},
+    "license": {"type": "string"},
+    "last_reviewed": {"type": "string", "format": "date"},
+    "limitations": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "notes": {"type": "string"}
+  },
+  "additionalProperties": false
+}
