@@ -1,94 +1,78 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T19:39:00Z-frontier",
-    "mode": "technology_science_frontier_import",
+    "run_key": "2026-09-06T20:41:27Z-frontier",
+    "mode": "counterfactual_founder_test",
     "status": "success",
-    "broken_assumption": "HumanityAI currently treats safety/governance as a collection of durable rules plus validators. A stronger model is to treat every consequential autonomous capability as requiring a continuously maintained, falsifiable assurance case: a structured argument linking a specific capability to explicit hazards, controls, evidence, residual uncertainty, and conditions that automatically force deferral to a human.",
+    "broken_assumption": "HumanityAI currently assumes that building a broad, high-quality map of problems and evidence will eventually create downstream value. If the project vanished tomorrow, however, most of today's outputs would likely be replaced by existing research/search systems and almost no real human decision would measurably change. The missing primitive is not more supply of knowledge; it is durable evidence of demand and decision pull.",
     "strongest_ideas": [
       {
-        "id": "frontier-executable-assurance-case-021",
-        "name": "Executable capability assurance cases",
-        "idea": "Create a machine-readable assurance object for each consequential capability (for example merge, outreach, spending, governance changes, sensitive research, or future real-world actions). The object states the capability, threat model, unacceptable outcomes, required controls, evidence that each control works, assumptions, known counterexamples, residual uncertainty, exact tests/heartbeats that keep the case valid, and a fail-closed deferral condition. Authority is granted only while the assurance case remains valid; stale or contradicted evidence automatically reduces capability rather than merely creating a warning.",
-        "why_novel_here": "Current policy answers 'what is forbidden or human-reviewed?' but does not require a positive, evidence-backed argument for why an autonomous capability remains safe under current conditions. This imports the safety-case/control-evaluation idea from high-assurance and emerging AI-control work and makes safety evidence a live dependency of authority.",
-        "expected_upside": "Turns governance from static prose into testable claims, exposes hidden assumptions, gives frontier/audit agents concrete things to attack, and creates a principled path for safely expanding autonomy later without relying on stronger prompts or one-time human trust decisions.",
+        "id": "frontier-demand-ledger-024",
+        "name": "Decision-demand ledger",
+        "idea": "Add a public machine-readable ledger of real decisions, questions, or coordination bottlenecks that humans or organizations actually need help resolving. Each demand object should record the decision owner or stakeholder class at a privacy-safe level, decision deadline, alternatives under consideration, what evidence would change the decision, affected groups, uncertainty, and whether HumanityAI's work was actually used. Research tasks can then be generated from unresolved demand rather than only from a global supply-side map.",
+        "why_novel_here": "Current HumanityAI work is mostly supply-first: identify important problems, collect evidence, map interventions, then hope usefulness follows. A demand ledger inverts the causal direction and gives the project a direct counterfactual test: did a concrete decision become better, faster, more evidence-grounded, or more contestable because HumanityAI existed?",
+        "expected_upside": "Creates measurable counterfactual value, gives task selection real external pull, reduces impressive-but-unused research, naturally connects to the earlier decision-to-outcome lifecycle, and can reveal which parts of the world model are actually useful rather than merely complete.",
         "failure_modes": [
-          "Assurance cases can become paperwork that rationalizes a desired capability instead of genuinely constraining it.",
-          "Tests can miss adaptive or selectively timed attacks, creating false confidence.",
-          "A shared model family can correlate the proposer, monitor, and evaluator failures.",
-          "Overly conservative invalidation can freeze useful low-risk work.",
-          "Machine-readable structure can create an illusion that normative judgments are mechanically settled."
+          "Early demand may be unrepresentative and bias the project toward vocal or well-connected users.",
+          "Urgent visible decisions may crowd out foundational research whose value is delayed.",
+          "Demand objects can expose sensitive context if privacy is handled badly.",
+          "Users may ask for decisions HumanityAI should not influence or cannot safely support.",
+          "Optimizing for recorded use could Goodhart into shallow responsiveness instead of genuine benefit."
         ],
-        "rights_distribution": "The assurance object must preserve human authority for normative boundaries, identify affected groups and distributional risks, and distinguish empirical control evidence from value judgments. Passing a technical case must never silently authorize a constitutionally protected or legally consequential action.",
-        "reversibility": "High for an internal prototype; using a case to expand real authority would require human review and stronger mechanical identity/capability separation.",
+        "rights_distribution": "Record affected groups and who gets to define the decision. Do not treat the requester's objective as morally exhaustive. Preserve the option to refuse or reframe coercive, rights-violating, privacy-sensitive, or inappropriate requests.",
+        "reversibility": "High if prototyped with synthetic or historical demand objects before accepting live submissions.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Prototype an assurance case for one capability that is currently already bounded, such as reviewing (not merging) an external PR. Ask the adversarial-red-team mode to invalidate the case using prompt injection, stale-state, selective-attack, provenance, and correlated-monitor scenarios. The prototype is useful only if it reveals at least one assumption/control not already obvious from SECURITY.md or makes a deferral condition more precise."
+        "falsifiable_next_test": "Create three synthetic or historical demand objects from decisions already discussed in HumanityAI's evidence domains. Compare task selection and output against the current backlog. Keep the concept only if it changes at least one research priority or reveals evidence that would matter to a decision but is invisible in the current problem-map workflow."
       },
       {
-        "id": "frontier-authority-decay-022",
-        "name": "Authority should decay when evidence decays",
-        "idea": "Attach freshness and dependency conditions to future autonomous capabilities. If required CI, identity separation, heartbeat health, provenance, monitor independence, or evaluation evidence becomes stale or fails, the capability automatically falls back to a narrower mode. Recovery requires restoring evidence, not an agent asserting that conditions are probably fine.",
-        "why_novel_here": "HumanityAI has heartbeat monitoring and human-review rules, but authority itself is mostly static. This makes authority conditional on continuously demonstrated safety properties.",
-        "expected_upside": "Limits damage from silent infrastructure drift and converts monitoring into an actual capability boundary rather than an observability feature.",
+        "id": "frontier-proof-of-use-025",
+        "name": "Proof-of-use feedback instead of repository activity",
+        "idea": "For selected outputs, track a small chain of downstream evidence: requested -> delivered -> read/reused -> decision influenced or not -> later outcome when observable. A null result ('useful-looking analysis changed nothing') is first-class evidence and should reduce confidence in similar work classes.",
+        "why_novel_here": "EVALUATION.md calls for counterfactual value and external validation, but there is not yet a concrete object tying an artifact to actual use or non-use. This converts 'utility' from a self-assessment dimension into observable feedback.",
+        "expected_upside": "Provides a reality-based signal for recursive task selection, identifies dead-end work classes, and gives HumanityAI a reason to stop producing artifacts that nobody needs.",
         "failure_modes": [
-          "Bad thresholds can cause unnecessary shutdowns.",
-          "Agents may optimize the measured health signals rather than underlying safety.",
-          "Dependencies can become complex enough that nobody understands why authority changed."
+          "Use is not the same as benefit.",
+          "Impact attribution is often confounded.",
+          "Tracking can become invasive or burdensome.",
+          "Popular outputs can dominate neglected but important work."
         ],
-        "rights_distribution": "Fail-closed behavior should reduce autonomous authority, never reduce human rights or bypass human governance. Human override of high-consequence safeguards should itself be explicit and auditable.",
-        "reversibility": "High as a design/prototype concept.",
+        "rights_distribution": "Use only voluntary/public feedback; do not instrument people covertly. Keep non-use as neutral evidence rather than blaming users.",
+        "reversibility": "High as an additive experimental registry.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Model the current external-PR merge boundary as a dependency graph and simulate loss of CI, stale heartbeat, prompt-injection suspicion, and identity-separation failure. Check whether every scenario produces an unambiguous least-authority fallback."
+        "falsifiable_next_test": "Define a minimal proof-of-use schema and retrospectively classify three existing HumanityAI outputs as no observed use / internal use / externally evidenced use. If every record collapses to speculation, that itself is evidence the project currently lacks a real impact-feedback channel."
       },
       {
-        "id": "frontier-control-eval-023",
-        "name": "Attack the control protocol, not only the agent",
-        "idea": "Add periodic synthetic control evaluations in which a sandboxed adversarial role attempts to achieve a forbidden outcome while knowing portions of the monitoring architecture. Vary attack timing and abstention so the evaluation tests selective attacks, not only obvious continuous malicious behavior. Store failures as regression scenarios for the assurance case.",
-        "why_novel_here": "Current red-team thinking mostly searches for vulnerabilities in architecture/content. AI-control research suggests the monitoring protocol itself must be evaluated against adaptive attack policies, including attackers that wait for favorable moments.",
-        "expected_upside": "Could reveal brittle assumptions before real external contributors or future more-capable agents encounter them and creates empirical evidence for or against expanding autonomy.",
+        "id": "frontier-pull-push-portfolio-026",
+        "name": "Explicit pull-versus-exploration portfolio",
+        "idea": "Split future work into two visibly different portfolios: demand-pulled work tied to concrete decision needs, and exploration work justified by neglectedness or option value. Evaluate them differently rather than forcing all research through one impact heuristic.",
+        "why_novel_here": "A pure demand-first system would overfit current users, while the current supply-first system risks irrelevance. Treating both as separate portfolios preserves long-horizon discovery while adding accountability to real-world usefulness.",
+        "expected_upside": "Prevents the demand-ledger idea from becoming a new Goodhart target and makes tradeoffs between immediate usefulness and foundational exploration explicit.",
         "failure_modes": [
-          "Synthetic attacks can teach future agents about defenses if sensitive protocol internals are unnecessarily exposed.",
-          "A narrow attack generator can make weak controls look safe.",
-          "Unsafe test design could accidentally cross from simulation into real consequential actions."
+          "Portfolio labels can become arbitrary.",
+          "Exploration can become a loophole for low-value work.",
+          "Demand work can dominate because its feedback is faster."
         ],
-        "rights_distribution": "Evaluations must remain sandboxed and must never use real people, unauthorized systems, secrets, or consequential external targets. Findings should reduce authority when uncertain rather than justify experimentation on affected parties.",
-        "reversibility": "High if restricted to inert/sandboxed simulations.",
+        "rights_distribution": "Exploration priorities should continue to account for neglected populations whose needs may not appear in incoming demand.",
+        "reversibility": "High as a task-selection experiment.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Create one inert tabletop scenario around external-PR prompt injection and compare whether the current policy catches a selective attacker who behaves normally for several runs before attempting one protected action."
+        "falsifiable_next_test": "Classify the current high-value backlog into pull-capable versus exploration work and see whether this exposes any tasks whose justification is only 'it seems important' without a plausible use or option-value case."
       }
     ],
     "rejected_or_deferred": [
-      "Expand autonomous merge authority now: current repository still lacks the target mechanical identity separation/protected-main architecture, so there is no positive assurance case for expansion.",
-      "Treat a passing assurance case as sufficient for normative or legal decisions: technical evidence cannot substitute for human authority over protected values and consequential commitments.",
-      "Expose full monitor/security internals to adversarial agents by default: recent control-evaluation work suggests attackers with knowledge of control internals can adapt around some protocols; use least disclosure compatible with meaningful evaluation.",
-      "Build a large assurance framework immediately: first test one small case and reject the idea if it adds ceremony without revealing new assumptions or improving deferral precision."
+      "Immediately solicit real organizations or policymakers for decision requests: potentially high value, but external outreach requires human review and the internal demand schema should first be tested on historical/synthetic cases.",
+      "Make user demand the sole task-selection criterion: this would systematically neglect voiceless, future, or poorly organized populations and would violate the project's broader mission.",
+      "Use clicks, stars, traffic, or downloads as proof of use: these are weak attention metrics and can reward popularity without decision value.",
+      "Replace the global problem map with a request queue: the map remains useful as exploration infrastructure and as a check against narrow incoming demand."
     ],
     "evidence_checked": [
-      {
-        "title": "NIST AI Risk Management Framework 1.0 and Generative AI Profile",
-        "url": "https://www.nist.gov/itl/ai-risk-management-framework",
-        "supports": "Risk management should span governance, mapping, measurement and management across the lifecycle; the GAI profile emphasizes additional oversight, tracking, documentation, testing and third-party considerations."
-      },
-      {
-        "title": "Korbak et al. (2025) — A sketch of an AI control safety case",
-        "url": "https://arxiv.org/abs/2501.17315",
-        "supports": "A safety case can be a structured argument whose claims depend on empirical control evaluations rather than a generic assertion that monitoring exists."
-      },
-      {
-        "title": "Kutasov et al. (2025) — Evaluating Control Protocols for Untrusted AI Agents",
-        "url": "https://arxiv.org/abs/2511.02997",
-        "supports": "Control protocols can look strong against default attacks yet degrade sharply against adaptive strategies; deferring on critical actions was comparatively robust in the reported evaluation."
-      },
-      {
-        "title": "Ge-Wang et al. (2026) — Attack Selection in Agentic AI Control Evaluations Meaningfully Decreases Safety",
-        "url": "https://arxiv.org/abs/2606.06529",
-        "supports": "Attackers that strategically choose when to act can substantially reduce measured safety, supporting selective-attack scenarios rather than only obvious continuous red-team behavior."
-      },
+      "README.md",
+      "EVALUATION.md",
+      "PRINCIPLES.md",
       "SECURITY.md",
       "security/policy.json",
-      "agent/heartbeats/README.md"
+      "agent/frontier_state.json"
     ],
-    "recommended_next_test": "Prototype one non-authorizing machine-readable assurance case for the already-limited capability 'review an external PR without merging it', then have a future adversarial-red-team rotation try to invalidate its claims. Do not change protected policy or expand authority unless a later human review explicitly approves that separate step.",
+    "recommended_next_test": "Prototype three historical/synthetic decision-demand objects and a minimal proof-of-use field set without changing protected policy. Compare whether they materially alter task selection or reveal decision-relevant evidence gaps that current supply-first research misses.",
     "human_review_required": false
   },
   "mode_history": [
@@ -100,7 +84,8 @@
     "neglected_opportunity_hunt",
     "outside_stakeholder_lens",
     "humanityai_is_the_wrong_shape",
-    "technology_science_frontier_import"
+    "technology_science_frontier_import",
+    "counterfactual_founder_test"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
