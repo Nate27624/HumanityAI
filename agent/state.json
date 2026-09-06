@@ -1,0 +1,61 @@
+{
+  "schema_version": "0.1",
+  "project": "HumanityAI",
+  "mode": "ai-maintained-human-grounded-publicly-auditable",
+  "last_run": null,
+  "last_audit": null,
+  "current_focus": null,
+  "recent_changes": [],
+  "unresolved_questions": [],
+  "known_regressions": [],
+  "high_value_backlog": [
+    {
+      "id": "B001",
+      "task": "Define a machine-readable evidence and claim schema that prevents circular AI sourcing",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "id": "B002",
+      "task": "Establish sourced baseline indicators for each top-level world-problem category",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "id": "B003",
+      "task": "Map existing organizations, open-source projects, datasets, and research programs relevant to each problem",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "id": "B004",
+      "task": "Build explicit contradiction and uncertainty representation into the data model",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "id": "B005",
+      "task": "Create automated validation for JSON schemas, broken source links, duplicate entities, and uncited consequential claims",
+      "priority": "high",
+      "status": "open"
+    },
+    {
+      "id": "B006",
+      "task": "Improve public discoverability with citation metadata, structured indexes, and concise AI-readable project summaries",
+      "priority": "medium",
+      "status": "open"
+    },
+    {
+      "id": "B007",
+      "task": "Develop a defensible method for prioritizing research questions without pretending normative tradeoffs are purely objective",
+      "priority": "medium",
+      "status": "open"
+    }
+  ],
+  "self_improvement": {
+    "last_evaluation": null,
+    "observed_strengths": [],
+    "observed_weaknesses": [],
+    "experiments": []
+  }
+}
