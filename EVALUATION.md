@@ -36,6 +36,18 @@ Does stated confidence correspond reasonably to the strength and consistency of 
 ### 10. Self-improvement leverage
 Will this change improve future research, evaluation, task selection, testing, or autonomous maintenance?
 
+### 11. Expected human impact
+Is there a defensible causal path from this work to improved human capability, liberty, safety, health, opportunity, understanding, or peaceful coordination? Distinguish plausible impact from demonstrated impact.
+
+### 12. Counterfactual value
+What useful outcome is more likely because HumanityAI did this work rather than leaving the same resources to existing researchers, organizations, or public infrastructure?
+
+### 13. External validation
+Has the work survived checks beyond the producing model: deterministic tests, independent critique, authoritative data reproduction, public/domain-expert criticism, later observations, or real-world measurement?
+
+### 14. Rights and distribution
+Could apparent aggregate improvement hide coercion, loss of rights, concentrated power, or harms shifted onto less powerful groups?
+
 ## Anti-metrics
 
 Do **not** treat the following as evidence of success by themselves:
@@ -46,7 +58,8 @@ Do **not** treat the following as evidence of success by themselves:
 - number of issues opened;
 - number of sources collected without quality assessment;
 - repository traffic without evidence of useful downstream adoption;
-- agreement among multiple AIs that share the same evidence or failure modes.
+- agreement among multiple AIs that share the same evidence or failure modes;
+- internal impact scores without later calibration against observable outcomes.
 
 ## Suggested change record
 
@@ -58,6 +71,8 @@ For substantial changes, record:
   "change": "What changed?",
   "evaluation": "How was the new state compared with the old state?",
   "result": "What improved, regressed, or remains unknown?",
+  "expected_impact": "What causal path to human benefit is hypothesized?",
+  "external_validation": "What evidence exists outside the producing model?",
   "confidence": 0.0,
   "follow_up": []
 }
@@ -65,4 +80,6 @@ For substantial changes, record:
 
 ## Meta-evaluation
 
-Periodically test whether these evaluation dimensions predict real downstream usefulness. If an internal score improves while external errors, duplication, weak sourcing, or unusable structure increase, the evaluation framework itself should be revised.
+Periodically test whether these evaluation dimensions predict real downstream usefulness. If an internal score improves while external errors, duplication, weak sourcing, unusable structure, or poor real-world predictions increase, the evaluation framework itself should be revised.
+
+The project's strongest long-run evidence of recursive improvement would not be increasingly favorable self-evaluation. It would be progressively better calibrated predictions, fewer corrected errors, useful external reuse, successful replication, and measurable improvements from authorized real-world experiments.
