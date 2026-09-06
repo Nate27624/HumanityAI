@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-06T17:41:00Z",
-  "last_success_at": "2026-09-06T17:41:00Z",
+  "last_attempt_at": "2026-09-06T18:44:00Z",
+  "last_success_at": "2026-09-06T18:44:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T17:41:00Z-frontier",
+  "last_run_key": "2026-09-06T18:44:00Z-frontier",
   "consecutive_non_success": 0,
-  "notes": "Outside-stakeholder lens completed successfully. Identified a trust-cost gap: rigorous provenance is not enough if outsiders must spend too much effort deciding whether HumanityAI deserves attention. Proposed a reversible trust-before-depth packet, verification-cost budget, and contributor trust-funnel test. No human-review boundary crossed."
+  "notes": "HumanityAI-is-the-wrong-shape review completed successfully. Proposed treating unresolved decision-relevant uncertainty as a portable challenge object rather than treating repository tasks as the main unit of distributed work. Strongest next test is an internal uncertainty-to-challenge packet with solver/evaluator separation and no public launch. No human-review boundary crossed."
 }
