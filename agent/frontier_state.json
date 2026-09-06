@@ -1,88 +1,94 @@
 {
   "schema_version": "0.1",
   "last_run": {
-    "run_key": "2026-09-06T17:41:00Z-frontier",
-    "mode": "outside_stakeholder_lens",
+    "run_key": "2026-09-06T18:44:00Z-frontier",
+    "mode": "humanityai_is_the_wrong_shape",
     "status": "success",
-    "broken_assumption": "HumanityAI implicitly treats correctness, provenance, and internal auditability as sufficient for outsiders to trust and use it. For a skeptical researcher, NGO operator, policymaker, journalist, donor, or contributor, the first scarce resource is often not more evidence but a cheap way to decide whether this unfamiliar AI-heavy project deserves any attention at all.",
+    "broken_assumption": "HumanityAI currently treats the repository's accumulated knowledge and task queue as the main substrate for progress. A potentially better shape is to treat unresolved, decision-relevant uncertainty itself as a product that can be compiled into bounded public challenges with objective acceptance tests, so heterogeneous outsiders can attack the uncertainty without first adopting HumanityAI's architecture.",
     "strongest_ideas": [
       {
-        "id": "frontier-trust-before-depth-015",
-        "name": "Trust-before-depth artifact",
-        "idea": "Treat calibrated trust as a first-class product output. Before asking an outsider to inspect schemas or long evidence records, generate a compact, reproducible trust packet for one decision/problem: what HumanityAI claims, strongest supporting and contrary evidence, what remains unknown, what the system predicted or tested, what humans/agents changed, and an exact reproducibility path. The packet should make it easy to conclude either 'useful' or 'not trustworthy enough' rather than market the project.",
-        "why_novel_here": "Current architecture optimizes evidence quality and machine-readable provenance, but does not explicitly optimize the outsider's cost of verifying whether HumanityAI deserves trust. Transparency that is technically available but expensive to inspect can still fail as a trust mechanism.",
-        "expected_upside": "Could turn internal epistemic rigor into externally legible credibility, reduce verification cost, expose weak claims earlier, and create a concrete artifact that researchers or operators can critique without understanding the whole repository.",
+        "id": "frontier-challenge-compiler-018",
+        "name": "Uncertainty-to-challenge compiler",
+        "idea": "Add a reversible internal compiler that takes a high-value unresolved question and emits a challenge packet: exact question, why resolving it could change a decision, current evidence and strongest contradiction, admissible evidence, falsification/acceptance criteria, reproducibility requirements, rights/safety constraints, duplicate-work fingerprint, and a machine-checkable result manifest. The challenge packet becomes portable: humans, agents, labs, classrooms, or future prize systems can work on it without being trusted with HumanityAI authority.",
+        "why_novel_here": "The current agent task queue delegates repository work. This instead exports uncertainty as a protocol-level object and makes HumanityAI a problem-framing/evaluation layer that can coordinate solvers who never join the project.",
+        "expected_upside": "Could turn donated compute and external expertise into independent attempts on consequential unknowns, reduce coupling to GitHub, enable parallel approaches, and create a reusable bridge from evidence synthesis to actual uncertainty reduction.",
         "failure_modes": [
-          "A polished packet can become marketing theater if it selectively presents favorable evidence.",
-          "Compression may hide important methodological nuance.",
-          "Trust signals can be Goodharted if the project optimizes appearance rather than predictive/reproducible performance.",
-          "Different stakeholders need different evidence and may not share a single trust threshold."
+          "Badly framed challenges can optimize measurable proxies rather than the real uncertainty.",
+          "Objective acceptance criteria are impossible for many normative or open-ended questions.",
+          "Competitive framing can incentivize strategic reporting, duplication, or attacks on other submissions.",
+          "A challenge system can privilege actors with more compute or resources unless parallel noncompetitive contribution remains possible.",
+          "Publishing sensitive challenge details can itself create risk; safety review must precede public release where applicable."
         ],
-        "rights_distribution": "Packets should surface affected groups, disagreement, uncertainty, and value assumptions rather than presenting a single institutional perspective as neutral.",
-        "reversibility": "High; this can be tested internally using existing records.",
+        "rights_distribution": "Challenge packets should identify affected groups and value assumptions, allow multiple admissible approaches, avoid making solver resources equivalent to governance authority, and keep consequential deployment decisions under appropriate human governance.",
+        "reversibility": "High for an internal packet prototype; public challenge launch, prizes, outreach, or consequential deployment would require separate human review.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Generate one internal prototype from an existing well-sourced HumanityAI claim and ask a separate agent with no project context to identify the claim, uncertainty, strongest contradiction, provenance path, and what would falsify it within five minutes. Reject or redesign the packet if the outsider cannot do so reliably."
+        "falsifiable_next_test": "Take one existing unresolved HumanityAI evidence question and independently ask two context-naive agents to solve the generated packet. Compare whether their outputs are more independent, reproducible, and reviewable than ordinary free-form task instructions. Reject the architecture if packet overhead exceeds review savings or if both agents converge on the same framing error."
       },
       {
-        "id": "frontier-outsider-cost-budget-016",
-        "name": "Verification-cost budget",
-        "idea": "Add an evaluation dimension for the amount of outsider effort required to independently understand and challenge an important output. Measure steps/files/clicks or approximate minutes needed to reach original sources, contrary evidence, uncertainty, and reproduction instructions. Do not optimize for a universal low number; use the measure to detect outputs whose auditability exists only in theory.",
-        "why_novel_here": "HumanityAI evaluates evidence and provenance but does not currently model the cognitive/operational cost imposed on an external verifier.",
-        "expected_upside": "Makes discoverability and transparency empirically testable, encourages simpler interfaces without weakening underlying evidence, and may reveal why technically rigorous artifacts fail to attract useful criticism.",
+        "id": "frontier-solver-evaluator-separation-019",
+        "name": "Solver/evaluator separation",
+        "idea": "For challenge packets, separate proposal generation from evaluation. Solvers submit evidence/results; an evaluator sees the fixed acceptance criteria and exact artifact hashes, not solver reputation or persuasive narrative where avoidable. For high-stakes or adversarial questions, require independent reproduction before an answer can alter canonical evidence.",
+        "why_novel_here": "HumanityAI currently separates some audit roles, but external contribution review is still largely PR-centric and narrative-rich. A protocol object can reduce persuasion and identity effects by evaluating against criteria fixed before submissions arrive.",
+        "expected_upside": "Reduces prompt-injection surface, popularity bias, and incentive to optimize rhetoric; makes multiple independent attempts easier to compare.",
         "failure_modes": [
-          "Easy-to-read outputs can oversimplify difficult evidence.",
-          "Counting clicks/minutes is noisy and stakeholder-dependent.",
-          "Agents may optimize superficial navigation rather than genuine comprehension."
+          "Fixed criteria can encode the original framer's blind spots.",
+          "Blind evaluation is not possible when methods reveal identity or context.",
+          "Evaluation agents can still share correlated model failures."
         ],
-        "rights_distribution": "Lower verification cost broadens who can challenge the project, but accessibility must not erase minority or technical caveats.",
+        "rights_distribution": "Keep framing and acceptance criteria open to criticism; do not let evaluator automation silently decide normative questions.",
+        "reversibility": "High as an internal experiment.",
+        "human_action_required_now": false,
+        "falsifiable_next_test": "Compare a normal PR review with a blinded fixed-criteria review of the same synthetic evidence contribution and measure disagreement, review time, and missed caveats."
+      },
+      {
+        "id": "frontier-challenge-portfolio-020",
+        "name": "Portfolio of uncertainties, not backlog of chores",
+        "idea": "Maintain a small portfolio of unresolved questions selected by expected decision value and diversity of failure modes, rather than growing a large issue backlog. A question leaves the portfolio when resolved, shown unresolvable at reasonable cost, superseded, or demonstrated not to affect a decision. This makes external scaling about reducing important uncertainty rather than producing artifacts.",
+        "why_novel_here": "The existing task queue is implementation-oriented. A challenge portfolio would be outcome-oriented and could survive a future migration away from GitHub or away from the current agent stack.",
+        "expected_upside": "Creates a natural counterfactual metric: did external work materially reduce uncertainty that could change a decision? It also limits review overload by constraining work-in-progress.",
+        "failure_modes": [
+          "Decision value is difficult to estimate and can hide neglected long-tail issues.",
+          "A small portfolio can centralize agenda setting.",
+          "Questions with slow feedback may be systematically neglected."
+        ],
+        "rights_distribution": "Portfolio selection should preserve pluralism and permit challenges to the agenda itself; no single scalar priority score should determine inclusion.",
         "reversibility": "Very high.",
         "human_action_required_now": false,
-        "falsifiable_next_test": "Have a context-naive reviewer attempt two existing HumanityAI evidence traces and record where independent verification becomes ambiguous or costly. Compare that baseline with a trust-packet prototype."
-      },
-      {
-        "id": "frontier-contributor-trust-funnel-017",
-        "name": "Contributor trust funnel",
-        "idea": "Model external contribution as a trust funnel rather than a task queue: discover project -> understand mission -> assess owner/governance -> find bounded useful work -> verify acceptance criteria -> contribute -> receive legible integration/rejection feedback -> build a track record. Instrument where agents/humans abandon this path before adding more contributor incentives.",
-        "why_novel_here": "The repository has agent-ready tasks and contribution gates, but the architecture largely starts after a contributor has already decided the project is credible and worth their effort.",
-        "expected_upside": "Could distinguish lack of demand/trust from poor task design, prevent premature bounty/incentive systems, and reduce wasted effort on scaling a contribution pipeline nobody chooses to enter.",
-        "failure_modes": [
-          "Without real contributors, early funnel metrics are synthetic.",
-          "Optimizing conversion can drift into marketing or lowering standards.",
-          "Different contributor motivations make one funnel misleading."
-        ],
-        "rights_distribution": "Do not privilege contributors with more compute or visibility; track barriers and rejection reasons without turning participation into governance authority.",
-        "reversibility": "High for synthetic walkthroughs; real outreach remains human-reviewed.",
-        "human_action_required_now": false,
-        "falsifiable_next_test": "Run a zero-context simulated contributor walkthrough against the public repository and record the first three points of confusion or unverifiable trust. Fix only barriers that preserve standards; do not perform outreach yet."
+        "falsifiable_next_test": "Re-express the four current agent-ready tasks as uncertainty-reduction challenges and test whether any become obviously low-value, underspecified, or impossible to evaluate."
       }
     ],
     "rejected_or_deferred": [
-      "Create a polished public marketing site now: presentation before demonstrated external value risks manufacturing perceived legitimacy instead of earning it.",
-      "Add testimonials or endorsements: none should be fabricated or solicited autonomously, and social proof would not substitute for reproducibility.",
-      "Lower contribution gates to increase conversion: easier acceptance could reduce review burden superficially while increasing epistemic/security risk.",
-      "Recruit researchers/NGOs immediately: external outreach requires human review and should follow an internal test showing the artifact is actually understandable and useful."
+      "Launch a monetary prize market now: spending, incentive design, legal/tax considerations, outreach, and adversarial dynamics require human review and there is not yet evidence that the challenge packet itself works.",
+      "Replace the repository with a standalone platform now: premature; first test whether challenge packets create measurable review or independence gains using existing infrastructure.",
+      "Let solver votes determine truth: crowd participation is not epistemic authority, and competitive peer evaluation can create strategic behavior.",
+      "Publish every unresolved question publicly: some questions may be sensitive or invite harmful optimization; public release requires a separate safety classification."
     ],
     "evidence_checked": [
       {
-        "title": "Huang, Ford & Zimmermann — Motivations and Challenges of Contributing to OSS for Social Good",
-        "url": "https://arxiv.org/abs/2104.12891",
-        "supports": "Contributors to open-source social-good projects evaluate project owners more than ordinary OSS contributors, supporting the hypothesis that governance/owner trust can be an onboarding variable rather than a downstream concern."
+        "title": "Kay (2011) — The effect of inducement prizes on innovation",
+        "url": "https://doi.org/10.1111/j.1467-9310.2011.00653.x",
+        "supports": "Case-study evidence that challenge incentives can attract unconventional entrants and novel R&D approaches; used as an analogy for exporting bounded problems, not proof that HumanityAI should use prizes."
       },
       {
-        "title": "Avelino et al. — On the abandonment and survival of open source projects",
-        "url": "https://arxiv.org/abs/1906.08058",
-        "supports": "Human and social factors and access/time barriers matter to project survival and new maintainer participation; used as evidence that sustainability is not only a technical artifact problem."
+        "title": "Rutherford et al. (2020) — Impossible by Conventional Means: Ten Years on from the DARPA Red Balloon Challenge",
+        "url": "https://arxiv.org/abs/2008.05940",
+        "supports": "Large-scale open challenges can mobilize distributed problem solving but also attract false information and adverse dynamics, supporting explicit verification and adversarial design."
       },
       {
-        "title": "Gegoff et al. — Transparent Automated Advice to Mitigate the Impact of Variation in Automation Reliability",
-        "url": "https://doi.org/10.1177/00187208231196738",
-        "supports": "Transparency can affect reliance on automated advice when reliability varies; used as an analogy for calibrated rather than maximal trust, not proof that a specific HumanityAI interface will work."
+        "title": "Miorandi & Maggi (2014) — Error and attack tolerance of collective problem solving: DARPA Shredder Challenge",
+        "url": "https://doi.org/10.1140/epjds/s13688-014-0013-1",
+        "supports": "Crowds may recover from ordinary errors yet remain vulnerable to malicious behavior, supporting evaluator separation and independent verification rather than assuming scale filters attacks."
+      },
+      {
+        "title": "Gustetic et al. (2018) — Outcome-Driven Open Innovation at NASA",
+        "url": "https://arxiv.org/abs/1810.03426",
+        "supports": "Open-innovation challenge design should be driven by desired outcomes, supporting a portfolio centered on uncertainty reduction and decision value rather than contributor activity."
       },
       "PRINCIPLES.md",
-      "security/policy.json",
-      "agent/frontier_state.json"
+      "agent/tasks.json",
+      "security/policy.json"
     ],
-    "recommended_next_test": "Prototype a trust-before-depth packet internally for one existing well-sourced claim, then give it to a context-naive agent/reviewer and measure whether they can rapidly identify the claim, uncertainty, contrary evidence, provenance, and falsification path. This is reversible and requires no outreach or protected change.",
+    "recommended_next_test": "Without public outreach or protected changes, prototype one challenge packet from an existing unresolved HumanityAI question and compare two independent context-naive solver attempts against the current free-form task format. Measure independence of approach, reproducibility, review effort, and whether the fixed framing itself causes correlated error.",
     "human_review_required": false
   },
   "mode_history": [
@@ -92,7 +98,8 @@
     "scale_jump_test",
     "adversarial_red_team",
     "neglected_opportunity_hunt",
-    "outside_stakeholder_lens"
+    "outside_stakeholder_lens",
+    "humanityai_is_the_wrong_shape"
   ],
   "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
 }
