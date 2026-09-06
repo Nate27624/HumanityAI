@@ -1,0 +1,53 @@
+{
+  "schema_version": "0.1",
+  "last_run": {
+    "run_key": "2026-09-06T11:43:00Z-frontier",
+    "mode": "zero_based_challenger",
+    "status": "success",
+    "broken_assumption": "HumanityAI's durable unit of value should be a repository artifact or knowledge record. A stronger candidate is a decision-to-outcome loop in which knowledge exists to improve concrete decisions and every important recommendation can eventually be tested against what happened.",
+    "strongest_ideas": [
+      {
+        "id": "frontier-decision-loop-001",
+        "name": "Decision-to-outcome public utility",
+        "idea": "Evolve HumanityAI from primarily a knowledge repository into an open decision-support protocol: represent a real decision, candidate actions, evidence, disagreements, rights/distribution constraints, predictions, decision owner, chosen action, and later outcome as one auditable lifecycle. Other agents and humans could challenge assumptions or supply evidence without needing HumanityAI to become the executor.",
+        "why_novel_here": "The current schemas emphasize problems, evidence, resources, tasks and predictions separately. A decision lifecycle would connect them around a falsifiable choice and downstream outcome, making counterfactual value and calibration operational rather than aspirational.",
+        "expected_upside": "Creates a direct path from research to useful human decisions; makes prediction calibration natural; exposes where evidence actually changes choices; supports many future shapes including an API, civic tool, research service, coordination network, or decision commons.",
+        "failure_modes": [
+          "Prematurely optimizing for visible decisions could neglect basic research with delayed value.",
+          "Decision framing can encode normative assumptions or omit affected stakeholders.",
+          "Outcome attribution can be weak or confounded.",
+          "A centralized decision platform could accumulate inappropriate influence if it moves from advice to authority."
+        ],
+        "rights_distribution": "Keep recommendations advisory, preserve alternatives and dissent, explicitly record affected groups and rights risks, and avoid a single scalar objective.",
+        "reversibility": "High if tested first as an additive schema/prototype rather than replacing current evidence structures.",
+        "human_action_required_now": false,
+        "falsifiable_next_test": "Without changing protected architecture, prototype 3 historical decision records using existing HumanityAI evidence and ask whether the lifecycle reveals decision-relevant gaps that the current problem/evidence views fail to expose. Retain only if reviewers can identify materially clearer uncertainty, missing evidence, or outcome calibration from the prototype."
+      },
+      {
+        "id": "frontier-open-challenge-002",
+        "name": "Open challenge market for uncertainty",
+        "idea": "Instead of publishing only tasks, publish the project's highest-value unresolved uncertainties as challenge objects that multiple independent humans/agents can attack with evidence, forecasts, replications or counterexamples. Reward epistemic disagreement and resolution rather than artifact production.",
+        "expected_upside": "Turns donated compute into competitive independent scrutiny and makes contradictions first-class work rather than exceptions.",
+        "failure_modes": ["Can attract volume without quality", "May privilege questions that are easy to formalize", "Monetary incentives, if ever introduced, would require substantial human/legal/governance review"],
+        "human_action_required_now": false,
+        "falsifiable_next_test": "Convert one existing high-value unresolved question into a non-monetary challenge object and compare independent answer diversity and review cost with an ordinary agent task."
+      }
+    ],
+    "rejected_or_deferred": [
+      "Immediately create a new organization or public platform: too early; the decision-lifecycle hypothesis can be tested inside the repository first.",
+      "Replace current problem/evidence schemas: unnecessary and risky before an additive prototype demonstrates value.",
+      "Attach financial rewards to challenges now: potentially useful later but introduces incentive, legal, fraud and governance complexity before basic contribution value is demonstrated."
+    ],
+    "evidence_checked": [
+      "PRINCIPLES.md",
+      "security/policy.json",
+      "IMPACT_MODEL.md",
+      "agent/state.json",
+      "recent repository commits through 2026-09-06T11:29:41Z"
+    ],
+    "recommended_next_test": "Prototype an additive decision-lifecycle schema with three historical examples; measure whether it surfaces actionable evidence gaps and supports retrospective calibration better than current records.",
+    "human_review_required": false
+  },
+  "mode_history": ["zero_based_challenger"],
+  "notes": "Frontier state records conceptual experiments, not authority. Ideas may exceed current execution permissions; human-review boundaries remain governed by security/policy.json."
+}
