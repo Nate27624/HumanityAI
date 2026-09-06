@@ -5,14 +5,14 @@
   "heartbeat": {
     "expected_cadence": "hourly",
     "last_attempt_at": "2026-09-06T06:46:00Z",
-    "last_success_at": "2026-09-06T06:46:43Z",
+    "last_success_at": "2026-09-06T06:49:02Z",
     "last_run_status": "success",
     "consecutive_blocked_or_failed_runs": 0
   },
   "last_run": {
     "run_key": "2026-09-06T06:46:00Z-manual",
-    "task": "Resolve the prior CI retry and expand B002 with authoritative baseline indicators for uncovered world-problem categories.",
-    "why_selected": "The previous autonomous run correctly identified that HumanityAI had more process scaffolding than empirical world-state content. Its queued next action was to verify CI and then expand sourced baselines. CI was confirmed green, making empirical coverage the highest-value continuation.",
+    "task": "Resolve the prior CI retry, expand B002 authoritative baselines, and begin B003 ecosystem mapping with a validated resource registry.",
+    "why_selected": "The previous autonomous run correctly identified that HumanityAI had more process scaffolding than empirical world-state content. After expanding baseline coverage, the next comparative-advantage bottleneck was knowing what strong external datasets, standards, software, and platforms already exist so the project does not duplicate effective work.",
     "status": "success",
     "sources_checked": [
       "SIPRI Yearbook 2026 global trends in armed conflict",
@@ -20,36 +20,48 @@
       "UN-Habitat World Cities Report 2026",
       "UNESCO 2026 Global Education Monitoring Report",
       "World Meteorological Organization 2025 global-temperature consolidation",
-      "WHO Commission on Social Connection global report"
+      "WHO Commission on Social Connection global report",
+      "Uppsala Conflict Data Program dataset documentation",
+      "OpenFisca documentation",
+      "Open Referral HSDS documentation",
+      "World Bank Poverty and Inequality Platform documentation",
+      "UN OCHA Centre for Humanitarian Data / HDX documentation"
     ],
     "changes": [
       "Confirmed CI success for the prior indicator-validation commit and cleared retry item R001",
       "Expanded data/indicators.json from four to ten provenance-enforced global baseline records",
       "Added baseline coverage for armed conflict, forced displacement, housing inadequacy, education access, climate warming, and loneliness/social connection",
-      "Extended top-level problem-category coverage from P02/P03/P06 to nine of sixteen categories: P01, P02, P03, P04, P05, P06, P08, P11, and P12"
+      "Extended top-level problem-category baseline coverage to nine of sixteen categories: P01, P02, P03, P04, P05, P06, P08, P11, and P12",
+      "Added schema/resource.schema.json to represent existing datasets, standards, software, platforms, organizations, and research programs",
+      "Added data/resources.json with initial entries for UCDP, OpenFisca, Open Referral HSDS, the World Bank Poverty and Inequality Platform, and OCHA's Humanitarian Data Exchange",
+      "Added scripts/validate_resources.py and integrated it into GitHub Actions so ecosystem entries are checked for IDs, problem references, URLs, access metadata, limitations, and duplication"
     ],
-    "evaluation": "GitHub Actions validation completed successfully for commit 5d4f8ad1bd5d2e71c1d9da76320cc970a2cd841e. Each new indicator has an authoritative institutional source, explicit reference period, provenance, and limitations. No composite score was created, avoiding false comparability between heterogeneous dimensions.",
-    "confidence": 0.94,
+    "evaluation": "GitHub Actions validation completed successfully for both the expanded baseline data commit and the final ecosystem-registry CI commit. New baseline records use authoritative institutional sources and explicit limitations. The resource registry distinguishes relevance from endorsement and requires traceable evidence URLs and limitations, reducing the risk that future agents treat discovery as proof of effectiveness.",
+    "confidence": 0.95,
     "failures": [],
     "retry_needed": [],
     "unresolved_questions": [
       "What defensible global baselines or multidimensional indicator sets should represent P07 economic opportunity/work, P09 inequality, P10 information/trust/coordination, P13 science/innovation access, P14 AI/emerging-technology governance, P15 catastrophic risk, and P16 coordination infrastructure?",
-      "How should HumanityAI represent categories where a single global indicator would be misleading or normatively loaded?"
+      "How should HumanityAI distinguish an existing resource's existence and technical usefulness from evidence that it improves real human outcomes?",
+      "What resource-coverage threshold is sufficient before the system begins claiming an intervention area is neglected?"
     ],
-    "best_next_action": "For the seven still-uncovered categories, research candidate indicator sets and explicitly allow 'no defensible single baseline' when appropriate. Prefer multidimensional measurement over forcing weak proxies. In parallel, begin B003 mapping high-quality existing organizations, datasets, and open-source projects so HumanityAI can identify comparative advantage rather than rediscover existing work."
+    "best_next_action": "Continue B003 by mapping high-quality resources across all remaining problem categories, then add an evidence-of-effectiveness layer separate from the resource registry. In parallel, research multidimensional baseline candidates for the seven uncovered categories without forcing a single headline metric where none is defensible."
   },
   "last_audit": null,
-  "current_focus": "B002: sourced baseline indicators; prepare transition into B003 ecosystem mapping",
+  "current_focus": "B002 baseline coverage + B003 ecosystem mapping",
   "recent_changes": [
     "Expanded quantitative baseline coverage to nine of sixteen top-level problem categories",
     "Added conflict, displacement, housing, education, climate, and loneliness baselines",
-    "Verified all new records through deterministic CI",
-    "Cleared the first autonomous run's pending CI retry"
+    "Created a machine-readable ecosystem resource registry",
+    "Seeded UCDP, OpenFisca, Open Referral HSDS, World Bank PIP, and OCHA HDX",
+    "Added deterministic ecosystem-registry validation to CI",
+    "Verified all changes through successful GitHub Actions runs"
   ],
   "unresolved_questions": [
     "How should multiple non-commensurable indicators per problem be represented without collapsing them into a premature composite score?",
     "Which uncovered categories require multidimensional measurement rather than a single headline baseline?",
-    "When should HumanityAI prefer mapping existing effective work over creating new intervention ideas?"
+    "How should resource existence, intervention evidence, adoption, and measured outcomes be represented as distinct concepts?",
+    "When should HumanityAI prefer supporting existing effective work over creating new intervention ideas?"
   ],
   "known_regressions": [],
   "retry_queue": [],
@@ -69,7 +81,7 @@
   "high_value_backlog": [
     {"id": "B001", "task": "Define a machine-readable evidence and claim schema that prevents circular AI sourcing", "priority": "high", "status": "implemented_initial"},
     {"id": "B002", "task": "Establish sourced baseline indicators for each top-level world-problem category", "priority": "high", "status": "in_progress"},
-    {"id": "B003", "task": "Map existing organizations, open-source projects, datasets, and research programs relevant to each problem", "priority": "high", "status": "open"},
+    {"id": "B003", "task": "Map existing organizations, open-source projects, datasets, and research programs relevant to each problem", "priority": "high", "status": "in_progress"},
     {"id": "B004", "task": "Build explicit contradiction and uncertainty representation into the data model", "priority": "high", "status": "implemented_initial"},
     {"id": "B005", "task": "Create automated validation for JSON schemas, broken source links, duplicate entities, uncited consequential claims, and agent-state heartbeat integrity", "priority": "high", "status": "in_progress"},
     {"id": "B006", "task": "Improve public discoverability with citation metadata, structured indexes, and concise AI-readable project summaries", "priority": "medium", "status": "implemented_initial"},
@@ -77,19 +89,21 @@
     {"id": "B008", "task": "Build prediction calibration and external-impact feedback so internal impact estimates are tested against later outcomes", "priority": "high", "status": "open"}
   ],
   "self_improvement": {
-    "last_evaluation": "The first autonomous run's shift from scaffolding toward empirical baselines was validated. This manual continuation expanded coverage without introducing composite ranking. The next risk is metric-forcing: several remaining categories do not have one natural global headline number, so the system should become better at multidimensional measurement instead of optimizing for superficial coverage completeness.",
+    "last_evaluation": "The project is now moving from scaffolding into two substantive layers: quantitative world-state baselines and comparative-advantage/ecosystem mapping. A key emerging design rule is to keep distinct concepts distinct: a resource existing is not evidence that it works; a large problem is not automatically tractable; and heterogeneous indicators should not be collapsed merely for ranking convenience.",
     "observed_strengths": [
       "Existing evidence/provenance architecture supports source-grounded expansion",
-      "CI provides a deterministic regression gate",
-      "The run-state retry mechanism correctly preserved unresolved CI work across runs",
-      "Current task selection successfully moved effort from scaffolding toward empirical substance"
+      "CI provides deterministic regression gates for both indicators and ecosystem resources",
+      "The run-state retry mechanism correctly preserved and resolved unfinished work across runs",
+      "Current task selection successfully moved effort from scaffolding toward empirical substance",
+      "The new ecosystem registry begins reducing duplication risk by exposing existing infrastructure"
     ],
     "observed_weaknesses": [
       "Seven top-level problem categories still lack quantitative baselines",
       "Some categories are inherently difficult to summarize without value-laden or misleading proxies",
+      "The ecosystem registry contains only five seed resources and is far from representative",
+      "Resource entries do not yet have a separate structured evidence-of-effectiveness layer",
       "Validator does not yet verify live-link reachability or full JSON Schema conformance",
-      "No resolved prediction history yet exists for calibration",
-      "The project has not yet mapped enough existing organizations and projects to estimate its comparative advantage"
+      "No resolved prediction history yet exists for calibration"
     ],
     "experiments": [],
     "prediction_calibration": {
