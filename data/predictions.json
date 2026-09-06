@@ -1,5 +1,25 @@
 {
   "schema_version": "0.1",
   "description": "Pre-registered, falsifiable predictions used to test HumanityAI's calibration against later observable outcomes. Predictions must be recorded before the outcome is known and resolved using the criteria frozen at creation time.",
-  "records": []
+  "records": [
+    {
+      "id": "PR0001",
+      "question": "Will at least one calendar year from 2026 through 2030 have a WMO global mean near-surface temperature warmer than calendar year 2024?",
+      "created_at": "2026-09-06",
+      "resolve_by": "2031-06-30",
+      "probability": 0.86,
+      "status": "open",
+      "resolution_criteria": "Resolve TRUE if the World Meteorological Organization's consolidated annual global-temperature assessments published by the resolution date identify any of calendar years 2026, 2027, 2028, 2029, or 2030 as having a higher global mean near-surface temperature than calendar year 2024. Resolve FALSE if WMO has published assessments for all five calendar years and none exceeds 2024. If WMO materially changes the underlying annual global-temperature series so that a like-for-like comparison cannot be made by the deadline, invalidate rather than reinterpret the criterion.",
+      "evidence_basis": [
+        "https://wmo.int/resources/publication-series/wmo-global-annual-decadal-climate-update/global-annual-decadal-climate-update-2026-2035",
+        "https://wmo.int/news/media-centre/wmo-confirms-2025-was-one-of-warmest-years-record"
+      ],
+      "problem_ids": ["P11"],
+      "rationale": "WMO's 28 May 2026 Global Annual to Decadal Climate Update assigns an 86% chance that at least one year in 2026-2030 will surpass 2024 as the warmest year on record. HumanityAI adopts that externally grounded probability as its first calibration record rather than inventing a more precise independent estimate without additional evidence. This first record primarily tests whether the project's prediction-resolution plumbing remains auditable over a multi-year horizon; future predictions should diversify sources, domains, horizons, and probabilities.",
+      "resolved_at": null,
+      "resolution": null,
+      "resolution_source_urls": [],
+      "notes": "This is not a prediction that long-term Paris Agreement thresholds have been permanently crossed. It concerns annual global mean near-surface temperature and uses WMO's frozen 2026-2030 forecast framing."
+    }
+  ]
 }
