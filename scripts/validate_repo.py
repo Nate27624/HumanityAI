@@ -9,38 +9,18 @@ from __future__ import annotations
 
 import json
 import sys
+from datetime import date
 from pathlib import Path
 from urllib.parse import urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
 
-ALLOWED_CLAIM_TYPES = {
-    "fact",
-    "estimate",
-    "hypothesis",
-    "value_judgment",
-    "proposal",
-    "unknown",
-}
-ALLOWED_STATUSES = {
-    "supported",
-    "mixed",
-    "disputed",
-    "insufficient_evidence",
-    "superseded",
-}
+ALLOWED_CLAIM_TYPES = {"fact", "estimate", "hypothesis", "value_judgment", "proposal", "unknown"}
+ALLOWED_STATUSES = {"supported", "mixed", "disputed", "insufficient_evidence", "superseded"}
 ALLOWED_RELATIONSHIPS = {"supports", "contradicts", "qualifies", "context"}
-ALLOWED_SOURCE_TYPES = {
-    "primary_data",
-    "peer_reviewed",
-    "systematic_review",
-    "official_report",
-    "preprint",
-    "expert_analysis",
-    "news",
-    "project_documentation",
-    "other",
-}
+ALLOWED_SOURCE_TYPES = {"primary_data", "peer_reviewed", "systematic_review", "official_report", "preprint", "expert_analysis", "news", "project_documentation", "other"}
+ALLOWED_INDICATOR_VALUE_TYPES = {"observed", "estimate", "projection", "index"}
+ALLOWED_INDICATOR_SOURCE_TYPES = {"primary_data", "official_report", "peer_reviewed", "systematic_review"}
 
 errors: list[str] = []
 warnings: list[str] = []
@@ -76,12 +56,10 @@ def validate_problems() -> set[str]:
     doc = load_json("data/problems.json")
     if not isinstance(doc, dict):
         return set()
-
     problems = doc.get("problems")
     if not isinstance(problems, list):
         fail("data/problems.json: `problems` must be a list")
         return set()
-
     ids: set[str] = set()
     for index, problem in enumerate(problems):
         where = f"data/problems.json problems[{index}]"
@@ -97,7 +75,6 @@ def validate_problems() -> set[str]:
         ids.add(pid)
         if not isinstance(problem.get("name"), str) or not problem["name"].strip():
             fail(f"{where}: missing non-empty name")
-
     if not ids:
         warn("problem registry contains no problem IDs")
     return ids
@@ -107,19 +84,16 @@ def validate_evidence(problem_ids: set[str]) -> None:
     doc = load_json("data/evidence.json")
     if not isinstance(doc, dict):
         return
-
     records = doc.get("records")
     if not isinstance(records, list):
         fail("data/evidence.json: `records` must be a list")
         return
-
     ids: set[str] = set()
     for index, record in enumerate(records):
         where = f"data/evidence.json records[{index}]"
         if not isinstance(record, dict):
             fail(f"{where}: must be an object")
             continue
-
         rid = record.get("id")
         if not isinstance(rid, str) or not rid.strip():
             fail(f"{where}: missing non-empty id")
@@ -127,31 +101,25 @@ def validate_evidence(problem_ids: set[str]) -> None:
             fail(f"{where}: duplicate evidence id {rid}")
         else:
             ids.add(rid)
-
         claim = record.get("claim")
         if not isinstance(claim, str) or not claim.strip():
             fail(f"{where}: missing non-empty claim")
-
         if record.get("claim_type") not in ALLOWED_CLAIM_TYPES:
             fail(f"{where}: invalid claim_type {record.get('claim_type')!r}")
         if record.get("status") not in ALLOWED_STATUSES:
             fail(f"{where}: invalid status {record.get('status')!r}")
-
         confidence = record.get("confidence")
         if not isinstance(confidence, (int, float)) or isinstance(confidence, bool):
             fail(f"{where}: confidence must be numeric")
         elif not 0 <= confidence <= 1:
             fail(f"{where}: confidence must be between 0 and 1")
-
         for pid in record.get("problem_ids", []):
             if pid not in problem_ids:
                 fail(f"{where}: references unknown problem id {pid!r}")
-
         sources = record.get("sources")
         if not isinstance(sources, list) or len(sources) == 0:
             fail(f"{where}: every evidence record requires at least one external source")
             continue
-
         for source_index, source in enumerate(sources):
             sw = f"{where} sources[{source_index}]"
             if not isinstance(source, dict):
@@ -163,6 +131,67 @@ def validate_evidence(problem_ids: set[str]) -> None:
                 fail(f"{sw}: invalid source_type {source.get('source_type')!r}")
             if source.get("relationship") not in ALLOWED_RELATIONSHIPS:
                 fail(f"{sw}: invalid relationship {source.get('relationship')!r}")
+
+
+def validate_indicators(problem_ids: set[str]) -> None:
+    doc = load_json("data/indicators.json")
+    if not isinstance(doc, dict):
+        return
+    records = doc.get("records")
+    if not isinstance(records, list):
+        fail("data/indicators.json: `records` must be a list")
+        return
+    ids: set[str] = set()
+    for index, record in enumerate(records):
+        where = f"data/indicators.json records[{index}]"
+        if not isinstance(record, dict):
+            fail(f"{where}: must be an object")
+            continue
+        rid = record.get("id")
+        if not isinstance(rid, str) or not rid.strip():
+            fail(f"{where}: missing non-empty id")
+        elif rid in ids:
+            fail(f"{where}: duplicate indicator id {rid}")
+        else:
+            ids.add(rid)
+        pids = record.get("problem_ids")
+        if not isinstance(pids, list) or not pids:
+            fail(f"{where}: requires at least one problem_id")
+        else:
+            for pid in pids:
+                if pid not in problem_ids:
+                    fail(f"{where}: references unknown problem id {pid!r}")
+        if not isinstance(record.get("name"), str) or not record["name"].strip():
+            fail(f"{where}: missing non-empty name")
+        value = record.get("value")
+        if not isinstance(value, (int, float)) or isinstance(value, bool):
+            fail(f"{where}: value must be numeric")
+        if not isinstance(record.get("unit"), str) or not record["unit"].strip():
+            fail(f"{where}: missing non-empty unit")
+        if record.get("value_type") not in ALLOWED_INDICATOR_VALUE_TYPES:
+            fail(f"{where}: invalid value_type {record.get('value_type')!r}")
+        for field in ("reference_period", "geography"):
+            if not isinstance(record.get(field), str) or not record[field].strip():
+                fail(f"{where}: missing non-empty {field}")
+        limitations = record.get("limitations")
+        if not isinstance(limitations, list) or not limitations or any(not isinstance(x, str) or not x.strip() for x in limitations):
+            fail(f"{where}: requires at least one non-empty limitation")
+        reviewed = record.get("last_reviewed")
+        try:
+            date.fromisoformat(reviewed)
+        except (TypeError, ValueError):
+            fail(f"{where}: last_reviewed must be ISO date YYYY-MM-DD")
+        source = record.get("source")
+        if not isinstance(source, dict):
+            fail(f"{where}: missing source object")
+            continue
+        for field in ("publisher", "title", "published_at"):
+            if not isinstance(source.get(field), str) or not source[field].strip():
+                fail(f"{where} source: missing non-empty {field}")
+        if not looks_like_http_url(source.get("url")):
+            fail(f"{where} source: invalid or missing http(s) URL")
+        if source.get("source_type") not in ALLOWED_INDICATOR_SOURCE_TYPES:
+            fail(f"{where} source: invalid source_type {source.get('source_type')!r}")
 
 
 def validate_schema_files() -> None:
@@ -183,17 +212,7 @@ def validate_schema_files() -> None:
 
 
 def validate_required_docs() -> None:
-    required = [
-        "README.md",
-        "PRINCIPLES.md",
-        "PROBLEM_MAP.md",
-        "CONTRIBUTING.md",
-        "AI_OPERATIONS.md",
-        "EVALUATION.md",
-        "ROADMAP.md",
-        "agent/CHARTER.md",
-        "agent/state.json",
-    ]
+    required = ["README.md", "PRINCIPLES.md", "PROBLEM_MAP.md", "CONTRIBUTING.md", "AI_OPERATIONS.md", "EVALUATION.md", "IMPACT_MODEL.md", "FAILURE_RECOVERY.md", "ROADMAP.md", "agent/CHARTER.md", "agent/state.json"]
     for relative in required:
         if not (ROOT / relative).exists():
             fail(f"missing required project document: {relative}")
@@ -203,16 +222,13 @@ def main() -> int:
     validate_required_docs()
     problem_ids = validate_problems()
     validate_evidence(problem_ids)
+    validate_indicators(problem_ids)
     validate_schema_files()
-
     for message in warnings:
         print(f"WARNING: {message}")
     for message in errors:
         print(f"ERROR: {message}")
-
-    print(
-        f"Validation complete: {len(errors)} error(s), {len(warnings)} warning(s)."
-    )
+    print(f"Validation complete: {len(errors)} error(s), {len(warnings)} warning(s).")
     return 1 if errors else 0
 
 
