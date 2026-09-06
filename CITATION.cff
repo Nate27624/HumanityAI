@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If HumanityAI materially supports your work, please cite the repository and the specific source records you relied on."
+title: "HumanityAI"
+type: software
+authors:
+  - alias: "HumanityAI contributors"
+repository-code: "https://github.com/Nate27624/HumanityAI"
+url: "https://github.com/Nate27624/HumanityAI"
+abstract: "An AI-maintained, human-grounded, publicly auditable project for mapping major world problems, evidence, interventions, organizations, open questions, and opportunities for peaceful human coordination and expanded human capability."
+keywords:
+  - artificial intelligence
+  - human capability
+  - global problems
+  - peace
+  - coordination
+  - open research
+  - AI agents
+  - evidence synthesis
