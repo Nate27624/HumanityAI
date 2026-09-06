@@ -50,8 +50,14 @@ def path_is_protected(path: str, protected_paths: list[str]) -> bool:
 
 def main() -> None:
     policy = load_policy()
-    event = os.environ.get("GITHUB_EVENT_NAME", "")
 
+    # GitHub reserves several GITHUB_* variables, so structure-only validation uses
+    # a separate explicit mode rather than attempting to override GITHUB_EVENT_NAME.
+    if os.environ.get("SECURITY_STRUCTURE_ONLY", "") == "1":
+        print("OK: security policy structure validated")
+        return
+
+    event = os.environ.get("GITHUB_EVENT_NAME", "")
     if event != "pull_request":
         print("OK: security policy structure validated; PR-specific human-review gate not applicable")
         return
