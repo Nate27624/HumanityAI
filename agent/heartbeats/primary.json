@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T17:29:00Z",
-  "last_success_at": "2026-09-06T17:29:00Z",
+  "last_attempt_at": "2026-09-06T18:30:00Z",
+  "last_success_at": "2026-09-06T18:30:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T17:26:21Z-primary",
+  "last_run_key": "2026-09-06T18:28:20Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Added I0016 as the first direct P15 global-catastrophic-risk baseline: SIPRI Yearbook 2026 estimates 9,745 nuclear warheads in military stockpiles in January 2026 (12,187 total inventory). Preserved SIPRI's approximate/open-source estimation limits and explicitly refused to convert inventory size into an unsupported annual catastrophe or existential-risk probability. This is one nuclear-risk dimension only, not a composite P15 score. Validate HumanityAI run 34048723297 completed successfully, including repository, resource, prediction, task, manifest, and security-boundary checks. No external PR, protected-path change, consequential external action, or new human-review condition was created."
+  "notes": "Selected calibration as the highest-value safe gap after recent runs completed first-pass baseline coverage across all 16 top-level problem categories. Added PR0001, HumanityAI's first pre-registered prediction: an 86% probability that at least one year in 2026-2030 exceeds 2024 in WMO global mean near-surface temperature, using WMO's 28 May 2026 annual-to-decadal forecast as the explicit evidence basis. Frozen resolution criteria require like-for-like WMO annual assessments and invalidate rather than reinterpret if comparability materially changes. The first write attempt returned a SHA mismatch; re-read current content and one retry succeeded. Validate HumanityAI run 34051887453 completed successfully. No external PR, protected-path change, consequential external action, suspected prompt injection, or new human-review condition was created. Future calibration work should add shorter-horizon and cross-domain predictions rather than overconcentrating on climate or copying external probabilities without independent evidence."
 }
