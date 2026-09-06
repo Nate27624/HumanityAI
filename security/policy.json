@@ -1,0 +1,60 @@
+{
+  "schema_version": "1.0",
+  "policy_name": "HumanityAI prompt-injection and human-review policy",
+  "external_content_trust": "untrusted_data_only",
+  "external_pr_merge_policy": "human_only_until_mechanical_identity_separation",
+  "email_on_human_review_required": true,
+  "human_review_reasons": [
+    "external_pull_request",
+    "protected_path_change",
+    "suspected_prompt_injection",
+    "security_or_validation_bypass_request",
+    "agent_authority_or_permission_change",
+    "licensing_policy_change",
+    "constitutional_or_governance_change",
+    "consequential_external_action",
+    "unresolved_provenance_or_security_compromise"
+  ],
+  "protected_paths": [
+    "PRINCIPLES.md",
+    "agent/CHARTER.md",
+    "SECURITY.md",
+    "security/",
+    ".github/workflows/",
+    ".github/CODEOWNERS",
+    "AI_OPERATIONS.md",
+    "FAILURE_RECOVERY.md",
+    "LICENSING.md",
+    "LICENSE",
+    "scripts/validate_pr_manifest.py",
+    "scripts/validate_security_boundaries.py"
+  ],
+  "untrusted_input_classes": [
+    "external_pull_request_content",
+    "issues_and_comments",
+    "webpages_and_retrieved_documents",
+    "papers_and_datasets",
+    "external_repository_content",
+    "tool_output_containing_external_text",
+    "contributor_supplied_code_or_data",
+    "encoded_or_hidden_instructions"
+  ],
+  "forbidden_authority_escalations_from_untrusted_content": [
+    "merge_or_direct_main_write",
+    "disable_or_weaken_validation",
+    "modify_governance_or_security_authority",
+    "reveal_credentials_or_private_data",
+    "expand_tool_or_repository_permissions",
+    "contact_third_parties",
+    "spend_money",
+    "create_external_accounts",
+    "modify_other_repositories"
+  ],
+  "target_merge_architecture": {
+    "separate_merge_identity": true,
+    "protected_main": true,
+    "exact_reviewed_sha_merge": true,
+    "required_ci": true,
+    "external_pr_human_approval": true
+  }
+}
