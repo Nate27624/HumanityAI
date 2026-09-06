@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-06T20:41:27Z",
-  "last_success_at": "2026-09-06T20:41:27Z",
+  "last_attempt_at": "2026-09-06T21:41:22Z",
+  "last_success_at": "2026-09-06T21:41:22Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T20:41:27Z-frontier",
+  "last_run_key": "2026-09-06T21:41:22Z-frontier",
   "consecutive_non_success": 0,
-  "notes": "Counterfactual-founder test completed successfully. Main finding: HumanityAI's biggest counterfactual weakness is supply-first research without durable evidence of demand or downstream decision use. Proposed a decision-demand ledger, proof-of-use feedback, and an explicit demand-pull versus exploration portfolio. No human-review boundary crossed."
+  "notes": "Experiment-generator run completed successfully. Added a blind historical backtest specification to compare the current supply-first workflow with the proposed decision-centric workflow before any architecture promotion. No human-review boundary crossed."
 }
