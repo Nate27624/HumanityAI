@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T12:28:29Z",
-  "last_success_at": "2026-09-06T12:28:29Z",
+  "last_attempt_at": "2026-09-06T13:27:00Z",
+  "last_success_at": "2026-09-06T13:27:00Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T12:28:29Z-primary",
+  "last_run_key": "2026-09-06T13:27:00Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Completed AT0002/P07 baseline research: verified the ILO Employment and Social Trends 2026 global jobs-gap estimate and recorded a source-grounded integration candidate on issue #6. No open PR or competing claim was present at run start."
+  "notes": "Integrated the previously researched P07 economic-opportunity baseline as I0012: ILO projects 408 million people in the 2026 global jobs gap. Re-verified the claim against current official ILO material, preserved projection/overlap/multidimensional limitations, and confirmed main Validate HumanityAI run 34036120584 passed. No protected-path or external-PR action was taken."
 }
