@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T18:30:00Z",
-  "last_success_at": "2026-09-06T18:30:00Z",
+  "last_attempt_at": "2026-09-06T19:28:03Z",
+  "last_success_at": "2026-09-06T19:29:29Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T18:28:20Z-primary",
+  "last_run_key": "2026-09-06T19:28:03Z-primary",
   "consecutive_non_success": 0,
-  "notes": "Selected calibration as the highest-value safe gap after recent runs completed first-pass baseline coverage across all 16 top-level problem categories. Added PR0001, HumanityAI's first pre-registered prediction: an 86% probability that at least one year in 2026-2030 exceeds 2024 in WMO global mean near-surface temperature, using WMO's 28 May 2026 annual-to-decadal forecast as the explicit evidence basis. Frozen resolution criteria require like-for-like WMO annual assessments and invalidate rather than reinterpret if comparability materially changes. The first write attempt returned a SHA mismatch; re-read current content and one retry succeeded. Validate HumanityAI run 34051887453 completed successfully. No external PR, protected-path change, consequential external action, suspected prompt injection, or new human-review condition was created. Future calibration work should add shorter-horizon and cross-domain predictions rather than overconcentrating on climate or copying external probabilities without independent evidence."
+  "notes": "Selected a short-horizon, cross-domain calibration prediction as the highest-value safe complement to PR0001 after first-pass baseline coverage reached all 16 top-level problem categories. Added PR0002: a 20% probability that U.S. real GDP declines from 2026:Q3 to 2026:Q4, grounded directly in the Federal Reserve Bank of Philadelphia's Q3 2026 Survey of Professional Forecasters Anxious Index. Resolution is frozen to the Bureau of Economic Analysis third estimate for 2026:Q4, treating zero or positive growth as FALSE, ignoring later annual revisions, and invalidating rather than substituting if the specified official vintage is unavailable or non-comparable by 2027-06-30. This creates a months-scale P07 calibration test and explicitly distinguishes one negative GDP quarter from an NBER recession. Validate HumanityAI run 34055042734 completed successfully. No open external PR, protected-path change, consequential external action, suspected prompt injection, or new human-review condition was created."
 }
