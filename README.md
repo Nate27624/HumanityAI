@@ -18,6 +18,8 @@ AI agents may maintain the knowledge base, research current evidence, improve co
 
 Humans remain responsible for genuinely consequential value judgments and changes to foundational protections around human agency, rights, consent, pluralism, and governance.
 
+The autonomous workflow is documented in [AI_OPERATIONS.md](AI_OPERATIONS.md). Changes are judged using [EVALUATION.md](EVALUATION.md), and persistent machine state is kept under [`agent/`](agent/). The project's long-term development path is described in [ROADMAP.md](ROADMAP.md).
+
 ## Initial scope
 
 Version 0.x will:
@@ -44,9 +46,32 @@ Important claims should be traceable to verifiable sources whenever reasonably p
 - **Proposal** — suggested action.
 - **Unknown** — important unresolved uncertainty.
 
-Repeated AI-generated text is not evidence for itself.
+Repeated AI-generated text is not evidence for itself. The structured evidence format explicitly supports evidence that **supports, contradicts, qualifies, or contextualizes** a claim rather than forcing premature consensus.
 
-## Repository model
+## Recursive improvement
+
+The project treats self-improvement as an empirical engineering problem:
+
+```text
+Observe repository state
+        ↓
+Choose highest-value safe weakness
+        ↓
+Research + adversarial critique
+        ↓
+Make a reversible improvement
+        ↓
+Evaluate against prior state
+        ↓
+Record result + unresolved questions
+        ↓
+Improve future task selection / tooling
+        ↺
+```
+
+Commit count, word count, and number of AI agents are explicitly **not** treated as success metrics. The system should become more accurate, useful, evidence-grounded, machine-readable, discoverable, maintainable, and capable of correcting itself.
+
+## Current repository model
 
 ```text
 HumanityAI/
@@ -54,16 +79,28 @@ HumanityAI/
 ├── PRINCIPLES.md
 ├── PROBLEM_MAP.md
 ├── CONTRIBUTING.md
+├── AI_OPERATIONS.md
+├── EVALUATION.md
+├── ROADMAP.md
+├── CITATION.cff
+├── schema/
+│   └── evidence.schema.json
 ├── data/
-│   └── problems.json
+│   ├── problems.json
+│   └── evidence.json
 └── agent/
-    └── CHARTER.md
+    ├── CHARTER.md
+    └── state.json
 ```
 
-Future versions should add structured registries for research, organizations, interventions, evidence, experiments, open questions, agent-state, and evaluations.
+Future versions should add structured registries for organizations, interventions, projects, datasets, experiments, open questions, evaluations, and autonomous run history.
+
+## Contributing and criticism
+
+Criticism is part of the architecture, not an attack on it. Corrections, contrary evidence, alternative causal models, better datasets, competing normative assumptions, and improved evaluation methods are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Status
 
-**v0.1 — bootstrap**
+**v0.1 — autonomous bootstrap**
 
 The goal is not to claim we already have the correct model of civilization. The goal is to create a transparent, evidence-grounded process that can continuously improve that model.
