@@ -16,5 +16,6 @@ Briefs should not turn multidimensional problems into a single convenience score
 
 ## Current briefs
 
+- [`P05 — Education, knowledge, and human development`](P05-education-human-development.md)
 - [`P07 — Economic opportunity, work, and abundance`](P07-economic-opportunity.md)
 - [`P11 — Climate, biodiversity, and environmental stability`](P11-climate-biodiversity-environment.md)
