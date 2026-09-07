@@ -58,9 +58,9 @@
         }
       ],
       "failures_side_effects": [
-        "No completed Tier-2 D integration cycle has yet demonstrated end-to-end producer -> independent verifier -> controller merge throughput.",
-        "PR #80 remains awaiting C verdict, so verifier capacity/latency is still an open operational variable.",
-        "The design has not yet been observed long enough to establish that higher early decision orientation persists rather than reflecting novelty."
+        "No completed Tier-2 D integration cycle had yet demonstrated end-to-end producer -> independent verifier -> controller merge throughput at this checkpoint.",
+        "PR #80 remained awaiting C verdict, so verifier capacity/latency was still an open operational variable.",
+        "The design had not yet been observed long enough to establish that higher early decision orientation persisted rather than reflecting novelty."
       ],
       "verdict": "promising",
       "lessons": [
@@ -74,6 +74,64 @@
         "PR #80",
         "PR #81",
         "agent/CONTROL_PLANE.md",
+        "agent/portfolio.json"
+      ]
+    },
+    {
+      "change_id": "DH0002",
+      "at": "2026-09-07T23:08:00Z",
+      "status": "evaluation_checkpoint",
+      "follows_change_id": "DH0001",
+      "problem_trigger": "The new hierarchy needed evidence that independent verification could both change producer claims and still permit useful work to reach main without D overriding C or becoming a permanent bottleneck.",
+      "prior_design": "DH0001 had shown one C QUALIFY block but no completed Tier-2 producer -> C -> D integration cycle.",
+      "hypothesis_rationale": "If the separation-of-duties design is functioning, C should be able to independently PASS a decision-bearing product after reproducing its key claims, and D should then integrate only the exact reviewed head after successful CI.",
+      "exact_change": "No architecture authority changed. Operator B produced PR #84 under the existing portfolio; C independently returned PASS at exact head 6b39ab902b412487b9e5b7ed6ecb2ca014116ba2; D confirmed the single unprotected research-file scope, exact-head successful Validate HumanityAI run 34167160907, and no unresolved review threads, then squash-merged through the normal PR path as main 113452710749499439b6365204cf1b27d756ced2. Portfolio allocation was then narrowed toward study-level LMIC ALMP cost/adoption extraction.",
+      "expected_benefit": [
+        "Demonstrate end-to-end Tier-2 throughput without weakening C independence.",
+        "Convert verified cost/adoption evidence into a sharper next exploration target.",
+        "Reduce repeated global ALMP meta-summary work."
+      ],
+      "risks": [
+        "One successful integration cycle is too little evidence to declare the hierarchy proven.",
+        "C review latency remains measurable because PR #80 still awaits verdict.",
+        "D could overreact to a single ALMP result and overconcentrate the portfolio on P07."
+      ],
+      "evaluation_window": "Continue through several additional A/B/C cycles and at least one independent Audit review.",
+      "evaluation_criteria": [
+        "Whether subsequent Tier-2 work continues to receive independent challenge before integration.",
+        "Whether C PASS/QUALIFY/FAIL outcomes materially affect D allocation and merge decisions.",
+        "Whether time-to-integration remains acceptable without bypassing review.",
+        "Whether portfolio diversity is preserved while low-yield repetition declines."
+      ],
+      "observed_outcomes": [
+        {
+          "observation_type": "observed",
+          "observation": "C reproduced PR #84's decision-bearing cost medians from the primary ILO/World Bank brief and explicitly preserved the non-portability and selected cost-effectiveness caveats."
+        },
+        {
+          "observation_type": "observed",
+          "observation": "D integrated PR #84 only after exact-head CI success and C PASS, completing the first observed end-to-end Tier-2 integration cycle under DH0001."
+        },
+        {
+          "observation_type": "interpretation",
+          "observation": "The early hierarchy is producing material decision delta: B's next allocation moved from broad modality synthesis to a study-level cost/adoption question with explicit insufficient-comparability kill tests."
+        }
+      ],
+      "failures_side_effects": [
+        "PR #80 still lacks a C verdict, so verifier queue latency has not been resolved.",
+        "PR #81 remains qualified and partly superseded by the verified allocation signal in PR #84; integrating it now may have low marginal value unless narrowed."
+      ],
+      "verdict": "promising",
+      "lessons": [
+        "Exact-head independent verification can coexist with useful throughput when producer scope is narrow and decision-bearing claims are reproducible.",
+        "A qualified earlier artifact need not be forced through correction when a later independently verified artifact captures the useful decision delta more cleanly.",
+        "Continue measuring decision delta and verifier latency; do not optimize for number of integration cycles."
+      ],
+      "links_shas_prs": [
+        "PR #84",
+        "C review 5135613262",
+        "CI run 34167160907",
+        "GitHub main 113452710749499439b6365204cf1b27d756ced2",
         "agent/portfolio.json"
       ]
     }
