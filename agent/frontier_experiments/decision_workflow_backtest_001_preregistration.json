@@ -1,0 +1,77 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "frontier-decision-workflow-backtest-001",
+  "status": "preregistered_cases_not_started",
+  "preregistered_at": "2026-09-07T02:58:00Z",
+  "purpose": "Freeze cases, information cutoffs, and evaluation rules before either workflow arm analyzes them. This file does not contain post-cutoff outcome evidence and should not be amended after an arm begins except to document a protocol deviation without replacing the frozen original.",
+  "case_selection_rules": [
+    "Public-interest decision with a discrete decision point and multiple plausible alternatives.",
+    "Substantial pre-cutoff public evidence and later observable outcomes.",
+    "Not already materially represented in HumanityAI, checked by repository search before preregistration.",
+    "Portfolio should span domains and include meaningful distributional or rights tradeoffs.",
+    "Case choice must not depend on an expectation that either workflow arm will win."
+  ],
+  "cases": [
+    {
+      "case_id": "seattle_minimum_wage_2014",
+      "decision": "Whether Seattle should enact the proposed phased $15 minimum-wage ordinance, retain the existing wage floor, or choose a materially different phase-in/design.",
+      "information_cutoff": "2014-06-01T23:59:59-07:00",
+      "decision_date": "2014-06-02",
+      "cutoff_rationale": "The cutoff is the end of the day before the City Council vote, preventing either arm from using the vote itself or later evaluations.",
+      "authoritative_anchor": "https://council.seattle.gov/2014/06/02/city-council-approves-15hour-minimum-wage-in-seattle/",
+      "predeclared_outcome_families": ["low-wage earnings", "employment/hours", "business entry/exit", "prices", "distribution across worker groups", "implementation/enforcement burden"],
+      "rights_distribution_questions": ["Who gains from higher hourly wages?", "Who bears employment, hours, price, or business-adjustment risks?", "How do effects differ for tipped workers, small-business employees, women, immigrants, and workers of color?"]
+    },
+    {
+      "case_id": "oregon_measure_110_2020",
+      "decision": "Whether Oregon voters should approve Measure 110's combination of reduced possession penalties and expanded addiction/recovery services, reject it, or prefer a materially different treatment/enforcement design.",
+      "information_cutoff": "2020-11-02T23:59:59-08:00",
+      "decision_date": "2020-11-03",
+      "cutoff_rationale": "The cutoff is the end of the day before the general election, excluding election results, implementation experience, and later legislative changes.",
+      "authoritative_anchor": "https://sos.oregon.gov/elections/Documents/results/november-general-2020.pdf",
+      "predeclared_outcome_families": ["treatment access and uptake", "overdose and mortality", "possession arrests/citations", "racial disparities", "public disorder and perceived safety", "service implementation capacity", "fiscal effects"],
+      "rights_distribution_questions": ["How are liberty and coercion distributed between people who use drugs and the broader public?", "Do enforcement burdens fall disproportionately on racial or low-income groups?", "Does treatment availability make nominal decriminalization meaningfully accessible and safe?"]
+    },
+    {
+      "case_id": "nyc_congestion_pricing_2024",
+      "decision": "Whether New York should proceed with the revised Manhattan Congestion Relief Zone tolling plan beginning January 2025, delay/cancel it, or materially redesign rates/exemptions.",
+      "information_cutoff": "2024-11-17T23:59:59-05:00",
+      "decision_date": "2024-11-18",
+      "cutoff_rationale": "The cutoff precedes the MTA Board vote on the revised phased toll structure and excludes subsequent implementation and traffic/revenue outcomes.",
+      "authoritative_anchor": "https://www.mta.info/document/158391",
+      "predeclared_outcome_families": ["vehicle entries and congestion", "travel times", "transit ridership and reliability", "toll revenue/capital funding", "air quality", "spillovers outside the zone", "distribution across income, disability, geography, and occupation"],
+      "rights_distribution_questions": ["Who pays the toll versus who benefits from faster travel and transit investment?", "Are low-income, disabled, outer-borough, New Jersey, and shift-worker burdens adequately represented?", "Are environmental burdens displaced to boundary communities?"]
+    }
+  ],
+  "arm_freeze_requirements": [
+    "Recommendation among explicit alternatives.",
+    "Confidence stated as a range or calibrated probability where meaningful, with rationale.",
+    "Three to seven falsifiable forecasts tied to the predeclared outcome families and a forecast horizon.",
+    "Evidence list restricted to material available at or before the case cutoff.",
+    "Explicit assumptions and evidence that would change the recommendation.",
+    "Affected groups, rights/distribution concerns, and unresolved uncertainties.",
+    "Approximate analyst/reviewer effort so added documentation burden can be compared."
+  ],
+  "evaluation_rubric": {
+    "scoring_rule": "Score each dimension independently on 0-4 anchors; do not sum into a single winner score. Report reviewer disagreement and ties.",
+    "dimensions": {
+      "decision_relevance": "0=no usable connection to choice; 2=some choice-relevant evidence; 4=clearly distinguishes alternatives using material evidence.",
+      "material_gap_discovery": "0=misses major decision-changing gaps; 2=identifies some; 4=identifies the most consequential gaps before reveal.",
+      "assumption_transparency": "0=key assumptions implicit; 2=mixed; 4=material assumptions explicit and linked to recommendation sensitivity.",
+      "forecast_quality": "0=no falsifiable forecasts; 2=forecasts exist but are vague/poorly scoped; 4=specific, time-bounded forecasts that can be resolved without reinterpretation.",
+      "uncertainty_and_disagreement": "0=collapses uncertainty; 2=mentions uncertainty; 4=represents credible competing evidence and explains what would update confidence.",
+      "rights_and_distribution": "0=aggregate-only; 2=names affected groups; 4=material burdens/benefits and rights constraints change or bound the analysis.",
+      "reviewer_usefulness": "0=would not help a pre-cutoff decision maker; 2=some useful synthesis; 4=materially improves understanding of tradeoffs and next evidence needs.",
+      "review_cost": "Record minutes and qualitative burden separately; lower cost is preferable only conditional on comparable usefulness."
+    }
+  },
+  "outcome_reveal_rules": [
+    "Do not expose either arm to post-cutoff evidence until both arms are frozen for that case.",
+    "Resolve forecasts against predeclared observable measures where possible; mark ambiguous outcomes unresolved rather than forcing a score.",
+    "Later outcomes are not treated as proof that a recommendation was correct because confounding and stochasticity remain.",
+    "Preserve negative/null results if the decision-centric workflow does not outperform or merely increases review burden.",
+    "Prefer at least one reviewer who did not produce either arm; if unavailable, label evaluation as non-independent."
+  ],
+  "contamination_check": "Repository code search before preregistration returned no matches for the three case topics. This reduces but does not eliminate model pretraining or general-knowledge contamination; strict source-date cutoffs remain required.",
+  "next_step": "Run Case 1 with separate contexts for the current and decision-centric arms, freeze both outputs, then reveal outcomes and score dimensions. Do not begin Cases 2-3 merely to increase throughput if Case 1 exposes protocol defects."
+}
