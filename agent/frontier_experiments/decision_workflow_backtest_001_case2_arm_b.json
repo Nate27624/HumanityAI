@@ -1,0 +1,229 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "frontier-decision-workflow-backtest-001",
+  "case_id": "oregon_measure_110_2020",
+  "arm": "B_decision_centric",
+  "status": "frozen_pre_outcome",
+  "information_cutoff": "2020-11-02T23:59:59-08:00",
+  "generated_without_post_cutoff_outcome_review": true,
+  "decision": "Whether Oregon voters should approve Measure 110's combination of reduced possession penalties and expanded addiction/recovery services, reject it, or prefer a materially different treatment/enforcement design.",
+  "alternatives": [
+    {
+      "id": "A_reject_status_quo",
+      "description": "Reject Measure 110 and retain the existing criminal-penalty framework and existing treatment-funding structure."
+    },
+    {
+      "id": "B_approve_measure_110",
+      "description": "Approve Measure 110: reduce criminal penalties for personal possession and redirect substantial marijuana-tax and justice-system savings toward addiction screening, treatment, recovery, harm-reduction, and support services."
+    },
+    {
+      "id": "C_treatment_expansion_without_decriminalization",
+      "description": "Expand treatment/recovery capacity substantially while retaining criminal possession penalties and using diversion more aggressively."
+    },
+    {
+      "id": "D_decriminalization_with_stronger_implementation_preconditions",
+      "description": "Move toward reduced possession penalties only after treatment capacity, referral pathways, data systems, and implementation governance reach predeclared readiness thresholds."
+    }
+  ],
+  "recommendation": {
+    "alternative_id": "B_approve_measure_110",
+    "confidence_probability": 0.62,
+    "rationale": "Pre-cutoff evidence makes continued reliance on criminal possession penalties difficult to defend as the primary response to substance-use disorder: Oregon already shows substantial racial disparity in possession enforcement, treatment access is weak, and international evidence indicates that decriminalization embedded in a broader health system can reduce criminal-justice exposure without clearly producing the catastrophic increases in drug use sometimes predicted. Measure 110 also creates a large dedicated treatment/recovery funding stream rather than merely removing penalties. The recommendation is only moderately confident because Portugal is not directly transferable to Oregon, the measure combines multiple interventions, treatment capacity is already constrained, and the success of voluntary assessment/referral depends heavily on implementation quality. A treatment-only alternative could plausibly dominate if criminal penalties create meaningful treatment engagement without disproportionate harms, while a readiness-gated decriminalization alternative could dominate if Oregon cannot scale services quickly enough."
+  },
+  "implementation_conditions": [
+    "Treat treatment/recovery capacity as a necessary implementation dependency, not as an automatic consequence of statutory funding.",
+    "Precommit to transparent measurement of service availability, waiting times, treatment initiation, retention, overdose, possession enforcement, racial disparities, public disorder, and fiscal flows.",
+    "Separate the causal effects of reduced possession penalties from the effects of treatment/harm-reduction funding wherever possible; Measure 110 is a bundled policy.",
+    "Build low-friction referral and assessment pathways that do not assume a citation alone will generate treatment uptake.",
+    "Preserve the ability to revise implementation if service bottlenecks, geographic inequity, public-space harms, or enforcement displacement emerge materially.",
+    "Do not interpret reduced arrests as sufficient evidence of improved health outcomes, and do not interpret rising overdoses alone as proof of a decriminalization effect without accounting for broader drug-market trends."
+  ],
+  "affected_groups": [
+    "people who use controlled substances, including people with substance-use disorders and people who do not meet disorder criteria",
+    "Black, Native American, and other groups disproportionately exposed to possession enforcement",
+    "people seeking voluntary treatment and recovery services",
+    "people in rural areas and communities with limited treatment capacity",
+    "people experiencing homelessness or unstable housing",
+    "families and communities affected by addiction, overdose, public drug use, or drug-related disorder",
+    "law-enforcement officers, courts, jails, probation systems, public defenders, and prosecutors",
+    "behavioral-health and harm-reduction providers",
+    "cities, counties, schools, state police, and other recipients of marijuana-tax revenue that could face redirected funding"
+  ],
+  "rights_and_distribution": {
+    "benefits": [
+      "Reduced criminal penalties can lower incarceration, criminal-record, employment, housing, and family harms from low-level possession enforcement.",
+      "Racial disparities in possession arrests and convictions create a strong equity reason to reduce unnecessary criminal exposure.",
+      "Dedicated treatment/recovery funding can expand access for people currently unable to obtain care."
+    ],
+    "risks": [
+      "If treatment capacity lags behind legal change, people may lose coercive contact with the justice system without gaining timely access to effective care.",
+      "Public disorder or visible drug use may impose concentrated burdens on residents, workers, transit users, businesses, and unhoused people even if aggregate health outcomes improve.",
+      "Redirecting marijuana-tax revenue imposes opportunity costs on cities, counties, police, schools, prevention, or other programs depending on the final fiscal structure.",
+      "A citation-based pathway can still distribute police contact unevenly even when possession is no longer criminal."
+    ],
+    "constraint": "Do not treat liberty from criminal punishment or aggregate overdose trends as the sole objective. The policy should be judged across health, rights, racial equity, treatment access, community burden, and implementation capacity without collapsing them into one scalar score."
+  },
+  "pre_cutoff_evidence": [
+    {
+      "source_id": "OR_VP_2020",
+      "publisher": "Oregon Secretary of State / Official 2020 General Election Voters' Pamphlet",
+      "published_at": "2020",
+      "title": "Official 2020 General Election Voters' Pamphlet — Measure 110",
+      "url": "https://re.bentoncountyor.gov/wp-content/uploads/2023/12/2020Nov03_State-Voters-Pamphlet.pdf",
+      "supports": "The official measure materials describe the bundled design: statewide addiction/recovery services, marijuana-tax funding, reduced possession penalties, and estimated shifts in public revenues and criminal-justice savings. The fiscal statement estimated reduced distributions to cities/counties alongside substantial new Drug Treatment and Recovery Fund resources.",
+      "limitations": "This establishes policy design and official fiscal estimates, not effectiveness. The linked archive copy is hosted by an Oregon county but reproduces the official state pamphlet."
+    },
+    {
+      "source_id": "OR_CJC_PCS_2018",
+      "publisher": "Oregon Criminal Justice Commission",
+      "published_at": "2018-09",
+      "title": "Possession of Controlled Substances Report",
+      "url": "https://www.oregon.gov/cjc/SAC/Documents/PossessionofControlledSubstancesReport-9-2018.pdf",
+      "supports": "Oregon's own criminal-justice analysis documented substantial racial disparities in possession arrests and felony convictions and emphasized that arrest/conviction patterns were not explained by equivalent racial differences in substance use. This makes distributional effects of criminalization a first-order decision variable.",
+      "limitations": "Descriptive disparities do not by themselves identify the causal effect of decriminalization on health, public safety, or later racial disparities."
+    },
+    {
+      "source_id": "OR_MEDICAID_TREATMENT_2019",
+      "publisher": "Substance Abuse / peer-reviewed Oregon Medicaid study",
+      "published_at": "2019",
+      "title": "Predictors of Substance use Treatment Initiation and Engagement among Adult and Adolescent Medicaid Recipients",
+      "url": "https://journals.sagepub.com/doi/10.1080/08897077.2018.1550467",
+      "supports": "Oregon Medicaid recipients saw declines in adjusted odds of both treatment initiation and engagement over 2010-2015, reinforcing that weak treatment engagement was a pre-existing systems problem rather than something decriminalization could be assumed to solve automatically.",
+      "limitations": "Medicaid recipients are not the entire population affected by Measure 110, and the study predates the ballot measure by several years."
+    },
+    {
+      "source_id": "OR_HB2257_2019",
+      "publisher": "Oregon Health Authority",
+      "published_at": "2019",
+      "title": "Substance Use Disorder Treatment Accreditation Advisory Group",
+      "url": "https://www.oregon.gov/oha/hsd/amh/pages/sudaag.aspx",
+      "supports": "House Bill 2257 required Oregon to examine accreditation and provider impacts as part of building system capacity and an adequate continuum of care, corroborating that treatment-system capacity and quality were active state concerns before Measure 110.",
+      "limitations": "An advisory-group mandate is evidence of a recognized systems problem, not a quantitative estimate of capacity or treatment effectiveness."
+    },
+    {
+      "source_id": "PORTUGAL_IZA_2017",
+      "publisher": "IZA Institute of Labor Economics",
+      "published_at": "2017-07",
+      "title": "Going after the Addiction, Not the Addicted: The Impact of Drug Decriminalization in Portugal",
+      "url": "https://www.iza.org/index.php/de/publications/dp/10895/going-after-the-addiction-not-the-addicted-the-impact-of-drug-decriminalization-in-portugal",
+      "supports": "A synthetic-control analysis of Portugal reported reductions in drug-related offenses and deaths and lower incidence of drug addiction among people with HIV after decriminalization, providing evidence against claims that decriminalization necessarily causes severe population-level health deterioration.",
+      "limitations": "Portugal's policy institutions, health system, drug market, enforcement practice, and baseline conditions differ from Oregon. The paper is a discussion paper and does not isolate an Oregon-style bundled treatment-funding design."
+    },
+    {
+      "source_id": "PORTUGAL_REVIEW_2017",
+      "publisher": "Substance Abuse Treatment, Prevention, and Policy / SAGE article",
+      "published_at": "2017-01-01",
+      "title": "The 15th anniversary of the Portuguese drug policy: Its history, its success and its future",
+      "url": "https://journals.sagepub.com/doi/full/10.1177/2050324516683640",
+      "supports": "The review describes lower HIV burden among people who use drugs, low overdose mortality, and increased treatment seeking after Portugal's reform, while emphasizing that the policy was broader than simple legal decriminalization.",
+      "limitations": "Narrative policy review with substantial causal-identification limits; Portugal should be treated as an informative analogue, not a direct prediction for Oregon."
+    },
+    {
+      "source_id": "OFFENDER_INTERVENTIONS_META_2016",
+      "publisher": "International Journal of Environmental Research and Public Health",
+      "published_at": "2016",
+      "title": "Are Non-Pharmacological Interventions Effective in Reducing Drug Use and Criminality? A Systematic and Meta-Analytical Review with an Economic Appraisal of These Interventions",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/27690077/",
+      "supports": "Across 43 trials of non-pharmacological interventions for drug-using offenders, pooled effects on re-arrest and drug use were limited or uncertain, although reincarceration and some therapeutic-community outcomes improved. This weakens any simple claim that maintaining criminal-justice contact plus treatment automatically produces large drug-use reductions.",
+      "limitations": "These are offender interventions, not population decriminalization. Program type, coercion, treatment intensity, and institutional setting vary substantially."
+    },
+    {
+      "source_id": "PRISON_OMT_SYSTEMATIC_2012",
+      "publisher": "Addiction",
+      "published_at": "2012",
+      "title": "The effectiveness of opioid maintenance treatment in prison settings: a systematic review",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/21955033/",
+      "supports": "Opioid maintenance treatment in prison can reduce heroin use and injecting risk and, when continuity exists, improve post-release treatment entry and retention. This supports preserving evidence-based treatment access regardless of the legal-penalty choice.",
+      "limitations": "Prison-based opioid maintenance is not equivalent to Measure 110's community-based, largely voluntary service model and says little about stimulant use or population-level public disorder."
+    }
+  ],
+  "decision_changing_uncertainties": [
+    {
+      "uncertainty": "Whether Oregon can convert new funding into timely, geographically distributed, culturally responsive treatment and recovery capacity quickly enough for legal reform to function as intended.",
+      "would_change_recommendation_if": "Credible pre-cutoff evidence showed that administrative, workforce, or provider constraints made near-term service expansion highly unlikely and that delaying decriminalization until capacity thresholds were met would preserve most rights benefits with substantially lower health/community risk."
+    },
+    {
+      "uncertainty": "How much criminal-justice contact currently causes treatment engagement versus deters care or imposes collateral harm.",
+      "would_change_recommendation_if": "Strong causal evidence showed that possession prosecution itself generates large, durable treatment and mortality benefits that cannot be reproduced through voluntary or civil referral and that these benefits exceed collateral and distributional harms."
+    },
+    {
+      "uncertainty": "Transferability of Portugal and other international decriminalization evidence to Oregon's drug market, treatment system, and enforcement institutions.",
+      "would_change_recommendation_if": "Comparable jurisdictions showed consistent substantial increases in overdose, serious disorder, or drug-market harms attributable to decriminalization despite adequate treatment implementation."
+    },
+    {
+      "uncertainty": "Whether a $100 civil violation plus optional assessment creates meaningful service engagement or mostly reduces criminal penalties without connecting high-risk users to care.",
+      "would_change_recommendation_if": "Evidence implied very low assessment/referral uptake and no credible alternative engagement pathway while untreated high-risk use was likely to rise materially."
+    },
+    {
+      "uncertainty": "The opportunity cost of redirecting marijuana-tax revenues from existing public recipients.",
+      "would_change_recommendation_if": "The displaced programs had stronger evidence of marginal health/safety benefit than the proposed treatment/recovery grants at the relevant funding scale."
+    }
+  ],
+  "frozen_forecasts": [
+    {
+      "forecast_id": "OR110_B_F1",
+      "horizon": "Within two years after the penalty provisions take effect",
+      "claim": "Possession arrests and criminal convictions for personal-use quantities covered by Measure 110 will fall by at least 70% relative to a credible no-measure counterfactual.",
+      "probability": 0.92,
+      "resolution_note": "Resolve using Oregon court/law-enforcement data and distinguish covered personal-possession offenses from trafficking, delivery, or other drug crimes."
+    },
+    {
+      "forecast_id": "OR110_B_F2",
+      "horizon": "Within three years after implementation",
+      "claim": "Racial disparities in criminal possession arrests/convictions will narrow materially in absolute criminal-justice exposure, even if disparities in police contact or civil citations persist.",
+      "probability": 0.78,
+      "resolution_note": "Measure both absolute exposure and relative disparity; do not claim equity success merely because total arrests decline."
+    },
+    {
+      "forecast_id": "OR110_B_F3",
+      "horizon": "Within three years after implementation",
+      "claim": "State-funded low-barrier treatment, peer support, harm-reduction, or recovery-service capacity will expand materially from the pre-measure baseline, but implementation speed and geographic availability will remain uneven.",
+      "probability": 0.80,
+      "resolution_note": "Resolve with funding, provider-network, service-volume, waiting-time, and geographic-access evidence rather than appropriations alone."
+    },
+    {
+      "forecast_id": "OR110_B_F4",
+      "horizon": "Within two years after implementation",
+      "claim": "Only a minority of people receiving possession citations will enter treatment directly through the citation/assessment pathway.",
+      "probability": 0.72,
+      "resolution_note": "Distinguish treatment reached through the citation pathway from services accessed independently through newly funded networks."
+    },
+    {
+      "forecast_id": "OR110_B_F5",
+      "horizon": "Within three years after implementation",
+      "claim": "Credible evidence will not establish a large population-level reduction in overdose mortality attributable to Measure 110 alone, because implementation, treatment expansion, and concurrent drug-market changes will make the causal signal difficult to isolate.",
+      "probability": 0.78,
+      "resolution_note": "This is a forecast about causal identifiability, not a forecast that overdose deaths will necessarily rise or fall. Mark unresolved if credible studies disagree materially."
+    },
+    {
+      "forecast_id": "OR110_B_F6",
+      "horizon": "Within three years after implementation",
+      "claim": "Public and political evaluation of Measure 110 will become strongly sensitive to visible implementation problems—especially treatment access, public drug use/disorder, or service delays—rather than being determined only by possession-arrest reductions.",
+      "probability": 0.75,
+      "resolution_note": "Resolve using contemporaneous official audits, legislative hearings, polling, or documented policy revisions; do not rely on isolated media anecdotes."
+    }
+  ],
+  "explicit_assumptions": [
+    "Low-level criminal possession penalties impose real collateral and distributional harms that are not fully captured by incarceration counts.",
+    "Treatment and recovery services can improve outcomes, but funding authorization does not guarantee capacity, uptake, fidelity, or equitable access.",
+    "Portugal is evidence that broad decriminalization can coexist with favorable outcomes, not proof that Oregon will reproduce Portugal's trajectory.",
+    "The dominant overdose environment may change independently of Measure 110 because illicit drug supply, especially opioid potency and composition, is an external driver.",
+    "Voluntary service uptake may be substantially lower than service availability; the pathway from reduced penalties to improved health is therefore not automatic.",
+    "Measure 110 is a bundle of legal, fiscal, treatment, recovery, and harm-reduction changes, so aggregate before/after outcomes should not be casually assigned to decriminalization alone."
+  ],
+  "unresolved_questions": [
+    "What minimum treatment-capacity and referral-readiness thresholds should have been required before penalty changes took effect?",
+    "How much treatment engagement in Oregon before 2020 was actually caused by possession prosecution rather than by probation, specialty courts, acute health events, family pressure, or self-referral?",
+    "How should public-space drug use and community disorder be measured separately from possession criminalization and from homelessness?",
+    "What are the marginal benefits of the marijuana-tax-funded programs that lose revenue relative to the proposed recovery-services fund?",
+    "Which evidence-based engagement mechanisms can replace coercive criminal leverage for people at highest overdose risk who do not initially seek treatment?"
+  ],
+  "review_cost_minutes_estimate": 70,
+  "protocol_notes": [
+    "No post-cutoff Oregon implementation, overdose, citation, legislative-reversal, audit, or public-opinion evidence was used to form this arm's recommendation or probabilities.",
+    "Current retrieval was restricted to documents published at or before the 2020-11-02 cutoff when used as substantive evidence; later pages were used only to locate historical documents and were excluded from reasoning about outcomes.",
+    "The arm distinguishes decriminalization from legalization and distinguishes criminal-possession reduction from treatment effectiveness.",
+    "The arm deliberately treats treatment capacity and implementation as first-order causal dependencies rather than assuming statutory funding creates services.",
+    "This file is frozen once committed. Later corrections should be separate deviation/correction records rather than rewriting forecasts after outcome reveal."
+  ]
+}
