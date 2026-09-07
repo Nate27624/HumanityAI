@@ -56,6 +56,21 @@
       "last_reviewed":"2026-09-06",
       "generated_by":"HumanityAI primary autonomous research loop; source is human-produced systematic review",
       "human_reviewed":false
+    },
+    {
+      "id":"E0007",
+      "claim":"Offering general health checks to adults not selected for a specific disease or risk factor has little or no effect on all-cause or cancer mortality and probably little or no effect on cardiovascular mortality, despite increasing some diagnoses; the evidence therefore does not support using diagnostic activity alone as a proxy for improved major health outcomes.",
+      "claim_type":"estimate",
+      "status":"mixed",
+      "problem_ids":["P03"],
+      "sources":[{"url":"https://www.cochrane.org/evidence/CD009009_general-health-checks-reducing-illness-and-mortality","title":"General health checks for reducing illness and mortality","publisher":"Cochrane","published_date":"2019-01-30","accessed_date":"2026-09-07","source_type":"systematic_review","relationship":"qualifies","notes":"Updated Cochrane systematic review of 17 randomized trials; 15 reported outcome data for 251,891 participants. Eleven mortality trials included 233,298 participants and 21,535 deaths. Total mortality RR 1.00 (95% CI 0.97 to 1.03; high certainty), cancer mortality RR 1.01 (0.92 to 1.12; high certainty), cardiovascular mortality RR 1.05 (0.94 to 1.16; moderate certainty), and fatal/non-fatal ischaemic heart disease RR 0.98 (0.94 to 1.03; high certainty). The review also reports increased detection of some conditions while evidence on several harms and downstream procedures was incomplete."}],
+      "confidence":0.94,
+      "confidence_rationale":"Worker C independently reproduced the candidate's trial counts, participant counts, mortality estimates, certainty ratings, and intervention scope from the original Cochrane review. Confidence is high in the null major-outcome finding for broad general health checks, while the status remains mixed because diagnosis rates can increase and several harms, procedures, and non-mortality outcomes were incompletely measured.",
+      "limitations":["The review was published in 2019 and many underlying trials are older; contemporary targeted prevention, risk-stratified screening, and disease-specific screening should not be inferred to be ineffective from this evidence.","The intervention is a broad package of general health checks rather than one standardized protocol, and delivery differed across trials and health systems.","The evidence concerns adults not selected for a particular disease or risk factor and does not apply to symptom-driven evaluation, clinically indicated follow-up, or recommended screening for specific diseases or high-risk groups.","Evidence on some harms, downstream procedures, psychological effects, resource use, and several non-mortality outcomes was incomplete, so this record does not establish a precise net-harm or cost-effectiveness estimate.","A mortality null does not prove zero benefit for every intermediate or quality-of-life outcome, and changing preventive treatments may alter the value of specific components.","This record concerns intervention effectiveness only and does not establish HumanityAI's comparative advantage in healthcare policy or imply a recommendation to stop clinically indicated preventive care."],
+      "counterevidence":["The review reports increased detection of some conditions and risk factors in included trials, so the intervention is not uniformly null across all measured outcomes.","Targeted screening and prevention for specific diseases or high-risk populations have different evidence bases and should not be generalized from this broad general-check result."],
+      "last_reviewed":"2026-09-07",
+      "generated_by":"HumanityAI Adaptive Compute Worker A candidate independently verified and integrated by Worker C; source is human-produced Cochrane systematic review",
+      "human_reviewed":false
     }
   ]
 }
