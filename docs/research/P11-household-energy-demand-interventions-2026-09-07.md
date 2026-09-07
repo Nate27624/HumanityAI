@@ -5,7 +5,7 @@
 
 ## Why this matters
 
-The new P11 problem brief correctly emphasizes that adoption or technological plausibility is not the same as demonstrated climate outcomes. A recent living systematic review provides unusually broad experimental and quasi-experimental evidence on a different mitigation lever: behavioral, informational, and monetary interventions intended to reduce household energy consumption.
+The new P11 problem brief correctly emphasizes that adoption or technological plausibility is not the same as demonstrated climate outcomes. A recent living systematic review provides unusually broad experimental, quasi-experimental, and longitudinal/pre–post evidence on a different mitigation lever: behavioral, informational, and monetary interventions intended to reduce household energy consumption.
 
 ## Main finding
 
@@ -22,9 +22,11 @@ This is useful evidence **against both overclaiming and dismissing demand-side b
 - The pooled effect is positive but small-to-moderate; these interventions are not evidence for a stand-alone solution to P11.
 - Adjustment for possible small-study effects materially reduces the standardized estimate from 0.22 to 0.13. Selection/publication effects therefore matter to interpretation.
 - The review explicitly reports methodological weaknesses and varying study quality across the evidence base.
+- The included designs are not uniformly causal: alongside randomized and quasi-experimental studies, the review includes longitudinal/pre–post designs that can be more vulnerable to confounding.
 - Intervention categories are heterogeneous. Monetary incentives, feedback, social comparison, motivation, and information should not be treated as one interchangeable policy.
 - Energy-consumption reduction is an intermediate outcome for climate mitigation. The review does not establish a uniform greenhouse-gas reduction because emissions consequences depend on energy source, timing, rebound, and context.
 - Average effects across 40 countries do not establish equal effectiveness, distributional impact, durability, or cost-effectiveness in a particular jurisdiction.
+- Durability is a recognized evidence gap: the review notes that relatively few included studies conduct follow-up measurement, so persistence beyond the measured intervention period remains uncertain.
 
 A related economics review on energy efficiency in developing countries warns that rebound can make realized energy savings smaller than engineering projections and that rebound size varies substantially by context. This is not a direct contradiction of the Khanna review—the interventions and estimands differ—but it reinforces the need to keep observed consumption, projected savings, welfare gains, and emissions outcomes distinct.
 
@@ -34,13 +36,13 @@ Context source: Kenneth Gillingham, Amelia Keyes, and Karen Palmer, *The Economi
 
 If later integrated into `data/evidence.json`, the defensible claim is approximately:
 
-> Across a large international experimental and quasi-experimental evidence base, behavioral, informational, and monetary household interventions reduce energy consumption on average, but the effect is modest and smaller after adjustment for possible small-study bias; effectiveness varies by intervention type and this evidence alone does not establish emissions reductions, durability, distributional effects, or cost-effectiveness.
+> Across a large international evidence base spanning experimental, quasi-experimental, and longitudinal/pre–post designs, behavioral, informational, and monetary household interventions are associated with lower energy consumption on average, but the effect is modest and smaller after adjustment for possible small-study bias; effectiveness varies by intervention type and this evidence alone does not establish emissions reductions, durability, distributional effects, cost-effectiveness, or a uniform causal effect across the full evidence base.
 
-Suggested status: `mixed` rather than simply `supported`, because the positive pooled effect coexists with material small-study adjustment, methodological weaknesses, and unresolved translation from energy use to climate outcomes.
+Suggested status: `mixed` rather than simply `supported`, because the positive pooled effect coexists with material small-study adjustment, heterogeneous study designs, methodological weaknesses, limited follow-up evidence, and unresolved translation from energy use to climate outcomes.
 
 ## Decision relevance
 
-This evidence changes the P11 action space modestly: household demand interventions appear empirically real enough to remain in the portfolio, but their likely role is **complementary**, not a substitute for structural decarbonization or adaptation. A future prioritization exercise should compare marginal cost per durable unit of energy/emissions reduction against technology, pricing, infrastructure, and regulatory alternatives rather than ranking interventions by statistical significance alone.
+This evidence changes the P11 action space modestly: household demand interventions appear empirically promising enough to remain in the portfolio, but their likely role is **complementary**, not a substitute for structural decarbonization or adaptation. A future prioritization exercise should compare marginal cost per durable unit of energy/emissions reduction against technology, pricing, infrastructure, and regulatory alternatives rather than ranking interventions by statistical significance alone.
 
 ## Falsifiable next checks
 
