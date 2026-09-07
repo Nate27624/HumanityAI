@@ -1,0 +1,55 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "IC0003",
+  "target_problem_ids": ["P02", "P03", "P05", "P07"],
+  "candidate_for": "data/evidence.json",
+  "claim": "Guaranteed basic income experiments in high-income countries show a mixed and intervention-specific pattern rather than a uniform poverty-reduction effect: some designs may reduce food insecurity, mental distress, or extend post-compulsory schooling, while evidence for overall health is inconclusive and a full GBI replacing existing assistance did not appear to improve self-rated overall health.",
+  "claim_type": "estimate",
+  "proposed_status": "mixed",
+  "source": {
+    "url": "https://www.campbellcollaboration.org/review/effects-of-guaranteed-basic-income-interventions-on-poverty-related-outcomes-in-high-income-countries-a-systematic-review-and-meta-analysis/",
+    "title": "Effects of guaranteed basic income interventions on poverty-related outcomes in high-income countries: A systematic review and meta-analysis",
+    "publisher": "Campbell Collaboration",
+    "source_type": "systematic_review",
+    "published_date": "2024-06-16",
+    "accessed_date": "2026-09-07",
+    "relationship": "qualifies"
+  },
+  "study_characteristics": {
+    "studies": 27,
+    "experiments": 10,
+    "randomized_experiments": 9,
+    "experiment_period": "1968-2020",
+    "geographies": ["United States", "Canada", "Barcelona, Spain", "Finland", "Netherlands"],
+    "search_current_through": "2022-12",
+    "design_note": "The review grouped experiments into multiple GBI types rather than treating basic income as one homogeneous intervention. Most experiments randomized participants, but the review reports additional methodological weaknesses that lower confidence."
+  },
+  "key_results": [
+    "Full GBI with gradual benefit withdrawal may reduce food insecurity and increase post-compulsory school enrollment among youth.",
+    "Supplemental GBI may improve self-rated mental distress and appears beneficial for some subjective financial-wellbeing and life-satisfaction outcomes.",
+    "More generous GBI than existing social assistance may improve life satisfaction and subjective financial wellbeing.",
+    "A full GBI replacing social assistance did not appear to improve self-rated overall health.",
+    "Across 176 poverty-related outcome variables, heterogeneous measures prevented broad quantitative pooling and many findings remained intervention-specific."
+  ],
+  "why_high_information_value": [
+    "HumanityAI already records unconditional cash-transfer evidence from low- and middle-income countries; this review adds a materially different high-income institutional context and explicitly compares GBI designs with existing social assistance.",
+    "The mixed findings help prevent collapsing 'basic income' into a single intervention effect and preserve the distinction between food security, mental health, subjective wellbeing, education, and overall health.",
+    "The review is useful for calibration because intuitive claims about broad health or poverty benefits are not uniformly supported even where some narrower outcomes improve."
+  ],
+  "limitations": [
+    "The ten experiments tested different GBI designs, benefit levels, replacement rules, populations, and policy contexts; they should not be pooled conceptually as one standardized intervention.",
+    "Experiments occurred between 1968 and 2020, and institutional context, labor markets, prices, welfare systems, and tax structures differ across time and countries.",
+    "Most outcomes were measured differently across studies, preventing broad meta-analysis and increasing the risk of selective interpretation of individual findings.",
+    "The review excluded later pandemic-era experiments from its intended permanent-income-policy scope; newer post-2022 evidence is not included.",
+    "Evidence about subjective wellbeing or mental distress does not establish effects on objective health, long-run earnings, fiscal sustainability, labor supply, or distributional incidence.",
+    "This record would describe intervention evidence only; it would not establish that a particular GBI design is cost-effective or that HumanityAI should advocate one."
+  ],
+  "counterevidence_and_uncertainty": [
+    "Some GBI variants improve specific outcomes, so the evidence should not be summarized as generally null.",
+    "The review's typology implies that replacing existing benefits, supplementing them, and changing benefit generosity can produce meaningfully different effects and risks.",
+    "Overall-health evidence is inconclusive, and the full-GBI result on self-rated health should not be generalized to every health outcome or income-support design."
+  ],
+  "recommended_integration": "After independent source verification, add a mixed P02/P03/P05/P07 intervention-evidence record that keeps GBI variants and outcome families explicit. Do not treat this as a universal estimate of basic income effectiveness or as a recommendation for a specific fiscal design.",
+  "human_review_required": false,
+  "generated_by": "HumanityAI Adaptive Worker A; source is human-produced Campbell systematic review"
+}

@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "IC0004",
+  "target_problem_ids": ["P07", "P09"],
+  "candidate_for": "data/evidence.json",
+  "claim": "Value-chain interventions for women in low- and middle-income countries appear to produce modest improvements in economic outcomes and small positive effects on some non-economic empowerment measures, but confidence is limited by methodological weaknesses and economic gains do not reliably translate into larger shifts in household or community gender roles.",
+  "claim_type": "estimate",
+  "proposed_status": "mixed",
+  "source": {
+    "url": "https://www.campbellcollaboration.org/review/value-chain-interventions-for-improving-womens-economic-empowerment-a-mixed-methods-systematic-review-and-meta-analysis/",
+    "title": "Value chain interventions for improving women’s economic empowerment: A mixed-methods systematic review and meta-analysis",
+    "publisher": "Campbell Collaboration",
+    "source_type": "systematic_review",
+    "published_date": "2024-08-12",
+    "accessed_date": "2026-09-07",
+    "relationship": "qualifies"
+  },
+  "study_characteristics": {
+    "total_studies": 118,
+    "mixed_methods_studies": 4,
+    "effectiveness_studies": 59,
+    "process_evaluations": 55,
+    "geography_note": "Evidence is concentrated in low- and middle-income countries, especially Sub-Saharan Africa and South Asia; few studies cover other regions.",
+    "design_note": "The review combines quantitative effectiveness evidence with qualitative/process evidence and reports low confidence in the methodological quality of the effectiveness findings."
+  },
+  "key_results": [
+    "Interventions modestly improved economic outcomes including income, asset holdings, productivity, and savings.",
+    "The review suggests gains arise more through skills and improved inputs than through improved access to profitable markets.",
+    "Effects on mobility, decision-making, and leadership of organizations were positive but small.",
+    "Economic gains did not consistently translate into substantial changes in gender roles within households or communities.",
+    "Women-targeted interventions did not show significantly larger economic impacts than non-targeted interventions, though they showed slightly larger effects on time use and non-economic empowerment indicators."
+  ],
+  "why_high_information_value": [
+    "HumanityAI has little intervention evidence directly addressing economic opportunity and unequal access through a gender/distributional lens.",
+    "The review prevents a common inference error: improved income or productivity should not automatically be treated as equivalent to increased agency, bargaining power, mobility, or leadership.",
+    "The mixed-method evidence makes implementation barriers visible, including exploitation, stereotypes, information gaps, and lack of control over resources."
+  ],
+  "limitations": [
+    "The review reports low confidence in the methodological quality of the quantitative evidence, so effect magnitudes should not be treated as precise or universally causal.",
+    "Interventions differ in value chain, sector, inputs, training, market access, collective organization, targeting, intensity, and institutional context.",
+    "Evidence is geographically concentrated in Sub-Saharan Africa and South Asia, limiting transferability to other regions.",
+    "The review could not determine with sufficient confidence which intervention types or mechanisms are most effective.",
+    "Small positive effects on decision-making, mobility, or leadership do not imply broad transformation of household or community power relations.",
+    "The review does not establish cost-effectiveness or HumanityAI's comparative advantage in funding, designing, or advocating a specific agricultural value-chain intervention."
+  ],
+  "counterevidence_and_uncertainty": [
+    "Quantitative economic improvements are real enough to reject a uniformly null summary, but non-economic empowerment gains are limited and cultural/institutional constraints persist.",
+    "Interventions specifically targeted to women did not produce significantly larger economic effects than non-targeted value-chain interventions, complicating simple targeting narratives.",
+    "Qualitative evidence suggests capacity building, networks, market access, and land ownership can facilitate empowerment, but these mechanisms have not been isolated with sufficient causal confidence."
+  ],
+  "recommended_integration": "After independent source verification, add a mixed P07/P09 intervention-evidence record that keeps economic outcomes separate from non-economic empowerment and explicitly preserves the low-confidence methodological assessment and regional concentration.",
+  "human_review_required": false,
+  "generated_by": "HumanityAI Adaptive Worker A; source is human-produced Campbell systematic review"
+}
