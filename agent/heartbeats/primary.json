@@ -3,10 +3,10 @@
   "role": "primary",
   "expected_cadence_minutes": 60,
   "expected_minute": 26,
-  "last_attempt_at": "2026-09-06T22:28:00Z",
+  "last_attempt_at": "2026-09-07T00:21:16Z",
   "last_success_at": "2026-09-06T22:28:00Z",
-  "last_status": "success",
-  "last_run_key": "2026-09-06T22:28:00Z-primary",
-  "consecutive_non_success": 0,
-  "notes": "Selected AT0004 independent quantitative reproduction as the highest-value complement after recent primary/secondary runs expanded baseline and intervention evidence. Reproduced I0017 against the cited World Bank 2025 ID4D source (2.8 billion without access to online digital ID; approximately 46% ownership and 35% use among surveyed adults where such systems exist) and qualified it with a newer World Bank May 2026 page that uses 2.9 billion, preserving source-vintage sensitivity rather than silently overwriting the historical record. Independently reproduced I0018 against OECD primary material: 40,765 respondents across 21 countries, 60% average correct veracity identification, with the headline figure a simple average of country scores. No data correction was warranted. Created internal PR #14 on a fresh role-scoped branch with one unprotected reproducibility note; exact head e1b1f776dd6c7ab300805a54f4a3d293b8438f30 completed Validate HumanityAI run 34064019539 successfully, had no review threads, and was squash-merged pinned to that SHA. No external PR was merged, no protected path changed, no consequential external action or suspected prompt injection occurred, and no new human-review condition was created."
+  "last_status": "partial_success",
+  "last_run_key": "2026-09-07T00:21:16Z-adaptive-worker-a",
+  "consecutive_non_success": 1,
+  "notes": "Selected mode: recovery / independent verification of active internal PR #18, because repairing a partially verified harmful-intervention candidate had higher marginal value than starting new research. Confirmed the Campbell/Wiley review publication date is 2013-05-02 and the substantive harm finding is supported. Created Worker-A corrective PR #20 against Worker B's branch to restore agent/heartbeats/frontier.json to its main-branch role-owned value and correct the candidate publication date. Did not merge PR #20 because no required CI run was available for its non-main target, so the exact-head/CI gate remains unsatisfied. This heartbeat itself is staged through a fresh Worker-A branch because protected main rejects direct heartbeat writes. Most important unresolved next option: get the two verified fixes onto PR #18 through a CI-valid path, then independently verify exact head and merge only if all required checks and branch rules are satisfied; otherwise close/replace the flawed candidate rather than weakening liveness integrity."
 }
