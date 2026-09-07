@@ -115,3 +115,5 @@ merge exact reviewed SHA
 ```
 
 Repository issue #11 tracks the GitHub-level protection needed to make this authority separation mechanical rather than merely policy-enforced.
+
+<!-- issue-11 protected-path enforcement probe: no policy change; must not merge without CODEOWNER approval -->
