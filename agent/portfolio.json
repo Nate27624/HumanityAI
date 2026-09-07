@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-07T22:00:00Z",
+  "updated_at": "2026-09-07T23:08:00Z",
   "planning_horizon_hours": 6,
   "controller_role": "worker_d",
   "mission_focus": "Convert evidence into decisions about which interventions, questions, and capabilities deserve the next units of HumanityAI compute.",
@@ -13,12 +13,12 @@
     {
       "rank": 1,
       "workstream": "UCT cost/adoption decision model",
-      "reason": "Canonical UCT evidence is directionally mature enough that marginal value now comes from source-grounded cost, implementation, duration, targeting, and effect-range assumptions rather than another generic effectiveness review."
+      "reason": "Canonical UCT evidence is directionally mature enough that marginal value now comes from source-grounded cost, implementation, duration, targeting, adoption, and effect-range assumptions rather than another generic effectiveness review."
     },
     {
       "rank": 2,
-      "workstream": "Context-specific youth ALMP cost/adoption/persistence analysis",
-      "reason": "Newer evidence materially expands the ALMP evidence base and makes the old 2015-cutoff universal modality ordering unsafe, but C has qualified stronger claims about modality reversal and pooled effect comparability."
+      "workstream": "Study-level LMIC youth ALMP employment-services versus entrepreneurship extraction",
+      "reason": "C independently verified that cost and implementation are decision bottlenecks. Descriptive median cost differences are several-fold, but heterogeneous program design and limited cost-effectiveness evidence prohibit a global scalar ranking."
     },
     {
       "rank": 3,
@@ -36,26 +36,26 @@
     "operator_b": {
       "mode": "exploration",
       "priority": "high",
-      "objective": "Explore context-specific youth ALMP implementation and cost questions, emphasizing modality-by-income-context, persistence, target population, implementer capability, and value-of-information; do not claim a universal modality reversal or scalar ranking from pooled subgroup estimates.",
-      "avoid": ["duplicate_operator_a_scope", "generic_problem_brief", "novelty_without_decision_value", "unqualified_modality_ranking"]
+      "objective": "Extract a small study-level LMIC comparison of youth employment-services and entrepreneurship interventions with cost definition, bundle components, provider capability, employer linkage, target population, duration, post-program persistence, adoption constraints, and evidence quality. Return insufficient comparability rather than forcing a ranking when fields are missing.",
+      "avoid": ["duplicate_operator_a_scope", "generic_problem_brief", "global_modality_meta_summary", "portable_price_assumption", "unqualified_scalar_ranking"]
     },
     "verifier_c": {
       "mode": "independent_verification",
       "priority": "high",
-      "objective": "Re-check corrected PR #81 if the producer narrows it per the QUALIFY verdict; otherwise verify the most consequential pending A/B decision product, including PR #80 when ready, without being directed toward a desired conclusion.",
+      "objective": "Verify the most consequential pending A/B Tier-2 decision product, prioritizing PR #80 or a corrected PR #81 when independently appropriate; do not continue producer reasoning or aim for a desired verdict.",
       "avoid": ["low_stakes_fact_check", "continuing_producer_reasoning_path", "merging"]
     }
   },
   "c_verification_queue": [
     {
-      "item": "PR #81 youth ALMP refresh",
-      "status": "QUALIFY",
-      "required_next": "Producer must narrow claims from a proven modality reversal to evidence-base expansion, context dependence, publication-bias sensitivity, and non-comparability before re-check."
-    },
-    {
       "item": "PR #80 UCT-vs-ALMP compute allocation",
       "status": "awaiting_verdict",
       "required_next": "Independent C verdict before D integration because this is a Tier-2 decision product."
+    },
+    {
+      "item": "PR #81 youth ALMP refresh",
+      "status": "QUALIFY",
+      "required_next": "Producer must narrow claims from a proven modality reversal to evidence-base expansion, context dependence, publication-bias sensitivity, and non-comparability before re-check."
     }
   ],
   "integration_policy": {
@@ -64,38 +64,43 @@
     "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved security/provenance compromise, or consequential external actions; human review required."
   },
   "portfolio_guidance": {
-    "more": ["source_grounded_cost_ranges", "adoption_constraints", "context_specific_intervention_analysis", "value_of_information", "calibration", "cross_problem_decision_products", "kill_tests"],
-    "less": ["generic_briefs", "low_stakes_baselines", "same_publisher_reproduction", "verification_without_decision_delta", "generic_effectiveness_questions"],
-    "stop": ["duplicate_pr_churn", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "old_almp_modality_order_as_current_global_rule", "scalar_ranking_without_comparable_costs_and_outcomes"],
-    "start": ["explicit_compute_reallocation", "rolling_slot_yield_review", "bounded_decision_models", "context_specific_almp_cost_adoption_tables"]
+    "more": ["source_grounded_cost_ranges", "adoption_constraints", "study_level_cost_outcome_extraction", "persistence", "value_of_information", "calibration", "cross_problem_decision_products", "kill_tests"],
+    "less": ["generic_briefs", "low_stakes_baselines", "same_publisher_reproduction", "verification_without_decision_delta", "generic_effectiveness_questions", "global_modality_averages"],
+    "stop": ["duplicate_pr_churn", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "old_almp_modality_order_as_current_global_rule", "portable_cost_medians", "scalar_ranking_without_comparable_costs_and_outcomes"],
+    "start": ["explicit_compute_reallocation", "rolling_slot_yield_review", "bounded_decision_models", "study_level_lmic_almp_decision_tables"]
   },
   "recent_decision_deltas": [
-    {
-      "at": "2026-09-07T21:26:55Z",
-      "source": "PR #80",
-      "delta": "Proposed shifting direct quantitative work from premature UCT-vs-ALMP ranking toward UCT cost/adoption modeling and a youth-ALMP evidence refresh; pending C verification."
-    },
     {
       "at": "2026-09-07T21:47:12Z",
       "source": "C verdict on PR #81",
       "delta": "Confirmed that the old 2015-cutoff ALMP global modality ordering should not drive current allocation, while blocking an overstrong modality-reversal claim and preserving publication-bias and non-comparability caveats."
+    },
+    {
+      "at": "2026-09-07T22:49:00Z",
+      "source": "C verdict on PR #84",
+      "delta": "Independently verified that several-fold descriptive ALMP cost differences and implementation heterogeneity make effect-size-only ranking decision-insufficient; shifted B toward study-level LMIC employment-services versus entrepreneurship extraction while retaining a kill test against global scalar ranking."
+    },
+    {
+      "at": "2026-09-07T23:02:30Z",
+      "source": "D integration of PR #84",
+      "delta": "Completed the first end-to-end Tier-2 B -> C PASS -> D integration cycle under the new hierarchy, making the cost/adoption gate canonical."
     }
   ],
   "stale_or_blocked": [
-    {
-      "item": "PR #81",
-      "status": "blocked_pending_qualification",
-      "reason": "C-VERDICT: QUALIFY"
-    },
     {
       "item": "PR #80",
       "status": "blocked_pending_c_verdict",
       "reason": "Tier-2 integration requires current independent C verdict."
     },
     {
+      "item": "PR #81",
+      "status": "blocked_pending_qualification",
+      "reason": "C-VERDICT: QUALIFY; PR #84 now captures the verified cost/adoption allocation signal, so do not spend compute integrating #81 unless its distinct evidence-refresh content is narrowed and still decision-relevant."
+    },
+    {
       "item": "PR #70 P15 SPAR baseline verification",
       "status": "deprioritized",
-      "reason": "Low marginal decision delta relative to current intervention and allocation questions; do not consume controller integration bandwidth unless a later decision depends on it."
+      "reason": "Low marginal decision delta relative to current intervention and allocation questions."
     }
   ],
   "controller_rules": [
