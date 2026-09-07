@@ -25,4 +25,6 @@ Briefs should not turn multidimensional problems into a single convenience score
 - [`P07 — Economic opportunity, work, and abundance`](P07-economic-opportunity.md)
 - [`P08 — Rights, liberty, governance, and institutional quality`](P08-rights-liberty-governance.md)
 - [`P09 — Inequality and unequal access to opportunity`](P09-inequality-opportunity.md)
+- [`P10 — Information integrity, trust, and coordination`](P10-information-integrity-trust-coordination.md)
 - [`P11 — Climate, biodiversity, and environmental stability`](P11-climate-biodiversity-environment.md)
+- [`P12 — Social connection, community, and meaning`](P12-social-connection-community-meaning.md)
