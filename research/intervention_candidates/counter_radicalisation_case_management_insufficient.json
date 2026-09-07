@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "IC0005",
+  "target_problem_ids": ["P01", "P08", "P10"],
+  "candidate_for": "data/evidence.json",
+  "claim": "Case-management tools and approaches are widely used in programmes seeking to counter radicalisation to violence, but a 2024 Campbell systematic review found no eligible effectiveness evaluations for these interventions, so their effect on violent-radicalisation outcomes cannot currently be established from the reviewed evidence base.",
+  "claim_type": "estimate",
+  "proposed_status": "insufficient_evidence",
+  "source": {
+    "url": "https://www.campbellcollaboration.org/review/case-management-interventions-seeking-to-counter-radicalisation-to-violence-and-related-forms-of-violence-a-systematic-review/",
+    "title": "Case management interventions seeking to counter radicalisation to violence and related forms of violence: A systematic review",
+    "publisher": "Campbell Collaboration",
+    "source_type": "systematic_review",
+    "published_date": "2024-04-12",
+    "accessed_date": "2026-09-07",
+    "relationship": "qualifies"
+  },
+  "study_characteristics": {
+    "effectiveness_studies_for_counter_radicalisation": 0,
+    "implementation_studies_for_counter_radicalisation": 47,
+    "reviews_of_case_management_for_other_violence": 8,
+    "search_current_through": "2023-01",
+    "publication_period": "2000-2023",
+    "design_note": "The review separated effectiveness from implementation. No eligible studies addressed the effectiveness objective for counter-radicalisation case management, while 47 studies examined implementation-related questions."
+  },
+  "key_results": [
+    "No eligible studies were identified that could establish whether case-management tools or approaches reduce radicalisation to violence.",
+    "Implementation research identified recurring issues including inconsistent tool use, subjective interpretation of risk, information-sharing and inter-agency coordination challenges, resourcing constraints, and uncertainty about translating assessments into practical action.",
+    "Evidence from case management for other forms of violence was also inconclusive overall; reviews of risk-assessment tools and polygraphs reported mixed results, and the review cautions that assessment tools alone would not be expected to directly reduce violence.",
+    "Some implementation studies identified skilled practitioners, tailoring support to client needs, trust-building, continuity, and multi-agency working as facilitators, but these implementation observations are not evidence of outcome effectiveness."
+  ],
+  "why_high_information_value": [
+    "Counter-radicalisation programmes can be consequential for both violence prevention and civil liberties, so separating widespread use from demonstrated effectiveness is decision-relevant.",
+    "The review provides a strong negative-evidence signal: a substantial implementation literature exists without eligible effectiveness evidence for the intervention class.",
+    "The record guards against inferring effectiveness from programme logic, practitioner acceptance, risk-assessment infrastructure, or institutional adoption."
+  ],
+  "limitations": [
+    "Absence of eligible effectiveness studies is not evidence that case management is ineffective; it means effectiveness could not be determined under the review's inclusion criteria.",
+    "The literature search was completed in January 2023, so later evaluations may not be represented.",
+    "Case-management programmes vary in target populations, legal settings, voluntariness, assessment tools, practitioner models, service availability, and definitions of radicalisation and violence.",
+    "Implementation findings are uneven in quality and should not be promoted into causal claims about violence reduction.",
+    "Transferability from case management used for interpersonal or collective violence to counter-radicalisation is conceptually plausible but not equivalent to demonstrated effectiveness in radicalisation contexts.",
+    "Counter-radicalisation interventions can create rights, privacy, stigma, discrimination, and trust risks; an effectiveness record alone would not resolve those normative or distributional questions.",
+    "This candidate does not establish cost-effectiveness or HumanityAI's comparative advantage in supporting, opposing, or designing such programmes."
+  ],
+  "counterevidence_and_uncertainty": [
+    "Forty-seven implementation studies indicate that case-management practice is not an evidence-free field; useful implementation knowledge exists even though outcome-effectiveness evidence is absent under the review criteria.",
+    "Some studies judged intervention assumptions to align with academic research, but plausible programme logic is not a substitute for outcome evaluation.",
+    "The review found mixed and inconclusive evidence for related case-management tools in other violence domains, so neither a broad positive nor broad null effectiveness conclusion is warranted."
+  ],
+  "recommended_integration": "After independent source verification and a check for post-January-2023 effectiveness evaluations, consider an insufficient-evidence P01/P08/P10 record emphasizing that widespread implementation and programme logic must not be treated as proof of violence-prevention effectiveness.",
+  "human_review_required": false,
+  "generated_by": "HumanityAI Adaptive Worker A; source is human-produced Campbell systematic review"
+}
