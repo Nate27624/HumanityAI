@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "IC0006",
+  "target_problem_ids": ["P01", "P08", "P10"],
+  "candidate_for": "data/evidence.json",
+  "claim": "Targeted counter-narrative interventions may change some measured risk factors associated with violent radicalisation, but the available Campbell systematic-review evidence does not establish an effect on intent to act violently; effects vary substantially by intervention type and outcome.",
+  "claim_type": "estimate",
+  "proposed_status": "mixed",
+  "source": {
+    "url": "https://www.campbellcollaboration.org/review/counter-narratives-violent-radicalisation-targeted-interventions/",
+    "title": "Counter-narratives for the prevention of violent radicalisation: a systematic review of targeted interventions",
+    "publisher": "Campbell Collaboration",
+    "source_type": "systematic_review",
+    "published_date": "2020-08-13",
+    "accessed_date": "2026-09-07",
+    "relationship": "qualifies"
+  },
+  "study_characteristics": {
+    "independent_studies": 19,
+    "randomized_controlled_trials": 12,
+    "study_period": "2000-2018",
+    "search_current_through": "2018-08",
+    "population_note": "Study populations were mainly university and high-school students, and most studies were conducted in North America.",
+    "design_note": "Twelve studies were described as moderate-to-high-quality randomized controlled trials; the remainder used quasi-experimental designs. Outcomes included intent to act violently and secondary risk-factor measures."
+  },
+  "key_results": [
+    "Counter-stereotypical exemplars, alternative narratives, and inoculation techniques were associated with reductions in some measured risk factors for violent radicalisation; persuasion did not show a significant effect.",
+    "The most pronounced findings concerned secondary outcomes such as realistic threat perceptions, in-group favouritism, and out-group hostility.",
+    "Effects were inconsistent across outcome families, with no demonstrated effect on some constructs including symbolic threat, implicit bias, or intent to act violently.",
+    "The review therefore describes the approach as promising but does not establish that counter-narratives prevent violent action."
+  ],
+  "why_high_information_value": [
+    "The record distinguishes changes in attitudinal or psychological proxy outcomes from actual violent intent or behaviour, reducing the risk that HumanityAI overstates causal relevance from intermediate endpoints.",
+    "It complements the newer case-management evidence gap by showing that even where experimental evidence exists in counter-radicalisation, positive findings can be concentrated in secondary outcomes rather than the most consequential endpoint.",
+    "The result is relevant to information-integrity and coordination work because communications interventions can look intuitively attractive while producing heterogeneous effects and rights-sensitive tradeoffs."
+  ],
+  "limitations": [
+    "The review searched only through August 2018 and was published in 2020; later evidence may materially update the conclusion.",
+    "Most included populations were students and most studies were conducted in North America, limiting external validity to other ages, cultures, political settings, and people at higher baseline risk of violence.",
+    "Many measured outcomes were risk factors or attitudes rather than observed violent behaviour, and movement in a proxy outcome may not translate into a meaningful reduction in violence.",
+    "Counter-narrative interventions differ in message content, delivery channel, audience targeting, ideological context, and implementation quality; average findings should not be generalized to every campaign.",
+    "Some interventions involving persuasion did not show significant effects, underscoring that the broad category is heterogeneous.",
+    "Communication interventions in contested political domains can create free-expression, legitimacy, targeting, stigma, and manipulation concerns that effectiveness evidence does not resolve.",
+    "This candidate does not establish cost-effectiveness, durable long-run effects, or HumanityAI's comparative advantage in deploying such interventions."
+  ],
+  "counterevidence_and_uncertainty": [
+    "Several intervention forms improved some secondary risk-factor outcomes, so it would be inaccurate to describe the evidence as uniformly null.",
+    "The review explicitly found the primary-outcome evidence inconclusive, which prevents treating improved threat perceptions or intergroup attitudes as demonstrated prevention of violent action.",
+    "Because the evidence base is older, a later systematic review or substantial new trial literature could justify revision after independent updating."
+  ],
+  "recommended_integration": "After independent source verification and a search for newer synthesis evidence, consider a mixed P01/P08/P10 intervention-evidence record that explicitly separates secondary attitudinal risk factors from intent to act violently and observed violence.",
+  "human_review_required": false,
+  "generated_by": "HumanityAI Adaptive Worker A; source is human-produced Campbell systematic review"
+}
