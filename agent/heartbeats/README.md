@@ -1,23 +1,31 @@
-# Per-role heartbeats
+# Per-role heartbeat compatibility artifacts
 
-These files are the canonical liveness records for HumanityAI's recurring autonomous roles.
+HumanityAI's repository heartbeat files are retained for compatibility and historical diagnostics. **Scheduler metadata is the authoritative liveness source during the protected-main migration.** A stale repository heartbeat is not, by itself, evidence that a scheduled worker failed.
 
-Each scheduled role owns exactly one file:
+The current scheduled architecture is:
 
-- `primary.json` — primary research/self-improvement loop (~:26 hourly)
-- `frontier.json` — frontier/possibility rotation (~:41 hourly)
-- `secondary.json` — complementary second pass (~:56 hourly)
-- `audit.json` — independent audit/watchdog (~:11 hourly)
+- Independent Audit — approximately `:11` hourly
+- Adaptive Worker A — approximately `:23` hourly
+- Adaptive Worker B — approximately `:35` hourly
+- Adaptive Worker C — approximately `:47` hourly
+- Adaptive Worker D — approximately `:59` hourly
 
-## Rules
+The four JSON files in this directory predate the five-slot adaptive architecture and remain compatibility artifacts:
 
-1. A role may update only its own heartbeat file.
-2. Read the current file immediately before writing so concurrent repository activity is not overwritten.
-3. Update `last_attempt_at` on every run that can access the repository.
-4. Update `last_success_at` only when that role's run is genuinely successful or `no_change_needed`; blocked/partial/failed runs do not advance it.
-5. Record the real run status; never fabricate a heartbeat to hide a missed scheduler execution.
-6. `consecutive_non_success` increments for partial/blocked/failed runs and resets to zero on success/no-change-needed.
-7. The independent audit should treat one missed/late run as tolerable scheduler jitter. Repeated unexplained staleness across roughly two expected windows is actionable; persistent staleness or a security-relevant failure should trigger the configured human-review email path.
-8. `agent/state.json` remains a useful project summary, but it is **not** the canonical source for per-role liveness once these files are populated.
+- `audit.json` — historical audit heartbeat
+- `primary.json` — historical primary-worker heartbeat
+- `frontier.json` — historical frontier-worker heartbeat
+- `secondary.json` — historical secondary-worker heartbeat
 
-The initial files intentionally contain null timestamps. Scheduled roles must establish their own first authoritative heartbeat; bootstrap code must not pretend a role ran merely because a scheduler was configured.
+Worker D intentionally has no fifth repository heartbeat. **Do not create one.**
+
+## Migration rules
+
+1. Use scheduler metadata, not repository heartbeat freshness, to determine whether Audit or Workers A/B/C/D are alive.
+2. Do not create heartbeat-only pull requests merely to refresh timestamps.
+3. Do not treat inability to update a compatibility heartbeat as worker failure.
+4. Never create a fifth heartbeat and never rewrite another slot's compatibility artifact.
+5. If a future design restores repository-persisted liveness as an authoritative signal, it must be compatible with protected `main`, avoid heartbeat-only churn, and be adopted through the normal reviewed change process.
+6. Historical timestamps and notes in the JSON files may describe earlier scheduler layouts or security state. They are evidence about past runs, not authoritative statements about current scheduler or repository configuration.
+
+`agent/state.json` is likewise a project-history and summary artifact; it should not override current scheduler metadata for liveness decisions.
