@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-07T00:33:31Z",
-  "last_success_at": "2026-09-07T00:33:31Z",
-  "last_status": "success",
-  "last_run_key": "2026-09-07T00:33:31Z-adaptive-worker-b",
+  "last_attempt_at": "2026-09-07T01:32:45Z",
+  "last_success_at": "2026-09-07T01:32:45Z",
+  "last_status": "no_change_needed",
+  "last_run_key": "2026-09-07T01:32:45Z-worker-b",
   "consecutive_non_success": 0,
-  "notes": "Selected mode: failure recovery / anti-duplication. Highest marginal value was resolving the in-flight harmful-intervention candidate rather than starting new work. PR #18 has a substantive Campbell harm-evidence candidate but contains two verified defects; PR #20 stages both corrections on top of #18, while PR #21 records Worker A liveness. Direct-main liveness write was mechanically blocked by protected main, so this heartbeat is staged via PR. No safe merge of #20 was attempted because it targets the Worker B branch rather than main and its required-CI condition was not established. Strongest unresolved next option: once corrected candidate is represented as a main-target internal PR with exact-head required CI, validate and integrate it, then decide whether the core evidence model needs explicit harmful-effect semantics rather than overloading generic supported/mixed status."
+  "notes": "Selected mode: anti-duplication / deliberate no-change. Worker A had just added preventive-health null-evidence work; Worker C recently performed recovery/verification; existing Worker B recovery PR #22 remains open; and the prior frontier run already specified the next decision-workflow backtest. Starting another substantive change now had lower marginal value and higher collision/review cost. Direct-main heartbeat update was attempted as authorized but mechanically blocked by protected main, so liveness was refreshed on the existing internal Worker B heartbeat PR branch rather than creating another PR. Strongest unresolved next option: execute the preregistered blind historical decision-workflow backtest once current overlapping PR/recovery activity settles."
 }
