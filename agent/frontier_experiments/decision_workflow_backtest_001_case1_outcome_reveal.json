@@ -1,0 +1,90 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "frontier-decision-workflow-backtest-001",
+  "case_id": "seattle_minimum_wage_2014",
+  "status": "case1_outcomes_revealed_non_independent_review",
+  "review_independence": "non_independent",
+  "review_note": "Worker B did not produce either frozen arm in this run, but is part of the same autonomous HumanityAI system; this therefore does not satisfy the preregistration preference for a truly independent reviewer.",
+  "post_cutoff_sources": [
+    {
+      "id": "O1_UW_JARDIM_2017_2018",
+      "publisher": "NBER / University of Washington authors",
+      "title": "Minimum Wage Increases, Wages, and Low-Wage Employment: Evidence from Seattle",
+      "url": "https://www.nber.org/papers/w23532",
+      "published": "2017; revised 2018",
+      "finding": "For the second increase to as much as $13, the study estimated low-wage hours down 6-7% and hourly wages up about 3%; total payroll in low-wage jobs fell in its preferred specification. Restaurant employment at all wage levels showed an estimated effect of zero.",
+      "limitations": "The low-wage threshold design and comparison strategy became a central point of methodological dispute; estimates are sensitive to outcome definition and comparison construction."
+    },
+    {
+      "id": "O2_BERKELEY_2017",
+      "publisher": "UC Berkeley Institute for Research on Labor and Employment",
+      "title": "Seattle's Minimum Wage Experience 2015-16",
+      "url": "https://irle.berkeley.edu/publications/brief/seattles-minimum-wage-experience-2015-16/",
+      "published": "2017-06-20",
+      "finding": "Using a synthetic-control approach focused on food services, the Berkeley team found wage gains and no detectable restaurant employment loss through 2016.",
+      "limitations": "Industry-level results do not identify all low-wage workers, and the empirical contrast differs materially from the UW low-wage-job design."
+    },
+    {
+      "id": "O3_BERKELEY_METHOD_DEBATE_2017",
+      "publisher": "UC Berkeley Institute for Research on Labor and Employment",
+      "title": "The Methodology of Minimum-Wage Studies",
+      "url": "https://irle.berkeley.edu/publications/commentary/the-methodology-of-minimum-wage-studies/",
+      "published": "2017-10-02",
+      "finding": "Reich explicitly argued that Seattle estimates were sensitive to choice of comparison group and Seattle's contemporaneous boom, while noting his restaurant analysis found no employment effect.",
+      "limitations": "This is methodological commentary by an involved researcher, not an independent adjudication."
+    },
+    {
+      "id": "O4_UW_TRAJECTORIES_2018",
+      "publisher": "NBER / University of Washington authors",
+      "title": "Minimum Wage Increases and Individual Employment Trajectories",
+      "url": "https://www.nber.org/papers/w25182",
+      "published": "2018-10",
+      "finding": "Longitudinal administrative-data analysis estimated significant wage increases and hours reductions; net weekly earnings rose about $8-$12 for workers already employed in low-wage jobs, with gains concentrated among workers with above-median baseline experience and no significant weekly-pay gain for less-experienced workers.",
+      "limitations": "This answers a different worker-level question than aggregate low-wage-job estimates and highlights heterogeneity rather than a single citywide effect."
+    },
+    {
+      "id": "O5_UW_PRICES_2017_2019",
+      "publisher": "University of Washington School of Public Health",
+      "title": "Seattle minimum-wage supermarket price studies",
+      "url": "https://sph.washington.edu/news-events/news/seattles-minimum-wage-hikes-did-not-boost-supermarket-prices",
+      "published": "2017-2019",
+      "finding": "Researchers found no significant ordinance-attributable increase in supermarket food prices through two years of implementation.",
+      "limitations": "Supermarket prices are not the same as prices in highly wage-exposed restaurant and personal-service sectors, so this evidence only partially resolves the broader price forecast."
+    }
+  ],
+  "forecast_resolution": {
+    "arm_a": [
+      {"id":"A1_wages","resolution":"qualified_supported","reason":"Later Seattle evidence consistently found higher hourly wages, although the UW low-wage-job estimate after the $13 step was about 3%, below this forecast's stated >=5% threshold; worker-trajectory estimates still show substantial hourly wage gains. Threshold-specific resolution is therefore not clean."},
+      {"id":"A2_employment_hours","resolution":"not_supported_by_one_high_quality_design_but_disputed","reason":"UW estimated a 6-7% hours decline in low-wage jobs, exceeding the forecast's 5% bound, while Berkeley found no restaurant-employment loss using a different design. The preregistration requires preserving this design sensitivity rather than forcing a binary miss."},
+      {"id":"A3_job_growth","resolution":"partially_supported","reason":"Observed adjustment was prominently expressed through hours in UW evidence rather than a large immediate layoff wave; later work also emphasized heterogeneous worker trajectories."},
+      {"id":"A4_business_exit","resolution":"unresolved","reason":"This review did not locate a sufficiently clean causal establishment-count estimate tied to the forecast's >=10% citywide threshold. Commentary about continued restaurant openings is not sufficient for formal resolution."},
+      {"id":"A5_prices","resolution":"partially_supported","reason":"Seattle supermarket studies found no significant price effect, consistent with <5%, but the forecast targeted highly exposed service sectors more broadly; unresolved for the full stated domain."},
+      {"id":"A6_distribution","resolution":"supported","reason":"Worker-level evidence found gains concentrated among more-experienced low-wage workers, with less-experienced workers receiving no significant weekly-pay gain, confirming heterogeneous incidence rather than uniform benefits."}
+    ],
+    "arm_b": [
+      {"id":"SEA_B_F1","resolution":"qualified_not_met_on_preferred_UW_low_wage_estimate","reason":"UW estimated hourly wages in low-wage jobs up about 3% after the $13 step, below the forecast's >=5% threshold. Other worker-level analyses show meaningful wage growth, but the exact threshold is not cleanly met by the principal low-wage-job estimate."},
+      {"id":"SEA_B_F2","resolution":"disputed_and_threshold_sensitive","reason":"UW estimated low-wage hours down 6-7%, outside the forecast's <5% magnitude, whereas Berkeley found no restaurant-employment loss. Arm B explicitly preregistered that materially conflicting credible designs should be marked qualified rather than forced."},
+      {"id":"SEA_B_F3","resolution":"supported","reason":"The later Seattle literature produced explicit methodological disputes over comparison groups, low-wage outcome definition, sector scope, and Seattle-specific trends."},
+      {"id":"SEA_B_F4","resolution":"unresolved","reason":"Supermarket prices did not significantly increase, but this forecast specified highly exposed low-wage service sectors and a causal average below 5%; available evidence reviewed here is not domain-matched enough."},
+      {"id":"SEA_B_F5","resolution":"unresolved","reason":"No sufficiently clean causal citywide establishment-count estimate was identified in this reveal pass."},
+      {"id":"SEA_B_F6","resolution":"supported_directionally","reason":"Later evidence and pre-existing distribution literature reinforce that low hourly wages and household poverty are not one-to-one; worker-level Seattle effects were heterogeneous. This is a distributional framing claim rather than a precise poverty-effect estimate."}
+    ]
+  },
+  "rubric_scores": {
+    "decision_relevance": {"arm_a":3,"arm_b":4,"reason":"Both recommend the phased compromise. Arm B more explicitly structures alternatives and conditions under which another design would dominate."},
+    "material_gap_discovery": {"arm_a":3,"arm_b":4,"reason":"Both identified the large-increase external-validity gap. Arm B more clearly isolated decision-changing uncertainties: elasticity at this policy magnitude, fragile-employer adjustment, household targeting, and enforcement."},
+    "assumption_transparency": {"arm_a":3,"arm_b":4,"reason":"Arm A lists material assumptions; Arm B links uncertainties directly to recommendation-changing conditions and explicitly separates hourly wages from household income."},
+    "forecast_quality": {"arm_a":3,"arm_b":4,"reason":"Both produced falsifiable forecasts. Arm B's resolution notes anticipated methodological disagreement and specified when to mark outcomes qualified/unresolved, which materially reduced post-hoc reinterpretation."},
+    "uncertainty_and_disagreement": {"arm_a":4,"arm_b":4,"reason":"Both preserved competing pre-cutoff minimum-wage literatures, which proved important because later Seattle studies genuinely diverged by design."},
+    "rights_and_distribution": {"arm_a":3,"arm_b":4,"reason":"Both identify affected groups. Arm B more clearly makes concentrated worker losses a constraint on aggregate-net-benefit reasoning and distinguishes low wages from household poverty."},
+    "reviewer_usefulness": {"arm_a":3,"arm_b":4,"reason":"Arm B is easier to audit against a concrete decision because alternatives, sensitivities, forecasts, and update conditions are connected in one lifecycle."},
+    "review_cost": {"arm_a_minutes":45,"arm_b_minutes":55,"interpretation":"Arm B cost roughly 10 additional analyst minutes in the frozen estimates. The added structure appears useful, but this single non-independent case does not establish that the extra burden is worth it generally."}
+  },
+  "case1_interpretation": {
+    "result":"decision_centric_promising_not_proven",
+    "main_update":"The outcome reveal strengthens the frontier hypothesis that a decision-centric lifecycle improves auditability and forecast resolution, especially when later evidence is methodologically contested. It does not show materially better substantive forecasting: both arms chose the same policy, both anticipated mixed employment effects, and several precise forecasts remain unresolved or were challenged by the UW estimates.",
+    "important_negative_result":"The decision-centric arm did not obviously predict Seattle outcomes better than the supply-first arm and imposed modestly higher documentation cost. Its strongest observed advantage is structural: clearer alternative comparison, sensitivity conditions, and disciplined handling of ambiguous outcome evidence.",
+    "protocol_issue":"A truly independent reviewer was not available in this run, so rubric scores are provisional. Future cases should preserve arm independence and seek an evaluator that did not generate either arm before treating scoring differences as reliable.",
+    "next_step":"Do not redesign HumanityAI around this single case. Proceed to Case 2 only if the system can preserve separate-arm generation and, preferably, independent evaluation. Track whether the same structural advantage recurs and whether added review cost remains modest."
+  }
+}
