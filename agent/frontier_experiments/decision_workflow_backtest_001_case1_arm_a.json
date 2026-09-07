@@ -1,0 +1,180 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "frontier-decision-workflow-backtest-001",
+  "case_id": "seattle_minimum_wage_2014",
+  "arm": "A_current_supply_first_workflow",
+  "status": "frozen_pre_outcome",
+  "information_cutoff": "2014-06-01T23:59:59-07:00",
+  "independence_note": "This arm was produced without opening or reading the contents of decision_workflow_backtest_001_case1_arm_b.json. Repository metadata revealed only that the separate arm-B file existed. No post-cutoff outcome evidence was used.",
+  "workflow_description": "Applied HumanityAI's current supply-first pattern: start from the broad economic-opportunity/inequality problem, gather general and local evidence about minimum-wage effects and affected populations, preserve contradictory findings, then synthesize a policy recommendation. No decision-lifecycle object, decision-changing evidence threshold, or targeted alternative-by-alternative evidence plan was introduced before research.",
+  "problem_frame": {
+    "primary_constraint": "A substantial share of Seattle workers earns low hourly wages, creating material income and capability constraints for workers and families.",
+    "policy_mechanism": "A statutory wage floor can transfer income toward workers whose wages are below the new floor, while potentially inducing employer adjustments through employment, hours, hiring, prices, benefits, productivity, automation, or business entry/exit.",
+    "central_uncertainty": "The magnitude and distribution of employer adjustment are uncertain, especially because Seattle's proposed $15 target is large relative to the existing $9.32 Washington minimum and prior evidence studies smaller changes in other settings."
+  },
+  "pre_cutoff_evidence": [
+    {
+      "source": "University of Washington News / Evans School analysis",
+      "date": "2014-03-28",
+      "url": "https://www.washington.edu/news/2014/03/28/news-briefs-minimum-wage-analysis-climate-change-discussion-suicide-prevention-bill/",
+      "relationship": "context",
+      "finding": "An Evans School analysis estimated that raising Seattle's minimum wage to $15 would directly affect roughly one-fourth of the city's workforce, establishing that the policy would be economically material rather than marginal.",
+      "limitations": "This characterizes exposure, not causal effects on employment, hours, prices, or business survival."
+    },
+    {
+      "source": "Seattle minimum-wage compromise reported May 1, 2014",
+      "date": "2014-05-01",
+      "url": "https://www.seattlemet.com/news-and-city-life/2014/05/murray-announces-minimum-wage-plan-may-2014",
+      "relationship": "context",
+      "finding": "The negotiated proposal used different three-, four-, five-, or seven-year phase-ins depending on employer size, health benefits, and tipped compensation, rather than imposing $15 immediately on every employer.",
+      "limitations": "Stakeholder agreement and policy design are not evidence that the intervention will achieve its intended outcomes."
+    },
+    {
+      "source": "Seattle City Council committee action reported May 29, 2014",
+      "date": "2014-05-29",
+      "url": "https://www.seattlemet.com/news-and-city-life/2014/05/committee-unanimously-passes-murray-minimum-wage-proposal-may-2014",
+      "relationship": "context",
+      "finding": "The council committee advanced the compromise with few amendments, leaving a phased design that would eventually converge to a common wage floor.",
+      "limitations": "Political support does not identify economic effects and may reflect bargaining constraints."
+    },
+    {
+      "source": "Congressional Budget Office",
+      "date": "2014-02-18",
+      "url": "https://www.cbo.gov/publication/44995",
+      "relationship": "mixed",
+      "finding": "For a federal increase from $7.25 to $10.10, CBO expected higher earnings and family income for many low-wage workers together with a probable modest reduction in low-wage employment; its central estimate was approximately 500,000 fewer jobs nationally, with substantial uncertainty.",
+      "limitations": "The federal $10.10 scenario is smaller and geographically broader than Seattle's $15 target, so direct quantitative transfer to Seattle would be weak."
+    },
+    {
+      "source": "Dube, Lester, and Reich, Review of Economics and Statistics",
+      "date": "2010",
+      "url": "https://direct.mit.edu/rest/article/92/4/945/57855/Minimum-Wage-Effects-Across-State-Borders",
+      "relationship": "supports",
+      "finding": "Using contiguous county pairs across state borders, the study found wage gains without detectable adverse restaurant-employment effects from historical minimum-wage differences and argued that local economic heterogeneity biases simpler comparisons.",
+      "limitations": "Historical changes were generally smaller than Seattle's proposed increase; restaurant-sector evidence may not generalize to all affected employers."
+    },
+    {
+      "source": "Meer and West, NBER Working Paper 19262",
+      "date": "2013-08",
+      "url": "https://www.nber.org/papers/w19262",
+      "relationship": "contradicts_or_qualifies",
+      "finding": "The authors argued that minimum wages may reduce employment growth over several years rather than cause an immediate level drop, with larger estimated effects for younger workers and low-wage industries.",
+      "limitations": "Working-paper estimates are observational and design-sensitive; the paper does not isolate Seattle or a $15 local wage floor."
+    },
+    {
+      "source": "Neumark, Salas, and Wascher, NBER Working Paper 18681",
+      "date": "2013-01",
+      "url": "https://www.nber.org/papers/w18681",
+      "relationship": "contradicts_or_qualifies",
+      "finding": "Reanalysis of minimum-wage evidence concluded that policymakers should take seriously a tradeoff between wage gains for some workers and employment losses for others.",
+      "limitations": "The literature is methodologically contested, and the review does not provide a Seattle-specific effect size."
+    }
+  ],
+  "synthesis": {
+    "points_of_relative_agreement": [
+      "Workers who remain employed at previously subminimum wages should receive higher hourly pay after the policy binds.",
+      "The employment response is uncertain and could appear through slower hiring or hours rather than visible layoffs.",
+      "Seattle's proposed increase is unusually large relative to the current wage floor, making extrapolation from historical estimates hazardous.",
+      "A phased implementation lowers the size of each annual adjustment and creates opportunities to observe employer and worker responses before full convergence."
+    ],
+    "credible_disagreement": [
+      "Local-comparison research finds little evidence of meaningful employment losses from historical increases, while other designs and reviews infer negative effects, especially for less-skilled workers or through slower job growth.",
+      "Evidence available before the vote does not establish whether a local $15 target will mostly raise incomes, materially reduce labor demand, or produce a mixture varying by sector and worker group."
+    ]
+  },
+  "recommendation": {
+    "choice": "Enact the negotiated phased path toward $15 rather than retain the existing wage floor or require an immediate citywide jump to $15.",
+    "confidence": {
+      "range": [0.62, 0.75],
+      "interpretation": "Probability that the phased compromise produces net gains for the broad population of low-wage Seattle workers relative to retaining the existing wage floor, while avoiding severe citywide employment disruption."
+    },
+    "rationale": "The policy targets a large, clearly identified low-wage population and has a direct mechanism for raising earnings. Pre-cutoff evidence strongly supports wage gains but is genuinely mixed on labor-demand effects. Because Seattle's target exceeds most historical variation, the gradual multi-year design is preferable to an immediate $15 mandate: it preserves much of the expected worker benefit while reducing adjustment shock and creating monitoring opportunities. The recommendation is not a claim that employment costs will be zero.",
+    "implementation_conditions": [
+      "Pair the wage schedule with credible enforcement so compliant employers are not disadvantaged by evasion.",
+      "Track wages, employment, hours, hiring, business openings/closures, and prices by sector and worker group rather than relying on one aggregate statistic.",
+      "Precommit to review evidence after early phase-in steps without treating any single short-run estimate as dispositive.",
+      "Preserve transparent treatment of tips and health-benefit credits during the transitional period."
+    ]
+  },
+  "affected_groups_and_distribution": [
+    "Current low-wage workers who remain employed are the clearest expected beneficiaries through higher hourly pay.",
+    "Workers with weak labor-market attachment, younger workers, and potential new entrants could bear disproportionate risk if adjustment occurs through slower hiring.",
+    "Employees in restaurants and other low-wage sectors are likely to be more exposed than high-wage sectors.",
+    "Small businesses with thin margins may face larger adjustment burdens, although the longer phase-in reduces the near-term shock.",
+    "Consumers may bear part of the cost through higher prices, and the incidence will vary by spending patterns.",
+    "Women, immigrants, workers of color, and tipped workers are likely to be materially represented among affected low-wage workers; aggregate employment statistics could conceal heterogeneous gains and losses."
+  ],
+  "rights_considerations": [
+    "Higher wages can expand material capability and bargaining power for affected workers.",
+    "A wage mandate constrains employer-worker contracting and can impose burdens on businesses or excluded workers; these costs require empirical monitoring rather than being dismissed as purely normative objections.",
+    "Enforcement should protect workers from retaliation while using predictable, transparent rules for employers."
+  ],
+  "frozen_forecasts": [
+    {
+      "id": "A1_wages",
+      "forecast": "Within two years of the first scheduled increase, average hourly wages among workers initially earning near the old wage floor will be materially higher than they would have been without the ordinance, with an effect of at least 5% for the directly exposed group.",
+      "probability": 0.85,
+      "horizon": "through 2017",
+      "outcome_family": "low-wage earnings"
+    },
+    {
+      "id": "A2_employment_hours",
+      "forecast": "Within two years of the first increase, combined employment/hours for directly exposed low-wage workers will not fall by more than 5% relative to a credible Seattle counterfactual, although a smaller negative effect remains plausible.",
+      "probability": 0.68,
+      "horizon": "through 2017",
+      "outcome_family": "employment/hours"
+    },
+    {
+      "id": "A3_job_growth",
+      "forecast": "If a negative labor-demand effect is detected, it will be more visible in hiring/job-growth or hours than as a large one-time wave of layoffs immediately after the first step.",
+      "probability": 0.65,
+      "horizon": "2015-2018",
+      "outcome_family": "employment/hours"
+    },
+    {
+      "id": "A4_business_exit",
+      "forecast": "Seattle will not experience a citywide increase in business exit large enough to reduce the total number of establishments by 10% or more relative to comparable local trends during the first two years of phase-in.",
+      "probability": 0.8,
+      "horizon": "through 2017",
+      "outcome_family": "business entry/exit"
+    },
+    {
+      "id": "A5_prices",
+      "forecast": "Prices in highly exposed low-wage service sectors will rise modestly after the wage increases, but average price increases attributable to the policy will remain below 5% in the first two years.",
+      "probability": 0.7,
+      "horizon": "through 2017",
+      "outcome_family": "prices"
+    },
+    {
+      "id": "A6_distribution",
+      "forecast": "Benefits will be concentrated among continuously employed low-wage workers, while any employment/hours losses will be unevenly distributed and more likely among marginal entrants or highly exposed worker groups than across all workers uniformly.",
+      "probability": 0.72,
+      "horizon": "2015-2018",
+      "outcome_family": "distribution across worker groups"
+    }
+  ],
+  "material_assumptions": [
+    "The city can enforce the ordinance sufficiently for the statutory schedule to translate into actual pay increases.",
+    "Seattle's strong local economy will not enter a severe unrelated downturn during initial implementation that overwhelms policy effects.",
+    "Employers have multiple margins of adjustment, so the incidence will not appear solely in headcount employment.",
+    "Historical minimum-wage studies remain directionally informative even though Seattle's target is outside much of their observed policy range.",
+    "The gradual phase-in materially reduces adjustment risk compared with an immediate $15 requirement."
+  ],
+  "evidence_that_would_change_recommendation": [
+    "Credible pre-cutoff evidence that similarly large local wage-floor increases caused persistent employment/hours losses exceeding roughly 5-10% among targeted workers without offsetting earnings gains.",
+    "Credible evidence that enforcement would be too weak to raise actual wages while still imposing substantial compliance costs on lawful employers.",
+    "Evidence that a materially different phase-in achieves similar worker-income gains with substantially lower labor-demand risk.",
+    "Evidence that Seattle's most affected industries face unusually binding competitive or margin constraints making historical evidence non-transferable."
+  ],
+  "unresolved_uncertainties": [
+    "The causal employment and hours elasticity for a local wage increase of this magnitude.",
+    "How much adjustment occurs through prices, benefits, scheduling, automation, productivity, or business entry/exit.",
+    "Whether effects differ materially across tipped workers, small-business workers, younger entrants, immigrants, women, and workers of color.",
+    "How quickly credible local data can distinguish policy effects from Seattle's underlying economic trend."
+  ],
+  "effort": {
+    "analyst_minutes_approx": 45,
+    "review_burden": "Moderate: seven pre-cutoff sources synthesized, six forecasts frozen, and multiple evidence-design disputes retained."
+  },
+  "freeze_statement": "This file freezes Arm A before any post-2014-06-01 outcome reveal. It must not be rewritten in response to later Seattle outcomes. Corrections to factual source metadata, if required, should be recorded as protocol deviations rather than silently changing the frozen recommendation or forecasts."
+}
