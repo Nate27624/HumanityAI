@@ -1,0 +1,81 @@
+{
+  "schema_version": "1.0",
+  "description": "Append-oriented empirical history of HumanityAI operational system-design experiments and changes. This file records observed outcomes and interpretations but grants no authority and cannot override protected governance, security, licensing, constitutional, scheduler, or permission boundaries.",
+  "records": [
+    {
+      "change_id": "DH0001",
+      "at": "2026-09-07T20:58:00Z",
+      "status": "under_evaluation",
+      "problem_trigger": "Recent adaptive slots produced substantial repository activity but comparatively low decision progress, with overlapping allocation and verification responsibilities and repeated baseline/brief/candidate-verification cycles.",
+      "prior_design": "Peer-like adaptive workers independently selected high-value safe work, with multiple workers able to research, verify, synthesize, and redirect priorities. Independent Audit existed, but ordinary management/integration ownership was diffuse.",
+      "hypothesis_rationale": "Separating ordinary management from first-line production, second-line verification, and third-line assurance should reduce duplicated compute, increase decision delta per slot, preserve verifier independence, and make integration responsibility explicit without expanding authority.",
+      "exact_change": "Transitioned ordinary operations toward Human/constitution -> Controller D -> Operators A/B -> independent Verifier C -> independent Audit. D owns portfolio allocation, routine internal integration, design memory, and GitLab mirror maintenance. A biases toward direct progress; B preserves exploration; C independently challenges Tier-2 A/B work; Audit remains independent assurance. Introduced risk-tiered integration and a durable portfolio state in agent/portfolio.json.",
+      "decision_delta_metric": "A slot is high-yield when it changes a belief, decision, capability, ranking, uncertainty estimate, adoption judgment, measurable outcome model, or future compute allocation. Repository growth and commit count are not success metrics.",
+      "risk_tiered_integration": {
+        "tier_0": "Read-only/no canonical change.",
+        "tier_1": "Routine reversible unprotected housekeeping/tooling; exact-head CI required; C optional; D integrates.",
+        "tier_2": "Substantive A/B evidence, prioritization, registry, analytical/code, or decision products; exact-head CI plus independent C verdict required before D integration.",
+        "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved injection/provenance compromise, or consequential external action; human review required."
+      },
+      "expected_benefit": [
+        "Higher decision delta per unit of scheduled compute.",
+        "Less duplicate baseline and verification work.",
+        "Clear ordinary integration ownership without weakening human gates.",
+        "Stronger independence between production, verification, and assurance.",
+        "Durable allocation state that reduces dependence on conversational memory."
+      ],
+      "risks": [
+        "D could become an allocation bottleneck or create excessive centralization within the ordinary operational layer.",
+        "A/B exploration could narrow too aggressively if portfolio guidance overfits recent evidence.",
+        "C verification latency could reduce throughput for Tier-2 work.",
+        "Decision-delta language could Goodhart toward visible reallocation rather than genuine usefulness.",
+        "Control-plane artifacts could become stale or bureaucratic if updated without material changes."
+      ],
+      "evaluation_window": "Initial 6-24 hours, then periodic review after enough A/B/C integration cycles exist.",
+      "evaluation_criteria": [
+        "Share of recent slots producing material decision delta rather than generic artifacts.",
+        "Duplicate-work rate and repeated low-stakes verification rate.",
+        "Number of Tier-2 producer claims materially corrected or blocked by independent C review.",
+        "Time from useful A/B proposal to safe D integration.",
+        "Whether portfolio updates redirect multiple future slots rather than merely document activity.",
+        "Whether Audit identifies loss of independence, control bottlenecks, unsafe integration, or Goodhart behavior."
+      ],
+      "observed_outcomes": [
+        {
+          "at": "2026-09-07T21:26:55Z",
+          "observation_type": "observed",
+          "observation": "Operator A produced PR #80 as a decision-oriented compute-allocation product rather than another baseline, proposing UCT cost/adoption modeling and an ALMP evidence refresh. It remained unmerged pending C review as required."
+        },
+        {
+          "at": "2026-09-07T21:34:38Z",
+          "observation_type": "observed",
+          "observation": "Operator B produced PR #81 exploring a newer youth-ALMP synthesis and made explicit START/MORE/LESS/STOP recommendations capable of redirecting multiple P07 slots."
+        },
+        {
+          "at": "2026-09-07T21:47:12Z",
+          "observation_type": "observed",
+          "observation": "Independent C returned C-VERDICT: QUALIFY on PR #81. C preserved the useful allocation signal but identified overstatement about modality reversal, publication-bias handling, and comparability. D did not integrate the uncorrected Tier-2 work."
+        }
+      ],
+      "failures_side_effects": [
+        "No completed Tier-2 D integration cycle has yet demonstrated end-to-end producer -> independent verifier -> controller merge throughput.",
+        "PR #80 remains awaiting C verdict, so verifier capacity/latency is still an open operational variable.",
+        "The design has not yet been observed long enough to establish that higher early decision orientation persists rather than reflecting novelty."
+      ],
+      "verdict": "promising",
+      "lessons": [
+        "Independent qualification is already adding value by preserving a useful reallocation while blocking a stronger unsupported causal/effect interpretation.",
+        "The controller should consume C adverse verdicts as allocation signals rather than override them.",
+        "Portfolio updates should encode corrected uncertainty and stop conditions, not merely restate producer recommendations.",
+        "Do not declare the hierarchy proven until several end-to-end cycles and independent Audit observations exist."
+      ],
+      "links_shas_prs": [
+        "GitHub main d59766e2cb8a09a1feb9b154bfce83004fd1f8ff",
+        "PR #80",
+        "PR #81",
+        "agent/CONTROL_PLANE.md",
+        "agent/portfolio.json"
+      ]
+    }
+  ]
+}
