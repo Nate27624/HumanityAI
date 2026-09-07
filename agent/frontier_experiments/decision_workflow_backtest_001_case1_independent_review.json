@@ -1,0 +1,63 @@
+{
+  "schema_version": "0.1",
+  "experiment_id": "frontier-decision-workflow-backtest-001",
+  "case_id": "seattle_minimum_wage_2014",
+  "reviewer_role": "adaptive_compute_worker_c",
+  "review_independence": "independent_of_both_frozen_arms",
+  "reviewed_at": "2026-09-07",
+  "scope": "Independent source verification of the newly revealed post-cutoff outcome claims. Worker C did not produce either frozen arm. This review does not retroactively alter the frozen forecasts and does not treat later outcomes as proof that either recommendation was correct.",
+  "source_checks": [
+    {
+      "source_id": "O1_UW_JARDIM_2017_2018",
+      "url": "https://www.nber.org/papers/w23532",
+      "status": "verified_with_scope_caution",
+      "verified": [
+        "The second Seattle increase to as much as $13 was estimated to reduce hours worked in low-wage jobs by 6-7%.",
+        "Hourly wages in those low-wage jobs were estimated to increase by about 3%.",
+        "The preferred analysis therefore estimated lower total payroll in low-wage jobs."
+      ],
+      "caution": "These are estimates from the UW low-wage-job design, not uncontested citywide causal facts. The experiment is correct to preserve design sensitivity rather than treating this source as dispositive."
+    },
+    {
+      "source_id": "O4_UW_TRAJECTORIES_2018",
+      "url": "https://www.nber.org/papers/w25182",
+      "status": "verified",
+      "verified": [
+        "The longitudinal analysis attributed significant hourly-wage increases and hours reductions to the ordinance.",
+        "The increase from $9.47 to as much as $13 raised average weekly earnings by about $8-$12 for the studied cohort.",
+        "The reported gains accrued to workers with above-median baseline experience, while less-experienced workers had no significant weekly-pay change."
+      ],
+      "caution": "This worker-level cohort design answers a different question from aggregate low-wage-job estimates and should not be substituted for them."
+    },
+    {
+      "source_id": "O5_UW_PRICES_2017_2019",
+      "url": "https://sph.washington.edu/news-events/news/seattles-minimum-wage-hikes-did-not-boost-supermarket-prices",
+      "status": "verified_with_domain_limit",
+      "verified": [
+        "UW researchers reported no significant ordinance-attributable increase in supermarket food prices through two years of implementation.",
+        "The study compared 106 food items at six Seattle chain stores with six same-chain King County stores."
+      ],
+      "caution": "Supermarket food prices do not resolve the preregistered broader price question for highly wage-exposed restaurants and personal services. The outcome reveal appropriately marks the price forecast only partially supported."
+    }
+  ],
+  "resolution_audit": {
+    "A1_wages": "agree_qualified_supported",
+    "A2_employment_hours": "agree_disputed",
+    "A3_job_growth": "not_independently_resolved_in_this_review",
+    "A4_business_exit": "agree_unresolved",
+    "A5_prices": "agree_partially_supported",
+    "A6_distribution": "agree_supported",
+    "SEA_B_F1": "agree_qualified_not_met_on_UW_threshold",
+    "overall": "The checked outcome resolutions are conservative and source-faithful. The strongest lesson is not a binary policy verdict but that forecast resolution depends materially on estimand and population: low-wage jobs, incumbent low-wage workers, industries, and consumer-price domains are not interchangeable."
+  },
+  "protocol_assessment": {
+    "independent_reviewer_requirement": "satisfied_for_this_source-verification pass because Worker C did not produce either frozen arm; the earlier outcome-reveal file should remain immutable as the historical non-independent reveal rather than being rewritten",
+    "material_protocol_issue": "The experiment should distinguish source verification from substantive adjudication. Independent verification can establish that reported findings are represented faithfully, but it cannot erase methodological disagreement among the underlying studies.",
+    "case2_gate": "No source-fidelity defect found that requires abandoning the experiment. Before Case 2, retain unresolved outcomes rather than inventing scalar scores and preserve estimand-specific resolution."
+  },
+  "sources_accessed": [
+    {"publisher": "NBER", "title": "Minimum Wage Increases, Wages, and Low-Wage Employment: Evidence from Seattle", "url": "https://www.nber.org/papers/w23532", "issue_date": "2017-06", "revision_date": "2018-05"},
+    {"publisher": "NBER", "title": "Minimum Wage Increases and Individual Employment Trajectories", "url": "https://www.nber.org/papers/w25182", "issue_date": "2018-10"},
+    {"publisher": "University of Washington School of Public Health", "title": "Seattle's minimum wage hikes did not boost supermarket prices", "url": "https://sph.washington.edu/news-events/news/seattles-minimum-wage-hikes-did-not-boost-supermarket-prices", "published": "2019-03-04"}
+  ]
+}
