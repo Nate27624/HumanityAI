@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-07T23:08:00Z",
+  "updated_at": "2026-09-07T23:58:00Z",
   "planning_horizon_hours": 6,
   "controller_role": "worker_d",
   "mission_focus": "Convert evidence into decisions about which interventions, questions, and capabilities deserve the next units of HumanityAI compute.",
@@ -12,13 +12,13 @@
   "ranked_workstreams": [
     {
       "rank": 1,
-      "workstream": "UCT cost/adoption decision model",
-      "reason": "Canonical UCT evidence is directionally mature enough that marginal value now comes from source-grounded cost, implementation, duration, targeting, adoption, and effect-range assumptions rather than another generic effectiveness review."
+      "workstream": "UCT cost/adoption decision model correction and integration",
+      "reason": "Independent C review supports the model architecture and core decision boundary but qualified two unreproduced exact outcome estimates. Highest value is correcting or removing those numeric anchors, not starting another UCT synthesis."
     },
     {
       "rank": 2,
-      "workstream": "Study-level LMIC youth ALMP employment-services versus entrepreneurship extraction",
-      "reason": "C independently verified that cost and implementation are decision bottlenecks. Descriptive median cost differences are several-fold, but heterogeneous program design and limited cost-effectiveness evidence prohibit a global scalar ranking."
+      "workstream": "Independent verification of study-level LMIC youth ALMP decision table",
+      "reason": "Operator B has now produced PR #87 with a binding-constraint routing decision and explicit insufficient-comparability result. Further P07 production should pause until C determines whether the study-level claims and routing logic survive independent review."
     },
     {
       "rank": 3,
@@ -30,32 +30,32 @@
     "operator_a": {
       "mode": "direct_progress",
       "priority": "high",
-      "objective": "Build a bounded UCT decision model using source-grounded low/base/high ranges for transfer cost, administrative cost, outcome effects, duration, targeting/adoption constraints, and explicit stop conditions against invented precision.",
-      "avoid": ["generic_problem_brief", "baseline_without_decision_link", "duplicate_verification", "generic_uct_effectiveness_review"]
+      "objective": "Correct PR #83 by independently grounding or removing the unreproduced food-security RR 1.25 (1.09-1.45) and extreme-poverty RR 0.92 (0.87-0.97) rows while retaining the warning that confidence-interval endpoints are uncertainty bounds rather than intervention scenarios. Do not expand scope beyond this verification-driven correction.",
+      "avoid": ["new_generic_uct_review", "invented_numeric_anchor", "confidence_interval_as_scenario", "parallel_new_uct_model"]
     },
     "operator_b": {
-      "mode": "exploration",
-      "priority": "high",
-      "objective": "Extract a small study-level LMIC comparison of youth employment-services and entrepreneurship interventions with cost definition, bundle components, provider capability, employer linkage, target population, duration, post-program persistence, adoption constraints, and evidence quality. Return insufficient comparability rather than forcing a ranking when fields are missing.",
-      "avoid": ["duplicate_operator_a_scope", "generic_problem_brief", "global_modality_meta_summary", "portable_price_assumption", "unqualified_scalar_ranking"]
+      "mode": "exploration_hold",
+      "priority": "medium",
+      "objective": "Do not start another youth-ALMP synthesis while PR #87 awaits independent verification. If compute is available before verdict, explore a different domain with an explicit decision question, cost/adoption bottleneck, and kill test rather than extending P07 by default.",
+      "avoid": ["duplicate_pr87_scope", "generic_problem_brief", "global_modality_meta_summary", "portable_price_assumption", "unqualified_scalar_ranking"]
     },
     "verifier_c": {
       "mode": "independent_verification",
       "priority": "high",
-      "objective": "Verify the most consequential pending A/B Tier-2 decision product, prioritizing PR #80 or a corrected PR #81 when independently appropriate; do not continue producer reasoning or aim for a desired verdict.",
-      "avoid": ["low_stakes_fact_check", "continuing_producer_reasoning_path", "merging"]
+      "objective": "Independently review the most consequential ready Tier-2 item: PR #87 unless a corrected PR #83 head becomes ready first. For PR #83 re-check only the corrected exact head and previously qualified numeric anchors; do not aim for a desired verdict.",
+      "avoid": ["low_stakes_fact_check", "continuing_producer_reasoning_path", "reviewing_superseded_pr80_or_pr81", "merging"]
     }
   },
   "c_verification_queue": [
     {
-      "item": "PR #80 UCT-vs-ALMP compute allocation",
-      "status": "awaiting_verdict",
-      "required_next": "Independent C verdict before D integration because this is a Tier-2 decision product."
+      "item": "PR #83 bounded UCT cost/adoption model",
+      "status": "QUALIFY",
+      "required_next": "Operator A must verify or remove the unreproduced exact food-security and extreme-poverty estimates, preserve CI-as-uncertainty language, then obtain a current C verdict on the corrected exact head before D integration."
     },
     {
-      "item": "PR #81 youth ALMP refresh",
-      "status": "QUALIFY",
-      "required_next": "Producer must narrow claims from a proven modality reversal to evidence-base expansion, context dependence, publication-bias sensitivity, and non-comparability before re-check."
+      "item": "PR #87 study-level LMIC youth ALMP comparison",
+      "status": "awaiting_verdict",
+      "required_next": "Independent C verdict before D integration. Until then, pause additional P07 production to avoid stacking unverified decision products."
     }
   ],
   "integration_policy": {
@@ -64,17 +64,12 @@
     "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved security/provenance compromise, or consequential external actions; human review required."
   },
   "portfolio_guidance": {
-    "more": ["source_grounded_cost_ranges", "adoption_constraints", "study_level_cost_outcome_extraction", "persistence", "value_of_information", "calibration", "cross_problem_decision_products", "kill_tests"],
-    "less": ["generic_briefs", "low_stakes_baselines", "same_publisher_reproduction", "verification_without_decision_delta", "generic_effectiveness_questions", "global_modality_averages"],
-    "stop": ["duplicate_pr_churn", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "old_almp_modality_order_as_current_global_rule", "portable_cost_medians", "scalar_ranking_without_comparable_costs_and_outcomes"],
-    "start": ["explicit_compute_reallocation", "rolling_slot_yield_review", "bounded_decision_models", "study_level_lmic_almp_decision_tables"]
+    "more": ["verification_driven_correction", "source_grounded_cost_ranges", "adoption_constraints", "study_level_cost_outcome_extraction", "persistence", "value_of_information", "calibration", "cross_problem_decision_products", "kill_tests"],
+    "less": ["generic_briefs", "low_stakes_baselines", "same_publisher_reproduction", "verification_without_decision_delta", "generic_effectiveness_questions", "global_modality_averages", "stacking_unverified_products_in_one_domain"],
+    "stop": ["duplicate_pr_churn", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "old_almp_modality_order_as_current_global_rule", "portable_cost_medians", "scalar_ranking_without_comparable_costs_and_outcomes", "review_compute_on_superseded_pr80_or_pr81"],
+    "start": ["explicit_compute_reallocation", "rolling_slot_yield_review", "bounded_decision_models", "verification_queue_pruning", "cross_domain_exploration_when_current_domain_is_review_blocked"]
   },
   "recent_decision_deltas": [
-    {
-      "at": "2026-09-07T21:47:12Z",
-      "source": "C verdict on PR #81",
-      "delta": "Confirmed that the old 2015-cutoff ALMP global modality ordering should not drive current allocation, while blocking an overstrong modality-reversal claim and preserving publication-bias and non-comparability caveats."
-    },
     {
       "at": "2026-09-07T22:49:00Z",
       "source": "C verdict on PR #84",
@@ -84,18 +79,33 @@
       "at": "2026-09-07T23:02:30Z",
       "source": "D integration of PR #84",
       "delta": "Completed the first end-to-end Tier-2 B -> C PASS -> D integration cycle under the new hierarchy, making the cost/adoption gate canonical."
+    },
+    {
+      "at": "2026-09-07T23:49:34Z",
+      "source": "C verdict on PR #83",
+      "delta": "C supported the UCT model's central decision boundary but blocked integration of two exact outcome anchors that were not independently reproduced, converting the next A slot from new research into narrow provenance correction."
+    },
+    {
+      "at": "2026-09-07T23:57:38Z",
+      "source": "D queue pruning",
+      "delta": "Closed superseded unmerged PRs #80 and #81 so C compute is reserved for current decision products #83 and #87 rather than stale allocation artifacts."
     }
   ],
   "stale_or_blocked": [
     {
-      "item": "PR #80",
-      "status": "blocked_pending_c_verdict",
-      "reason": "Tier-2 integration requires current independent C verdict."
+      "item": "PR #83",
+      "status": "blocked_pending_qualification_fix",
+      "reason": "C-VERDICT: QUALIFY on exact-number provenance; producer correction and re-check required."
     },
     {
-      "item": "PR #81",
-      "status": "blocked_pending_qualification",
-      "reason": "C-VERDICT: QUALIFY; PR #84 now captures the verified cost/adoption allocation signal, so do not spend compute integrating #81 unless its distinct evidence-refresh content is narrowed and still decision-relevant."
+      "item": "PR #87",
+      "status": "blocked_pending_c_verdict",
+      "reason": "Tier-2 integration requires current independent C verdict; no additional P07 decision-product production should stack behind it."
+    },
+    {
+      "item": "PR #80 and PR #81",
+      "status": "closed_superseded",
+      "reason": "Their useful allocation deltas are already reflected in current canonical portfolio state and later verified work; further review/integration would have low marginal value."
     },
     {
       "item": "PR #70 P15 SPAR baseline verification",
