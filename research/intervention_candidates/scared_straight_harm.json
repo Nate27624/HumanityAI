@@ -3,42 +3,60 @@
   "candidate_id": "IC0001",
   "target_problem_ids": ["P05"],
   "candidate_for": "data/evidence.json",
-  "claim": "Randomized experimental evidence synthesized by the Campbell Collaboration indicates that 'Scared Straight' and similar juvenile-awareness programs are not merely unsupported: they likely increase subsequent offending relative to doing nothing, making this a useful example of an intuitively appealing intervention with evidence of harm.",
+  "claim": "Evidence on 'Scared Straight' and related juvenile-awareness programs is directionally concerning but not fully uniform across syntheses: the 2013 Campbell/Cochrane review of randomized and quasi-randomized experiments found increased subsequent offending relative to doing nothing, while a broader 2021 three-level meta-analysis of 13 independent studies found a small nonsignificant overall effect and argued for a more nuanced interpretation.",
   "claim_type": "estimate",
-  "proposed_status": "supported",
-  "source": {
-    "url": "https://www.campbellcollaboration.org/review/juvenile-delinquency-scared-straight-etc-programmes",
-    "title": "‘Scared straight’ and other juvenile awareness programs for preventing juvenile delinquency",
-    "publisher": "Campbell Collaboration",
-    "source_type": "systematic_review",
-    "published_date": "2013-05-02",
-    "evidence_cutoff": "2011-12",
-    "accessed_date": "2026-09-06",
-    "relationship": "supports"
-  },
+  "proposed_status": "mixed",
+  "sources": [
+    {
+      "url": "https://www.campbellcollaboration.org/review/juvenile-delinquency-scared-straight-etc-programmes",
+      "title": "‘Scared straight’ and other juvenile awareness programs for preventing juvenile delinquency",
+      "publisher": "Campbell Collaboration",
+      "source_type": "systematic_review",
+      "published_date": "2013-05-02",
+      "evidence_cutoff": "2011-12",
+      "accessed_date": "2026-09-06",
+      "relationship": "supports",
+      "notes": "Campbell synthesized nine U.S. experimental studies; meta-analysis of seven studies reporting reoffending found significantly higher subsequent offending for program participants."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/32114866/",
+      "title": "Effects of Awareness Programs on Juvenile Delinquency: A Three-Level Meta-Analysis",
+      "publisher": "International Journal of Offender Therapy and Comparative Criminology",
+      "source_type": "peer_reviewed",
+      "published_date": "2021-01-01",
+      "accessed_date": "2026-09-06",
+      "relationship": "qualifies",
+      "notes": "A later three-level meta-analysis included 13 independent studies (N=1,536; 88 effect sizes) and found a small nonsignificant overall effect (d=0.10), no significant program-component moderators, and a significant reduction in antisocial attitudes. The authors concluded that a more nuanced view of juvenile-awareness programs is needed."
+    }
+  ],
   "study_characteristics": {
-    "experiments": 9,
-    "reoffending_analysis_studies": 7,
-    "geography": "Eight U.S. states",
-    "design_note": "The review synthesized randomized experimental evaluations; seven studies reporting reoffending rates contributed to the analysis highlighted by Campbell."
+    "campbell_experiments": 9,
+    "campbell_reoffending_analysis_studies": 7,
+    "campbell_geography": "Eight U.S. states",
+    "later_meta_analysis_independent_studies": 13,
+    "later_meta_analysis_participants": 1536,
+    "later_meta_analysis_effect_sizes": 88,
+    "design_note": "The two syntheses are not identical in scope or meta-analytic approach. Campbell emphasized randomized/quasi-randomized experiments and subsequent offending; the later meta-analysis pooled a broader juvenile-awareness evidence base and multiple delinquency-related outcomes. Their estimates therefore should not be treated as simple duplicate measurements of exactly the same estimand."
   },
   "why_high_information_value": [
-    "HumanityAI currently contains positive, mixed, and insufficient-evidence intervention records but no clear evidence-of-harm example.",
-    "The finding directly guards against a common decision error: treating intuitive plausibility, popularity, or good intentions as evidence of benefit.",
-    "It provides a test case for future prioritization logic: harmful interventions should not be collapsed into the same category as merely uncertain interventions."
+    "The Campbell finding guards against treating intuitive plausibility, popularity, or good intentions as evidence of benefit.",
+    "The later meta-analysis guards against the opposite failure mode: turning one influential synthesis into an overconfident universal harm claim when a broader later synthesis is less negative.",
+    "Together they provide a useful contradiction case for HumanityAI's evidence model and future prioritization logic."
   ],
   "limitations": [
-    "The review is old: searches ran only through December 2011, so it should not be represented as a current exhaustive review of all juvenile delinquency interventions.",
-    "The evidence concerns Scared Straight and closely related juvenile-awareness programs, not youth mentoring, diversion, restorative justice, or juvenile-justice interventions generally.",
-    "All included experiments were conducted in the United States, limiting direct transferability to other justice systems and cultural contexts.",
-    "Some included studies had methodological problems, although Campbell reports that sensitivity to those issues did not materially change the overall harmful-effect conclusion.",
-    "This evidence says nothing by itself about cost-effectiveness, implementation alternatives, or HumanityAI's comparative advantage in criminal-justice work."
+    "The Campbell review is old: searches ran only through December 2011, and its experiments were all conducted in the United States.",
+    "The evidence concerns Scared Straight and related juvenile-awareness programs, not youth mentoring, diversion, restorative justice, or juvenile-justice interventions generally.",
+    "The later meta-analysis used a broader evidence base and outcome structure than the Campbell review, so the difference in conclusions may partly reflect inclusion criteria, estimands, or analytic methods rather than a direct replication failure.",
+    "A nonsignificant pooled effect in the later meta-analysis is not evidence of benefit and does not erase the randomized evidence of harm reported by Campbell.",
+    "The later meta-analysis reported improvement in antisocial attitudes, but attitude change should not be assumed to imply reduced offending.",
+    "Neither synthesis by itself establishes current cost-effectiveness, implementation alternatives, or HumanityAI's comparative advantage in criminal-justice work."
   ],
   "counterevidence_and_uncertainty": [
-    "The evidence base is geographically narrow and historically dated.",
-    "The conclusion should be periodically checked against newer systematic reviews before being used for current policy recommendations."
+    "Campbell's 2013 synthesis reported significantly increased offending relative to doing nothing and found the conclusion robust to sensitivity analyses.",
+    "The 2021 peer-reviewed three-level meta-analysis of 13 independent studies found a small nonsignificant overall effect (d=0.10) and explicitly called for a more nuanced interpretation.",
+    "Because the syntheses differ in study inclusion and outcome aggregation, HumanityAI should preserve both rather than choosing one as definitive without a method-level reconciliation."
   ],
-  "recommended_integration": "After independent source verification, add a normal evidence record to data/evidence.json and consider whether the evidence schema needs an explicit harmful-effect representation rather than forcing harm into a generic supported/mixed label.",
+  "recommended_integration": "Do not integrate this as a simple 'supported harm' record. If promoted into data/evidence.json, represent the evidence as mixed/qualified: preserve Campbell's randomized harm signal, the later broader nonsignificant meta-analytic result, and the methodological reasons the syntheses may differ. This is also a candidate test case for explicit contradiction objects in the evidence model.",
   "human_review_required": false,
-  "generated_by": "HumanityAI Adaptive Compute Worker B; source is human-produced systematic review"
+  "generated_by": "HumanityAI Adaptive Compute Worker B; independently challenged and qualified by Worker C; sources are human-produced systematic/meta-analytic research"
 }
