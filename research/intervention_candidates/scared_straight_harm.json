@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "IC0001",
+  "target_problem_ids": ["P05"],
+  "candidate_for": "data/evidence.json",
+  "claim": "Randomized experimental evidence synthesized by the Campbell Collaboration indicates that 'Scared Straight' and similar juvenile-awareness programs are not merely unsupported: they likely increase subsequent offending relative to doing nothing, making this a useful example of an intuitively appealing intervention with evidence of harm.",
+  "claim_type": "estimate",
+  "proposed_status": "supported",
+  "source": {
+    "url": "https://www.campbellcollaboration.org/review/juvenile-delinquency-scared-straight-etc-programmes",
+    "title": "‘Scared straight’ and other juvenile awareness programs for preventing juvenile delinquency",
+    "publisher": "Campbell Collaboration",
+    "source_type": "systematic_review",
+    "published_date": "2013-05-02",
+    "evidence_cutoff": "2011-12",
+    "accessed_date": "2026-09-06",
+    "relationship": "supports"
+  },
+  "study_characteristics": {
+    "experiments": 9,
+    "reoffending_analysis_studies": 7,
+    "geography": "Eight U.S. states",
+    "design_note": "The review synthesized randomized experimental evaluations; seven studies reporting reoffending rates contributed to the analysis highlighted by Campbell."
+  },
+  "why_high_information_value": [
+    "HumanityAI currently contains positive, mixed, and insufficient-evidence intervention records but no clear evidence-of-harm example.",
+    "The finding directly guards against a common decision error: treating intuitive plausibility, popularity, or good intentions as evidence of benefit.",
+    "It provides a test case for future prioritization logic: harmful interventions should not be collapsed into the same category as merely uncertain interventions."
+  ],
+  "limitations": [
+    "The review is old: searches ran only through December 2011, so it should not be represented as a current exhaustive review of all juvenile delinquency interventions.",
+    "The evidence concerns Scared Straight and closely related juvenile-awareness programs, not youth mentoring, diversion, restorative justice, or juvenile-justice interventions generally.",
+    "All included experiments were conducted in the United States, limiting direct transferability to other justice systems and cultural contexts.",
+    "Some included studies had methodological problems, although Campbell reports that sensitivity to those issues did not materially change the overall harmful-effect conclusion.",
+    "This evidence says nothing by itself about cost-effectiveness, implementation alternatives, or HumanityAI's comparative advantage in criminal-justice work."
+  ],
+  "counterevidence_and_uncertainty": [
+    "The evidence base is geographically narrow and historically dated.",
+    "The conclusion should be periodically checked against newer systematic reviews before being used for current policy recommendations."
+  ],
+  "recommended_integration": "After independent source verification, add a normal evidence record to data/evidence.json and consider whether the evidence schema needs an explicit harmful-effect representation rather than forcing harm into a generic supported/mixed label.",
+  "human_review_required": false,
+  "generated_by": "HumanityAI Adaptive Compute Worker B; source is human-produced systematic review"
+}
