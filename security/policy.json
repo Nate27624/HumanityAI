@@ -2,7 +2,7 @@
   "schema_version": "1.0",
   "policy_name": "HumanityAI prompt-injection and human-review policy",
   "external_content_trust": "untrusted_data_only",
-  "external_pr_merge_policy": "human_only_until_mechanical_identity_separation",
+  "external_pr_merge_policy": "human_only",
   "email_on_human_review_required": true,
   "human_review_reasons": [
     "external_pull_request",
