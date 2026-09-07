@@ -16,6 +16,7 @@ Briefs should not turn multidimensional problems into a single convenience score
 
 ## Current briefs
 
+- [`P02 — Poverty and material insecurity`](P02-poverty-material-insecurity.md)
 - [`P03 — Health and preventable suffering`](P03-health-preventable-suffering.md)
 - [`P05 — Education, knowledge, and human development`](P05-education-human-development.md)
 - [`P07 — Economic opportunity, work, and abundance`](P07-economic-opportunity.md)
