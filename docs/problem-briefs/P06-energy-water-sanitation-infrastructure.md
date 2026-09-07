@@ -2,7 +2,7 @@
 
 ## Why this problem matters
 
-Essential infrastructure expands or constrains practical human capability. Electricity, clean cooking, water, sanitation, transport, communications, and related systems affect health, education, economic opportunity, safety, time use, and the ability to participate in modern institutions. HumanityAI should therefore treat infrastructure as a multidimensional enabling condition rather than as a single access score.
+Essential infrastructure expands or constrains practical human capability. Electricity, clean cooking, water, sanitation, transport, communications, and related systems affect health, education, economic opportunity, safety, time use, and the ability to participate in modern institutions. HumanityAI therefore treats infrastructure as a multidimensional enabling condition rather than as a single access score.
 
 ## Current baseline
 
