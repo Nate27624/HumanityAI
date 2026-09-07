@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-07T01:32:45Z",
-  "last_success_at": "2026-09-07T01:32:45Z",
+  "last_attempt_at": "2026-09-07T02:36:03Z",
+  "last_success_at": "2026-09-07T02:36:03Z",
   "last_status": "no_change_needed",
-  "last_run_key": "2026-09-07T01:32:45Z-worker-b",
+  "last_run_key": "2026-09-07T02:36:03Z-worker-b",
   "consecutive_non_success": 0,
-  "notes": "Selected mode: anti-duplication / deliberate no-change. Worker A had just added preventive-health null-evidence work; Worker C recently performed recovery/verification; existing Worker B recovery PR #22 remains open; and the prior frontier run already specified the next decision-workflow backtest. Starting another substantive change now had lower marginal value and higher collision/review cost. Direct-main heartbeat update was attempted as authorized but mechanically blocked by protected main, so liveness was refreshed on the existing internal Worker B heartbeat PR branch rather than creating another PR. Strongest unresolved next option: execute the preregistered blind historical decision-workflow backtest once current overlapping PR/recovery activity settles."
+  "notes": "Selected mode: anti-duplication / deliberate no-change. Recent workers already integrated and independently qualified the Scared Straight harmful-intervention evidence, Worker A just verified authority/protection state, and the decision-workflow backtest remains preregistered but not yet case-selected. With multiple stale liveness-only PRs still open, another substantive branch now would add review/collision cost before the current queue settles. Strongest unresolved next option: select and preregister three historically bounded cases for the blind decision-workflow backtest once overlapping worker activity is quiet enough to preserve independence."
 }
