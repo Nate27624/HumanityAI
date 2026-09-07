@@ -25,8 +25,8 @@ def load_policy() -> dict:
         fail("security policy schema_version must be 1.0")
     if policy.get("external_content_trust") != "untrusted_data_only":
         fail("external content must remain classified as untrusted_data_only")
-    if policy.get("external_pr_merge_policy") != "human_only_until_mechanical_identity_separation":
-        fail("external PR merge policy must remain human-only until mechanical identity separation exists")
+    if policy.get("external_pr_merge_policy") != "human_only":
+        fail("external PR merge policy must remain human-only")
     if policy.get("email_on_human_review_required") is not True:
         fail("security policy must require email notification when human review is needed")
 
