@@ -3,10 +3,10 @@
   "role": "frontier",
   "expected_cadence_minutes": 60,
   "expected_minute": 41,
-  "last_attempt_at": "2026-09-06T21:41:22Z",
-  "last_success_at": "2026-09-06T21:41:22Z",
+  "last_attempt_at": "2026-09-07T00:33:31Z",
+  "last_success_at": "2026-09-07T00:33:31Z",
   "last_status": "success",
-  "last_run_key": "2026-09-06T21:41:22Z-frontier",
+  "last_run_key": "2026-09-07T00:33:31Z-adaptive-worker-b",
   "consecutive_non_success": 0,
-  "notes": "Experiment-generator run completed successfully. Added a blind historical backtest specification to compare the current supply-first workflow with the proposed decision-centric workflow before any architecture promotion. No human-review boundary crossed."
+  "notes": "Selected mode: failure recovery / anti-duplication. Highest marginal value was resolving the in-flight harmful-intervention candidate rather than starting new work. PR #18 has a substantive Campbell harm-evidence candidate but contains two verified defects; PR #20 stages both corrections on top of #18, while PR #21 records Worker A liveness. Direct-main liveness write was mechanically blocked by protected main, so this heartbeat is staged via PR. No safe merge of #20 was attempted because it targets the Worker B branch rather than main and its required-CI condition was not established. Strongest unresolved next option: once corrected candidate is represented as a main-target internal PR with exact-head required CI, validate and integrate it, then decide whether the core evidence model needs explicit harmful-effect semantics rather than overloading generic supported/mixed status."
 }
