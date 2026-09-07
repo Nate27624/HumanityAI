@@ -45,7 +45,7 @@ The candidate therefore improves P07's multidimensional diagnosis without constr
 
 ## Same-publisher contextual check
 
-The ILO's accompanying 2026 release independently presents the same 2.1 billion outlook figure alongside separate job-quality deficits: nearly 300 million workers in extreme working poverty and about 186 million projected unemployed people at a 4.9% unemployment rate. Those figures describe different and partly overlapping labour-market dimensions and must not be summed into a unique count of workers facing poor economic opportunity.
+The ILO's accompanying 2026 release separately presents the same 2.1 billion outlook figure alongside separate job-quality deficits: nearly 300 million workers in extreme working poverty and about 186 million projected unemployed people at a 4.9% unemployment rate. Those figures describe different and partly overlapping labour-market dimensions and must not be summed into a unique count of workers facing poor economic opportunity.
 
 This cross-check strengthens confidence that the 2.1 billion figure is intentional and central to the ILO's 2026 job-quality framing, but it is not independent evidence because both publications come from the same institution.
 
