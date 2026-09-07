@@ -1,0 +1,54 @@
+{
+  "schema_version": "0.1",
+  "candidate_id": "IC0002",
+  "target_problem_ids": ["P03"],
+  "candidate_for": "data/evidence.json",
+  "claim": "A large Cochrane systematic review of randomized trials found that offering general health checks to unselected adults has little or no effect on all-cause or cancer mortality and probably little or no effect on cardiovascular mortality, despite increasing some diagnoses; this is a high-certainty example where a plausible preventive-health intervention does not translate into better major outcomes.",
+  "claim_type": "estimate",
+  "proposed_status": "mixed",
+  "source": {
+    "url": "https://www.cochrane.org/evidence/CD009009_general-health-checks-reducing-illness-and-mortality",
+    "title": "General health checks for reducing illness and mortality",
+    "publisher": "Cochrane",
+    "source_type": "systematic_review",
+    "published_date": "2019-01-30",
+    "accessed_date": "2026-09-06",
+    "relationship": "qualifies"
+  },
+  "study_characteristics": {
+    "randomized_trials_included": 17,
+    "trials_with_outcome_data": 15,
+    "participants_with_outcome_data": 251891,
+    "mortality_trials": 11,
+    "mortality_participants": 233298,
+    "deaths_observed": 21535,
+    "design_note": "The review compared invitations to one or more general health checks for adults not selected for a particular disease or risk factor with no invitation. Risk of bias was generally low for the primary outcomes."
+  },
+  "key_results": [
+    "All-cause mortality: RR 1.00, 95% CI 0.97 to 1.03; high-certainty evidence.",
+    "Cancer mortality: RR 1.01, 95% CI 0.92 to 1.12; high-certainty evidence.",
+    "Cardiovascular mortality: RR 1.05, 95% CI 0.94 to 1.16; moderate-certainty evidence.",
+    "Fatal and non-fatal ischaemic heart disease: RR 0.98, 95% CI 0.94 to 1.03; high-certainty evidence.",
+    "The review reports that health checks increased the number of new diagnoses in some trials, while evidence on several possible harms and downstream procedures was incomplete."
+  ],
+  "why_high_information_value": [
+    "HumanityAI currently has little direct preventive-health intervention evidence, while health checks are intuitively appealing and widely understandable.",
+    "The finding separates detection activity from patient-important outcomes: more diagnoses do not necessarily imply lower mortality or morbidity.",
+    "The large randomized evidence base makes this a useful calibration case for resisting surrogate-outcome and activity-count bias in future recommendations."
+  ],
+  "limitations": [
+    "The review was published in 2019 and many underlying trials are older; contemporary targeted prevention, risk-stratified screening, and disease-specific screening should not be inferred to be ineffective from this evidence.",
+    "The intervention is a broad package of general health checks rather than one standardized protocol, and delivery differed across trials and health systems.",
+    "The review mainly addresses population-level invitations for general checks among adults not selected for specific risk factors; it does not apply to symptom-driven evaluation or recommended screening for particular diseases or high-risk groups.",
+    "Evidence on some harms, follow-up procedures, psychological effects, and resource use was incomplete, so the record should not claim a precise net-harm estimate.",
+    "A mortality null does not prove no benefit for every intermediate or quality-of-life outcome, and the review did not establish cost-effectiveness across current healthcare systems.",
+    "This evidence does not establish HumanityAI's comparative advantage in healthcare policy or imply a recommendation to stop clinically indicated preventive care."
+  ],
+  "counterevidence_and_uncertainty": [
+    "Health checks can increase detection of conditions and risk factors, which may be valuable in some targeted contexts even though the pooled general-check strategy did not improve major mortality outcomes.",
+    "Changes in modern preventive treatments and screening practices may alter the value of specific components, so any current policy use should distinguish broad general checks from evidence-based targeted prevention."
+  ],
+  "recommended_integration": "After independent source verification, add a normal P03 intervention-evidence record emphasizing the distinction between diagnostic activity and patient-important outcomes. Do not generalize the result to targeted screening, symptom-driven care, or high-risk populations.",
+  "human_review_required": false,
+  "generated_by": "HumanityAI Adaptive Compute Worker A; source is human-produced Cochrane systematic review"
+}
