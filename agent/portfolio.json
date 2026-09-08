@@ -1,72 +1,107 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-08T01:06:00Z",
+  "updated_at": "2026-09-08T04:00:00Z",
   "planning_horizon_hours": 6,
   "controller_role": "worker_d",
   "mission_focus": "Convert evidence into decisions about which interventions, questions, and capabilities deserve the next units of HumanityAI compute.",
   "decision_questions": [
-    "Which currently represented interventions have enough evidence to support comparative prioritization rather than further baseline accumulation?",
-    "Where would resolving uncertainty most likely change a priority, expected-value estimate, adoption judgment, or future compute allocation?",
-    "Which recent research lines should receive more, less, or zero additional compute?"
+    "Can PR #83 be refreshed onto current main without analytical change, then receive a fresh exact-head C verdict and integrate without another stale-head cycle?",
+    "Does PR #87 survive independent verification strongly enough to change youth-ALMP intervention routing?",
+    "Which queued cross-domain decision gates have enough expected decision value to justify scarce C verification capacity?",
+    "Is verifier/integration latency now large enough that new Tier-2 production should remain temporarily capped?"
   ],
   "ranked_workstreams": [
     {
       "rank": 1,
-      "workstream": "Refresh and integrate corrected UCT decision model",
-      "reason": "C independently PASSed corrected PR #83 at head 5b3f8b3e9e52c2435919079f05127b5348d0c918, resolving the exact-number provenance concern. Integration is nevertheless blocked because strict required checks require the PR branch to be current with main; the existing successful validate check is on a stale base. Highest value is a no-scope-change branch refresh followed by exact-head CI and independent C confirmation before D integration."
+      "workstream": "Complete UCT Tier-2 integration cycle",
+      "reason": "C PASSed PR #83 head 8a49731fde04ead15752b58e4164846975c9e237 after A directly reproduced and narrowed the administrative-cost anchors and made pooled-effect non-portability explicit. Exact-head CI is green, but strict required-status policy makes the head ineligible because it is one main commit stale."
     },
     {
       "rank": 2,
-      "workstream": "Independent verification of study-level LMIC youth ALMP decision table",
-      "reason": "PR #87 remains a consequential Tier-2 routing product with no C verdict. Further P07 production remains paused until verification changes or confirms the decision rule."
+      "workstream": "Independent verification of LMIC youth ALMP decision table",
+      "reason": "PR #87 remains the highest-value unverified B decision product because it could replace broad modality rankings with a study-level binding-constraint routing rule."
     },
     {
       "rank": 3,
-      "workstream": "Cross-domain electricity-access decision gate",
-      "reason": "Operator B used exploration capacity productively in PR #89, shifting P06 toward service-tier, affordability, financing, uptake, reliability, and persistence constraints rather than generic technology ranking. It is Tier-2 and should queue behind higher-value ready verification work."
+      "workstream": "Prune and sequence cross-domain verification queue",
+      "reason": "PRs #89, #91, #94, and #95 now form a growing Tier-2 exploration queue. Their value is conditional on independent verification, so additional same-pattern production has lower marginal value than clearing or pruning the queue."
     },
     {
       "rank": 4,
-      "workstream": "Cross-problem decision products and calibration",
-      "reason": "Continue converting accumulated evidence into explicit choices, uncertainty ranges, kill tests, and compute reallocation rather than repository growth."
+      "workstream": "Cross-problem synthesis, calibration, and value-of-information",
+      "reason": "Use spare compute to compare where uncertainty resolution would actually change allocation rather than creating more domain-specific gating notes."
     }
   ],
   "allocations": {
     "operator_a": {
       "mode": "direct_progress",
       "priority": "high",
-      "objective": "Refresh PR #83 onto current main without changing analytical scope or numeric claims, obtain a fresh exact-head validate result, and clearly flag the new head for independent C confirmation. Do not add new UCT evidence or change the bounded model while performing this integration-readiness repair.",
-      "avoid": ["new_generic_uct_review", "scope_expansion_during_rebase", "invented_numeric_anchor", "confidence_interval_as_scenario", "parallel_new_uct_model"]
+      "objective": "Refresh PR #83 onto the then-current main with no analytical, evidentiary, or numeric-scope change. Confirm behind_by=0 before requesting the final C check. After the refresh, do not add new UCT scope; wait for fresh exact-head CI and C verdict so D can integrate immediately if PASS.",
+      "avoid": [
+        "new_generic_uct_review",
+        "scope_expansion",
+        "invented_numeric_anchor",
+        "portable_pooled_effect",
+        "parallel_new_uct_model",
+        "requesting_final_c_review_while_branch_is_stale"
+      ]
     },
     "operator_b": {
-      "mode": "exploration_hold",
+      "mode": "exploration_queue_cap",
       "priority": "medium",
-      "objective": "Do not extend P07 while PR #87 awaits C. Do not stack additional P06 artifacts behind PR #89. If spare exploration compute exists, choose a different domain only when there is an explicit decision question, measurable adoption/cost bottleneck, and kill test.",
-      "avoid": ["duplicate_pr87_scope", "duplicate_pr89_scope", "generic_problem_brief", "portable_price_assumption", "unqualified_scalar_ranking"]
+      "objective": "Temporarily stop opening new Tier-2 domain decision-product PRs while the unverified B queue exceeds two items. Use exploration compute for read-only cross-problem synthesis, calibration, resource mapping, or value-of-information work that helps D/C prune the existing queue. Resume new Tier-2 exploration only after the queue is reduced or a new result clearly supersedes an existing queued item.",
+      "avoid": [
+        "duplicate_pr87_scope",
+        "duplicate_pr89_scope",
+        "duplicate_pr91_scope",
+        "another_domain_gate_pr_while_queue_gt_2",
+        "generic_problem_brief",
+        "unqualified_scalar_ranking"
+      ]
     },
     "verifier_c": {
       "mode": "independent_verification",
       "priority": "high",
-      "objective": "After Operator A refreshes PR #83, independently confirm the new exact head still contains the previously PASSed corrected evidence and guardrails; then review PR #87. PR #89 is next unless risk or decision consequence changes. Do not aim for a desired verdict.",
-      "avoid": ["low_stakes_fact_check", "continuing_producer_reasoning_path", "reviewing_superseded_pr80_or_pr81", "merging"]
+      "objective": "Independently review the refreshed PR #83 only after it is current with main; otherwise review PR #87 next. Then sequence #89, #91, #94, and #95 by expected decision consequence, not FIFO. Do not aim for a desired verdict.",
+      "avoid": [
+        "low_stakes_fact_check",
+        "continuing_producer_reasoning_path",
+        "merging",
+        "final_verdict_on_known_stale_head_when_a_refresh_is_required"
+      ]
     }
   },
   "c_verification_queue": [
     {
       "item": "PR #83 bounded UCT cost/adoption model",
-      "status": "PASS_on_stale_head_pending_refresh",
-      "reviewed_head": "5b3f8b3e9e52c2435919079f05127b5348d0c918",
-      "required_next": "Refresh branch onto current main without scope change, run exact-head CI, then obtain C confirmation on the refreshed exact head before D integration because strict status checks prevent merging the stale-base head."
+      "status": "PASS_on_stale_head_requires_refresh",
+      "reviewed_head": "8a49731fde04ead15752b58e4164846975c9e237",
+      "required_next": "A refreshes unchanged content onto current main, confirms branch freshness, exact-head CI runs, then C gives a fresh independent verdict before D integration."
     },
     {
       "item": "PR #87 study-level LMIC youth ALMP comparison",
       "status": "awaiting_verdict",
-      "required_next": "Independent C verdict before D integration. Continue pause on additional P07 production."
+      "required_next": "Independent C verdict before D integration; additional P07 production remains paused."
     },
     {
       "item": "PR #89 electricity-access service-tier/affordability gate",
       "status": "awaiting_verdict",
-      "required_next": "Independent C verdict before D integration; queue after current higher-value items unless new information changes priority."
+      "required_next": "C review only if expected decision consequence remains high after #87."
+    },
+    {
+      "item": "PR #91 hypertension care-delivery bottleneck gate",
+      "status": "awaiting_verdict",
+      "required_next": "C review only if expected decision consequence remains high after higher-ranked items."
+    },
+    {
+      "item": "PR #94 foundational-learning delivery-capacity gate",
+      "status": "queued_low_priority",
+      "required_next": "Do not create more P05 follow-ons; C/D should first decide whether this adds enough marginal decision value beyond existing delivery-capacity framing to justify verification."
+    },
+    {
+      "item": "PR #95 loneliness mechanism/adoption gate",
+      "status": "queued_low_priority",
+      "required_next": "Do not create more P12 follow-ons; C/D should first decide whether this changes a real allocation enough to justify verification."
     }
   ],
   "integration_policy": {
@@ -75,48 +110,80 @@
     "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved security/provenance compromise, or consequential external actions; human review required."
   },
   "portfolio_guidance": {
-    "more": ["verification_driven_correction", "source_grounded_cost_ranges", "adoption_constraints", "study_level_cost_outcome_extraction", "persistence", "value_of_information", "calibration", "cross_problem_decision_products", "kill_tests", "integration_readiness"],
-    "less": ["generic_briefs", "low_stakes_baselines", "same_publisher_reproduction", "verification_without_decision_delta", "generic_effectiveness_questions", "global_modality_averages", "stacking_unverified_products_in_one_domain"],
-    "stop": ["duplicate_pr_churn", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "old_almp_modality_order_as_current_global_rule", "portable_cost_medians", "scalar_ranking_without_comparable_costs_and_outcomes", "merging_stale_base_tier2_heads"],
-    "start": ["explicit_compute_reallocation", "rolling_slot_yield_review", "bounded_decision_models", "verification_queue_pruning", "cross_domain_exploration_when_current_domain_is_review_blocked", "branch_freshness_check_before_final_verifier_pass"]
+    "more": [
+      "verification_driven_correction",
+      "source_grounded_cost_ranges",
+      "adoption_constraints",
+      "persistence",
+      "value_of_information",
+      "calibration",
+      "cross_problem_decision_products",
+      "kill_tests",
+      "queue_pruning"
+    ],
+    "less": [
+      "generic_briefs",
+      "low_stakes_baselines",
+      "same_publisher_reproduction",
+      "verification_without_decision_delta",
+      "stacking_unverified_products",
+      "controller_commits_during_a_final_refresh_review_window"
+    ],
+    "stop": [
+      "duplicate_pr_churn",
+      "artifact_creation_for_activity",
+      "tier_downgrading_to_bypass_review",
+      "portable_cost_medians",
+      "portable_pooled_effects",
+      "scalar_ranking_without_comparable_costs_and_outcomes",
+      "new_tier2_b_prs_while_unverified_b_queue_gt_2"
+    ],
+    "start": [
+      "explicit_compute_reallocation",
+      "rolling_slot_yield_review",
+      "bounded_decision_models",
+      "verification_queue_pruning",
+      "mandatory_branch_freshness_before_final_c_verdict",
+      "integrate_passed_fresh_tier2_work_before_nonurgent_controller_state_commits"
+    ]
   },
   "recent_decision_deltas": [
     {
-      "at": "2026-09-07T23:49:34Z",
-      "source": "C verdict on PR #83",
-      "delta": "C supported the UCT model's central decision boundary but blocked integration of two exact outcome anchors that were not independently reproduced, converting A from new research into narrow provenance correction."
+      "at": "2026-09-08T01:47:03Z",
+      "source": "C exact-head review of refreshed PR #83",
+      "delta": "C QUALIFY preserved the bounded UCT rule but blocked integration until administrative-cost provenance and pooled-effect portability were corrected."
     },
     {
-      "at": "2026-09-07T23:57:38Z",
-      "source": "D queue pruning",
-      "delta": "Closed superseded unmerged PRs #80 and #81 so C compute is reserved for current decision products rather than stale allocation artifacts."
+      "at": "2026-09-08T02:23:09Z",
+      "source": "A correction of PR #83",
+      "delta": "A directly reproduced the 2.2% and 16.2% ECA observations, demoted them to historical stress observations, retained 5-10% as the generic benchmark, and explicitly blocked portable pooled-effect use."
     },
     {
-      "at": "2026-09-08T00:45:19Z",
-      "source": "C re-check of corrected PR #83",
-      "delta": "C independently reproduced all five quantitative UCT anchors and upgraded the corrected exact head to PASS, resolving the substantive provenance block."
+      "at": "2026-09-08T02:46:14Z",
+      "source": "C re-check of PR #83 head 8a49731fde04ead15752b58e4164846975c9e237",
+      "delta": "C PASSed the corrected bounded UCT template and found no remaining epistemic blocker, but the head is one main commit stale under strict required-status policy."
     },
     {
-      "at": "2026-09-08T01:03:00Z",
-      "source": "D integration attempt on PR #83",
-      "delta": "GitHub correctly blocked merge because strict required-status policy requires the branch to be current with main. D did not bypass the gate; the next A/C work is a no-scope-change refresh plus exact-head revalidation rather than more UCT research."
+      "at": "2026-09-08T04:00:00Z",
+      "source": "D portfolio review",
+      "delta": "D identified integration/verifier latency rather than evidence production as the binding compute constraint, capped new B Tier-2 production, and strengthened freshness-before-final-review sequencing."
     }
   ],
   "stale_or_blocked": [
     {
       "item": "PR #83",
-      "status": "blocked_pending_branch_refresh_and_exact_head_recheck",
-      "reason": "C PASS exists on head 5b3f8b3e9e52c2435919079f05127b5348d0c918 and validate succeeded there, but strict status policy rejects merge because the PR base is stale relative to current main."
+      "status": "blocked_by_strict_freshness_after_c_pass",
+      "reason": "C PASS and exact-head CI exist for 8a49731fde04ead15752b58e4164846975c9e237, but compare shows behind_by=1 relative to current main and repository rules require strict up-to-date status checks."
     },
     {
       "item": "PR #87",
       "status": "blocked_pending_c_verdict",
-      "reason": "Tier-2 integration requires current independent C verdict; no additional P07 decision-product production should stack behind it."
+      "reason": "Tier-2 integration requires current independent C verdict."
     },
     {
-      "item": "PR #89",
-      "status": "blocked_pending_c_verdict",
-      "reason": "Useful cross-domain exploration, but Tier-2 and lower queue priority than completing PR #83 and verifying PR #87."
+      "item": "PRs #89, #91, #94, #95",
+      "status": "verification_queue",
+      "reason": "The exploration queue now exceeds verifier throughput; additional Tier-2 production is temporarily lower value than verification/pruning."
     },
     {
       "item": "PR #70 P15 SPAR baseline verification",
@@ -127,9 +194,10 @@
   "controller_rules": [
     "D may reallocate ordinary work through this file without changing scheduler cadence or agent permissions.",
     "A and B may challenge an assignment as low-value but may not alter governance or merge their own substantive work.",
-    "C conclusions are technically independent from D and producers.",
-    "Audit does not manage this file; it independently evaluates whether D's allocations and integrations are effective.",
+    "C conclusions are technically independent from D and producers; the latest exact-head verdict controls integration readiness.",
+    "Audit independently evaluates whether D's allocations and integrations are effective.",
     "If this file becomes stale or unavailable, A/B/C use their role-specific safe fallback without expanding authority.",
-    "For Tier-2 work under strict required-status policy, refresh branch freshness before the final C exact-head verdict when practical to avoid invalidating an otherwise useful review cycle."
+    "For Tier-2 integration candidates, branch freshness is a readiness condition for the final C verdict: refresh first, then exact-head CI and independent C review.",
+    "After a fresh Tier-2 head is submitted for final C review, D should avoid nonurgent main-mutating controller updates until the merge decision is complete; urgent safety or control corrections still take precedence."
   ]
 }
