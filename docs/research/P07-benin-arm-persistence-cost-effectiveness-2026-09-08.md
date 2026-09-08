@@ -8,7 +8,7 @@ Controller fallback assignment: after the bounded Bosnia cost search, extract Be
 
 Benin's Youth Employment Project impact evaluation provides a substantially stronger within-study comparison than the canonical P07 routing note previously had: the randomized design separately identifies **training only**, **cash grant only**, **training + cash**, and control, follows outcomes for roughly **45 months after training / 38 months after grant**, and reports component-level per-capita delivery costs.
 
-The decision-relevant result is not "training beats grants globally." It is narrower: **for this low-education, underemployed Benin sample and this specific delivery architecture, the training-only arm is the only arm with clear sustained gains in business performance and earnings at the longest follow-up, while grant-only has no primary business/earnings effect and adding the grant generally attenuates the training-only business-performance signal.** This is a **study-specific diagnostic signal** that skill/management support may have addressed an important constraint more effectively than this particular grant design on those primary outcomes; the experiment does **not** identify human-capital/management scarcity as the uniquely binding constraint. Alternative explanations include grant size or timing, intra-household capture, investment quality, complementary inputs, and other treatment-design differences. Important gender, welfare, implementation-quality, and portability caveats remain first-order.
+The decision-relevant result is not "training beats grants globally." It is narrower: **for this low-education, underemployed Benin sample and this specific delivery architecture, the training-only arm shows clear sustained gains in business performance and earnings at the longest follow-up, while grant-only has no primary business/earnings effect. Among women, the combined training+grant arm is significantly weaker than training-only on key business outcomes; among men, equality between the combined and training-only arms generally cannot be rejected, so no broad attenuation claim is warranted.** This is a **study-specific diagnostic signal** that skill/management support may have addressed an important constraint more effectively than this particular grant design on those primary outcomes; the experiment does **not** identify human-capital/management scarcity as the uniquely binding constraint. Alternative explanations include grant size or timing, intra-household capture, investment quality, complementary inputs, and other treatment-design differences. Important gender, welfare, implementation-quality, and portability caveats remain first-order.
 
 The report also provides an explicit implementation-cost anchor: **training cost about US$1,050 per beneficiary; the cash-grant component cost about US$629 per beneficiary.** The PDF text renders the latter as `US$ 629` followed by footnote marker `4`, which can appear in extracted text as `6294`; it is not a US$6,294 grant. The report's own back-of-the-envelope calculation says the training cost is recouped through the estimated earnings increment after about **36 months for men** and **64 months for women**, with the women's calculation requiring the assumption that the last observed earnings impact persists beyond follow-up.
 
@@ -50,9 +50,13 @@ At the longest follow-up, the report states:
 - training only had strong positive and significant impacts on business-performance measures for both women and men;
 - training-only monthly earnings increased by roughly **US$16 for women** and **US$29 for men**;
 - grant only had no effect on revenues, profits, or earnings for either women or men;
-- training + grant effects were generally smaller than training only on business performance, with especially clear attenuation/null effects for women;
+- among women, training + grant was significantly weaker than training only on key business-performance outcomes; among men, equality between T1 and T2 generally could not be rejected, and the report says the combined-arm business effect cannot be concluded definitively;
 - grant recipients did show welfare/asset effects in some dimensions, so null business-performance effects must not be rewritten as "the grant produced no benefit";
 - women receiving training + grant created paid jobs even though their own business profits did not improve, showing that owner earnings and employment spillovers are distinct outcomes.
+
+### Attrition qualification
+
+Follow-up-3 attrition is treatment-correlated, especially in the T1 and T3 arms. The report's inverse-probability-weighting and bounding exercises are reassuring under moderate assumptions, but they do not eliminate attrition as a limitation. Long-horizon arm comparisons should therefore retain this uncertainty rather than treating FU3 estimates as attrition-free.
 
 ## Cost accounting and what can safely be compared
 
@@ -86,6 +90,7 @@ Several mechanisms in the report make this a delivery-specific result rather tha
 4. **Baseline technical skills.** The report notes that many participants had prior technical training/apprenticeship, potentially making management and socioemotional skills unusually complementary to existing productive skills.
 5. **Grant capture/redistribution and investment quality.** The report discusses intra-household transfers and suboptimal investment as plausible mechanisms behind weak grant effects, particularly for women.
 6. **Outcome heterogeneity.** Grant arms can improve assets/expenditures or job creation even when owner profits/earnings do not rise.
+7. **Differential attrition at FU3.** Treatment-correlated attrition means the longest-horizon comparisons rely partly on robustness assumptions even though the report's weighting/bounds checks are reassuring.
 
 ## Current P07 decision rule
 
@@ -96,4 +101,4 @@ Several mechanisms in the report make this a delivery-specific result rather tha
 
 ## Recommended next action for Worker D
 
-This closes the specific Benin persistence/cost gap identified after PR #87 well enough to update P07 routing, subject to a fresh independent Worker C verdict on this corrected exact head. If C confirms the report extraction, denominator handling, and narrowed mechanism language, D can integrate this note and reduce further P07 producer compute unless a concrete downstream decision requires a comparable second study or a verified T1 combined-arm unit cost.
+This closes the specific Benin persistence/cost gap identified after PR #87 well enough to update P07 routing, subject to a fresh independent Worker C verdict on this corrected exact head. If C confirms the report extraction, denominator handling, narrowed mechanism language, gender-specific T1/T2 interpretation, and attrition qualification, D can integrate this note and reduce further P07 producer compute unless a concrete downstream decision requires a comparable second study or a verified T1 combined-arm unit cost.
