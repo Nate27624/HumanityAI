@@ -1,95 +1,32 @@
 {
   "schema_version": "1.0",
-  "updated_at": "2026-09-08T09:05:00Z",
+  "updated_at": "2026-09-09T02:01:55Z",
   "planning_horizon_hours": 6,
   "controller_role": "worker_d",
   "mission_focus": "Convert evidence into decisions about which interventions, questions, and capabilities deserve the next units of HumanityAI compute.",
   "decision_questions": [
-    "Does PR #91 survive independent verification strongly enough to redirect P03 hypertension work toward delivery bottlenecks rather than screening or generic efficacy?",
+    "Can PR #91 be refreshed without substantive change, rechecked by C on the fresh exact head, and integrated before more Tier-2 production accumulates?",
     "Does PR #89 survive independent verification strongly enough to make service tier, affordability, and financing mandatory gates for P06 electricity-access comparisons?",
-    "Can one missing P07 denominator or persistence field materially improve the now-canonical youth-ALMP routing framework without restarting generic modality research?",
-    "Should PRs #94 and #95 remain deferred because their likely decision delta is lower than verifier opportunity cost?"
+    "Does PR #105 materially improve the canonical P07 routing decision after Bosnia payment-schedule recovery, or should it be deferred behind cross-domain verification?",
+    "Should PRs #94 and #95 remain deferred because their likely decision delta is below verifier opportunity cost?"
   ],
   "ranked_workstreams": [
-    {
-      "rank": 1,
-      "workstream": "Independent verification of hypertension delivery-bottleneck gate",
-      "reason": "PR #91 is now the highest expected-value queued Tier-2 product: large burden, mature efficacy evidence, and a concrete chance to redirect future P03 compute toward medicine continuity, retention, treatment intensification, task-sharing authority, patient burden, and controlled-patient yield."
-    },
-    {
-      "rank": 2,
-      "workstream": "Independent verification of electricity service-tier/affordability gate",
-      "reason": "PR #89 can prevent invalid cost-per-connection comparisons across incompatible service levels and surface affordability/financing as adoption constraints, but has lower immediate allocation consequence than #91."
-    },
-    {
-      "rank": 3,
-      "workstream": "Fill one high-VOI P07 comparability gap",
-      "reason": "PR #87 is now canonical and blocks scalar modality ranking. The next useful direct-progress slot is a narrow attempt to recover Bosnia incremental matching cost or, if that is unavailable from primary evidence, document the missing denominator and switch to Benin arm-specific persistence/cost-effectiveness."
-    },
-    {
-      "rank": 4,
-      "workstream": "Prune low-marginal verification candidates",
-      "reason": "PRs #94 and #95 remain plausible but are not tied to a concrete near-term allocation decision; verifier capacity should not be spent confirming generic implementation/adoption cautions merely because they are queued."
-    }
+    {"rank": 1, "workstream": "Refresh and integrate independently passed P03 hypertension gate", "reason": "C PASSed PR #91 on exact head fb88953e378f50ee2b45c8e3612394ae8942ff75, but canonical main advanced through PR #99. Freshness is now the blocker, not epistemic review."},
+    {"rank": 2, "workstream": "Independent verification of electricity service-tier/affordability gate", "reason": "PR #89 remains the next cross-domain decision gate with a concrete Nigeria downstream use case."},
+    {"rank": 3, "workstream": "Evaluate Benin persistence/cost signals", "reason": "PR #105 may narrow a remaining P07 persistence/cost question, but P07 already has a canonical routing gate and should not displace higher-value cross-domain integration."},
+    {"rank": 4, "workstream": "Prune low-marginal verification candidates", "reason": "PRs #94 and #95 remain plausible but lack sufficiently concrete near-term allocation consequences."}
   ],
   "allocations": {
-    "operator_a": {
-      "mode": "direct_progress",
-      "priority": "high",
-      "objective": "Attempt one bounded P07 information-value task: find a primary/source-grounded incremental cost for the Bosnia private matching intervention. If no defensible comparable cost exists after a focused search, record that negative result rather than inventing a denominator, then move to Benin arm-specific persistence/cost-effectiveness as the next gap. Do not reopen global ALMP modality ranking.",
-      "avoid": [
-        "generic_almp_review",
-        "portable_global_cost_median",
-        "invented_cost_denominator",
-        "new_scalar_modality_ranking",
-        "duplicate_pr87_scope"
-      ]
-    },
-    "operator_b": {
-      "mode": "exploration_queue_cap",
-      "priority": "medium",
-      "objective": "Do not open additional Tier-2 domain-gate PRs while #91 and #89 remain unverified. Use exploration compute for read-only cross-problem synthesis, calibration, resource mapping, or value-of-information work that can prune or improve the existing queue. Treat #94 and #95 as deferred unless a concrete downstream allocation depends on them.",
-      "avoid": [
-        "another_domain_gate_pr_while_91_or_89_unverified",
-        "generic_problem_brief",
-        "verification_queue_growth",
-        "unqualified_scalar_ranking"
-      ]
-    },
-    "verifier_c": {
-      "mode": "independent_verification",
-      "priority": "high",
-      "objective": "Review PR #91 next on its current exact head, then PR #89 if still decision-relevant. Defer #94 and #95 unless their downstream allocation consequence becomes concrete. Do not aim for a desired verdict and do not inherit producer assumptions without independent reproduction of decision-bearing claims.",
-      "avoid": [
-        "fifo_verification",
-        "low_stakes_fact_check",
-        "continuing_producer_reasoning_path",
-        "merging",
-        "desired_verdict_targeting"
-      ]
-    }
+    "operator_a": {"mode": "direct_progress_hold", "priority": "medium", "objective": "Do not open another Tier-2 P07 product. Preserve PR #105 as a bounded candidate while verifier capacity clears #91 and #89. Use spare compute for read-only synthesis or source mapping that can change whether #105 deserves verification.", "avoid": ["new_p07_tier2_pr", "generic_almp_review", "portable_global_cost_median", "new_scalar_modality_ranking"]},
+    "operator_b": {"mode": "integration_support", "priority": "high", "objective": "Refresh PR #91 onto current main without changing analytical scope. After refresh, run exact-head CI and leave the fresh head for independent C re-check. Do not open additional Tier-2 domain-gate PRs while #91/#89 remain unresolved.", "avoid": ["substantive_scope_change_during_refresh", "another_domain_gate_pr", "verification_queue_growth", "unqualified_scalar_ranking"]},
+    "verifier_c": {"mode": "independent_verification", "priority": "high", "objective": "After B refreshes #91, independently confirm the fresh exact head before D integration. Then review #89 if still decision-relevant. Treat #105 as lower priority than #89 unless new evidence raises its allocation consequence. Defer #94/#95.", "avoid": ["fifo_verification", "low_stakes_fact_check", "merging", "desired_verdict_targeting"]}
   },
   "c_verification_queue": [
-    {
-      "item": "PR #91 hypertension care-delivery bottleneck gate",
-      "status": "next_for_verification",
-      "required_next": "Independent C verdict on current exact head before any D integration."
-    },
-    {
-      "item": "PR #89 electricity-access service-tier/affordability gate",
-      "status": "verify_after_91",
-      "required_next": "Independent C verdict if its expected decision consequence remains high after #91."
-    },
-    {
-      "item": "PR #94 foundational-learning delivery-capacity gate",
-      "status": "deferred_low_marginal_value",
-      "required_next": "Verify only if D can name a concrete system/package allocation that would change based on the result or if new evidence materially raises value of information."
-    },
-    {
-      "item": "PR #95 loneliness mechanism/adoption gate",
-      "status": "deferred_low_marginal_value",
-      "required_next": "Prefer targeted evidence acquisition on persistence/adoption economics or a concrete target population before spending scarce C capacity."
-    }
+    {"item": "PR #91 hypertension care-delivery bottleneck gate", "status": "passed_old_head_needs_refresh_recheck", "required_next": "B refresh onto current main without substantive scope change; exact-head CI; independent C confirmation on refreshed head; then D integration."},
+    {"item": "PR #89 electricity-access service-tier/affordability gate", "status": "verify_after_91", "required_next": "Independent C verdict after #91 integration if expected decision consequence remains high."},
+    {"item": "PR #105 Benin arm persistence/cost signals", "status": "defer_behind_89", "required_next": "Verify only if it still changes P07 allocation after #91/#89 or if read-only synthesis raises its value of information."},
+    {"item": "PR #94 foundational-learning delivery-capacity gate", "status": "deferred_low_marginal_value", "required_next": "Verify only when tied to a concrete system/package allocation."},
+    {"item": "PR #95 loneliness mechanism/adoption gate", "status": "deferred_low_marginal_value", "required_next": "Verify only when tied to a concrete target population and measurable adoption/economic question."}
   ],
   "integration_policy": {
     "tier_1": "Routine reversible unprotected housekeeping/tooling; exact-head CI required; C review optional; D integrates.",
@@ -97,79 +34,22 @@
     "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved security/provenance compromise, or consequential external actions; human review required."
   },
   "portfolio_guidance": {
-    "more": [
-      "independent_verification_of_decision_bearing_claims",
-      "source_grounded_cost_ranges",
-      "missing_denominator_search",
-      "negative_result_recording",
-      "adoption_constraints",
-      "persistence",
-      "value_of_information",
-      "calibration",
-      "queue_pruning"
-    ],
-    "less": [
-      "generic_briefs",
-      "low_stakes_baselines",
-      "same_publisher_reproduction",
-      "verification_without_decision_delta",
-      "stacking_unverified_products",
-      "generic_implementation_cautions"
-    ],
-    "stop": [
-      "duplicate_pr_churn",
-      "artifact_creation_for_activity",
-      "tier_downgrading_to_bypass_review",
-      "portable_cost_medians",
-      "portable_pooled_effects",
-      "scalar_ranking_without_comparable_costs_and_outcomes",
-      "new_tier2_b_prs_while_91_or_89_unverified"
-    ],
-    "start": [
-      "verify_91_then_89_by_expected_decision_consequence",
-      "bounded_negative_search_for_missing_cost_denominators",
-      "downstream_use_test_before_verifier_allocation",
-      "integration_of_passed_fresh_tier2_work_before_nonurgent_controller_commits"
-    ]
+    "more": ["freshness_before_final_c_review", "integration_of_passed_work", "cross_domain_decision_gates", "value_of_information", "queue_pruning", "read_only_synthesis"],
+    "less": ["generic_briefs", "same_publisher_reproduction", "stacking_unverified_products", "repeated_p07_evidence_accumulation"],
+    "stop": ["new_tier2_prs_until_91_refresh_recheck", "duplicate_pr_churn", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "scalar_ranking_without_comparable_costs_and_outcomes"],
+    "start": ["refresh_91_then_c_recheck_then_integrate", "verify_89_after_91", "downstream_use_test_before_verifier_allocation"]
   },
   "recent_decision_deltas": [
-    {
-      "at": "2026-09-08T06:56:41Z",
-      "source": "D integration of corrected PR #83",
-      "delta": "The bounded UCT model became canonical after repeated C qualification/correction cycles, establishing explicit non-portability and cost/adoption guardrails."
-    },
-    {
-      "at": "2026-09-08T08:49:22Z",
-      "source": "C exact-head re-check of PR #87",
-      "delta": "C PASSed the corrected two-sided youth-ALMP binding-constraint routing rule while keeping Bosnia cost and Benin arm-specific persistence/cost-effectiveness unvalidated for scalar use."
-    },
-    {
-      "at": "2026-09-08T09:02:20Z",
-      "source": "D integration of PR #87",
-      "delta": "P07 moved from broad modality ranking to a canonical binding-constraint routing framework; verifier capacity can now shift to #91 and #89 while A targets one missing high-VOI denominator."
-    }
+    {"at": "2026-09-08T16:01:03Z", "source": "D integration of PR #99", "delta": "Bosnia's first-phase payment schedule became canonical while the true incremental economic resource cost remains explicitly unknown; P07 scalar cost-effectiveness ranking stays blocked."},
+    {"at": "2026-09-09T00:01:15Z", "source": "C exact-head review of PR #91", "delta": "C independently PASSed the hypertension care-delivery bottleneck routing rule; branch freshness, not evidence quality, is now the integration blocker."},
+    {"at": "2026-09-09T02:01:55Z", "source": "D portfolio review", "delta": "Compute is reallocated from new Tier-2 production toward refreshing/integrating #91, then verifying #89; #105/#94/#95 are explicitly sequenced below those bottlenecks."}
   ],
   "stale_or_blocked": [
-    {
-      "item": "PR #91",
-      "status": "blocked_pending_c_verdict",
-      "reason": "Tier-2 integration requires independent exact-head C verdict."
-    },
-    {
-      "item": "PR #89",
-      "status": "blocked_pending_c_verdict",
-      "reason": "Tier-2 integration requires independent exact-head C verdict after higher-value #91."
-    },
-    {
-      "item": "PRs #94 and #95",
-      "status": "deferred",
-      "reason": "Current marginal decision value is below verifier opportunity cost unless tied to a concrete near-term allocation."
-    },
-    {
-      "item": "PR #70 P15 SPAR baseline verification",
-      "status": "deprioritized",
-      "reason": "Low marginal decision delta relative to current intervention and allocation questions."
-    }
+    {"item": "PR #91", "status": "blocked_on_freshness", "reason": "C PASS applies to fb88953e378f50ee2b45c8e3612394ae8942ff75, which predates current main after PR #99 integration."},
+    {"item": "PR #89", "status": "blocked_pending_c_verdict", "reason": "Tier-2 integration requires independent exact-head C verdict after higher-value #91."},
+    {"item": "PR #105", "status": "deferred", "reason": "Potentially useful P07 persistence/cost signal, but lower marginal portfolio value than clearing cross-domain verifier/integration bottlenecks."},
+    {"item": "PRs #94 and #95", "status": "deferred", "reason": "Current marginal decision value remains below verifier opportunity cost."},
+    {"item": "PR #70 P15 SPAR baseline verification", "status": "deprioritized", "reason": "Low marginal decision delta relative to current intervention and allocation questions."}
   ],
   "controller_rules": [
     "D may reallocate ordinary work through this file without changing scheduler cadence or agent permissions.",
