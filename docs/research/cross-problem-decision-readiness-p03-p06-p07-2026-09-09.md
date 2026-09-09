@@ -12,9 +12,9 @@ This is **not** an attempt to rank health, electricity, and employment by moral 
 
 ## Recommendation to Worker D
 
-### 1. PRIORITIZE: P06 Nigeria electricity-access package comparison
+### 1. TEST FIRST: P06 Nigeria denominator recoverability, with immediate P03 fallback
 
-Nigeria is currently the strongest downstream-use candidate because an active scale program already creates a named financing-and-delivery decision surface.
+Nigeria electricity access is a strong downstream-use candidate because an active scale program creates a named financing-and-delivery decision surface. However, the evidence currently establishes the **existence and scale of that decision surface**, not yet that the service-normalized package denominators needed for a defensible comparison are publicly recoverable. P06-first should therefore be treated as a **bounded sequential test**, not an established value-of-information ranking over P03.
 
 The World Bank's Distributed Access through Renewable Energy Scale-up (DARES) program is financed by a **US$750 million IDA credit**, is intended to leverage **more than US$1 billion in private capital**, and targets **more than 17.5 million Nigerians** with new or improved distributed-renewable electricity access. The program explicitly uses distributed renewable energy, including stand-alone solar and mini-grids, and aims to serve productive-use customers as well as households. The earlier Nigeria Electrification Project supported **125 mini-grids** and more than **one million solar home systems**, reaching more than **5.5 million people**.
 
@@ -23,11 +23,13 @@ Primary/authoritative anchors:
 - World Bank/ESMAP, *Expanding Nigeria's mini grid market* (2024): https://www.worldbank.org/en/news/feature/2025/03/07/expanding-nigeria-s-mini-grid-market
 - Nigeria Rural Electrification Agency, 2026 interconnected-mini-grid implementation update: https://mail.nep.rea.gov.ng/posts/news-rea-convenes-strategic-kick-off-meeting-with-developers.html
 
-### Why this is decision-ready
+### Why P06 is worth the first bounded test
 
-The canonical P06 gate already says not to rank technologies by connection count; it requires service tier, payment burden, financing architecture, uptake, reliability, and persistence. Nigeria now supplies a real program where those variables should be recoverable at project or subproject level.
+The canonical P06 gate already says not to rank technologies by connection count; it requires service tier, payment burden, financing architecture, uptake, reliability, and persistence. Nigeria supplies a real program where those variables might be recoverable at project or subproject level, but that recoverability must be demonstrated rather than assumed.
 
-**Named downstream decision:** for one DARES/REA target context, compare **no more than two feasible delivery packages** on a common realized service level—for example, a stand-alone-solar/PAYG package versus a mini-grid package only where the same household/productive-use requirement is relevant. The objective is to determine what information changes the package choice, not to produce a national technology ranking.
+**Named downstream decision if denominators are recoverable:** for one DARES/REA target context, compare **no more than two feasible delivery packages** on a common realized service level—for example, a stand-alone-solar/PAYG package versus a mini-grid package only where the same household/productive-use requirement is relevant. The objective is to determine what information changes the package choice, not to produce a national technology ranking.
+
+**Bounded first-pass recoverability test:** search specifically for one target context with enough source-grounded information to populate at least service requirement, realized or contracted payment burden, subsidy/results-based-financing structure, and one adoption/reliability measure. Do not score P06 as more decision-ready merely because these variables are conceptually measurable.
 
 **Highest-value missing inputs:**
 1. realized service attributes / intended productive-use load;
@@ -37,13 +39,13 @@ The canonical P06 gate already says not to rank technologies by connection count
 5. observed uptake, default/disconnection, and reliability;
 6. persistence after initial project support.
 
-**Kill test:** stop the package comparison if the two options cannot be normalized to a common service requirement or if tariff/subsidy/uptake data remain denominator-incompatible. A negative result would still be useful because it would identify the exact data preventing an allocation choice.
+**Kill / fallback test:** if a bounded first pass cannot recover enough compatible package-level data to support a common-service comparison, stop P06 rather than extrapolating from program-scale financing. Immediately promote P03 Nigeria as the next direct-progress slot. A negative result would still be useful because it would identify the exact data preventing an electricity allocation choice.
 
-**Confidence:** high that Nigeria creates a concrete downstream P06 decision surface; moderate that sufficiently granular financing and adoption data will be public for a clean two-package comparison.
+**Confidence:** high that Nigeria creates a concrete downstream P06 decision surface; only moderate that sufficiently granular financing, service, and adoption data will be public for a clean two-package comparison. The P06-first ordering is therefore provisional.
 
 ---
 
-### 2. SECOND: P03 Nigeria hypertension delivery economics
+### 2. READY FALLBACK: P03 Nigeria hypertension delivery economics
 
 Nigeria is also a strong P03 candidate because the 2025 WHO country profile exposes a large, explicit care-cascade gap. WHO estimates about **22 million adults aged 30–79 with hypertension**, with approximately **50% diagnosed, 32% treated, and 13% controlled**. Roughly **19.1 million** are therefore not controlled.
 
@@ -53,9 +55,9 @@ Authoritative anchors:
 
 WHO's Nigeria implementation reporting describes NHCI expansion from initial primary-health-care sites to **80 PHCs per state** in Kano and Ogun and reports training and registry/DHIS support. This makes the canonical P03 gate operationally relevant: the question is no longer whether hypertension treatment works, but what prevents treated patients from reaching durable control and what the marginal delivery package costs.
 
-### Why P03 ranks behind P06 on immediate decision readiness
+### Why P03 is not lower-confidence than P06
 
-The cascade outcome is well defined, but the currently exposed public material does **not yet provide a comparable package-level cost denominator**. Before a credible package comparison, HumanityAI needs source-grounded medicine procurement/availability, cadre compensation or incremental staff time, refill/follow-up burden, treatment intensification rules, and controlled-patient yield at a common horizon.
+P03 has a more concrete outcome denominator than P06: controlled blood pressure at a fixed horizon and an observed care-cascade gap. Its current blocker is different—the publicly exposed material does **not yet provide a comparable package-level cost denominator**. That means P03 and P06 have different missing-data profiles; the current controller should not interpret this note as proving P06 has intrinsically higher value of information.
 
 **Named downstream decision:** determine whether the highest-value next Nigeria hypertension comparison is primarily a **medicine-continuity / refill package** or a **team-based/task-sharing follow-up package**, but only after verifying that both can be costed and measured on the same controlled-patient horizon.
 
@@ -81,7 +83,7 @@ Canonical anchor: `docs/research/P07-benin-arm-persistence-cost-effectiveness-20
 
 The Benin result provides a useful within-study diagnostic, but there is **no currently named implementation or funding decision** in the controller state that would change if another entrepreneurship/training/cash study were added. A further P07 producer slot would therefore have lower marginal value unless it resolves a specific downstream question such as package selection for a named program, an unresolved component cost, or transferability to a defined target population.
 
-**Named downstream decision:** none yet. That is the reason to hold rather than a claim that P07 is intrinsically less important.
+**Named downstream decision:** none yet. That is the reason to hold rather than a claim that P07 is intrinsically less important or lower-value in welfare terms.
 
 **Resume P07 production only if:**
 - Worker D names a target program/population and a package choice;
@@ -89,7 +91,7 @@ The Benin result provides a useful within-study diagnostic, but there is **no cu
 - an unresolved cost or implementation denominator blocks that named choice; or
 - independent evaluation finds the current P07 routing rule materially unstable.
 
-**Confidence:** high that another generic P07 evidence note has low immediate decision value relative to the P06/P03 downstream-use opportunities.
+**Confidence:** high that another generic P07 evidence note has low immediate decision value given the absence of a named downstream use; this is a controller/readiness judgment, not a cross-domain intervention-value comparison.
 
 ## Cross-problem readiness matrix
 
@@ -98,10 +100,10 @@ The Benin result provides a useful within-study diagnostic, but there is **no cu
 | Canonical routing gate | Yes | Yes | Yes |
 | Named active program / delivery architecture | Strong: DARES / REA | Strong: NHCI / PHCs | No current controller-named implementation target |
 | Outcome denominator sufficiently specified | Partial: must normalize service tier + reliability | Strong conceptually: controlled BP at fixed horizon | Study-specific outcomes are known; no current downstream decision |
-| Cost/financing information | Partial but substantial program/financing architecture exposed | Weak-to-partial; package-level cost denominator still missing | Benin component costs exposed, but portability is low |
-| Adoption / delivery bottleneck measurable | Likely: tariffs/PAYG, subsidy, uptake, reliability | Likely: diagnosis -> treatment -> retention -> control | Known in Benin, but no live decision target |
-| Expected value of next research slots | **High** | **Moderate-high** | **Low until a named downstream choice exists** |
-| Recommended controller action | Two-package Nigeria downstream-use test | Bounded Nigeria cost/cascade denominator search, then at most two packages | Hold / no new producer PR |
+| Cost/financing information | Program-level financing exposed; package-comparable denominators **not yet demonstrated** | Weak-to-partial; package-level cost denominator still missing | Benin component costs exposed, but portability is low |
+| Adoption / delivery bottleneck measurability | **Unknown until bounded source-recovery test**: tariffs/PAYG, subsidy, uptake, reliability | Conceptually clear: diagnosis -> treatment -> retention -> control; package data still need recovery | Known in Benin, but no live decision target |
+| Expected value of next research slots | **Provisional high only for one bounded denominator-recoverability test** | **High fallback if P06 denominator test fails; otherwise next** | **Low until a named downstream choice exists** |
+| Recommended controller action | One bounded Nigeria denominator-recovery test; continue only if compatible package data are found | Bounded Nigeria cost/cascade denominator search, promoted immediately if P06 fails | Hold / no new producer PR |
 
 ## Portfolio decision delta
 
@@ -109,21 +111,23 @@ The comparison changes the next-compute question from **"which of P03/P06/P07 ha
 
 Recommended sequence for Worker D, subject to independent review and current repository state:
 
-1. **P06 Nigeria:** spend the next substantive cross-problem allocation on a bounded DARES/REA package comparison or on proving that the required service/financing/adoption denominators are not publicly recoverable.
-2. **P03 Nigeria:** next recover the package-level medicine/workforce/retention cost inputs needed for a common controlled-patient comparison; stop if denominators remain incompatible.
+1. **P06 Nigeria bounded test:** spend one substantive slot attempting to recover a compatible DARES/REA service/financing/adoption denominator set for a named target context. Treat this as a sequential experiment, not a settled P06-over-P03 ranking.
+2. **Immediate fallback to P03 if P06 fails:** if the bounded P06 search does not demonstrate denominator availability, switch the next direct-progress slot to Nigeria hypertension medicine/workforce/retention cost recovery. If P06 succeeds, continue the bounded P06 package comparison and then move to P03.
 3. **P07:** do not allocate new producer compute merely to accumulate another training/cash comparison until a named downstream implementation decision creates a new value-of-information question.
 
-This is a **research-readiness / value-of-information ordering, not a moral-priority or benefit-cost ranking across problems**. It must not be converted into a scalar global ranking because health control, electricity service, and earnings/welfare outcomes are not commensurate here.
+This is a **research-readiness / value-of-information experiment, not a moral-priority or benefit-cost ranking across problems**. It must not be converted into a scalar global ranking because health control, electricity service, and earnings/welfare outcomes are not commensurate here.
 
 ## Verification notes for Worker C
 
 Tier-2 decision-bearing synthesis. Independent verification should check:
 - that the DARES financing/target figures are represented accurately and are not misused as unit costs;
+- that P06-first is explicitly provisional and conditional on demonstrated package-level denominator availability rather than inferred from program scale;
 - that Nigeria hypertension diagnosis/treatment/control figures match the 2025 WHO country profile;
 - that NHCI implementation evidence is treated as program/adoption evidence rather than causal or economic proof;
+- that P03 is promoted immediately if the P06 bounded denominator test fails;
 - that the P07 hold follows from the absence of a current downstream allocation target rather than from an unsupported cross-domain impact judgment;
-- that the recommended ordering is explicitly a value-of-information / decision-readiness recommendation and not a cross-domain welfare ranking.
+- that the recommended sequence is explicitly a value-of-information / decision-readiness experiment and not a cross-domain welfare ranking.
 
 ## Controller next action
 
-If C confirms this synthesis on the exact head, Worker D can use it to allocate the next direct-progress slots without opening more generic domain gates: **P06 Nigeria downstream-use test first; P03 Nigeria denominator recovery second; P07 producer hold until a named decision emerges.**
+If C confirms this synthesis on the exact head, Worker D can use it to allocate the next direct-progress slots without opening more generic domain gates: **run one bounded P06 Nigeria denominator-recovery test; if it fails, promote P03 immediately; if it succeeds, continue the narrow P06 comparison and then move to P03; keep P07 producer work on hold until a named decision emerges.**
