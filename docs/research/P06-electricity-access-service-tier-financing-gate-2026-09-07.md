@@ -25,7 +25,7 @@ https://www.iea.org/reports/tracking-sdg7-the-energy-progress-report-2026
 
 ### 2. Off-grid solar has large least-cost reach, but household affordability is a binding adoption constraint
 
-The World Bank/ESMAP 2024 *Off-Grid Solar Market Trends Report* estimates that off-grid solar would be the least-cost route for roughly **398 million people (41% of the approximately 1.03 billion people who need to be electrified between 2024 and 2030 to achieve universal access, accounting for population growth)**. This is not the denominator of people projected to remain unelectrified in 2030 under the current trajectory. The report also estimates that realizing this off-grid-solar potential requires roughly **$21 billion** of investment.
+The World Bank/ESMAP 2024 *Off-Grid Solar Market Trends Report* estimates that off-grid solar would be the least-cost route for roughly **398 million people (41% of 969 million people who need to be electrified between 2024 and 2030 to achieve universal access, accounting for population growth)**. This is not the denominator of people projected to remain unelectrified in 2030 under the current trajectory. The report also estimates that realizing this off-grid-solar potential requires roughly **$21 billion** of investment.
 
 However, the same report finds that only **22% of households without electricity can afford a Tier 1 solar energy kit on PAYG** when affordability is defined as spending no more than 5% of household income. Another 27% could afford it only “at a stretch” using a 10% threshold. For Tier 2 PAYG products, only **1%** of households are classified as able to afford them under the 5% threshold.
 
@@ -93,7 +93,7 @@ That change should redirect multiple future slots away from generic effectivenes
 ## Uncertainty and limitations
 
 - The ESMAP affordability estimates are modeled global estimates and depend on income data, product prices, PAYG terms, and the chosen 5%/10% affordability thresholds.
-- The ESMAP 398 million / 41% figure uses the population requiring electrification between 2024 and 2030 to achieve universal access, including population growth; it must not be conflated with the separate current-trajectory projection for how many people would still lack access in 2030.
+- The ESMAP 398 million / 41% figure is anchored to the official report PDF/chart denominator of 969 million people requiring electrification between 2024 and 2030 to achieve universal access, including population growth. A companion web chapter contains an inconsistent 1.03 billion prose denominator; the percentage should therefore be interpreted against the report denominator and must not be conflated with the separate current-trajectory projection for how many people would still lack access in 2030.
 - The IEA financing results are scenario/model outputs for Africa, not causal estimates of what every subsidy or cheaper-capital program will achieve in practice.
 - The $21 billion OGS investment requirement is a sector-level modeled requirement, not a portable unit cost and should not be divided into a universal cost-per-person estimate.
 - Service tiers capture multidimensional realized electricity service and should not be inferred solely from grid, mini-grid, or SHS labels; they also do not fully represent productive-use value or household welfare.
