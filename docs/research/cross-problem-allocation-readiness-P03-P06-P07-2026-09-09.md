@@ -12,15 +12,17 @@ This is **not** a claim that hypertension, electricity access, and youth employm
 
 ## Recommendation
 
-Allocate the next three domain-specific producer slots as follows, unless Worker D has a newer downstream decision that changes the opportunity cost:
+Allocate the next three domain-specific producer opportunities as follows, unless Worker D has a newer downstream decision that changes the opportunity cost:
 
-1. **P03 — two slots, conditionally.** Use the first to identify one high-burden country/system with public hypertension cascade, medicine/procurement, workforce, follow-up, and control data. Use the second only if at least two delivery packages can be compared on a common control definition and horizon with credible cost and retention inputs.
-2. **P06 — one slot, as a denominator-recovery / value-of-information test.** Select one high-deficit country with a public least-cost electrification plan and test whether two pathways can actually be normalized to a common realized service tier, household payment burden, subsidy/financing architecture, reliability, uptake, and persistence. If those common denominators cannot be recovered, stop instead of building a synthetic ranking.
-3. **P07 — zero new producer slots for now.** Preserve the Benin result as a bounded package-design diagnostic. Reopen P07 production only when Worker D can name a concrete target population and package allocation that requires a second comparable study, verified combined-arm cost, or other specific missing decision input.
+1. **P03 — one denominator-feasibility screen.** Identify one high-burden country/system with public hypertension cascade, medicine/procurement, workforce, follow-up, control, and economic data. This first slot tests whether at least two delivery packages can actually be compared on a common outcome definition, horizon, cost perspective, and retention/control denominator.
+2. **P06 — one denominator-recovery / value-of-information screen.** Select one high-deficit country with a public least-cost electrification plan and test whether two pathways can actually be normalized to a common realized service tier, household payment burden, subsidy/financing architecture, reliability, uptake, and persistence. If those common denominators cannot be recovered, stop instead of building a synthetic ranking.
+3. **One slot — hold uncommitted.** Release it to a second P03 package-comparison slot only if the first P03 screen demonstrates two genuinely commensurable packages on common outcome, horizon, cost perspective, and retention/control definitions. Otherwise reallocate it to the highest-value live queue item. Do not automatically spend it on P07.
+
+**P07 receives zero new producer slots for now** unless Worker D can name a concrete target population and package allocation that requires a second comparable study, verified combined-arm cost, or other specific missing decision input.
 
 This is a **research-allocation recommendation**, not a real-world spending recommendation.
 
-## Why P03 currently has the highest marginal decision readiness
+## Why P03 currently has the highest marginal decision readiness for the first screen
 
 The canonical P03 gate says the central uncertainty is no longer whether antihypertensive treatment can work. The useful unit is a delivery package that repeatedly detects, initiates, titrates, supplies, follows, and retains patients until blood pressure is controlled.
 
@@ -31,22 +33,28 @@ Current decision inputs already identify:
 - **Effectiveness anchor:** a 2024 LMIC meta-analysis found community-based strategies increased blood-pressure control overall, while the canonical note explicitly treats the pooled effect as heterogeneous rather than portable.
 - **Cost state:** economic evidence for non-physician delivery is directionally promising but too heterogeneous for a portable global cost-per-controlled-patient estimate.
 
-That combination creates a relatively clean next research test: **can one country-level system expose two feasible delivery packages with comparable controlled-patient yield, retention, and cost inputs?** If yes, a second P03 slot can produce a bounded decision comparison. If no, the line should stop after bottleneck diagnosis.
+That combination creates a relatively clean **feasibility** test: can one country-level system expose two feasible delivery packages with comparable controlled-patient yield, retention, and cost inputs? Only if that screen passes should a second P03 slot produce a bounded package comparison.
+
+### Concrete false-comparison trap in Bangladesh
+
+Existing Bangladesh HEARTS and COBRA-BPS economics must **not** be treated as presently commensurable package alternatives merely because both concern hypertension in Bangladesh. The HEARTS costing work models scale-up of one protocol-based implementation and reports program inputs such as medicines, diagnostics, and provider time. COBRA-BPS evaluates a different multicomponent community-health-worker package in a rural CHW-covered population and uses a different economic perspective/model and DALY-based outcome construction. Those differences in population, intervention bundle, costing perspective, denominator, and outcome horizon are large enough that mechanically comparing their headline economic estimates would create a false package ranking.
+
+The first P03 slot should therefore be a denominator-recovery screen, not an assumed head-to-head comparison. A second slot is earned only if common definitions and comparable cost/outcome construction can be recovered from one target system or from genuinely compatible implementation variants.
 
 ### P03 value-of-information test
 
-Proceed to a second P03 slot only if the first slot can recover all of the following for one target system:
+Release the held third slot to P03 only if the first P03 screen can recover all of the following for one target system:
 
 1. a common blood-pressure control definition and outcome horizon;
 2. medicine availability/procurement or patient price information;
-3. delivery-cadre cost or compensation information;
+3. delivery-cadre cost or compensation information on a compatible cost perspective;
 4. follow-up/retention information;
 5. treatment-intensification or protocol information; and
-6. at least two realistically available delivery packages or implementation variants.
+6. at least two realistically available delivery packages or implementation variants measured compatibly enough for comparison.
 
-**Kill condition:** if those inputs cannot be put on a common denominator, do not create a cross-package cost-effectiveness scalar.
+**Kill condition:** if those inputs cannot be put on a common denominator and cost perspective, do not create a cross-package cost-effectiveness scalar and do not pre-allocate a second P03 slot.
 
-**Confidence:** moderate-high that P03 has the best near-term path to a decision-ready country comparison; moderate on whether public cost and retention data will be complete enough.
+**Confidence:** moderate-high that P03 has the best near-term path for the **first denominator-feasibility screen**; moderate and explicitly conditional that it will earn a second slot.
 
 ## Why P06 deserves one targeted slot but not a broad comparison campaign
 
@@ -90,7 +98,7 @@ Current decision inputs include:
 - **Adoption/implementation:** very high training take-up, decentralized delivery, coaching/home visits, transport/meals/childcare accommodations, and gender-relevant implementation details.
 - **Portability:** low. The result is explicitly a study-specific package diagnostic, not evidence that training dominates grants globally.
 
-The remaining uncertainty is therefore not “collect more P07 evidence” in the abstract. It is **which concrete package allocation needs another comparator?** Until that downstream decision exists, another P07 producer slot has lower marginal value than converting P03/P06 gates into country-level decisions.
+The remaining uncertainty is therefore not “collect more P07 evidence” in the abstract. It is **which concrete package allocation needs another comparator?** Until that downstream decision exists, another P07 producer slot has lower marginal value than the P03/P06 feasibility screens.
 
 ### P07 reopen test
 
@@ -110,19 +118,20 @@ Reopen production only if Worker D can name at least one of:
 | Dimension | P03 hypertension | P06 electricity access | P07 youth self-employment |
 | --- | --- | --- | --- |
 | Current useful outcome denominator | Controlled patient at defined threshold/horizon | User reaching defined realized service tier, ideally with reliability/persistence | Long-horizon earnings/business outcomes, with welfare/jobs separated |
-| Cost readiness | Moderate: country-specific medicine/workforce/retention costs still needed | Moderate-low for comparison: financing estimates exist, but pathway costs require service normalization | Moderate-high within Benin: component costs explicit; combined-arm cost unresolved |
-| Adoption/implementation readiness | High conceptual readiness; country data still needed | High conceptual readiness; tariff, uptake, default, reliability often incomplete | High within study; low portability |
+| Cost readiness | Moderate: country-specific compatible medicine/workforce/retention costs still need denominator recovery | Moderate-low for comparison: financing estimates exist, but pathway costs require service normalization | Moderate-high within Benin: component costs explicit; combined-arm cost unresolved |
+| Adoption/implementation readiness | High conceptual readiness; package commensurability still unproven | High conceptual readiness; tariff, uptake, default, reliability often incomplete | High within study; low portability |
 | Evidence maturity | Clinical efficacy mature; delivery bottleneck is central | Access efficacy established, downstream welfare mixed | Strong bounded within-study diagnostic, weak cross-context portability |
-| Primary unresolved decision input | Common country-level delivery-package denominator | Common service-tier + payment/financing denominator | A named downstream package choice requiring another comparator |
-| Marginal producer value now | **High if first country screen passes** | **Moderate as a one-slot denominator test** | **Low absent downstream decision** |
+| Primary unresolved decision input | Whether two country-level delivery packages are actually commensurable | Common service-tier + payment/financing denominator | A named downstream package choice requiring another comparator |
+| Marginal producer value now | **Highest for one feasibility screen; second slot conditional** | **Moderate as one denominator test** | **Low absent downstream decision** |
 
 ## Allocation rule for Worker D
 
 For the next small block of cross-problem producer compute, prefer **decision readiness over domain breadth**:
 
-- Give P03 the first opportunity to graduate from a routing gate to a country-level package comparison.
+- Give P03 one denominator-feasibility screen.
 - Give P06 one bounded attempt to recover comparable service/adoption denominators; treat a well-documented stop result as useful.
-- Hold P07 until a named package decision creates a specific information demand.
+- Hold the third slot uncommitted until one of those screens earns it; release it to P03 only if the first P03 screen demonstrates genuinely comparable packages on common outcome, horizon, cost perspective, and retention/control definitions.
+- Keep P07 paused until a named package decision creates a specific information demand.
 
 Do not turn this ordering into a permanent domain priority. Recompute it when new canonical evidence, controller objectives, or downstream decisions change the marginal value.
 
@@ -130,9 +139,11 @@ Do not turn this ordering into a permanent domain priority. Recompute it when ne
 
 Before this synthesis, P03, P06, and P07 each had a valid routing gate but no shared rule for deciding where the next producer slots should go. This note converts those gates into a falsifiable near-term allocation:
 
-**2 conditional P03 slots / 1 bounded P06 slot / 0 P07 producer slots**, with explicit kill tests for each line.
+**1 P03 denominator-feasibility screen / 1 P06 denominator-recovery screen / 1 held slot**, with P07 at zero unless a named downstream package decision appears.
 
-The expected gain is not more artifacts; it is a higher probability that the next research block yields one actual country/package comparison and fewer incomparable scalar rankings.
+The held slot is released to P03 only if its first screen demonstrates two comparable packages on common outcome, horizon, cost perspective, and retention/control definitions. Otherwise Worker D reallocates it to the highest-value live queue item.
+
+The expected gain is not more artifacts; it is a higher probability that the next research block yields an actual decision-ready comparison and fewer incomparable scalar rankings.
 
 ## Sources already canonical in HumanityAI
 
@@ -141,5 +152,7 @@ This synthesis introduces no new external factual evidence. It relies on the ind
 - `docs/research/P03-hypertension-delivery-bottleneck-gate-2026-09-07.md`
 - `docs/research/P06-electricity-access-service-tier-financing-gate-2026-09-07.md`
 - `docs/research/P07-benin-arm-persistence-cost-effectiveness-2026-09-08.md`
+
+Worker C's independent challenge additionally checked Bangladesh HEARTS costing (PMID 35760540), COBRA-BPS Bangladesh (PMID 33751956), and World Bank Nigeria DARES documentation specifically to test whether the proposed next-step denominators are actually comparable. This revision incorporates C's qualification rather than treating those sources as new canonical package rankings.
 
 Underlying source limitations, dates, and provenance remain those recorded in the canonical notes. This cross-problem product changes **compute allocation**, not the confidence assigned to the underlying empirical claims.
