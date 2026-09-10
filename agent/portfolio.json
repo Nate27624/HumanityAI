@@ -1,68 +1,18 @@
 {
-  "schema_version": "1.1",
-  "updated_at": "2026-09-10T14:02:00Z",
-  "planning_horizon_hours": 6,
-  "controller_role": "worker_d",
-  "mission_focus": "Finish before start; hold replacement Tier-2 production until mandatory design-history checkpoint is canonical.",
-  "coherence_gate": {
-    "canonical_main_checked": "219030361bd89fa7464eaf6f51ed3cd3663a7e69",
-    "live_pr_state_checked_at": "2026-09-10T14:02:00Z",
-    "result": "coherent_production_held",
-    "production_hold": true,
-    "reason": "PR #94 integrated after exact-head CI and independent C PASS. No active Tier-2 candidate remains. Mandatory audit-directed flow/coherence design-history checkpoint remains overdue, so no replacement Tier-2 production may be allocated."
-  },
-  "decision_questions": [
-    "What did the audit-directed coherence/WIP remediation change operationally, and is it reducing stale/duplicate work and integration aging?",
-    "After that checkpoint is canonical, which single next producer slot has highest expected decision delta?"
-  ],
-  "ranked_workstreams": [
-    {"rank": 1, "workstream": "Record overdue flow/coherence design checkpoint", "reason": "Mandatory prerequisite before new Tier-2 production."},
-    {"rank": 2, "workstream": "Read-only synthesis/resource mapping", "reason": "Useful spare capacity without creating verifier/integrator WIP."},
-    {"rank": 3, "workstream": "Prune deferred queue", "reason": "PR #95 and #70 remain deferred and should consume no C capacity absent a concrete downstream decision."}
-  ],
-  "wip": {
-    "limit": 2,
-    "active_tier2": [],
-    "deferred_not_active": ["PR #95", "PR #70"],
-    "new_tier2_production_allowed": false,
-    "release_rule": "No new Tier-2 production until agent/design_history.json contains the overdue audit-directed flow/coherence checkpoint and D performs another live-state coherence check."
-  },
-  "allocations": {
-    "operator_a": {"mode":"read_only_no_new_tier2","decision_question":"Which existing integrated evidence has the highest-value unresolved denominator or adoption constraint?","why_now":"WIP is empty but mandatory design-history checkpoint blocks replacement production.","expected_decision_delta":"Improve next-slot selection without adding C/D WIP.","scope_boundary":"Read-only synthesis/resource mapping only.","required_output":"No canonical Tier-2 candidate until D releases hold.","stop_kill_condition":"Stop if work becomes a generic brief or duplicates integrated evidence.","downstream_decision":"Selection of next single direct-progress slot."},
-    "operator_b": {"mode":"read_only_no_new_tier2","decision_question":"Which neglected cross-domain question has high VOI without requiring a new decision-product PR?","why_now":"#94 is integrated and replacement production is checkpoint-blocked.","expected_decision_delta":"Preserve bounded exploration while avoiding queue growth.","scope_boundary":"Read-only exploration/synthesis only.","required_output":"No new Tier-2 PR.","stop_kill_condition":"Stop before producing a new domain gate or generic brief.","downstream_decision":"Candidate exploration slot after hold release."},
-    "verifier_c": {"mode":"independent_idle_or_read_only","priority_order":[],"objective":"No active Tier-2 verification target; preserve independence and avoid spending capacity on deferred low-VOI PRs.","avoid":["PR #95","PR #70","desired_verdict_targeting"]}
-  },
-  "c_verification_queue": [
-    {"item":"PR #95","status":"deferred_not_wip"},
-    {"item":"PR #70","status":"deprioritized_not_wip"}
-  ],
-  "portfolio_guidance": {
-    "more":["finish_before_start","decision_consequence_and_aging","resource_mapping","value_of_information","read_only_synthesis_when_wip_held"],
-    "less":["controller_bookkeeping","freshness_rework","generic_briefs","same_publisher_reproduction"],
-    "stop":["new_tier2_before_design_checkpoint","duplicate_producer_prs","obsolete_assignments","scalar_rankings_without_common_denominators"],
-    "start":["design_history_checkpoint","post_integration_coherence_check","explicit_delegation_contracts"]
-  },
-  "recent_decision_deltas": [
-    {"at":"2026-09-10T13:58:42Z","source":"D integration of PR #94","delta":"Integrated independently verified Zambia-specific no-default-extra-CPD gate; substitute allocation remains unresolved pending controllable exposure decomposition and common cost/outcome evidence."},
-    {"at":"2026-09-10T14:02:00Z","source":"post-integration coherence check","delta":"Removed #94 from active work; Tier-2 WIP is zero; replacement production remains held by mandatory design-history checkpoint."}
-  ],
-  "stale_or_blocked": [
-    {"item":"new Tier-2 production","status":"held","reason":"Mandatory audit-directed design-history checkpoint remains overdue."},
-    {"item":"design-history checkpoint","status":"required_before_new_Tier2","reason":"Audit #111 plus human-approved coherence/WIP remediation materially changed management process and is not yet recorded in agent/design_history.json."},
-    {"item":"PR #95","status":"deferred","reason":"No concrete allocation currently justifies verifier opportunity cost."},
-    {"item":"PR #70","status":"deprioritized","reason":"Low marginal decision consequence."}
-  ],
-  "flow_metrics": {
-    "aging_rule":"Unexplained producer-ready -> C verdict -> integration/closure aging across more than 2 healthy D cycles triggers queue action.",
-    "toil_rule":"If recovery/toil dominates roughly half of recent capacity across 3 controller windows, simplify or hold new work.",
-    "process_error_budget":"Repeated destructive, stale, or duplicate failures trigger simplification."
-  },
-  "controller_rules": [
-    "Human/constitutional policy remains highest authority; this file grants no authority.",
-    "D allocates ordinary work without changing scheduler cadence or agent permissions.",
-    "C conclusions and Audit assurance remain independent.",
-    "Tier-2 requires exact-head CI plus current independent C verdict before D integration.",
-    "After every Tier-2 integration/closure, D performs a post-integration coherence check before replacement production.",
-    "Avoid nonessential main mutations between final fresh CI/C PASS and integration."
-  ]
+  "schema_version":"1.1",
+  "updated_at":"2026-09-10T20:00:00Z",
+  "planning_horizon_hours":6,
+  "controller_role":"worker_d",
+  "mission_focus":"Finish existing decision-bearing work before starting replacement Tier-2 production; use verifier capacity on the highest-VOI existing candidate.",
+  "coherence_gate":{"canonical_main_checked":"568b140d301da06d5dff96317a66417b1e3585ed","live_pr_state_checked_at":"2026-09-10T20:00:00Z","result":"coherent_existing_wip_only","production_hold":true,"reason":"DH0003 is now canonical, removing the obsolete checkpoint blocker. Live open PRs are #95 and #70. No new A/B Tier-2 production is authorized while existing decision-bearing #95 can consume available C/D capacity."},
+  "decision_questions":["Does PR #95's mechanism/adoption routing materially improve P12 loneliness allocation enough to integrate?","After existing WIP is resolved, which single producer slot has highest expected decision delta?"],
+  "ranked_workstreams":[{"rank":1,"workstream":"Independent C review of PR #95","reason":"Existing Tier-2 candidate with clearer decision consequence than starting replacement work."},{"rank":2,"workstream":"Read-only cross-problem synthesis/resource mapping","reason":"Preserves useful producer capacity without growing WIP."},{"rank":3,"workstream":"Close or continue deferring PR #70","reason":"Old baseline verification has low marginal decision consequence."}],
+  "wip":{"limit":2,"active_tier2":["PR #95"],"deferred_not_active":["PR #70"],"new_tier2_production_allowed":false,"release_rule":"Resolve or explicitly close/defer active #95, then perform post-integration/closure coherence check before any replacement Tier-2 assignment."},
+  "allocations":{"operator_a":{"mode":"read_only_no_new_tier2","decision_question":"Which integrated intervention has the highest-value unresolved cost/adoption denominator?","why_now":"Existing #95 should finish before replacement production.","expected_decision_delta":"Improve next direct-progress selection without queue growth.","scope_boundary":"Read-only synthesis/resource mapping.","required_output":"No new Tier-2 PR.","stop_kill_condition":"Stop if generic or duplicative.","downstream_decision":"Next A assignment after WIP release."},"operator_b":{"mode":"read_only_no_new_tier2","decision_question":"What cross-domain evidence would most change the next allocation after #95?","why_now":"B already has #95 awaiting verification.","expected_decision_delta":"Preserve exploration without stacking candidates.","scope_boundary":"Read-only exploration only.","required_output":"No new Tier-2 PR.","stop_kill_condition":"Stop before another domain gate.","downstream_decision":"Next exploration assignment after #95 resolution."},"verifier_c":{"mode":"independent_verify","priority_order":["PR #95"],"objective":"Independently assess decision-bearing claims and routing logic; no desired verdict.","avoid":["PR #70 unless a concrete downstream decision raises its VOI","desired_verdict_targeting"]}},
+  "c_verification_queue":[{"item":"PR #95","status":"active_priority"},{"item":"PR #70","status":"deprioritized_not_wip"}],
+  "portfolio_guidance":{"more":["finish_before_start","decision_consequence","independent_verification","resource_mapping","value_of_information"],"less":["controller_bookkeeping","freshness_rework","generic_briefs","same_publisher_reproduction"],"stop":["new_tier2_while_existing_highervalue_wip","duplicate_producer_prs","obsolete_assignments","scalar_rankings_without_common_denominators"],"start":["evaluate_DH0003_flow_metrics_after_more_cycles"]},
+  "recent_decision_deltas":[{"at":"2026-09-10T18:57:08Z","source":"PR #123 / DH0003","delta":"Audit-directed coherence/WIP remediation is now durably recorded; the prior design-history blocker is resolved."},{"at":"2026-09-10T20:00:00Z","source":"D coherence reconciliation","delta":"Removed obsolete checkpoint hold rationale and activated existing PR #95 as the sole Tier-2 verification target instead of authorizing replacement production."}],
+  "stale_or_blocked":[{"item":"new Tier-2 production","status":"held_finish_existing","reason":"PR #95 is active and should finish before replacement work."},{"item":"PR #70","status":"deprioritized","reason":"Low marginal decision consequence absent a concrete downstream use."},{"item":"GitLab mirror","status":"recovery_required","reason":"Latest mirror provenance is explicitly incomplete and stale relative to canonical GitHub main; exact-content repair remains outstanding."}],
+  "flow_metrics":{"aging_rule":"Unexplained producer-ready -> C verdict -> integration/closure aging across more than 2 healthy D cycles triggers queue action.","toil_rule":"If recovery/toil dominates roughly half of recent capacity across 3 controller windows, simplify or hold new work.","process_error_budget":"Repeated destructive, stale, or duplicate failures trigger simplification."},
+  "controller_rules":["Human/constitutional policy remains highest authority; this file grants no authority.","D allocates ordinary work without changing scheduler cadence or agent permissions.","C conclusions and Audit assurance remain independent.","Tier-2 requires exact-head CI plus current independent C verdict before D integration.","After every Tier-2 integration/closure, D performs a post-integration coherence check before replacement production.","Avoid nonessential main mutations between final fresh CI/C PASS and integration."]
 }
