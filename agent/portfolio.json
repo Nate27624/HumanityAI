@@ -1,60 +1,96 @@
 {
-  "schema_version": "1.0",
-  "updated_at": "2026-09-09T17:58:56Z",
+  "schema_version": "1.1",
+  "updated_at": "2026-09-10T01:00:00Z",
   "planning_horizon_hours": 6,
   "controller_role": "worker_d",
-  "mission_focus": "Convert evidence into decisions about which interventions, questions, and capabilities deserve the next units of HumanityAI compute.",
+  "mission_focus": "Finish decision-bearing work before starting more; convert evidence into decisions while keeping Tier-2 WIP within verifier/integrator capacity.",
+  "coherence_gate": {
+    "canonical_main_checked": "694e6196f967b23f2e12f9fdef36ab650f5f4642",
+    "live_pr_state_checked_at": "2026-09-10T01:00:00Z",
+    "result": "reconciliation_required",
+    "production_hold": true,
+    "reason": "Prior portfolio predated integrated PR #116 and did not include new Tier-2 PR #117. New Tier-2 production remains held until this reconciliation is canonical and post-change coherence is rechecked."
+  },
   "decision_questions": [
-    "What concrete downstream allocation decision should use the now-canonical P03 hypertension, P06 electricity-access, and P07 ALMP routing gates?",
-    "Does PR #94's Zambia incremental-package question have enough marginal decision value to justify C verification now that higher-priority gates are integrated?",
-    "Should PR #95 remain deferred until a target population, adoption funnel, and measurable economic or wellbeing decision are specified?",
-    "Which cross-problem comparison or resource-allocation product would convert the recent gate integrations into an actual portfolio ranking?"
+    "Does PR #117 establish that Nigeria lacks a currently commensurable two-package hypertension comparison and therefore block release of the held second P03 slot?",
+    "Does PR #94 change a concrete Zambia incremental-package allocation enough to justify integration after independent verification?",
+    "After #117/#94 resolve, which single next producer slot has the highest expected decision delta under the cross-problem synthesis integrated in #116?"
   ],
   "ranked_workstreams": [
-    {"rank": 1, "workstream": "Cross-problem decision synthesis", "reason": "P03, P06, and bounded P07 evidence are now canonical; marginal value is higher from comparing actionable bottlenecks, costs, adoption constraints, and value of information than from opening another domain brief."},
-    {"rank": 2, "workstream": "Evaluate Zambia incremental-package allocation", "reason": "PR #94 asks a concrete marginal-package question and is the strongest remaining candidate for independent verification if it can change allocation between standard Catch Up, added CPD, and exposure/fidelity support."},
-    {"rank": 3, "workstream": "Resource mapping and measurable downstream use", "reason": "Recent gates need country/program-specific costs, implementers, adoption constraints, and outcome denominators before they can change real allocations."},
-    {"rank": 4, "workstream": "Prune low-marginal open work", "reason": "PR #95 and old PR #70 remain below current verifier opportunity cost absent a concrete downstream decision."}
+    {"rank": 1, "workstream": "Finish active P03 denominator-feasibility screen", "reason": "PR #117 directly tests the first slot allocated by canonical synthesis #116 and determines whether a second P03 slot is released or killed."},
+    {"rank": 2, "workstream": "Resolve Zambia incremental-package gate", "reason": "PR #94 remains the strongest older concrete allocation candidate and should be finished rather than displaced by new production."},
+    {"rank": 3, "workstream": "Read-only cross-problem/resource synthesis", "reason": "Use spare producer capacity without creating another C/D integration obligation while WIP is full."}
   ],
+  "wip": {
+    "limit": 2,
+    "active_tier2": [
+      {"item": "PR #117", "producer": "A", "producer_ready_at": "2026-09-10T00:00:00Z", "stage": "awaiting_independent_C_verdict", "decision_consequence": "Controls whether the held second P03 package-comparison slot is released."},
+      {"item": "PR #94", "producer": "B", "stage": "awaiting_independent_C_verdict", "decision_consequence": "Controls whether Zambia resources should favor generic CPD or measured exposure/fidelity bottlenecks."}
+    ],
+    "deferred_not_active": ["PR #95", "PR #70"],
+    "new_tier2_production_allowed": false,
+    "release_rule": "No replacement Tier-2 production until one active item is integrated/closed and D completes a post-integration coherence check."
+  },
   "allocations": {
-    "operator_a": {"mode": "decision_synthesis", "priority": "high", "objective": "Do not open another P07 evidence product. Build a bounded cross-problem comparison or resource map using canonical P03/P06/P07 gates, with explicit costs/adoption/outcomes/uncertainty and a named allocation decision or value-of-information test.", "avoid": ["new_p07_tier2_pr", "generic_almp_review", "portable_global_cost_median", "new_scalar_modality_ranking"]},
-    "operator_b": {"mode": "downstream_use_test", "priority": "high", "objective": "Assess whether PR #94 changes a concrete Zambia package allocation; otherwise use read-only synthesis/resource mapping rather than opening another Tier-2 gate. Keep #95 deferred unless a target population and measurable adoption/economic decision are specified.", "avoid": ["another_generic_domain_gate", "verification_queue_growth", "pooled_effect_scalar_ranking", "artifact_creation_for_activity"]},
-    "verifier_c": {"mode": "independent_verification", "priority": "medium", "objective": "Verify PR #94 only if its incremental-package allocation remains decision-relevant on current head. Do not re-verify integrated P03/P06/P07 work or duplicate Benin evidence. Defer #95/#70 absent a concrete downstream use.", "avoid": ["fifo_verification", "duplicate_benin_verification", "low_stakes_fact_check", "merging", "desired_verdict_targeting"]}
+    "operator_a": {
+      "mode": "hold_new_tier2_finish_117",
+      "decision_question": "Can Nigeria support a commensurable two-package hypertension comparison now?",
+      "why_now": "Canonical #116 allocated the first P03 slot to this denominator-feasibility test.",
+      "expected_decision_delta": "Release or kill the held second P03 comparison slot.",
+      "scope_boundary": "PR #117 only; no new P03 Tier-2 artifact while WIP is full.",
+      "required_output": "Respond only to independent C findings on #117 if needed; otherwise read-only source/resource mapping.",
+      "stop_kill_condition": "If common outcome, horizon, cost perspective, retention/control denominator, and two comparable packages cannot be recovered, do not create a scalar package ranking and do not release a second P03 slot.",
+      "downstream_decision": "Whether the next domain producer slot returns to P03 or is reallocated."
+    },
+    "operator_b": {
+      "mode": "hold_new_tier2_finish_94",
+      "decision_question": "Does Zambia evidence support allocating marginal support away from generic CPD toward a measurable exposure/fidelity constraint?",
+      "why_now": "#94 is aged, concrete, and remains one of only two active Tier-2 items under the WIP limit.",
+      "expected_decision_delta": "Accept, qualify, or reject an incremental-package routing rule for Zambia.",
+      "scope_boundary": "PR #94 only; #95/#70 and new Tier-2 production remain deferred.",
+      "required_output": "Respond only to independent C findings on #94 if needed; otherwise read-only synthesis/resource mapping.",
+      "stop_kill_condition": "If the evidence cannot distinguish incremental CPD from exposure/fidelity alternatives on compatible outcomes and costs, preserve uncertainty rather than ranking packages.",
+      "downstream_decision": "Whether foundational-learning follow-up compute/resources target generic training or measurable delivery constraints."
+    },
+    "verifier_c": {
+      "mode": "independent_verification",
+      "priority_order": ["PR #117", "PR #94"],
+      "objective": "Independently verify the two active decision-bearing candidates; conclusions remain independent from D.",
+      "avoid": ["fifo_low_value_verification", "PR #95", "PR #70", "desired_verdict_targeting"]
+    }
   },
   "c_verification_queue": [
-    {"item": "PR #94 foundational-learning incremental-package gate", "status": "conditional_next", "required_next": "Verify if downstream-use test confirms it can change Zambia package allocation; otherwise defer."},
-    {"item": "PR #95 loneliness mechanism/adoption gate", "status": "deferred_low_marginal_value", "required_next": "Verify only when tied to a concrete target population, adoption funnel, and measurable allocation question."},
-    {"item": "PR #70 P15 SPAR baseline verification", "status": "deprioritized", "required_next": "Do not spend verifier capacity unless a concrete preparedness allocation depends on the versioned baseline."}
+    {"item": "PR #117", "status": "active_priority_1"},
+    {"item": "PR #94", "status": "active_priority_2"},
+    {"item": "PR #95", "status": "deferred_not_wip"},
+    {"item": "PR #70", "status": "deprioritized_not_wip"}
   ],
-  "integration_policy": {
-    "tier_1": "Routine reversible unprotected housekeeping/tooling; exact-head CI required; C review optional; D integrates.",
-    "tier_2": "Substantive evidence, prioritization, canonical registry, significant analysis/code, or decision product; exact-head CI plus current independent C-VERDICT required for A/B producer work; D integrates.",
-    "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved security/provenance compromise, or consequential external actions; human review required."
-  },
   "portfolio_guidance": {
-    "more": ["cross_problem_comparison", "resource_mapping", "cost_and_adoption_constraints", "value_of_information", "measurable_downstream_decisions", "queue_pruning"],
-    "less": ["generic_briefs", "same_publisher_reproduction", "stacking_unverified_products", "repeated_domain_gate_creation"],
-    "stop": ["additional_p07_evidence_accumulation_without_downstream_decision", "duplicate_benin_verification", "artifact_creation_for_activity", "tier_downgrading_to_bypass_review", "scalar_ranking_without_comparable_costs_and_outcomes"],
-    "start": ["turn_recent_integrations_into_cross_problem_decision_product", "country_program_resource_mapping", "downstream_use_test_before_verifier_allocation"]
+    "more": ["finish_before_start", "decision_consequence_and_aging", "resource_mapping", "value_of_information", "read_only_synthesis_when_wip_full"],
+    "less": ["controller_bookkeeping", "freshness_rework", "generic_briefs", "same_publisher_reproduction"],
+    "stop": ["new_tier2_while_wip_full", "duplicate_producer_prs", "obsolete_assignments", "scalar_rankings_without_common_denominators"],
+    "start": ["track_producer_ready_to_C_to_integration_aging", "post_integration_coherence_check", "explicit_delegation_contracts"]
   },
   "recent_decision_deltas": [
-    {"at": "2026-09-09T06:58:41Z", "source": "D integration of PR #91", "delta": "P03 hypertension care-delivery bottleneck routing became canonical after fresh independent verification."},
-    {"at": "2026-09-09T11:59:33Z", "source": "D integration of PR #89", "delta": "P06 electricity-access comparisons now route by realized service tier, affordability, and financing rather than technology label or connection count alone."},
-    {"at": "2026-09-09T17:58:56Z", "source": "D integration of PR #105", "delta": "Benin long-horizon evidence became a bounded P07 diagnostic for package design, gender heterogeneity, attrition, and cost accounting without implying a portable training-vs-capital rank."},
-    {"at": "2026-09-09T17:58:56Z", "source": "D portfolio review", "delta": "The bottleneck shifts from clearing verifier backlog to converting multiple canonical gates into cross-problem allocation, resource mapping, and measurable downstream decisions."}
+    {"at": "2026-09-09T23:59:41Z", "source": "integration of PR #116", "delta": "Next three domain producer opportunities were allocated conditionally: one P03 feasibility screen, one P06 denominator/VOI screen, and one held slot; P07 receives zero new slots absent a concrete target decision."},
+    {"at": "2026-09-10T01:00:00Z", "source": "D coherence reconciliation", "delta": "Live Tier-2 WIP is capped at #117/#94; #95/#70 are explicitly outside active WIP and all replacement Tier-2 production is held until an item finishes and coherence is rechecked."}
   ],
   "stale_or_blocked": [
-    {"item": "PR #94", "status": "conditional_verification", "reason": "Potentially useful incremental-package allocation question, but must pass a downstream-use test before consuming C capacity."},
-    {"item": "PR #95", "status": "deferred", "reason": "Mechanism/adoption framing is plausible but lacks a sufficiently concrete near-term allocation target."},
-    {"item": "PR #70", "status": "deprioritized", "reason": "Low marginal decision delta relative to current intervention and allocation questions."}
+    {"item": "new Tier-2 production", "status": "held", "reason": "WIP limit is full and controller reconciliation must become canonical first."},
+    {"item": "PR #95", "status": "deferred", "reason": "No concrete target population/adoption/economic allocation currently justifies verifier opportunity cost."},
+    {"item": "PR #70", "status": "deprioritized", "reason": "Low marginal decision consequence."}
   ],
+  "flow_metrics": {
+    "aging_rule": "Unexplained producer-ready -> C verdict -> integration/closure aging across more than 2 healthy D cycles triggers queue action.",
+    "toil_rule": "If recovery/toil dominates roughly half of recent operational capacity across 3 controller windows, simplify or hold new work rather than add coordination layers.",
+    "process_error_budget": "Repeated destructive, stale, or duplicate failures trigger simplification."
+  },
   "controller_rules": [
-    "D may reallocate ordinary work through this file without changing scheduler cadence or agent permissions.",
-    "A and B may challenge an assignment as low-value but may not alter governance or merge their own substantive work.",
-    "C conclusions are technically independent from D and producers; the latest exact-head verdict controls integration readiness.",
-    "Audit independently evaluates whether D's allocations and integrations are effective.",
-    "If this file becomes stale or unavailable, A/B/C use their role-specific safe fallback without expanding authority.",
-    "For Tier-2 integration candidates, branch freshness is a readiness condition for the final C verdict: refresh first, then exact-head CI and independent C review.",
-    "After a fresh Tier-2 head is submitted for final C review, D should avoid nonurgent main-mutating controller updates until the merge decision is complete; urgent safety or control corrections still take precedence."
+    "Human/constitutional policy remains highest authority; this file grants no authority.",
+    "D allocates ordinary work without changing scheduler cadence or agent permissions.",
+    "C conclusions and Audit assurance remain independent.",
+    "Tier-2 requires exact-head CI plus current independent C verdict before D integration.",
+    "After every Tier-2 integration/closure, D performs a post-integration coherence check before replacement production.",
+    "Avoid nonessential main mutations between final fresh CI/C PASS and integration."
   ]
 }
