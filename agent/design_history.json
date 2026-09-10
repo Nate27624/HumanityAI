@@ -11,71 +11,16 @@
       "hypothesis_rationale": "Separating ordinary management from first-line production, second-line verification, and third-line assurance should reduce duplicated compute, increase decision delta per slot, preserve verifier independence, and make integration responsibility explicit without expanding authority.",
       "exact_change": "Transitioned ordinary operations toward Human/constitution -> Controller D -> Operators A/B -> independent Verifier C -> independent Audit. D owns portfolio allocation, routine internal integration, design memory, and GitLab mirror maintenance. A biases toward direct progress; B preserves exploration; C independently challenges Tier-2 A/B work; Audit remains independent assurance. Introduced risk-tiered integration and a durable portfolio state in agent/portfolio.json.",
       "decision_delta_metric": "A slot is high-yield when it changes a belief, decision, capability, ranking, uncertainty estimate, adoption judgment, measurable outcome model, or future compute allocation. Repository growth and commit count are not success metrics.",
-      "risk_tiered_integration": {
-        "tier_0": "Read-only/no canonical change.",
-        "tier_1": "Routine reversible unprotected housekeeping/tooling; exact-head CI required; C optional; D integrates.",
-        "tier_2": "Substantive A/B evidence, prioritization, registry, analytical/code, or decision products; exact-head CI plus independent C verdict required before D integration.",
-        "tier_3": "Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved injection/provenance compromise, or consequential external action; human review required."
-      },
-      "expected_benefit": [
-        "Higher decision delta per unit of scheduled compute.",
-        "Less duplicate baseline and verification work.",
-        "Clear ordinary integration ownership without weakening human gates.",
-        "Stronger independence between production, verification, and assurance.",
-        "Durable allocation state that reduces dependence on conversational memory."
-      ],
-      "risks": [
-        "D could become an allocation bottleneck or create excessive centralization within the ordinary operational layer.",
-        "A/B exploration could narrow too aggressively if portfolio guidance overfits recent evidence.",
-        "C verification latency could reduce throughput for Tier-2 work.",
-        "Decision-delta language could Goodhart toward visible reallocation rather than genuine usefulness.",
-        "Control-plane artifacts could become stale or bureaucratic if updated without material changes."
-      ],
+      "risk_tiered_integration": {"tier_0":"Read-only/no canonical change.","tier_1":"Routine reversible unprotected housekeeping/tooling; exact-head CI required; C optional; D integrates.","tier_2":"Substantive A/B evidence, prioritization, registry, analytical/code, or decision products; exact-head CI plus independent C verdict required before D integration.","tier_3":"Protected/security/governance/licensing/constitutional/agent-authority changes, external PRs, unresolved injection/provenance compromise, or consequential external action; human review required."},
+      "expected_benefit": ["Higher decision delta per unit of scheduled compute.","Less duplicate baseline and verification work.","Clear ordinary integration ownership without weakening human gates.","Stronger independence between production, verification, and assurance.","Durable allocation state that reduces dependence on conversational memory."],
+      "risks": ["D could become an allocation bottleneck or create excessive centralization within the ordinary operational layer.","A/B exploration could narrow too aggressively if portfolio guidance overfits recent evidence.","C verification latency could reduce throughput for Tier-2 work.","Decision-delta language could Goodhart toward visible reallocation rather than genuine usefulness.","Control-plane artifacts could become stale or bureaucratic if updated without material changes."],
       "evaluation_window": "Initial 6-24 hours, then periodic review after enough A/B/C integration cycles exist.",
-      "evaluation_criteria": [
-        "Share of recent slots producing material decision delta rather than generic artifacts.",
-        "Duplicate-work rate and repeated low-stakes verification rate.",
-        "Number of Tier-2 producer claims materially corrected or blocked by independent C review.",
-        "Time from useful A/B proposal to safe D integration.",
-        "Whether portfolio updates redirect multiple future slots rather than merely document activity.",
-        "Whether Audit identifies loss of independence, control bottlenecks, unsafe integration, or Goodhart behavior."
-      ],
-      "observed_outcomes": [
-        {
-          "at": "2026-09-07T21:26:55Z",
-          "observation_type": "observed",
-          "observation": "Operator A produced PR #80 as a decision-oriented compute-allocation product rather than another baseline, proposing UCT cost/adoption modeling and an ALMP evidence refresh. It remained unmerged pending C review as required."
-        },
-        {
-          "at": "2026-09-07T21:34:38Z",
-          "observation_type": "observed",
-          "observation": "Operator B produced PR #81 exploring a newer youth-ALMP synthesis and made explicit START/MORE/LESS/STOP recommendations capable of redirecting multiple P07 slots."
-        },
-        {
-          "at": "2026-09-07T21:47:12Z",
-          "observation_type": "observed",
-          "observation": "Independent C returned C-VERDICT: QUALIFY on PR #81. C preserved the useful allocation signal but identified overstatement about modality reversal, publication-bias handling, and comparability. D did not integrate the uncorrected Tier-2 work."
-        }
-      ],
-      "failures_side_effects": [
-        "No completed Tier-2 D integration cycle had yet demonstrated end-to-end producer -> independent verifier -> controller merge throughput at this checkpoint.",
-        "PR #80 remained awaiting C verdict, so verifier capacity/latency was still an open operational variable.",
-        "The design had not yet been observed long enough to establish that higher early decision orientation persisted rather than reflecting novelty."
-      ],
+      "evaluation_criteria": ["Share of recent slots producing material decision delta rather than generic artifacts.","Duplicate-work rate and repeated low-stakes verification rate.","Number of Tier-2 producer claims materially corrected or blocked by independent C review.","Time from useful A/B proposal to safe D integration.","Whether portfolio updates redirect multiple future slots rather than merely document activity.","Whether Audit identifies loss of independence, control bottlenecks, unsafe integration, or Goodhart behavior."],
+      "observed_outcomes": [{"at":"2026-09-07T21:26:55Z","observation_type":"observed","observation":"Operator A produced PR #80 as a decision-oriented compute-allocation product rather than another baseline, proposing UCT cost/adoption modeling and an ALMP evidence refresh. It remained unmerged pending C review as required."},{"at":"2026-09-07T21:34:38Z","observation_type":"observed","observation":"Operator B produced PR #81 exploring a newer youth-ALMP synthesis and made explicit START/MORE/LESS/STOP recommendations capable of redirecting multiple P07 slots."},{"at":"2026-09-07T21:47:12Z","observation_type":"observed","observation":"Independent C returned C-VERDICT: QUALIFY on PR #81. C preserved the useful allocation signal but identified overstatement about modality reversal, publication-bias handling, and comparability. D did not integrate the uncorrected Tier-2 work."}],
+      "failures_side_effects": ["No completed Tier-2 D integration cycle had yet demonstrated end-to-end producer -> independent verifier -> controller merge throughput at this checkpoint.","PR #80 remained awaiting C verdict, so verifier capacity/latency was still an open operational variable.","The design had not yet been observed long enough to establish that higher early decision orientation persisted rather than reflecting novelty."],
       "verdict": "promising",
-      "lessons": [
-        "Independent qualification is already adding value by preserving a useful reallocation while blocking a stronger unsupported causal/effect interpretation.",
-        "The controller should consume C adverse verdicts as allocation signals rather than override them.",
-        "Portfolio updates should encode corrected uncertainty and stop conditions, not merely restate producer recommendations.",
-        "Do not declare the hierarchy proven until several end-to-end cycles and independent Audit observations exist."
-      ],
-      "links_shas_prs": [
-        "GitHub main d59766e2cb8a09a1feb9b154bfce83004fd1f8ff",
-        "PR #80",
-        "PR #81",
-        "agent/CONTROL_PLANE.md",
-        "agent/portfolio.json"
-      ]
+      "lessons": ["Independent qualification is already adding value by preserving a useful reallocation while blocking a stronger unsupported causal/effect interpretation.","The controller should consume C adverse verdicts as allocation signals rather than override them.","Portfolio updates should encode corrected uncertainty and stop conditions, not merely restate producer recommendations.","Do not declare the hierarchy proven until several end-to-end cycles and independent Audit observations exist."],
+      "links_shas_prs": ["GitHub main d59766e2cb8a09a1feb9b154bfce83004fd1f8ff","PR #80","PR #81","agent/CONTROL_PLANE.md","agent/portfolio.json"]
     },
     {
       "change_id": "DH0002",
@@ -86,54 +31,34 @@
       "prior_design": "DH0001 had shown one C QUALIFY block but no completed Tier-2 producer -> C -> D integration cycle.",
       "hypothesis_rationale": "If the separation-of-duties design is functioning, C should be able to independently PASS a decision-bearing product after reproducing its key claims, and D should then integrate only the exact reviewed head after successful CI.",
       "exact_change": "No architecture authority changed. Operator B produced PR #84 under the existing portfolio; C independently returned PASS at exact head 6b39ab902b412487b9e5b7ed6ecb2ca014116ba2; D confirmed the single unprotected research-file scope, exact-head successful Validate HumanityAI run 34167160907, and no unresolved review threads, then squash-merged through the normal PR path as main 113452710749499439b6365204cf1b27d756ced2. Portfolio allocation was then narrowed toward study-level LMIC ALMP cost/adoption extraction.",
-      "expected_benefit": [
-        "Demonstrate end-to-end Tier-2 throughput without weakening C independence.",
-        "Convert verified cost/adoption evidence into a sharper next exploration target.",
-        "Reduce repeated global ALMP meta-summary work."
-      ],
-      "risks": [
-        "One successful integration cycle is too little evidence to declare the hierarchy proven.",
-        "C review latency remains measurable because PR #80 still awaits verdict.",
-        "D could overreact to a single ALMP result and overconcentrate the portfolio on P07."
-      ],
+      "expected_benefit": ["Demonstrate end-to-end Tier-2 throughput without weakening C independence.","Convert verified cost/adoption evidence into a sharper next exploration target.","Reduce repeated global ALMP meta-summary work."],
+      "risks": ["One successful integration cycle is too little evidence to declare the hierarchy proven.","C review latency remains measurable because PR #80 still awaits verdict.","D could overreact to a single ALMP result and overconcentrate the portfolio on P07."],
       "evaluation_window": "Continue through several additional A/B/C cycles and at least one independent Audit review.",
-      "evaluation_criteria": [
-        "Whether subsequent Tier-2 work continues to receive independent challenge before integration.",
-        "Whether C PASS/QUALIFY/FAIL outcomes materially affect D allocation and merge decisions.",
-        "Whether time-to-integration remains acceptable without bypassing review.",
-        "Whether portfolio diversity is preserved while low-yield repetition declines."
-      ],
-      "observed_outcomes": [
-        {
-          "observation_type": "observed",
-          "observation": "C reproduced PR #84's decision-bearing cost medians from the primary ILO/World Bank brief and explicitly preserved the non-portability and selected cost-effectiveness caveats."
-        },
-        {
-          "observation_type": "observed",
-          "observation": "D integrated PR #84 only after exact-head CI success and C PASS, completing the first observed end-to-end Tier-2 integration cycle under DH0001."
-        },
-        {
-          "observation_type": "interpretation",
-          "observation": "The early hierarchy is producing material decision delta: B's next allocation moved from broad modality synthesis to a study-level cost/adoption question with explicit insufficient-comparability kill tests."
-        }
-      ],
-      "failures_side_effects": [
-        "PR #80 still lacks a C verdict, so verifier queue latency has not been resolved.",
-        "PR #81 remains qualified and partly superseded by the verified allocation signal in PR #84; integrating it now may have low marginal value unless narrowed."
-      ],
+      "evaluation_criteria": ["Whether subsequent Tier-2 work continues to receive independent challenge before integration.","Whether C PASS/QUALIFY/FAIL outcomes materially affect D allocation and merge decisions.","Whether time-to-integration remains acceptable without bypassing review.","Whether portfolio diversity is preserved while low-yield repetition declines."],
+      "observed_outcomes": [{"observation_type":"observed","observation":"C reproduced PR #84's decision-bearing cost medians from the primary ILO/World Bank brief and explicitly preserved the non-portability and selected cost-effectiveness caveats."},{"observation_type":"observed","observation":"D integrated PR #84 only after exact-head CI success and C PASS, completing the first observed end-to-end Tier-2 integration cycle under DH0001."},{"observation_type":"interpretation","observation":"The early hierarchy is producing material decision delta: B's next allocation moved from broad modality synthesis to a study-level cost/adoption question with explicit insufficient-comparability kill tests."}],
+      "failures_side_effects": ["PR #80 still lacks a C verdict, so verifier queue latency has not been resolved.","PR #81 remains qualified and partly superseded by the verified allocation signal in PR #84; integrating it now may have low marginal value unless narrowed."],
       "verdict": "promising",
-      "lessons": [
-        "Exact-head independent verification can coexist with useful throughput when producer scope is narrow and decision-bearing claims are reproducible.",
-        "A qualified earlier artifact need not be forced through correction when a later independently verified artifact captures the useful decision delta more cleanly.",
-        "Continue measuring decision delta and verifier latency; do not optimize for number of integration cycles."
-      ],
-      "links_shas_prs": [
-        "PR #84",
-        "C review 5135613262",
-        "CI run 34167160907",
-        "GitHub main 113452710749499439b6365204cf1b27d756ced2",
-        "agent/portfolio.json"
-      ]
+      "lessons": ["Exact-head independent verification can coexist with useful throughput when producer scope is narrow and decision-bearing claims are reproducible.","A qualified earlier artifact need not be forced through correction when a later independently verified artifact captures the useful decision delta more cleanly.","Continue measuring decision delta and verifier latency; do not optimize for number of integration cycles."],
+      "links_shas_prs": ["PR #84","C review 5135613262","CI run 34167160907","GitHub main 113452710749499439b6365204cf1b27d756ced2","agent/portfolio.json"]
+    },
+    {
+      "change_id": "DH0003",
+      "at": "2026-09-10T14:08:00Z",
+      "status": "under_evaluation",
+      "follows_change_id": "DH0001",
+      "problem_trigger": "Independent Audit finding #111 and subsequent controller runs exposed stale assignments, duplicate/superseded producer work, verifier/integrator queue growth, and repeated branch-freshness rework. Human-approved management guidance therefore required a mandatory controller-coherence gate, finish-before-start discipline, a default Tier-2 WIP limit of two, explicit delegation contracts, and post-integration reconciliation before replacement production.",
+      "prior_design": "D maintained portfolio state and risk-tiered integration, but new production could be allocated while durable state lagged live PR/main state; queue limits and assignment contracts were advisory rather than explicit operating constraints.",
+      "hypothesis_rationale": "Reconciling durable state before production, limiting active Tier-2 WIP to verifier/integrator capacity, and requiring explicit decision-delta/stop conditions should reduce stale or duplicate work and freshness toil while increasing the fraction of compute that changes downstream decisions.",
+      "exact_change": "Applied audit-directed ordinary-management remediation: mandatory pre-production and post-integration coherence checks; default hard WIP limit of two active Tier-2 candidates absent a documented higher-EV exception; finish-before-start allocation; explicit A/B assignment fields for decision question, why-now, expected decision delta, scope, output, kill condition, and downstream decision; aging escalation after more than two healthy D cycles; process-error-budget simplification; and a hold on replacement Tier-2 production while this checkpoint was overdue. No scheduler, permission, constitutional, security, licensing, or verifier/auditor authority changed.",
+      "expected_benefit": ["Fewer stale, duplicate, and superseded Tier-2 candidates.","Lower verifier/integrator queue age and branch-freshness rework.","Higher decision delta per producer slot.","Durable controller state that matches live canonical work before operators act."],
+      "risks": ["Overly strict WIP discipline could leave useful producer capacity idle.","Controller reconciliation can itself become bookkeeping toil.","A two-item default limit may be too low for unusually independent high-value workstreams.","Metrics may Goodhart toward short queues rather than valuable outcomes."],
+      "evaluation_window": "Next 3-6 healthy controller windows and subsequent Tier-2 producer->C->D cycles.",
+      "evaluation_criteria": ["No obsolete assignment is executed after a Tier-2 integration or closure.","Active Tier-2 WIP normally remains at or below two.","Producer-ready to C verdict to integration/closure aging does not remain unexplained beyond two healthy D cycles.","Duplicate/superseded PR creation and branch-freshness rework decline.","At least one subsequent producer assignment has a clear downstream decision delta rather than generic evidence accumulation.","Recovery/bookkeeping toil does not dominate roughly half of capacity across three controller windows."],
+      "observed_outcomes": [{"at":"2026-09-10T14:02:00Z","observation_type":"observed","observation":"After PR #94 integration, D reconciled portfolio state against live main, removed #94 from active work, found Tier-2 WIP at zero, and held replacement production pending this mandatory checkpoint."},{"observation_type":"observed","observation":"Earlier controller runs closed or deferred superseded work rather than processing the queue FIFO, and C adverse verdicts changed integration and allocation decisions."},{"observation_type":"interpretation","observation":"The remediation appears directionally useful because it converts integration events into explicit queue cleanup and prevents immediate replacement work from outrunning durable state, but evidence is not yet sufficient to call the process proven."}],
+      "failures_side_effects": ["Repeated freshness invalidation and duplicate/superseded artifacts occurred before the remediation matured.","The checkpoint itself became a temporary production blocker because it was not recorded immediately when the management change was adopted."],
+      "verdict": "promising",
+      "lessons": ["Finish-before-start should be enforced at the durable allocation layer, not merely recommended in prose.","Post-integration reconciliation is part of integration, not optional bookkeeping.","Design-history checkpoints for meaningful management changes should be recorded promptly so the memory requirement does not itself stall useful work.","Keep the WIP limit as an ordinary operational default subject to evidence, not as new constitutional authority."],
+      "links_shas_prs": ["Audit finding #111","GitHub main 219030361bd89fa7464eaf6f51ed3cd3663a7e69","PR #94","agent/portfolio.json","agent/design_history.json"]
     }
   ]
 }
