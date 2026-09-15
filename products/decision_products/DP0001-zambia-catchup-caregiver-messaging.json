@@ -1,0 +1,88 @@
+{
+  "schema_version": "0.1",
+  "id": "DP0001",
+  "title": "Zambia Catch Up caregiver attendance-information messaging",
+  "status": "producer_ready_for_independent_review",
+  "user_context": {
+    "archetype": "Zambia education implementer already considering or operating Catch Up",
+    "decision": "Whether a caregiver attendance-information messaging add-on should be tested next alongside existing Catch Up, rather than scaled or treated as proven.",
+    "scope": "Grade 3-5 Catch Up pupils where child-level school and Catch Up exposure can be measured reliably."
+  },
+  "feasible_options": [
+    {"id":"test","label":"TEST","description":"Run a small randomized add-on pilot of weekly caregiver information on school and Catch Up attendance."},
+    {"id":"do_not_test","label":"DO NOT TEST","description":"Do not run the messaging pilot; preserve resources for other implementation improvements."},
+    {"id":"cannot_decide","label":"CANNOT DECIDE","description":"Use when local exposure-data capability or incremental pilot cost cannot be established well enough to route the decision."}
+  ],
+  "routing_recommendation": {
+    "route": "TEST_CONDITIONALLY",
+    "rule": "TEST next only if reliable child-level data can cheaply distinguish school absence, present-but-missed Catch Up, Catch Up non-delivery, and Catch Up attendance. Otherwise CANNOT DECIDE pending an exposure-data feasibility and micro-costing check.",
+    "not_authorized": ["national scale-up", "claim of Zambia effectiveness", "claim of superior cost-effectiveness versus standard Catch Up"]
+  },
+  "benefits_costs_denominators": {
+    "closest_same_package_research": {
+      "setting": "seven low-income schools in Santiago, Chile",
+      "intervention": "weekly attendance messages plus monthly grade/behavior messages",
+      "attendance_effect": "+1.1 percentage points",
+      "math_grade_effect": "+0.09 SD",
+      "language_effect": "+0.11 SD",
+      "reported_cost": "US$10.86 per student-year",
+      "use": "research denominator only; not a Zambia budget estimate"
+    },
+    "mechanism_close_african_evidence": {
+      "setting": "low-income Cape Town neighborhoods",
+      "result": "weekly parent messages reporting after-school-program attendance increased attendance about 5.6%-6.1%",
+      "reported_cost": "about R1.01 per child per week",
+      "limitation": "no downstream learning outcome; accounting scope is not portable to Zambia"
+    },
+    "zambia_local_feasibility_evidence": {
+      "intervention": "nine-month parent-facing SMS plus monthly-meeting early-reading package",
+      "reading_effect": "roughly +0.19 to +0.28 SD",
+      "estimated_national_expansion_cost": "US$20-22 per child",
+      "limitation": "different bundled intervention; does not isolate attendance/exposure and is not a cost denominator for attendance messaging"
+    },
+    "required_zambia_denominators": ["incremental cost per treated child", "incremental cost per additional realized Catch Up session"],
+    "cannot_compare": "Current evidence cannot defensibly compare caregiver messaging cost-effectiveness with standard Catch Up or other marginal interventions because denominators, packages, settings, and mechanisms are incompatible."
+  },
+  "confidence": {
+    "pilot_routing": "moderate",
+    "zambia_learning_effect": "low-to-moderate",
+    "scale_or_portable_cost_effectiveness": "low"
+  },
+  "uncertainties_and_contrary_evidence": [
+    "The closest cost+attendance+learning evidence is from Chile, not Zambia.",
+    "Cape Town evidence is mechanism-close but lacks learning outcomes and comes from a master's thesis.",
+    "The Zambia SMS evidence changes home reading directly and includes monthly meetings, so it does not identify attendance messaging as the causal mechanism.",
+    "Messaging cannot fix Catch Up non-delivery or other non-family-controllable causes of missed exposure.",
+    "An attendance gain has limited decision value if it does not increase realized Catch Up sessions or if added exposure does not improve policy-relevant learning."
+  ],
+  "adoption_constraints": [
+    "reliable child-level school attendance data",
+    "reliable Catch Up session delivery and attendance data",
+    "caregiver phone-number matching and message deliverability",
+    "SIM churn, language, and caregiver literacy",
+    "low incremental data-cleaning and staff burden",
+    "adequate Catch Up instructional quality when sessions are attended"
+  ],
+  "what_changes_recommendation": {
+    "toward_do_not_test": ["exposure states cannot be distinguished cheaply", "pilot micro-costing is high relative to plausible exposure gain", "messaging cannot target a family-controllable bottleneck"],
+    "toward_scale_later": ["randomized Zambia evidence shows meaningful added realized Catch Up exposure", "added exposure improves policy-relevant learning", "incremental cost per added session is decision-competitive using compatible denominators", "effects persist and implementation remains reliable"],
+    "stop_after_pilot": ["recorded attendance rises without meaningful added Catch Up exposure", "added exposure does not improve policy-relevant learning", "implementation/data burden dominates benefit"]
+  },
+  "highest_value_next_information_request": "Before committing to the pilot, obtain a small Zambia Catch Up operational sample showing whether school absence, present-but-missed Catch Up, Catch Up non-delivery, and Catch Up attendance can be distinguished reliably, plus a micro-cost estimate for producing those states and sending/monitoring weekly caregiver messages.",
+  "canonical_provenance": [
+    {"path":"docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md","integrated_commit":"7e73a5458c35022bbfff2ecf78325385cf071227","role":"canonical producer evidence synthesis"},
+    {"issue":128,"role":"productization acceptance criteria and user-value test"},
+    {"path":"agent/portfolio.json","controller_release_commit":"c9931fc4b24c91ce39291f81d5b40f9c89222ff0","role":"current bounded assignment"}
+  ],
+  "user_value_rubric": {
+    "reduces_search_synthesis_burden": {"result":"yes","reason":"Consolidates route, evidence boundaries, operational constraints, incompatible denominators, and next information request into one decision object."},
+    "better_specified_than_literature_summary": {"result":"yes","reason":"Returns a conditional TEST/CANNOT DECIDE routing rule with explicit kill conditions rather than an intervention-effect narrative."},
+    "avoids_unsupported_scalar_ranking": {"result":"yes","reason":"Does not rank messaging against Catch Up or other interventions on a common scalar without compatible denominators."},
+    "surfaces_uncertainty_noncomparability": {"result":"yes","reason":"Separates pilot plausibility from Zambia effectiveness and scale/cost-effectiveness claims."},
+    "reproducible_from_canonical_evidence": {"result":"provisional_pending_c_review","reason":"All substantive inputs point to integrated canonical P05 synthesis; independent C should challenge fidelity and reproducibility."},
+    "identifies_next_information_request": {"result":"yes","reason":"Requests local exposure-state feasibility plus micro-costing because that information directly gates TEST versus CANNOT DECIDE."}
+  },
+  "decision_delta": "Transforms integrated P05 evidence from a research conclusion into an implementer routing rule: conditionally TEST a bounded Zambia caregiver attendance-information add-on only when exposure-state data are feasible; otherwise CANNOT DECIDE. It explicitly rejects scale and cross-intervention cost-effectiveness inference.",
+  "producer": "Operator A",
+  "review_required": "Independent Worker C product-level challenge before Worker D integration"
+}
