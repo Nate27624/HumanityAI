@@ -2,7 +2,13 @@
   "schema_version": "0.1",
   "id": "DP0001",
   "title": "Zambia Catch Up caregiver attendance-information messaging",
-  "status": "producer_ready_for_independent_review",
+  "status": "integrated_then_modified_candidate_pending_independent_product_review",
+  "lifecycle": {
+    "integrated_version_commit": "1c45a344d457fd230e2a3ff29bc209d919468f7c",
+    "current_candidate_assignment": "DP0001-MODIFY-01",
+    "current_candidate_review_state": "awaiting_independent_worker_c_product_review",
+    "note": "The previously verified substantive evidence is unchanged; this candidate corrects routing clarity, compact provenance, and lifecycle metadata."
+  },
   "user_context": {
     "archetype": "Zambia education implementer already considering or operating Catch Up",
     "decision": "Whether a caregiver attendance-information messaging add-on should be tested next alongside existing Catch Up, rather than scaled or treated as proven.",
@@ -14,8 +20,11 @@
     {"id":"cannot_decide","label":"CANNOT DECIDE","description":"Use when local exposure-data capability, caregiver information-gap/deliverability, or incremental pilot cost cannot be established well enough to route the decision."}
   ],
   "routing_recommendation": {
-    "route": "TEST_INFORMATION_GAP_TARGETED_CONDITIONALLY",
-    "rule": "TEST next only if reliable child-level data can cheaply distinguish school absence, present-but-missed Catch Up, Catch Up non-delivery, and Catch Up attendance; a bounded pre-pilot check shows targeted caregivers have a material, actionable information gap about those states; messages can be received/understood reliably enough; and the missed exposure is plausibly family-controllable. Otherwise CANNOT DECIDE or DO NOT TEST according to the failed gate.",
+    "current_route": "CANNOT_DECIDE",
+    "current_route_reason": "The canonical repository does not yet contain the required Zambia operational observations establishing reconstructable exposure states, a material/actionable caregiver information gap, reliable message delivery/comprehension, a family-controllable bottleneck, and pilot micro-costing. Therefore TEST is not the present-tense recommendation.",
+    "route_if_gates_pass": "TEST_INFORMATION_GAP_TARGETED",
+    "route_if_gates_fail": "DO_NOT_TEST",
+    "rule": "Move from CANNOT DECIDE to TEST only if reliable child-level data can cheaply distinguish school absence, present-but-missed Catch Up, Catch Up non-delivery, and Catch Up attendance; a bounded pre-pilot check shows targeted caregivers have a material, actionable information gap about those states; messages can be received/understood reliably enough; the missed exposure is plausibly family-controllable; and pilot micro-costing is acceptable. If a required observation is merely missing, remain CANNOT DECIDE. If a gate is observed to fail, route DO NOT TEST.",
     "not_authorized": ["untargeted claim of broad effectiveness", "national scale-up", "claim of Zambia effectiveness", "claim of superior cost-effectiveness versus standard Catch Up"]
   },
   "benefits_costs_denominators": {
@@ -27,25 +36,29 @@
       "language_effect": "+0.11 SD",
       "message_receipt": "about 60% in the closest-source review",
       "reported_cost": "US$10.86 per student-year",
-      "use": "research denominator only; not a Zambia budget estimate"
+      "use": "research denominator only; not a Zambia budget estimate",
+      "source_pointer": "docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md — Chile same-package evidence section"
     },
     "mechanism_close_african_evidence": {
       "setting": "low-income Cape Town neighborhoods",
       "result": "weekly parent messages reporting after-school-program attendance increased attendance about 5.6%-6.1%",
       "reported_cost": "about R1.01 per child per week",
-      "limitation": "no downstream learning outcome; accounting scope is not portable to Zambia"
+      "limitation": "no downstream learning outcome; accounting scope is not portable to Zambia",
+      "source_pointer": "docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md — Cape Town mechanism-close evidence section"
     },
     "zambia_local_feasibility_evidence": {
       "intervention": "nine-month parent-facing SMS plus monthly-meeting early-reading package",
       "reading_effect": "roughly +0.19 to +0.28 SD",
       "estimated_national_expansion_cost": "US$20-22 per child",
-      "limitation": "different bundled intervention; does not isolate attendance/exposure and is not a cost denominator for attendance messaging"
+      "limitation": "different bundled intervention; does not isolate attendance/exposure and is not a cost denominator for attendance messaging",
+      "source_pointer": "docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md — Zambia parent-SMS feasibility evidence section"
     },
     "required_zambia_denominators": ["incremental cost per treated child", "incremental cost per additional realized Catch Up session"],
     "cannot_compare": "Current evidence cannot defensibly compare caregiver messaging cost-effectiveness with standard Catch Up or other marginal interventions because denominators, packages, settings, and mechanisms are incompatible."
   },
   "confidence": {
-    "information_gap_targeted_pilot_routing": "moderate",
+    "information_gap_targeted_pilot_routing_if_gates_pass": "moderate",
+    "present_cannot_decide_route": "high",
     "zambia_learning_effect": "low-to-moderate",
     "scale_or_portable_cost_effectiveness": "low"
   },
@@ -70,25 +83,27 @@
   ],
   "what_changes_recommendation": {
     "toward_do_not_test": ["caregivers already know the relevant attendance/exposure state", "reliable message receipt is too low", "information is not understandable or actionable", "exposure states cannot be distinguished cheaply", "pilot micro-costing is high relative to plausible exposure gain", "messaging cannot target a family-controllable bottleneck"],
+    "toward_test": ["the four exposure states are reliably reconstructable", "targeted caregivers demonstrably have a material/actionable information gap", "messages are reliably received and understood", "missed exposure is plausibly family-controllable", "pilot micro-costing is acceptable"],
     "toward_scale_later": ["randomized Zambia evidence in the relevant target population shows meaningful added realized Catch Up exposure", "added exposure improves policy-relevant learning", "incremental cost per added session is decision-competitive using compatible denominators", "effects persist and implementation/message receipt remain reliable"],
     "stop_after_pilot": ["message receipt is inadequate", "caregiver knowledge does not change where an information gap was expected", "recorded attendance rises without meaningful added Catch Up exposure", "added exposure does not improve policy-relevant learning", "implementation/data burden dominates benefit"]
   },
   "highest_value_next_information_request": "Before committing to the pilot, obtain a small Zambia Catch Up operational sample that jointly measures whether the four exposure states can be reconstructed reliably, whether intended caregivers have a material/actionable information gap about those states and can reliably receive/understand messages, and the micro-cost of producing those states and sending/monitoring weekly messages.",
   "canonical_provenance": [
-    {"path":"docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md","integrated_commit":"7e73a5458c35022bbfff2ecf78325385cf071227","role":"canonical producer evidence synthesis"},
+    {"path":"docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md","integrated_commit":"7e73a5458c35022bbfff2ecf78325385cf071227","role":"canonical producer evidence synthesis and compact source pointers for all quantitative denominators"},
     {"issue":128,"role":"productization acceptance criteria and user-value test"},
-    {"path":"agent/portfolio.json","controller_release_commit":"c9931fc4b24c91ce39291f81d5b40f9c89222ff0","role":"bounded assignment release; controller state may advance independently"},
-    {"pr":143,"review":"C-VERDICT QUALIFY on head 750aa940ca9c52c189a19b506aedc924dfcf5b2c","role":"independent review requiring information-gap, heterogeneous-effect, and deliverability gates"}
+    {"path":"agent/portfolio.json","role":"current controller assignment DP0001-MODIFY-01; controller state may advance independently"},
+    {"pr":143,"review":"C-VERDICT QUALIFY on head 750aa940ca9c52c189a19b506aedc924dfcf5b2c","role":"independent substantive review requiring information-gap, heterogeneous-effect, and deliverability gates"},
+    {"integrated_product_commit":"1c45a344d457fd230e2a3ff29bc209d919468f7c","role":"previous DP0001 integrated lifecycle anchor before this bounded usability correction"}
   ],
   "user_value_rubric": {
-    "reduces_search_synthesis_burden": {"result":"yes","reason":"Consolidates route, evidence boundaries, operational constraints, incompatible denominators, mechanism gates, and next information request into one decision object."},
-    "better_specified_than_literature_summary": {"result":"yes","reason":"Returns a targeted TEST/CANNOT DECIDE/DO NOT TEST routing rule with explicit mechanism and kill conditions rather than an intervention-effect narrative."},
+    "reduces_search_synthesis_burden": {"result":"yes","reason":"Consolidates present route, contingent route, evidence boundaries, operational constraints, incompatible denominators, mechanism gates, and next information request into one decision object."},
+    "better_specified_than_literature_summary": {"result":"yes","reason":"Returns present CANNOT DECIDE plus explicit TEST-if-gates-pass and DO NOT TEST-if-gates-fail semantics rather than an intervention-effect narrative."},
     "avoids_unsupported_scalar_ranking": {"result":"yes","reason":"Does not rank messaging against Catch Up or other interventions on a common scalar without compatible denominators."},
     "surfaces_uncertainty_noncomparability": {"result":"yes","reason":"Separates targeted pilot plausibility from broad effectiveness, Zambia effectiveness, and scale/cost-effectiveness claims."},
-    "reproducible_from_canonical_evidence": {"result":"provisional_pending_c_rereview","reason":"Substantive inputs point to integrated canonical P05 synthesis and the independent C qualification; corrected head requires focused C re-review."},
-    "identifies_next_information_request": {"result":"yes","reason":"Requests local exposure-state feasibility, caregiver information-gap/deliverability, and micro-costing because those observations directly gate the route."}
+    "reproducible_from_canonical_evidence": {"result":"pending_c_product_review","reason":"Substantive inputs point to integrated canonical P05 synthesis; this usability/lifecycle correction requires independent C product review before D integration."},
+    "identifies_next_information_request": {"result":"yes","reason":"Requests local exposure-state feasibility, caregiver information-gap/deliverability, and micro-costing because those observations directly gate movement from CANNOT DECIDE to TEST."}
   },
-  "decision_delta": "Narrows the prior conditional pilot route into an information-gap-targeted routing rule: exposure-data feasibility alone is insufficient. TEST only where caregivers plausibly lack actionable exposure information and messages are deliverable/actionable; otherwise CANNOT DECIDE or DO NOT TEST. Scale and cross-intervention cost-effectiveness inference remain rejected.",
+  "decision_delta": "Makes the present decision explicit: CANNOT DECIDE today because required Zambia operational gate observations are absent. TEST is contingent on those gates passing; observed gate failure routes DO NOT TEST. Adds compact source pointers and accurate integrated-then-modified lifecycle state without changing verified substantive evidence or the non-comparability conclusion.",
   "producer": "Operator A",
-  "review_required": "Independent Worker C focused re-review of corrected exact head before Worker D integration"
+  "review_required": "Independent Worker C product-decision review of the corrected exact head before Worker D integration"
 }
