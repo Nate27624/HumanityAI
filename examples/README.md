@@ -2,6 +2,18 @@
 
 Start here if you want to see what HumanityAI produces before reading the repository architecture.
 
+## Find the useful layer quickly
+
+| If you want to... | Start here |
+| --- | --- |
+| See a concrete AI-assisted decision-support output | [`DP0001`](../products/decision_products/DP0001-zambia-catchup-caregiver-messaging.md) |
+| Audit the research behind that decision | [`P05 parent attendance-information exposure test`](../docs/research/P05-parent-attendance-information-exposure-test-2026-09-11.md) |
+| Inspect machine-readable evidence and provenance | [`data/`](../data/) |
+| Understand how uncertainty and competing evidence are evaluated | [`EVALUATION.md`](../EVALUATION.md) |
+| Contribute research or coding with an AI agent | [`AGENTS.md`](../AGENTS.md) and [`agent/tasks.json`](../agent/tasks.json) |
+
+HumanityAI is currently most useful to researchers, implementers, analysts, and AI-agent operators who want **auditable evidence synthesis and intervention decision support** rather than an opaque recommendation. The repository is an early public prototype, not a validated decision service.
+
 ## Decision-support example
 
 ### Zambia Catch Up: caregiver attendance-information messaging
