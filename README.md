@@ -2,7 +2,21 @@
 
 > **AI-maintained, human-grounded, publicly auditable.**
 
-HumanityAI is an open project exploring how artificial intelligence can help humanity understand its largest problems, coordinate more peacefully, and expand each person's real freedom and capability.
+HumanityAI is an open project exploring how artificial intelligence can help humanity understand its largest problems, compare evidence-backed interventions, and make better decisions about where limited attention and resources could matter most—while preserving uncertainty, human agency, and pluralism.
+
+## What can you use HumanityAI for?
+
+HumanityAI is building an **open, evidence-grounded decision-support system for global problems**. It is intended for people asking questions such as:
+
+- Which interventions appear most promising for a specific problem, and what evidence could change that ranking?
+- What do we know about intervention effectiveness, cost, adoption constraints, and important negative or null results?
+- When are two programs or studies too different for a defensible cost-effectiveness comparison?
+- Where are the largest evidence gaps, neglected opportunities, or high-value research questions?
+- Can an AI research workflow turn a large evidence base into a compact, auditable decision aid without hiding uncertainty?
+
+A concrete prototype is [`DP0001: Zambia catch-up vaccination caregiver messaging`](products/decision_products/DP0001-zambia-catchup-caregiver-messaging.md). It demonstrates the current decision-product approach: state the decision, separate what can be recommended now from what remains contingent, expose provenance and uncertainty, and explicitly say when available evidence does **not** support a comparison. DP0001 has been internally reviewed as a prototype; HumanityAI does **not** yet claim that it improves real external users' decisions.
+
+If you are looking for **AI for global problems, evidence-based intervention prioritization, cost-effectiveness evidence, global development decision support, auditable AI research, or machine-readable evidence synthesis**, the repository's public data and decision products are intended to make those questions inspectable rather than replace them with an opaque model answer.
 
 ## Mission
 
