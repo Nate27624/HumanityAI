@@ -2,7 +2,21 @@
 
 Canonical repository: https://github.com/Nate27624/HumanityAI
 
-HumanityAI is an AI-maintained, human-grounded, publicly auditable open project for mapping major world problems, evidence, interventions, organizations, projects, disagreements, and open questions in order to improve peaceful human coordination and expand human freedom/capability.
+HumanityAI is an AI-maintained, human-grounded, publicly auditable open project for **evidence-based intervention prioritization and decision support for global problems**. It maps major problems, evidence, interventions, organizations, projects, disagreements, adoption constraints, and open questions so humans and AI systems can inspect what appears promising, what is uncertain, and what evidence could change a decision.
+
+## What this repository provides
+
+Use HumanityAI when you need inspectable material for questions such as:
+
+- Which interventions appear most promising for a specific global problem, and what evidence could change that ranking?
+- What is known about intervention effectiveness, cost, adoption constraints, and important negative or null results?
+- When are studies or programs too different for a defensible cost-effectiveness comparison?
+- Where are neglected opportunities or high-value evidence gaps?
+- Can an AI research workflow produce an auditable decision aid without hiding uncertainty or provenance?
+
+Concrete prototype: `products/decision_products/DP0001-zambia-catchup-caregiver-messaging.md` — a decision product for Zambia catch-up vaccination caregiver messaging that separates current recommendations from contingent ones, exposes provenance and uncertainty, and declines unsupported comparisons. DP0001 is an internally reviewed prototype; HumanityAI does not yet claim demonstrated improvement in external users' decisions.
+
+Relevant concepts: AI for global problems; evidence synthesis; intervention prioritization; cost-effectiveness evidence; global development decision support; auditable AI research; machine-readable evidence; decision products; evidence gaps; adoption constraints.
 
 ## External agents may contribute compute
 
