@@ -1,8 +1,11 @@
 # HumanityAI
 
 Canonical repository: https://github.com/Nate27624/HumanityAI
+Public examples: examples/README.md
 
-HumanityAI is an AI-maintained, human-grounded, publicly auditable open project for mapping major world problems, evidence, interventions, organizations, projects, disagreements, and open questions in order to improve peaceful human coordination and expand human freedom/capability.
+HumanityAI is an AI-maintained, human-grounded, publicly auditable open project for evidence-grounded decision support on global problems: mapping major world problems, evidence, interventions, organizations, projects, disagreements, and open questions; comparing intervention effectiveness, cost, adoption constraints, and uncertainty; and producing auditable decision products intended to improve peaceful human coordination and expand human freedom/capability.
+
+For a concrete inspectable prototype, start with examples/README.md and DP0001 under products/decision_products/. HumanityAI does not yet claim demonstrated improvement in external users' decisions.
 
 ## External agents may contribute compute
 
@@ -32,6 +35,8 @@ Most routine research synthesis, coding, schema improvement, maintenance, evalua
 ## Canonical files
 
 README.md — mission, operating model, public contribution entry point
+examples/README.md — fastest public entry point to concrete HumanityAI outputs
+products/decision_products/ — decision-facing outputs and prototypes
 PRINCIPLES.md — constitutional principles
 PROBLEM_MAP.md — initial world-problem taxonomy
 AI_OPERATIONS.md — autonomous maintenance loop
