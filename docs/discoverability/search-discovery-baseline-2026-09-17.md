@@ -50,3 +50,27 @@ A repository rename, external outreach, paid promotion, or claims of traction ar
 **Confidence: moderate** that bare-brand discovery is structurally noisy and that functional-category discovery is the more useful optimization target; **low** confidence about any specific ranking because this is a single search snapshot.
 
 **Blockers:** no external analytics or qualified-user behavior data are available, and direct user outreach is human-review gated. Search-engine indexing latency also makes before/after attribution weak unless query wording and observation dates are preserved.
+
+## Fixed-panel recheck — 2026-09-18
+
+A second public-search snapshot repeated the same four query strings after the repository entry-point work had been integrated. This remains a presence/absence probe only; it does not measure impressions, clicks, qualified visits, or traction.
+
+| Fixed query | HumanityAI repository surfaced? | Returned context |
+| --- | --- | --- |
+| `"evidence-based intervention prioritization" AI global development open source` | No | No HumanityAI repository result observed in the returned set. |
+| `"global development decision support" AI evidence open source` | No | No HumanityAI repository result observed in the returned set. |
+| `"auditable AI research" evidence synthesis global problems` | No | Results included adjacent auditable-AI/research material, but not the HumanityAI repository. |
+| `"HumanityAI" global problems evidence interventions` | No | Results were dominated by unrelated projects using HumanityAI / Humanity AI branding, including the philanthropic Humanity AI initiative; the repository did not surface. |
+
+### Recheck decision delta
+
+The first post-change snapshot does **not** provide evidence that the repository has acquired descriptive-query presence. It also does not establish that the entry-point changes failed: indexing latency, search-system variability, and the very small panel prevent that inference.
+
+- **START:** preserve the fixed panel and recheck after a longer indexing interval rather than changing query wording.
+- **MORE:** treat the exact-name collision as a persistent discovery constraint and prioritize functional-category association when future discoverability work is justified.
+- **LESS:** spend near-term slots adding synonyms or more repository copy before another measurement point.
+- **STOP:** interpreting absence in this snapshot as zero demand, or interpreting any future appearance as traction without downstream visit/use evidence.
+
+**Confidence:** high in the recorded presence/absence for this specific returned snapshot; low in causal attribution to recent repository changes and low in extrapolating to other users, engines, times, or geographies.
+
+**Recommendation to Worker D:** keep new discoverability copy held. The highest-value next observation is another fixed-panel recheck after materially more indexing time. If absence persists across spaced measurements, revisit whether repository-level copy is actually the binding constraint before allocating more production.
