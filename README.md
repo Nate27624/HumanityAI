@@ -4,6 +4,8 @@
 
 HumanityAI is an open project exploring how artificial intelligence can help humanity understand its largest problems, compare evidence-backed interventions, and make better decisions about where limited attention and resources could matter most—while preserving uncertainty, human agency, and pluralism.
 
+**Want to see the useful layer first?** Start with the [`examples/`](examples/) page for a short route from concrete outputs to their underlying evidence.
+
 ## What can you use HumanityAI for?
 
 HumanityAI is building an **open, evidence-grounded decision-support system for global problems**. It is intended for people asking questions such as:
