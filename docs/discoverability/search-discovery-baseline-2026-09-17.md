@@ -74,3 +74,27 @@ The first post-change snapshot does **not** provide evidence that the repository
 **Confidence:** high in the recorded presence/absence for this specific returned snapshot; low in causal attribution to recent repository changes and low in extrapolating to other users, engines, times, or geographies.
 
 **Recommendation to Worker D:** keep new discoverability copy held. The highest-value next observation is another fixed-panel recheck after materially more indexing time. If absence persists across spaced measurements, revisit whether repository-level copy is actually the binding constraint before allocating more production.
+
+## Fixed-panel recheck — 2026-09-23
+
+A third public-search snapshot repeated the same four query strings after five additional days of indexing time and after the README first-minute route had been integrated. This remains a presence/absence probe only; it does not measure impressions, clicks, qualified visits, demand, or traction.
+
+| Fixed query | HumanityAI repository surfaced? | Returned context |
+| --- | --- | --- |
+| `"evidence-based intervention prioritization" AI global development open source` | No | No HumanityAI repository result observed in the returned set; adjacent evidence-based intervention material surfaced instead. |
+| `"global development decision support" AI evidence open source` | No | No HumanityAI repository result observed in the returned set. |
+| `"auditable AI research" evidence synthesis global problems` | No | Auditable-AI/research material surfaced, including unrelated research programs, but not the HumanityAI repository. |
+| `"HumanityAI" global problems evidence interventions` | No | The exact-name space remained dominated by unrelated Humanity AI entities, including the philanthropic initiative and other products using the name. |
+
+### Recheck decision delta
+
+Three spaced snapshots now provide no sampled evidence that the repository is acquiring presence for the fixed descriptive-query panel. This still does **not** establish zero demand or prove that any specific entry-point change failed. It does reduce the expected value of adding more repository copy on the assumption that copy alone is the binding constraint.
+
+- **MORE:** investigate distribution/indexing constraints and stable machine-readable/public entry points before adding more synonyms or internal product artifacts.
+- **LESS:** assume repository prose is the binding discoverability constraint without evidence.
+- **STOP:** repeated near-term copy changes intended only to influence search presence, and bare-brand optimization in the crowded `HumanityAI` name space.
+- **HOLD:** external outreach, posting, paid promotion, account creation, or other consequential distribution actions remain human-review gated.
+
+**Confidence:** high in presence/absence for this returned snapshot; moderate that bare-brand collision is persistent; low in causal attribution and in extrapolation to other search engines, users, locations, or ranking windows.
+
+**Recommendation to Worker D:** treat repository-copy optimization as non-binding until new evidence says otherwise. Preserve the existing clear README/example route and shift the next reversible discoverability work toward diagnosing indexability/distribution surfaces or measuring qualified discovery through already-authorized public surfaces rather than producing another same-pattern internal artifact.
