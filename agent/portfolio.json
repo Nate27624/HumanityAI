@@ -1,24 +1,24 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-23T06:56:00Z",
+  "updated_at": "2026-09-24T01:01:00Z",
   "planning_horizon_hours": 8,
   "controller_role": "worker_d",
-  "mission_focus": "Qualified discoverability remains the bottleneck. Three spaced fixed-panel snapshots show no sampled repository presence, so preserve the clear README/example route and diagnose indexability/distribution constraints rather than adding more copy.",
+  "mission_focus": "Qualified discoverability remains the bottleneck. Three spaced fixed-panel snapshots show no sampled repository presence; preserve the clear README/example route and diagnose indexability/distribution constraints rather than adding more copy.",
   "coherence_gate": {
-    "canonical_main_checked": "05b942b6b1ceaad869831e841aa2bca0b7b8809f",
-    "live_pr_state_checked_at": "2026-09-23T06:56:00Z",
+    "canonical_main_checked": "cddd7771eae313aa2f76da0ba0e2c45bc3d8ab63",
+    "live_pr_state_checked_at": "2026-09-24T01:01:00Z",
     "result": "reconciled",
     "production_hold": false,
-    "reason": "Live state has one open deferred PR (#70), zero active Tier-2 candidates, and human-paused Operator B. No replacement Tier-2 production is justified; current work is reversible discoverability measurement/diagnosis."
+    "reason": "PR #182 is merged; live state has one open deferred PR (#70), zero active Tier-2 candidates, and human-paused Operator B. No replacement Tier-2 production is justified; current work remains reversible discoverability diagnosis."
   },
   "decision_questions": [
-    "Why does HumanityAI remain absent from the fixed descriptive-query panel after three spaced snapshots: indexability/distribution surface, category competition, or simply insufficient search evidence?",
+    "Why does HumanityAI remain absent from the fixed descriptive-query panel after three spaced snapshots: indexability/distribution surface, category competition, or insufficient search evidence?",
     "Do already-authorized public entry points expose enough stable machine-readable and human-readable signals for qualified discovery without more copy?",
     "What reversible measurement can distinguish indexing/distribution constraints from a repository-copy constraint without outreach or vanity-metric optimization?"
   ],
   "ranked_workstreams": [
-    {"rank": 1, "workstream": "Diagnose indexability/distribution surfaces", "reason": "Three spaced fixed-panel snapshots show no sampled repository presence; marginal README synonym work now has lower VOI than identifying whether public/indexable surfaces are the constraint."},
-    {"rank": 2, "workstream": "Preserve first-minute comprehension route", "reason": "README -> examples -> DP0001 is already direct; change it only for a concrete observed navigation/comprehension defect."},
+    {"rank": 1, "workstream": "Diagnose indexability/distribution surfaces", "reason": "Three spaced fixed-panel snapshots show no sampled repository presence; marginal README synonym work has lower VOI than identifying whether public/indexable surfaces are the constraint."},
+    {"rank": 2, "workstream": "Preserve first-minute comprehension route", "reason": "README -> examples -> DP0001 is already direct; change only for a concrete observed navigation/comprehension defect."},
     {"rank": 3, "workstream": "Hold low-VOI internal expansion", "reason": "DP0002, platform/API work, same-pattern evidence products, and PR #70 lack a current downstream decision that beats discoverability diagnosis."}
   ],
   "wip": {
@@ -26,7 +26,7 @@
     "active_tier2": [],
     "deferred_not_active": ["PR #70", "DP0002", "platform/UI/API expansion", "historical blinded replay"],
     "new_tier2_production_allowed": true,
-    "tier1_in_flight": ["controller/discovery-recheck-20260923"]
+    "tier1_in_flight": []
   },
   "allocations": {
     "operator_a": {"mode": "read_only_indexability_diagnosis", "required_output": "Do not add entry-point copy. Inspect already-authorized public repository/indexing surfaces and report only a concrete reversible indexability/distribution defect or a measurement that can distinguish it from a copy constraint."},
@@ -41,10 +41,9 @@
     "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurement that can distinguish indexability/distribution constraints from copy constraints"]
   },
   "recent_decision_deltas": [
-    {"at": "2026-09-23T06:56:00Z", "delta": "Third spaced fixed-panel snapshot again found no sampled HumanityAI repository presence. Lower the priority of additional repository copy and shift reversible discoverability work toward indexability/distribution diagnosis."},
-    {"at": "2026-09-22T07:58:00Z", "delta": "Reconciled controller state to live GitHub and verified GitLab mirror provenance/content after prior mirror recovery; no new Tier-2 work pulled."},
-    {"at": "2026-09-20T00:59:00Z", "delta": "Operator B is explicitly human-paused and A/C/D assumptions no longer depend on B firing."},
-    {"at": "2026-09-19T12:01:00Z", "delta": "README now routes first-minute visitors directly to examples; hold additional copy and preserve measurement-first allocation."}
+    {"at": "2026-09-24T01:01:00Z", "delta": "Post-#182 coherence check removed the completed discovery-recheck handoff from in-flight state and confirmed no Tier-2 replacement should be pulled."},
+    {"at": "2026-09-23T06:56:00Z", "delta": "Third spaced fixed-panel snapshot again found no sampled HumanityAI repository presence; shift reversible discoverability work toward indexability/distribution diagnosis."},
+    {"at": "2026-09-20T00:59:00Z", "delta": "Operator B is explicitly human-paused and A/C/D assumptions no longer depend on B firing."}
   ],
   "stale_or_blocked": [
     {"item": "External-use validation/outreach", "status": "human_review_required_for_outreach", "reason": "Repository-level discoverability work does not authorize contacting users."},
@@ -54,17 +53,17 @@
   ],
   "producer_visibility": {
     "p05": {"producer_branch": "operator-a/p05-parent-messaging-exposure-test-20260911", "original_producer_ready_sha": "622456e9ee35613b2a31c0efcfb90725dc1570d8", "authoritative_recovery_pr": 137, "authoritative_recovery_status": "merged", "classification": "RECOVERED_AND_INTEGRATED; prior no_candidate diagnosis is false"},
-    "discoverability": {"pr167": {"status": "closed_unmerged; do_not_recreate_without_new_evidence"}, "pr171": {"status": "merged"}, "pr174": {"status": "merged"}, "pr178": {"status": "merged", "change": "README first-minute route to examples"}, "recheck_20260923": {"status": "producer_ready_on_controller/discovery-recheck-20260923", "observation": "no sampled repository presence across fixed panel"}}
+    "discoverability": {"pr167": {"status": "closed_unmerged; do_not_recreate_without_new_evidence"}, "pr171": {"status": "merged"}, "pr174": {"status": "merged"}, "pr178": {"status": "merged", "change": "README first-minute route to examples"}, "pr182": {"status": "merged", "source_branch": "controller/discovery-recheck-20260923", "observation": "no sampled repository presence across fixed panel"}}
   },
   "mirror": {
-    "github_source_sha": "05b942b6b1ceaad869831e841aa2bca0b7b8809f",
-    "gitlab_mirror_sha": "a24ae42b7da286dc53603d13f671085611b07d9f",
-    "status": "stale_pending_sync",
-    "verification": "Canonical GitHub advanced after the last verified mirror provenance. D must sync GitLab only after this controller change is integrated; do not treat the older mirror provenance as current."
+    "github_source_sha": "cddd7771eae313aa2f76da0ba0e2c45bc3d8ab63",
+    "gitlab_mirror_sha": "ea20ba952f28570a56970d0ea45f89fab4440c8d",
+    "status": "current_verified",
+    "verification": "GitLab provenance names canonical GitHub main cddd7771eae313aa2f76da0ba0e2c45bc3d8ab63; representative portfolio and design-history blobs match canonical GitHub."
   },
   "flow_metrics": {
-    "process_error_budget": "Tier-2 WIP is zero. Recent mirror recovery/topology reconciliation consumed controller capacity; do not create replacement Tier-2 work merely to fill idle slots.",
-    "current_assessment": "Public legibility is improved, but three spaced fixed-panel snapshots still show no sampled repository presence. This is a material decision delta away from more copy and toward diagnosing indexability/distribution surfaces; external usefulness remains unvalidated."
+    "process_error_budget": "Tier-2 WIP is zero. Do not create replacement Tier-2 work merely to fill idle slots.",
+    "current_assessment": "Public legibility is improved, but three spaced fixed-panel snapshots still show no sampled repository presence. The material decision delta is away from more copy and toward indexability/distribution diagnosis; external usefulness remains unvalidated."
   },
   "controller_rules": [
     "Human/constitutional policy remains highest authority; this file grants no authority.",
