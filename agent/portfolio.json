@@ -1,12 +1,12 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-30T07:55:00Z",
+  "updated_at": "2026-09-30T09:02:00Z",
   "planning_horizon_hours": 8,
   "controller_role": "worker_d",
   "mission_focus": "Qualified discoverability remains the bottleneck. Three spaced fixed-panel snapshots show no sampled repository presence; preserve the clear README/example route and diagnose indexability/distribution constraints rather than adding more copy.",
   "coherence_gate": {
     "canonical_main_checked": "298bd96f805b0b731b233d98a326645347ddab18",
-    "live_pr_state_checked_at": "2026-09-30T07:55:00Z",
+    "live_pr_state_checked_at": "2026-09-30T09:02:00Z",
     "result": "reconciled",
     "production_hold": false,
     "reason": "Live state has one open deferred PR (#70), zero active Tier-2 candidates, and human-paused Operator B. No replacement Tier-2 production is justified; current work remains reversible discoverability diagnosis."
@@ -41,7 +41,7 @@
     "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurement that can distinguish indexability/distribution constraints from copy constraints"]
   },
   "recent_decision_deltas": [
-    {"at": "2026-09-30T07:55:00Z", "delta": "Coherence recheck confirmed zero active Tier-2 WIP and no justification for replacement production; GitLab mirror remains stale relative to canonical GitHub and must not be treated as current."},
+    {"at": "2026-09-30T09:02:00Z", "delta": "Direct GitLab read resolved the mirror premise: GitLab main is current for canonical GitHub 298bd96f805b0b731b233d98a326645347ddab18 and its portfolio content matches canonical; correct the controller branch and reroute through CI/C review."},
     {"at": "2026-09-24T01:01:00Z", "delta": "Post-#182 coherence check removed the completed discovery-recheck handoff from in-flight state and confirmed no Tier-2 replacement should be pulled."},
     {"at": "2026-09-23T06:56:00Z", "delta": "Third spaced fixed-panel snapshot again found no sampled HumanityAI repository presence; shift reversible discoverability work toward indexability/distribution diagnosis."}
   ],
@@ -49,8 +49,7 @@
     {"item": "External-use validation/outreach", "status": "human_review_required_for_outreach", "reason": "Repository-level discoverability work does not authorize contacting users."},
     {"item": "Discoverability outcome evidence", "status": "unvalidated", "reason": "Three spaced fixed-panel snapshots show no sampled repository presence; this is not evidence of zero demand and does not isolate the causal constraint."},
     {"item": "Operator B", "status": "human_paused", "reason": "Human-directed reduced-compute topology; controller must not re-enable or allocate executable work to B."},
-    {"item": "PR #70", "status": "deprioritized", "reason": "Low marginal decision consequence absent concrete downstream use."},
-    {"item": "GitLab mirror", "status": "stale_pending_sync", "reason": "Last verified mirror provenance names cddd7771eae313aa2f76da0ba0e2c45bc3d8ab63 while canonical GitHub main is 298bd96f805b0b731b233d98a326645347ddab18; GitLab write capability is unavailable in this run."}
+    {"item": "PR #70", "status": "deprioritized", "reason": "Low marginal decision consequence absent concrete downstream use."}
   ],
   "producer_visibility": {
     "p05": {"producer_branch": "operator-a/p05-parent-messaging-exposure-test-20260911", "original_producer_ready_sha": "622456e9ee35613b2a31c0efcfb90725dc1570d8", "authoritative_recovery_pr": 137, "authoritative_recovery_status": "merged", "classification": "RECOVERED_AND_INTEGRATED; prior no_candidate diagnosis is false"},
@@ -58,12 +57,12 @@
   },
   "mirror": {
     "github_source_sha": "298bd96f805b0b731b233d98a326645347ddab18",
-    "gitlab_mirror_sha": "ea20ba952f28570a56970d0ea45f89fab4440c8d",
-    "status": "stale_pending_sync",
-    "verification": "Canonical GitHub advanced beyond the last verified GitLab provenance; GitLab must not be treated as current until exact tracked content is synchronized and representative files verified."
+    "gitlab_mirror_sha": "f241bcc88cb074bc2e443f7cdb3d3b63da9dae0f",
+    "status": "current_verified",
+    "verification": "Direct GitLab read on 2026-09-30 found main provenance 'mirror: GitHub main 298bd96f805b0b731b233d98a326645347ddab18'; GitLab agent/portfolio.json exactly matches canonical GitHub content at that source SHA."
   },
   "flow_metrics": {
-    "process_error_budget": "Tier-2 WIP is zero. Do not create replacement Tier-2 work merely to fill idle slots; mirror recovery remains controller toil.",
+    "process_error_budget": "Tier-2 WIP is zero. Do not create replacement Tier-2 work merely to fill idle slots.",
     "current_assessment": "Public legibility is improved, but three spaced fixed-panel snapshots still show no sampled repository presence. The material decision delta remains away from more copy and toward indexability/distribution diagnosis; external usefulness remains unvalidated."
   },
   "controller_rules": [
