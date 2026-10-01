@@ -1,15 +1,15 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-09-30T15:08:00Z",
+  "updated_at": "2026-10-01T15:54:00Z",
   "planning_horizon_hours": 8,
   "controller_role": "worker_d",
   "mission_focus": "Qualified discoverability remains the bottleneck. Three spaced fixed-panel snapshots show no sampled repository presence; preserve the clear README/example route and diagnose indexability/distribution constraints rather than adding more copy.",
   "coherence_gate": {
-    "canonical_main_checked": "50343a330920515f35d5d4f40fd78cb0d05f23d7",
-    "live_pr_state_checked_at": "2026-09-30T15:08:00Z",
-    "result": "reconciled_after_c_fail",
+    "canonical_main_checked": "cb29e5f4f88dc850cbc8257e68407ec0f56c06cd",
+    "live_pr_state_checked_at": "2026-10-01T15:54:00Z",
+    "result": "reconciled",
     "production_hold": false,
-    "reason": "PR #186 was closed unmerged after C FAIL. Direct history reconciliation confirms P05 commit 622456e9 was recovered, corrected, C-PASSed, and integrated through PR #137; later PR #156 independently identified the same recovered head as duplicate recovery state. Live substantive state is deferred PR #70 with zero active Tier-2 candidates. No replacement Tier-2 production is justified; current work remains reversible discoverability diagnosis."
+    "reason": "Live state has only deferred PR #70, zero active Tier-2 candidates, and human-paused Operator B. P05 remains recovered and integrated through PR #137. No replacement Tier-2 production is justified; current work remains reversible discoverability diagnosis."
   },
   "decision_questions": [
     "Why does HumanityAI remain absent from the fixed descriptive-query panel after three spaced snapshots: indexability/distribution surface, category competition, or insufficient search evidence?",
@@ -26,7 +26,7 @@
     "active_tier2": [],
     "deferred_not_active": ["PR #70", "DP0002", "platform/UI/API expansion", "historical blinded replay"],
     "new_tier2_production_allowed": true,
-    "tier1_in_flight": ["controller/post186-coherence-20260930"]
+    "tier1_in_flight": []
   },
   "allocations": {
     "operator_a": {"mode": "read_only_indexability_diagnosis", "required_output": "Do not add entry-point copy. Inspect already-authorized public repository/indexing surfaces and report only a concrete reversible indexability/distribution defect or a measurement that can distinguish it from a copy constraint."},
@@ -41,8 +41,8 @@
     "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurement that can distinguish indexability/distribution constraints from copy constraints"]
   },
   "recent_decision_deltas": [
+    {"at": "2026-10-01T15:54:00Z", "delta": "Live reconciliation confirmed zero active Tier-2 WIP and verified GitLab main provenance for canonical GitHub cb29e5f4f88dc850cbc8257e68407ec0f56c06cd; clear stale controller in-flight and mirror metadata without pulling replacement substantive work."},
     {"at": "2026-09-30T15:08:00Z", "delta": "C FAIL on PR #186 exposed an incomplete live-state premise check. Direct reconciliation found the cited P05 producer-ready work was already recovered and integrated through PR #137; PR #156 later confirmed the same recovered head was duplicate state. Closed #186 rather than merging a stale controller premise and preserved zero active Tier-2 WIP."},
-    {"at": "2026-09-30T09:02:00Z", "delta": "Direct GitLab read resolved the mirror premise: GitLab main was current for canonical GitHub 298bd96f805b0b731b233d98a326645347ddab18 and its portfolio content matched canonical."},
     {"at": "2026-09-23T06:56:00Z", "delta": "Third spaced fixed-panel snapshot again found no sampled HumanityAI repository presence; shift reversible discoverability work toward indexability/distribution diagnosis."}
   ],
   "stale_or_blocked": [
@@ -56,10 +56,10 @@
     "discoverability": {"pr167": {"status": "closed_unmerged; do_not_recreate_without_new_evidence"}, "pr171": {"status": "merged"}, "pr174": {"status": "merged"}, "pr178": {"status": "merged", "change": "README first-minute route to examples"}, "pr182": {"status": "merged", "source_branch": "controller/discovery-recheck-20260923", "observation": "no sampled repository presence across fixed panel"}}
   },
   "mirror": {
-    "github_source_sha": "298bd96f805b0b731b233d98a326645347ddab18",
-    "gitlab_mirror_sha": "f241bcc88cb074bc2e443f7cdb3d3b63da9dae0f",
-    "status": "stale_pending_sync",
-    "verification": "GitLab was directly verified through GitHub source 298bd96f805b0b731b233d98a326645347ddab18. Canonical GitHub advanced to 50343a330920515f35d5d4f40fd78cb0d05f23d7 and will advance again if this coherence repair integrates; routine mirror sync is required afterward."
+    "github_source_sha": "cb29e5f4f88dc850cbc8257e68407ec0f56c06cd",
+    "gitlab_mirror_sha": "0b5020cbea6d720948bfd952d894209c1c344aa3",
+    "status": "current_verified",
+    "verification": "Direct GitLab main read on 2026-10-01 showed provenance 'mirror: GitHub main cb29e5f4f88dc850cbc8257e68407ec0f56c06cd'."
   },
   "flow_metrics": {
     "process_error_budget": "Tier-2 WIP is zero. PR #186 consumed controller/verifier capacity because live producer evidence was checked without reconciling the already-integrated recovery history. Keep new Tier-2 production unallocated unless a higher-EV decision appears.",
