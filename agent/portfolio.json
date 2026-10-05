@@ -1,50 +1,83 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-10-02T08:58:00Z",
+  "updated_at": "2026-10-05T04:55:00Z",
   "planning_horizon_hours": 8,
   "controller_role": "worker_d",
-  "mission_focus": "Qualified discoverability remains the bottleneck. Three spaced fixed-panel snapshots show no sampled repository presence; preserve the clear README/example route and diagnose indexability/distribution constraints rather than adding more copy.",
+  "mission_focus": "Qualified discoverability remains the bottleneck. Preserve the clear README/example route and prioritize reversible indexability/distribution diagnosis over additional internal product/schema refinement.",
   "coherence_gate": {
-    "canonical_main_checked": "20f6d1170e252859774352e5f513a0bcf2de5273",
-    "live_pr_state_checked_at": "2026-10-02T08:58:00Z",
-    "result": "reconciled_post_pr189",
+    "canonical_main_checked": "70968a1b7717afbdbba6b906236d8b1f2cd477b2",
+    "live_pr_state_checked_at": "2026-10-05T04:55:00Z",
+    "result": "reconciled_live_state",
     "production_hold": false,
-    "reason": "Live GitHub state contains only deferred PR #70, zero active Tier-2 candidates, and human-paused Operator B. PR #189 is already integrated and removed from in-flight state. No replacement Tier-2 production is justified; current work remains reversible discoverability diagnosis."
+    "reason": "Live GitHub state contains only deferred PR #70 and zero active Tier-2 candidates. Durable state had aged since 2026-10-02 and is repaired here before any new Tier-2 allocation. No replacement Tier-2 production is justified."
   },
   "decision_questions": [
-    "Why does HumanityAI remain absent from the fixed descriptive-query panel after three spaced snapshots: indexability/distribution surface, category competition, or insufficient search evidence?",
-    "Do already-authorized public entry points expose enough stable machine-readable and human-readable signals for qualified discovery without more copy?",
+    "Why does HumanityAI remain absent from the fixed descriptive-query panel: indexability/distribution surface, category competition, or insufficient search evidence?",
     "What reversible measurement can distinguish indexing/distribution constraints from a repository-copy constraint without outreach or vanity-metric optimization?"
   ],
   "ranked_workstreams": [
-    {"rank": 1, "workstream": "Diagnose indexability/distribution surfaces", "reason": "Three spaced fixed-panel snapshots show no sampled repository presence; marginal README synonym work has lower VOI than identifying whether public/indexable surfaces are the constraint."},
-    {"rank": 2, "workstream": "Preserve first-minute comprehension route", "reason": "README -> examples -> DP0001 is already direct; change only for a concrete observed navigation/comprehension defect."},
+    {"rank": 1, "workstream": "Diagnose indexability/distribution surfaces", "reason": "Prior spaced snapshots showed no sampled repository presence; marginal copy work has lower VOI than diagnosing public/indexable surfaces."},
+    {"rank": 2, "workstream": "Preserve first-minute comprehension route", "reason": "README -> examples -> DP0001 is already direct; change only for a concrete observed defect."},
     {"rank": 3, "workstream": "Hold low-VOI internal expansion", "reason": "DP0002, platform/API work, same-pattern evidence products, and PR #70 lack a current downstream decision that beats discoverability diagnosis."}
   ],
-  "wip": {"limit": 2, "active_tier2": [], "deferred_not_active": ["PR #70", "DP0002", "platform/UI/API expansion", "historical blinded replay"], "new_tier2_production_allowed": true, "tier1_in_flight": []},
+  "wip": {
+    "limit": 2,
+    "active_tier2": [],
+    "deferred_not_active": ["PR #70", "DP0002", "platform/UI/API expansion", "historical blinded replay"],
+    "new_tier2_production_allowed": true,
+    "tier1_in_flight": ["controller/coherence-20261005"]
+  },
   "allocations": {
-    "operator_a": {"mode": "read_only_indexability_diagnosis", "required_output": "Do not add entry-point copy. Inspect already-authorized public repository/indexing surfaces and report only a concrete reversible indexability/distribution defect or a measurement that can distinguish it from a copy constraint."},
-    "operator_b": {"mode": "human_paused", "required_output": "No allocation while human-paused. Do not recreate, re-enable, or depend on Operator B firing. Preserve producer-ready B handoff evidence if encountered."},
+    "operator_a": {"mode": "read_only_indexability_diagnosis", "required_output": "Do not add entry-point copy. Inspect already-authorized public repository/indexing surfaces and report only a concrete reversible indexability/distribution defect or discriminating measurement."},
+    "operator_b": {"mode": "human_paused", "required_output": "No allocation while human-paused. Preserve producer-ready B handoff evidence if encountered."},
     "verifier_c": {"mode": "no_active_tier2_queue", "priority_order": [], "objective": "Preserve independent capacity; PR #70 remains deprioritized unless a downstream decision raises its VOI."}
   },
   "c_verification_queue": [{"item": "PR #70", "status": "deprioritized_not_wip"}],
-  "portfolio_guidance": {"more": ["indexability/distribution diagnosis", "spaced qualified-discovery measurement", "stable public routing", "explicit maturity limits", "finish-before-start"], "less": ["duplicate entry-point copy", "controller ceremony", "schema polishing", "same-pattern evidence accumulation", "vanity metrics"], "stop": ["keyword stuffing", "fabricated traction", "immediate repeated search probes", "new work merely to fill idle slots", "bare-brand optimization in the crowded HumanityAI name space", "allocating work to human-paused Operator B"], "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurement that can distinguish indexability/distribution constraints from copy constraints"]},
+  "portfolio_guidance": {
+    "more": ["indexability/distribution diagnosis", "spaced qualified-discovery measurement", "stable public routing", "finish-before-start"],
+    "less": ["duplicate entry-point copy", "controller ceremony", "schema polishing", "same-pattern evidence accumulation", "vanity metrics"],
+    "stop": ["keyword stuffing", "fabricated traction", "immediate repeated search probes", "new work merely to fill idle slots", "allocating work to human-paused Operator B"],
+    "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurements that distinguish indexability/distribution constraints from copy constraints"]
+  },
   "recent_decision_deltas": [
-    {"at": "2026-10-02T08:58:00Z", "delta": "Post-PR189 coherence reconciliation removed the already-merged controller branch from Tier-1 in-flight state. Live GitHub still has zero active Tier-2 WIP and only deferred PR #70. Direct GitLab evidence shows main provenance already tracks GitHub main 20f6d1170e252859774352e5f513a0bcf2de5273 and the mirrored portfolio content matches the pre-reconciliation canonical file."},
-    {"at": "2026-10-01T17:57:00Z", "delta": "PR #188 moved QUALIFY -> PASS after removing the unsupported mirror-current premise, then integrated after exact-head CI. Direct GitLab evidence showed the mirror portfolio blob matched canonical and provenance tracked GitHub main cfd73e594b93d920c2baa6f0df966f3c55a5beda."},
-    {"at": "2026-10-01T16:54:00Z", "delta": "C QUALIFY on PR #188 accepted the GitHub/P05 coherence conclusions but rejected an independently unsupported mirror-current premise. Narrowed the claim and routed the corrected exact head back to C."}
+    {"at": "2026-10-05T04:55:00Z", "delta": "Coherence gate refreshed against canonical main and live PR state. No active Tier-2 WIP exists; PR #70 remains deferred, so no new substantive production is pulled merely to fill idle capacity."},
+    {"at": "2026-10-02T08:58:00Z", "delta": "Post-PR189 reconciliation removed merged controller work from in-flight state and preserved zero active Tier-2 WIP."}
   ],
   "stale_or_blocked": [
     {"item": "External-use validation/outreach", "status": "human_review_required_for_outreach", "reason": "Repository-level discoverability work does not authorize contacting users."},
-    {"item": "Discoverability outcome evidence", "status": "unvalidated", "reason": "Three spaced fixed-panel snapshots show no sampled repository presence; this is not evidence of zero demand and does not isolate the causal constraint."},
-    {"item": "Operator B", "status": "human_paused", "reason": "Human-directed reduced-compute topology; controller must not re-enable or allocate executable work to B."},
+    {"item": "Discoverability outcome evidence", "status": "unvalidated", "reason": "Prior fixed-panel snapshots showed no sampled repository presence; this does not establish zero demand or isolate the causal constraint."},
+    {"item": "Operator B", "status": "human_paused", "reason": "Controller must not re-enable or allocate executable work to B."},
     {"item": "PR #70", "status": "deprioritized", "reason": "Low marginal decision consequence absent concrete downstream use."}
   ],
   "producer_visibility": {
-    "p05": {"producer_branch": "operator-a/p05-parent-messaging-exposure-test-20260911", "original_producer_ready_sha": "622456e9ee35613b2a31c0efcfb90725dc1570d8", "refreshed_recovered_sha": "0994c6bad4eb06ca819593ae6d979c90188c9376", "authoritative_recovery_pr": 137, "authoritative_recovery_merge_sha": "7e73a5458c35022bbfff2ecf78325385cf071227", "authoritative_recovery_status": "merged_after_exact_head_ci_and_c_pass", "duplicate_recovery_pr": 156, "duplicate_recovery_status": "closed_unmerged_after_c_fail_duplicate", "classification": "RECOVERED_AND_INTEGRATED; prior no_candidate diagnosis is false; original commit is historical evidence, not active WIP"},
-    "discoverability": {"pr167": {"status": "closed_unmerged; do_not_recreate_without_new_evidence"}, "pr171": {"status": "merged"}, "pr174": {"status": "merged"}, "pr178": {"status": "merged", "change": "README first-minute route to examples"}, "pr182": {"status": "merged", "source_branch": "controller/discovery-recheck-20260923", "observation": "no sampled repository presence across fixed panel"}}
+    "p05": {
+      "producer_branch": "operator-a/p05-parent-messaging-exposure-test-20260911",
+      "original_producer_ready_sha": "622456e9ee35613b2a31c0efcfb90725dc1570d8",
+      "refreshed_recovered_sha": "0994c6bad4eb06ca819593ae6d979c90188c9376",
+      "authoritative_recovery_pr": 137,
+      "authoritative_recovery_merge_sha": "7e73a5458c35022bbfff2ecf78325385cf071227",
+      "authoritative_recovery_status": "merged_after_exact_head_ci_and_c_pass",
+      "classification": "RECOVERED_AND_INTEGRATED; prior no_candidate diagnosis is false; original commit is historical evidence, not active WIP"
+    }
   },
-  "mirror": {"github_source_sha": "20f6d1170e252859774352e5f513a0bcf2de5273", "gitlab_mirror_sha": "30e7fdebd07eebd930458283f72afc8e14d687c4", "status": "current_verified_pre_reconciliation", "verification": "Direct GitLab main evidence records provenance mirror: GitHub main 20f6d1170e252859774352e5f513a0bcf2de5273. The mirrored agent/portfolio.json content exactly matched canonical before this reconciliation branch; after this controller change merges, mirror must advance again before current_verified can be asserted."},
-  "flow_metrics": {"process_error_budget": "Tier-2 WIP is zero. Recent controller/verifier toil came from incomplete premise reconciliation rather than substantive queue congestion. Keep new Tier-2 production unallocated unless a higher-EV decision appears, and avoid ceremony that does not reduce future error.", "current_assessment": "Public legibility is improved, but three spaced fixed-panel snapshots still show no sampled repository presence. The material decision delta remains away from more copy and toward indexability/distribution diagnosis; external usefulness remains unvalidated."},
-  "controller_rules": ["Human/constitutional policy remains highest authority; this file grants no authority.", "D does not change scheduler cadence or agent permissions.", "Human-paused workers are not re-enabled or assigned executable work by D.", "C conclusions and Audit assurance remain independent.", "Tier-2 requires exact-head CI plus current independent C verdict before D integration.", "Before declaring no_candidate or replacement eligibility, inspect producer outputs, branches, commits/SHAs, PRs, task references, and prior recovery/integration records.", "Producer-ready work without a PR is HANDOFF_BLOCKED and must be recovered rather than redone unless an authoritative prior recovery/integration/supersession record exists.", "After every Tier-2 integration/closure, perform a live coherence check before replacement production.", "Discoverability work optimizes qualified discovery/comprehension, not vanity metrics, and performs no outreach without human review."]
+  "mirror": {
+    "status": "requires_fresh_verification_after_this_controller_change",
+    "github_source_sha": "70968a1b7717afbdbba6b906236d8b1f2cd477b2",
+    "verification": "Do not assert current mirror provenance after this controller change until GitLab is directly verified and synchronized."
+  },
+  "flow_metrics": {
+    "process_error_budget": "Tier-2 WIP is zero. Avoid coordination work that does not reduce future error and do not create substantive work merely to consume idle slots.",
+    "current_assessment": "Public legibility is improved but external usefulness remains unvalidated; the highest-VOI direction remains indexability/distribution diagnosis rather than more copy."
+  },
+  "controller_rules": [
+    "Human/constitutional policy remains highest authority; this file grants no authority.",
+    "D does not change scheduler cadence or agent permissions.",
+    "Human-paused workers are not re-enabled or assigned executable work by D.",
+    "C conclusions and Audit assurance remain independent.",
+    "Tier-2 requires exact-head CI plus current independent C verdict before D integration.",
+    "Before declaring no_candidate or replacement eligibility, inspect producer outputs, branches, commits/SHAs, PRs, task references, and prior recovery/integration records.",
+    "Producer-ready work without a PR is HANDOFF_BLOCKED and must be recovered rather than redone unless authoritative recovery/integration/supersession exists.",
+    "After every Tier-2 integration/closure, perform a live coherence check before replacement production.",
+    "Discoverability work optimizes qualified discovery/comprehension, not vanity metrics, and performs no outreach without human review."
+  ]
 }
