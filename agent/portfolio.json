@@ -1,15 +1,15 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-10-05T04:55:00Z",
+  "updated_at": "2026-10-06T12:00:54Z",
   "planning_horizon_hours": 8,
   "controller_role": "worker_d",
   "mission_focus": "Qualified discoverability remains the bottleneck. Preserve the clear README/example route and prioritize reversible indexability/distribution diagnosis over additional internal product/schema refinement.",
   "coherence_gate": {
-    "canonical_main_checked": "70968a1b7717afbdbba6b906236d8b1f2cd477b2",
-    "live_pr_state_checked_at": "2026-10-05T04:55:00Z",
+    "canonical_main_checked": "c50e8d26cb9ca30730a0079869a3505950bce349",
+    "live_pr_state_checked_at": "2026-10-06T12:00:54Z",
     "result": "reconciled_live_state",
     "production_hold": false,
-    "reason": "Live GitHub state contains only deferred PR #70 and zero active Tier-2 candidates. Durable state had aged since 2026-10-02 and is repaired here before any new Tier-2 allocation. No replacement Tier-2 production is justified."
+    "reason": "Live GitHub state contains only deferred PR #70 and zero active Tier-2 candidates. The prior controller branch is already merged and has been removed from in-flight state. No replacement Tier-2 production is justified."
   },
   "decision_questions": [
     "Why does HumanityAI remain absent from the fixed descriptive-query panel: indexability/distribution surface, category competition, or insufficient search evidence?",
@@ -25,7 +25,7 @@
     "active_tier2": [],
     "deferred_not_active": ["PR #70", "DP0002", "platform/UI/API expansion", "historical blinded replay"],
     "new_tier2_production_allowed": true,
-    "tier1_in_flight": ["controller/coherence-20261005"]
+    "tier1_in_flight": ["controller/coherence-20261006"]
   },
   "allocations": {
     "operator_a": {"mode": "read_only_indexability_diagnosis", "required_output": "Do not add entry-point copy. Inspect already-authorized public repository/indexing surfaces and report only a concrete reversible indexability/distribution defect or discriminating measurement."},
@@ -40,8 +40,8 @@
     "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurements that distinguish indexability/distribution constraints from copy constraints"]
   },
   "recent_decision_deltas": [
-    {"at": "2026-10-05T04:55:00Z", "delta": "Coherence gate refreshed against canonical main and live PR state. No active Tier-2 WIP exists; PR #70 remains deferred, so no new substantive production is pulled merely to fill idle capacity."},
-    {"at": "2026-10-02T08:58:00Z", "delta": "Post-PR189 reconciliation removed merged controller work from in-flight state and preserved zero active Tier-2 WIP."}
+    {"at": "2026-10-06T12:00:54Z", "delta": "Coherence gate refreshed against canonical main and live PR state. The prior controller branch is merged; active Tier-2 WIP remains zero and PR #70 remains deferred. Direct GitLab evidence shows mirror provenance tracks canonical GitHub main c50e8d26cb9ca30730a0079869a3505950bce349 and the mirrored portfolio blob matches canonical before this reconciliation."},
+    {"at": "2026-10-05T04:55:00Z", "delta": "Coherence gate refreshed against canonical main and live PR state. No active Tier-2 WIP exists; PR #70 remains deferred, so no new substantive production is pulled merely to fill idle capacity."}
   ],
   "stale_or_blocked": [
     {"item": "External-use validation/outreach", "status": "human_review_required_for_outreach", "reason": "Repository-level discoverability work does not authorize contacting users."},
@@ -61,9 +61,10 @@
     }
   },
   "mirror": {
-    "status": "requires_fresh_verification_after_this_controller_change",
-    "github_source_sha": "70968a1b7717afbdbba6b906236d8b1f2cd477b2",
-    "verification": "Do not assert current mirror provenance after this controller change until GitLab is directly verified and synchronized."
+    "github_source_sha": "c50e8d26cb9ca30730a0079869a3505950bce349",
+    "gitlab_mirror_sha": "e63fb3c980ae0fbc0a438fff277b39c115cdca74",
+    "status": "current_verified_pre_reconciliation",
+    "verification": "Direct GitLab main provenance is mirror: GitHub main c50e8d26cb9ca30730a0079869a3505950bce349 and mirrored agent/portfolio.json blob 0ecedaa4c5241c5381fb19cc346267d02a6de9d5 matches canonical before this reconciliation. After this controller change merges, mirror must advance again before current_verified can be asserted."
   },
   "flow_metrics": {
     "process_error_budget": "Tier-2 WIP is zero. Avoid coordination work that does not reduce future error and do not create substantive work merely to consume idle slots.",
