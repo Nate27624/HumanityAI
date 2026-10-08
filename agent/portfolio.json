@@ -1,15 +1,15 @@
 {
   "schema_version": "1.2",
-  "updated_at": "2026-10-06T12:00:54Z",
+  "updated_at": "2026-10-08T18:01:01Z",
   "planning_horizon_hours": 8,
   "controller_role": "worker_d",
   "mission_focus": "Qualified discoverability remains the bottleneck. Preserve the clear README/example route and prioritize reversible indexability/distribution diagnosis over additional internal product/schema refinement.",
   "coherence_gate": {
-    "canonical_main_checked": "c50e8d26cb9ca30730a0079869a3505950bce349",
-    "live_pr_state_checked_at": "2026-10-06T12:00:54Z",
+    "canonical_main_checked": "44607d8525bf195159ffdfd338fc488f79e10a50",
+    "live_pr_state_checked_at": "2026-10-08T18:01:01Z",
     "result": "reconciled_live_state",
     "production_hold": false,
-    "reason": "Live GitHub state contains only deferred PR #70 and zero active Tier-2 candidates. The prior controller branch is already merged and has been removed from in-flight state. No replacement Tier-2 production is justified."
+    "reason": "Live GitHub main and PR state checked: #192 merged, #70 remains the sole open/deferred PR, zero active Tier-2 candidates. P05 recovery #137 is already integrated. No new Tier-2 allocation justified; Operator B remains human-paused."
   },
   "decision_questions": [
     "Why does HumanityAI remain absent from the fixed descriptive-query panel: indexability/distribution surface, category competition, or insufficient search evidence?",
@@ -25,7 +25,7 @@
     "active_tier2": [],
     "deferred_not_active": ["PR #70", "DP0002", "platform/UI/API expansion", "historical blinded replay"],
     "new_tier2_production_allowed": true,
-    "tier1_in_flight": ["controller/coherence-20261006"]
+    "tier1_in_flight": []
   },
   "allocations": {
     "operator_a": {"mode": "read_only_indexability_diagnosis", "required_output": "Do not add entry-point copy. Inspect already-authorized public repository/indexing surfaces and report only a concrete reversible indexability/distribution defect or discriminating measurement."},
@@ -40,6 +40,7 @@
     "start": ["inspect stable public/indexable surfaces for concrete defects", "design reversible measurements that distinguish indexability/distribution constraints from copy constraints"]
   },
   "recent_decision_deltas": [
+    {"at": "2026-10-08T18:01:01Z", "delta": "Live-state coherence reconciled: PR #192 merged, PR #70 still deferred, zero active Tier-2 WIP, P05 producer-ready handoff already recovered through PR #137. Full tracked-tree comparison at prior GitHub main 44607d8525bf195159ffdfd338fc488f79e10a50 and GitLab main 30a0eb80717923c9960f117dec6406ad167b3790 found 115/115 matching blobs with no missing or divergent files; prior mirror-integrity incident is resolved at this checked snapshot. No new Tier-2 work allocated; B remains human-paused."},
     {"at": "2026-10-06T12:00:54Z", "delta": "Coherence gate refreshed against canonical main and live PR state. The prior controller branch is merged; active Tier-2 WIP remains zero and PR #70 remains deferred. Direct GitLab evidence shows mirror provenance tracks canonical GitHub main c50e8d26cb9ca30730a0079869a3505950bce349 and the mirrored portfolio blob matches canonical before this reconciliation."},
     {"at": "2026-10-05T04:55:00Z", "delta": "Coherence gate refreshed against canonical main and live PR state. No active Tier-2 WIP exists; PR #70 remains deferred, so no new substantive production is pulled merely to fill idle capacity."}
   ],
@@ -61,10 +62,10 @@
     }
   },
   "mirror": {
-    "github_source_sha": "c50e8d26cb9ca30730a0079869a3505950bce349",
-    "gitlab_mirror_sha": "e63fb3c980ae0fbc0a438fff277b39c115cdca74",
-    "status": "current_verified_pre_reconciliation",
-    "verification": "Direct GitLab main provenance is mirror: GitHub main c50e8d26cb9ca30730a0079869a3505950bce349 and mirrored agent/portfolio.json blob 0ecedaa4c5241c5381fb19cc346267d02a6de9d5 matches canonical before this reconciliation. After this controller change merges, mirror must advance again before current_verified can be asserted."
+    "github_source_sha": "44607d8525bf195159ffdfd338fc488f79e10a50",
+    "gitlab_mirror_sha": "30a0eb80717923c9960f117dec6406ad167b3790",
+    "status": "full_tree_verified_before_this_reconciliation_pending_next_sync",
+    "verification": "At 2026-10-08T18:01:01Z, 115/115 tracked GitHub and GitLab blobs matched exactly with no missing files; GitLab main message was mirror: GitHub main 44607d8525bf195159ffdfd338fc488f79e10a50. Previous mismatches are no longer present. If this controller PR merges, GitLab must be resynchronized and reverified before declaring the new GitHub head mirrored."
   },
   "flow_metrics": {
     "process_error_budget": "Tier-2 WIP is zero. Avoid coordination work that does not reduce future error and do not create substantive work merely to consume idle slots.",
