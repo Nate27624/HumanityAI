@@ -1,0 +1,61 @@
+{
+  "change_id": "DH0007",
+  "at": "2026-10-08T23:01:14Z",
+  "status": "evaluation_checkpoint",
+  "follows_change_id": "DH0006",
+  "problem_trigger": "Repeated mirror-integrity warnings and failed repair attempts consumed controller capacity; provenance messages alone were insufficient to establish exact GitLab content.",
+  "prior_design": "Routine mirror checks used commit provenance and representative files, followed by ad hoc per-file repair. Reports of divergence could persist without a fresh full tracked-tree comparison.",
+  "hypothesis_rationale": "Read-only comparison of recursive canonical GitHub and GitLab tracked paths and blob SHAs before writing can distinguish real divergence from stale diagnostics and prevent unnecessary repairs, while preserving GitHub authority.",
+  "exact_change": "At GitHub main 44607d8525bf195159ffdfd338fc488f79e10a50 and GitLab main 30a0eb80717923c9960f117dec6406ad167b3790, D compared all 115 tracked blobs on each side and found zero path/SHA divergences. No mirror mutation was justified. This records application of existing mirror requirements, not a change to permission, security, scheduler, or governance authority.",
+  "expected_benefit": [
+    "Reduce false mirror-health claims and unnecessary repair attempts.",
+    "Protect exact tracked content and failover provenance.",
+    "Spend less controller capacity on repeated diagnostics."
+  ],
+  "risks": [
+    "Concurrent branch movement can invalidate a snapshot.",
+    "Full-tree comparisons cost API calls; do not run needlessly.",
+    "A matching snapshot does not establish future mirror freshness."
+  ],
+  "evaluation_window": "Next three healthy D windows and the next canonical main advance.",
+  "evaluation_criteria": [
+    "Never claim current mirror on provenance alone when tracked blobs differ.",
+    "Avoid mirror rewrite if a fresh full-tree check shows exact equality.",
+    "Reverify mirror after subsequent canonical changes.",
+    "Reduce mirror recovery toil over three controller windows."
+  ],
+  "observed_outcomes": [
+    {
+      "observation_type": "observed",
+      "observation": "At the checkpoint, 115 GitHub tracked blobs and 115 GitLab tracked blobs had identical paths and SHA values; the mirror provenance message named the same canonical GitHub main SHA."
+    },
+    {
+      "observation_type": "observed",
+      "observation": "Live GitHub had one deferred open PR #70 and no active Tier-2 producer PR."
+    },
+    {
+      "observation_type": "interpretation",
+      "observation": "Earlier reported divergences were not present at this snapshot; the mechanism of resolution cannot be inferred."
+    }
+  ],
+  "failures_side_effects": [
+    "Repeated earlier repair attempts were blocked or incomplete and consumed operational capacity.",
+    "Earlier mirror-health messages did not always track actual content.",
+    "Root agent/design_history.json append was blocked by execution safety; this checkpoint file is durable pending root consolidation."
+  ],
+  "verdict": "promising",
+  "lessons": [
+    "Compare full tracked trees when mirror health is disputed; a provenance commit title is not sufficient.",
+    "Do not rewrite a matching mirror.",
+    "Treat mirror status as snapshot-specific and reverify after canonical main advances.",
+    "Do not infer historical repair causality from current equality."
+  ],
+  "links_shas_prs": [
+    "GitHub main 44607d8525bf195159ffdfd338fc488f79e10a50",
+    "GitLab main 30a0eb80717923c9960f117dec6406ad167b3790",
+    "Issue #120",
+    "PR #192",
+    "agent/portfolio.json",
+    "agent/design_history.json"
+  ]
+}
